@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_law
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20240906\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-12 07:59+0000\n"
+"PO-Revision-Date: 2024-09-12 07:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Archived"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Cancel"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Category"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "Content"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.actions.server,name:mgmtsystem_law.create_law_record_cron_ir_actions_server
+#: model:ir.cron,cron_name:mgmtsystem_law.create_law_record_cron
+msgid "Create RSS Law Records"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__done
+msgid "Done"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__draft
+msgid "Draft"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "Group By..."
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Information"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_company_form
+msgid "Law RSS"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.actions.act_window,name:mgmtsystem_law.action_laws
+#: model:ir.ui.menu,name:mgmtsystem_law.menu_mgmtsystem_manuals_manuals
+msgid "Laws"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.actions.act_window,help:mgmtsystem_law.action_laws
+msgid "Laws of your management systems."
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_menu_form
+msgid "Management System Law"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_menu_form
+msgid "Name"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_company_form
+msgid "RSS URL"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Set To Done"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Set To In Progress"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "Stage"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "System"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "Systems"
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "e.g. Once upon a time..."
+msgstr ""
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_document_law
+#: model:ir.model,name:mgmtsystem_law.model_res_company
+msgid "scaffold_test.scaffold_test"
+msgstr ""
