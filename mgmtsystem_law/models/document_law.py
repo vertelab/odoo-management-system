@@ -20,6 +20,7 @@ class MgmtsystemLaw(models.Model):
         readonly=True,
         default=fields.Date.today()
     )
+    mgmtsystem_claim_ids = fields.Many2many(comodel_name='mgmtsystem.claim')
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",
@@ -129,13 +130,15 @@ class MgmtsystemLaw(models.Model):
 
                 raise UserError(f"The RSS URL is empty on company {company.display_name}")
     
+
     @api.depends("rss_titel")
     def _compute_name(self):
 
         for rec in self:
 
             if rec.rss_titel:
-                rec.name = rec.rss_titel            
+                rec.name = rec.rss_titel
+
 
     def set_stage_to_in_progres(self):
 
