@@ -63,8 +63,22 @@
                     <field name="company_id" groups="base.group_multi_company" />
                     <field name="creation_date" />
                   </group>
-
                 </group>
+              </page>
+              <page name="claim" string="Claims">
+                <field name="mgmtsystem_claim_ids">
+                  <tree>
+                    <field name="reference"/>
+                    <field name="user_id"/>
+                    <field name="partner_id"/>
+                    <field name="partner_phone"/>
+                    <field name="email_from"/>
+                    <field name="description"/>
+                    <field name="date_closed"/>
+                    <field name="cause"/>
+                    <field name="resolution"/>
+                  </tree>
+                </field>
               </page>
             </notebook>
           </sheet>
