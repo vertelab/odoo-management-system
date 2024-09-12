@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 from odoo import models, fields, api
 from odoo.exceptions import UserError, ValidationError
 
-class MgmtsystemLaw(models.Model):
+class DocumentLaw(models.Model):
     _name = 'document.law'
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = 'scaffold_test.scaffold_test'
@@ -20,7 +20,10 @@ class MgmtsystemLaw(models.Model):
         readonly=True,
         default=fields.Date.today()
     )
-    mgmtsystem_claim_ids = fields.Many2many(comodel_name='mgmtsystem.claim')
+    mgmtsystem_claim_ids = fields.Many2many(comodel_name='mgmtsystem.claim', string="Claims")
+    mgmtsystem_action_ids = fields.Many2many(comodel_name="mgmtsystem.action", string="Actions")
+    document_page_ids = fields.Many2many(comodel_name="document.page", string="Document Pages")
+    mgmtsystem_hazard_ids = fields.Many2many(comodel_name="mgmtsystem.hazard", string="Hazards")
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",
@@ -63,9 +66,6 @@ class MgmtsystemLaw(models.Model):
     rss_dokumentnamn = fields.Char(string="Document Name")
     rss_avdelningar = fields.Char(string="Departments")
 
-    def _run_multi_company(self):
-        pass
-
     def _create_law_record_cron(self):
 
         companies = self.env['res.company'].search([])
@@ -87,7 +87,7 @@ class MgmtsystemLaw(models.Model):
 
                 links_to_xml = []
                 xml_dicts = []
-                record_dict = {'system_id': system_id, 'company_id':company.id}
+                record_dict = {'system_id': system_id, 'company_id': company.id}
 
                 for item in rss.channel.items:
 
