@@ -1,5 +1,0 @@
-<odoo noupdate="1">
-    <record model="mgmtsystem.system" id="laws" >
-      <field name="name" >Laws</field>
-    </record>
-</odoo>
