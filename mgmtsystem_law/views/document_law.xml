@@ -1,0 +1,99 @@
+<odoo>
+  <data>
+
+    <record id="view_law_tree" model="ir.ui.view">
+      <field name="name">mgmtsystem.law.list</field>
+      <field name="model">document.law</field>
+      <field name="inherit_id" ref="document_law.view_law_tree"/>
+      <field name="arch" type="xml">
+        <field name="category_id" position="after">
+          <field name="system_id" />
+        </field>
+      </field>
+    </record>
+
+    <record id="view_law_form" model="ir.ui.view">
+      <field name="name">mgmtsystem.law.form</field>
+      <field name="model">document.law</field>
+      <field name="inherit_id" ref="document_law.view_law_form"/>
+      <field name="arch" type="xml">
+
+        <field name="category_id" position="after">
+          <field name="system_id"/>
+        </field>
+
+        <page name="info" position="after">
+          <page name="claim" string="Claims">
+            <field name="mgmtsystem_claim_ids" string="Claims">
+              <tree>
+                <field name="reference"/>
+                <field name="user_id"/>
+                <field name="partner_id"/>
+                <field name="partner_phone"/>
+                <field name="email_from"/>
+                <field name="description"/>
+                <field name="date_closed"/>
+                <field name="cause"/>
+                <field name="resolution"/>
+              </tree>
+            </field>
+          </page>
+          <page name="action" string="Actions">
+            <field name="mgmtsystem_action_ids" string="Actions">
+              <tree>
+                <field name="name"/>
+                <field name="type_action"/>
+                <field name="user_id"/>
+                <field name="date_deadline"/>
+                <field name="reference"/>
+                <field name="description"/>
+                <field name="system_id"/>
+                <field name="tag_ids"/>
+              </tree>
+            </field>
+          </page>
+          <page name="document_page" string="Document Pages">
+            <field name="document_page_ids" string="Document Pages">
+              <tree>
+                <field name="name"/>
+              </tree>
+            </field>
+          </page>
+          <page name="hazard" string="Hazards">
+            <field name="mgmtsystem_hazard_ids" string="Hazards">
+              <tree>
+                <field name="name"/>
+              </tree>
+            </field>
+          </page>
+        </page>
+
+      </field>
+    </record>
+
+    <record id="view_law_filter" model="ir.ui.view">
+      <field name="name">mgmtsystem.law.search</field>
+      <field name="model">document.law</field>
+      <field name="inherit_id" ref="document_law.view_law_filter"/>
+      <field name="arch" type="xml">
+        <field name="rss_titel" position="after">
+          <field name="system_id" />
+        </field>
+        <filter name="group_by_category" position="before">
+          <filter name="group_by_system" string="System" context="{'group_by':'system_id'}" />
+        </filter>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_laws">
+      <field name="name">mgmtsystem.law.action</field>
+      <field name="res_model">document.law</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="mgmtsystem_law.view_law_tree"/>
+      <field name="search_view_id" ref="mgmtsystem_law.view_law_filter" />
+      <field name="help">No laws at the moment.</field>
+      <field name="domain" eval="[('rss_dok_id','!=',False)]" />
+    </record>
+
+  </data>
+</odoo> 
