@@ -22,7 +22,7 @@
 # https://www.odoo.com/documentation/14.0/reference/module.html
 #
 {
-    'name': '',
+    'name': 'Management System: Managment System Law',
     'version': '1.0',
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -35,11 +35,11 @@
     'website': 'https://vertel.se/apps/odoo-',
     'images': ['static/description/banner.png'], 
     'license': 'AGPL-3',
-    'depends': ['mail','mgmtsystem_manual',"mgmtsystem_claim","mgmtsystem_action","document_page","mgmtsystem_hazard"],
+    'depends': ['document_law','mgmtsystem_manual',"mgmtsystem_claim","mgmtsystem_action","mgmtsystem_hazard"],
     "external_dependencies": {
-       "python": ["rss_parser"],
+       "python": ["rss_parser",'xmltodict'],
      },
-    'data': ['security/ir.model.access.csv', 'data/mgmtsystem_law.xml', 'data/create_law_record_cron.xml', 'views/res_company.xml', 'views/mgmtsystem_law.xml', ], 
+    'data': ['security/ir.model.access.csv', 'data/mgmtsystem_law.xml', 'views/document_law.xml', 'views/mgmtsystem_law.xml', ], 
     'demo': [],
     'application': False,
     'installable': True,    
