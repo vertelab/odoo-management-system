@@ -7,60 +7,62 @@ msgstr ""
 "Project-Id-Version: Odoo Server 16.0-20240906\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-12 07:59+0000\n"
-"PO-Revision-Date: 2024-09-12 07:59+0000\n"
+"PO-Revision-Date: 2024-09-12 10:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "Archived"
-msgstr ""
+msgstr "Arkiverad"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #. module: mgmtsystem_law
 #: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__cancel
 msgid "Cancelled"
-msgstr ""
+msgstr "Avbruten"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
 msgid "Content"
-msgstr ""
+msgstr "Innehåll"
 
 #. module: mgmtsystem_law
 #: model:ir.actions.server,name:mgmtsystem_law.create_law_record_cron_ir_actions_server
 #: model:ir.cron,cron_name:mgmtsystem_law.create_law_record_cron
 msgid "Create RSS Law Records"
-msgstr ""
+msgstr "Skapa RSS Lagregister"
 
 #. module: mgmtsystem_law
 #: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__done
 msgid "Done"
-msgstr ""
+msgstr "Färdig"
 
 #. module: mgmtsystem_law
 #: model:ir.model.fields.selection,name:mgmtsystem_law.selection__document_law__stage__draft
 msgid "Draft"
-msgstr ""
+msgstr "Utkast"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
 msgid "Group By..."
-msgstr ""
+msgstr "Gruppera efter..."
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
@@ -70,31 +72,31 @@ msgstr ""
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_company_form
 msgid "Law RSS"
-msgstr ""
+msgstr "Lag RSS"
 
 #. module: mgmtsystem_law
 #: model:ir.actions.act_window,name:mgmtsystem_law.action_laws
 #: model:ir.ui.menu,name:mgmtsystem_law.menu_mgmtsystem_manuals_manuals
 msgid "Laws"
-msgstr ""
+msgstr "Lagar"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.actions.act_window,help:mgmtsystem_law.action_laws
 msgid "Laws of your management systems."
-msgstr ""
+msgstr "Lagar för dina ledningssystem."
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_menu_form
 msgid "Management System Law"
-msgstr ""
+msgstr "Ledningssystemslagar"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_menu_form
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_company_form
@@ -104,17 +106,17 @@ msgstr ""
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "Set To Done"
-msgstr ""
+msgstr "Flytta till Färdig"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "Set To In Progress"
-msgstr ""
+msgstr "Flytta till Under pågående"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
 msgid "Stage"
-msgstr ""
+msgstr "Läge"
 
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
@@ -129,7 +131,7 @@ msgstr ""
 #. module: mgmtsystem_law
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
 msgid "e.g. Once upon a time..."
-msgstr ""
+msgstr "t.ex. Det var en gång..."
 
 #. module: mgmtsystem_law
 #: model:ir.model,name:mgmtsystem_law.model_document_law
