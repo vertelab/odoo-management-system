@@ -79,6 +79,9 @@
         <field name="rss_titel" position="after">
           <field name="system_id" />
         </field>
+        <field name="stage" position="replace">
+          <field name="system_id" icon="fa-folder" string="System" enable_counters="1" />
+        </field>
         <filter name="group_by_category" position="before">
           <filter name="group_by_system" string="System" context="{'group_by':'system_id'}" />
         </filter>
@@ -92,7 +95,6 @@
       <field name="view_id" ref="mgmtsystem_law.view_law_tree"/>
       <field name="search_view_id" ref="mgmtsystem_law.view_law_filter" />
       <field name="help">No laws at the moment.</field>
-      <field name="domain" eval="[('rss_dok_id','!=',False)]" />
     </record>
 
   </data>
