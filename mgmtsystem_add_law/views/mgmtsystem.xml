@@ -1,0 +1,5 @@
+<odoo>
+
+  <menuitem id="menu_mgmtsystem_manuals_manuals" name="Add Law" action="mgmtsystem_add_law.add_law_wizard_action" parent="mgmtsystem.menu_mgmtsystem_manuals" sequence="0" groups="mgmtsystem.group_mgmtsystem_viewer" />
+
+</odoo>

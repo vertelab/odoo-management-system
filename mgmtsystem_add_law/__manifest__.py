@@ -22,21 +22,24 @@
 # https://www.odoo.com/documentation/14.0/reference/module.html
 #
 {
-    'name': 'Management System: Managment System Law',
+    'name': 'Management System Add Laws',
     'version': '1.0',
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.odoo.com""",
+        Makes it possible to add laws from the website lagen.nu to the Management System Law module.
+    """,
     'category': '', # Technical Settings|Localization|Payroll Localization|Account Charts|User types|Invoicing|Sales|Human Resources|Operations|Marketing|Manufacturing|Website|Theme|Administration|Appraisals|Sign|Helpdesk|Administration|Extra Rights|Other Extra Rights|
     'description': """
-        Long description of module's purpose
+        Makes it possible to add laws from the website lagen.nu to the Management System Law module.
     """,
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-',
-    'images': ['static/description/banner.png'], 
+    'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
-    'depends': ['document_law','mgmtsystem_manual',"mgmtsystem_claim","mgmtsystem_action","mgmtsystem_hazard"],
-    'data': ['security/ir.model.access.csv', 'views/document_law.xml', 'views/mgmtsystem_law.xml', ], 
+    'depends': ["mgmtsystem_law"],
+    "external_dependencies": {
+        "python": ["beautifulsoup4"],
+     },
+    'data': ["security/ir.model.access.csv", "wizard/mgmtsystem_add_law_wizard.xml","views/mgmtsystem.xml",],
     'demo': [],
     'application': False,
     'installable': True,    
