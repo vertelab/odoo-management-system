@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mgmtsystem_add_law.access_mgmtsystem_add_law_wizard,access_mgmtsystem_add_law_wizard,mgmtsystem_add_law.model_mgmtsystem_add_law_wizard,base.group_user,1,1,1,1

@@ -95,6 +95,9 @@
       <field name="view_id" ref="mgmtsystem_law.view_law_tree"/>
       <field name="search_view_id" ref="mgmtsystem_law.view_law_filter" />
       <field name="help">No laws at the moment.</field>
+<!--
+      <field name="domain" eval="[('company_id','=',uid.company_id)]" />
+-->
     </record>
 
   </data>

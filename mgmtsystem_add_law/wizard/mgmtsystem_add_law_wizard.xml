@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="mgmtsystem_add_law_wizard_view_form" model="ir.ui.view">
+        <field name="name">mgmtsystem.add.law.wizard.view.form</field>
+        <field name="model">mgmtsystem.add.law.wizard</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="Add Law">
+                <group>
+                    <field name="law_designation"/>
+                </group>
+                <footer>
+                    <button name="add_law" string="Add Law" type="object"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="add_law_wizard_action" model="ir.actions.act_window">
+        <field name="name">Add Law</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mgmtsystem.add.law.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mgmtsystem_add_law_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
