@@ -36,7 +36,7 @@
     'images': ['static/description/banner.png'], 
     'license': 'AGPL-3',
     'depends': ['document_law','mgmtsystem_manual',"mgmtsystem_claim","mgmtsystem_action","mgmtsystem_hazard"],
-    'data': ['security/ir.model.access.csv', 'views/document_law.xml', 'views/mgmtsystem_law.xml', ], 
+    'data': ['security/ir.model.access.csv', 'views/document_law.xml', 'views/mgmtsystem.xml', ], 
     'demo': [],
     'application': False,
     'installable': True,    
