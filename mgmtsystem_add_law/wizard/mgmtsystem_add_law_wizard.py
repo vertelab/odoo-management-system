@@ -2,8 +2,11 @@ from odoo import models, fields, api
 from odoo.exceptions import UserError, ValidationError
 
 import requests
+import logging
 
 from bs4 import BeautifulSoup
+
+_logger = logging.getLogger(__name__)
 
 class MgmtsystemAddLawWizard(models.TransientModel):
     _name = 'mgmtsystem.add.law.wizard'
@@ -34,10 +37,13 @@ class MgmtsystemAddLawWizard(models.TransientModel):
                 rss_organ = contents.find("dd")
                 rss_typ = "sfs" if "sfs" in contents.findAll("dd")[2].text.lower() else False
                 rss_datum = contents.findAll("dd")[1].text
-                rss_publicerad = contents.findAll("dd")[6].text
-                rss_systemdatum = contents.findAll("dd")[6].text
+                rss_publicerad = self.get_publishing_date(contents)
+                rss_systemdatum = self.get_publishing_date(contents)
                 rss_text = "\n\n".join(map((lambda p: p.text),contents.findAll("p")))
                 rss_html = contents
+
+                # _logger.error(f"{rss_datum=}")                
+                _logger.error(f"{rss_publicerad=}")                
 
                 record = {
                     "rss_titel": rss_titel,
@@ -60,12 +66,21 @@ class MgmtsystemAddLawWizard(models.TransientModel):
                     'tag': 'reload',
                 }
 
-            raise ValidationError("Lagen/Förordningen värkar inte exsitera")
+            raise ValidationError("Lagen/Förordningen värkar inte exsistera")
 
         raise UserError("Lagen/Förordningen finns readan")
       
     def create_record(self,record):
 
         self.env["document.law"].create(record)
+
+    def get_publishing_date(self,contents):
+
+        dt_list = list(map(lambda dt: dt.text ,contents.findAll("dt")))
+
+        pub_index = dt_list.index("Senast hämtad")
+
+        return contents.findAll("dd")[pub_index].text
+
 
 
