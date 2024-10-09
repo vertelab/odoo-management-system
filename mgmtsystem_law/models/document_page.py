@@ -7,6 +7,6 @@ from odoo.exceptions import UserError, ValidationError
 
 class DocumentPage(models.Model):
     _inherit = 'document.page'
-    _description = 'Adds connections to mgmtsystem modules for the document_law module.'
+    _description = 'Adds One2many connection to document.law from document.page.'
 
     document_law_ids = fields.One2many(comodel_name="document.law", inverse_name="document_page_manual")
