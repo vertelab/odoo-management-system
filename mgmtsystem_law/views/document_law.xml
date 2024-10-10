@@ -23,6 +23,13 @@
         </field>
 
         <page name="info" position="after">
+          <page name="manul/policy" string="Manual/Policy" attrs="{'invisible': [('document_page_ids','=', False )]}">
+            <field name="document_page_ids">
+              <tree editable="bottom" string="Manuls/Policys">
+                <field name="document_page_id"/>
+              </tree>
+            </field>
+          </page>
           <page name="claim" string="Claims">
             <field name="mgmtsystem_claim_ids" string="Claims">
               <tree>
@@ -49,13 +56,6 @@
                 <field name="description"/>
                 <field name="system_id"/>
                 <field name="tag_ids"/>
-              </tree>
-            </field>
-          </page>
-          <page name="document_page" string="Document Pages">
-            <field name="document_page_ids" string="Document Pages">
-              <tree>
-                <field name="name"/>
               </tree>
             </field>
           </page>
@@ -95,7 +95,7 @@
       <field name="view_id" ref="mgmtsystem_law.view_law_tree"/>
       <field name="search_view_id" ref="mgmtsystem_law.view_law_filter" />
       <field name="help">No laws at the moment.</field>
-<!--
+      <!--
       <field name="domain" eval="[('company_id','=',uid.company_id)]" />
 -->
     </record>
