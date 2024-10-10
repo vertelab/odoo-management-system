@@ -11,9 +11,8 @@ class DocumentLaw(models.Model):
 
     mgmtsystem_claim_ids = fields.Many2many(comodel_name='mgmtsystem.claim', string="Claims")
     mgmtsystem_action_ids = fields.Many2many(comodel_name="mgmtsystem.action", string="Actions")
-    document_page_ids = fields.Many2many(comodel_name="document.page", string="Document Pages")
     mgmtsystem_hazard_ids = fields.Many2many(comodel_name="mgmtsystem.hazard", string="Hazards")
 
-    document_page_manual = fields.Many2one(comodel_name="document.page", domain=[('parent_id','=',"ref('manuals')")] )
+    document_page_ids = fields.One2many(comodel_name="document.page.law", inverse_name="document_law_id")
     
     system_id = fields.Many2one(comodel_name="mgmtsystem.system", string="System")
