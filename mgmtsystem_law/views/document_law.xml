@@ -8,6 +8,8 @@
       <field name="arch" type="xml">
         <field name="company_id" position="after">
           <field name="system_id" />
+          <field name="document_page_ids" widget="many2many_tags" optional="hide"/>
+          <field name="mgmtsystem_claim_ids" widget="many2many_tags" optional="hide"/>
         </field>
       </field>
     </record>
