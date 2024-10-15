@@ -10,7 +10,7 @@ class DocumentPageLaw(models.Model):
     _name="document.page.law"
     _description = 'Glue model between document.page and document.law'
 
-    name = fields.Char("test")
+    name = fields.Char(string="Document Page Law")
 
     document_law_id = fields.Many2one(comodel_name="document.law")
     document_page_id = fields.Many2one(comodel_name="document.page")

@@ -6,7 +6,7 @@
       <field name="model">document.law</field>
       <field name="inherit_id" ref="document_law.view_law_tree"/>
       <field name="arch" type="xml">
-        <field name="category_id" position="after">
+        <field name="company_id" position="after">
           <field name="system_id" />
         </field>
       </field>
@@ -18,7 +18,7 @@
       <field name="inherit_id" ref="document_law.view_law_form"/>
       <field name="arch" type="xml">
 
-        <field name="category_id" position="after">
+        <field name="company_id" position="after">
           <field name="system_id"/>
         </field>
 
@@ -82,7 +82,7 @@
         <field name="stage" position="replace">
           <field name="system_id" icon="fa-folder" string="System" enable_counters="1" />
         </field>
-        <filter name="group_by_category" position="before">
+        <filter name="group_by_stage" position="before">
           <filter name="group_by_system" string="System" context="{'group_by':'system_id'}" />
         </filter>
       </field>
