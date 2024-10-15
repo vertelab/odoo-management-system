@@ -32,16 +32,8 @@
           </page>
           <page name="claim" string="Claims">
             <field name="mgmtsystem_claim_ids" string="Claims">
-              <tree>
-                <field name="reference"/>
-                <field name="user_id"/>
-                <field name="partner_id"/>
-                <field name="partner_phone"/>
-                <field name="email_from"/>
-                <field name="description"/>
-                <field name="date_closed"/>
-                <field name="cause"/>
-                <field name="resolution"/>
+              <tree editable="bottom" string="Claims">
+                <field name="mgmtsystem_claim_id"/>
               </tree>
             </field>
           </page>
