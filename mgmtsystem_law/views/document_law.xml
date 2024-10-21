@@ -75,6 +75,7 @@
         </field>
         <field name="stage" position="replace">
           <field name="system_id" icon="fa-folder" string="System" enable_counters="1" />
+          <!-- <field name="document_page_id" icon="fa-folder" string="Manual" enable_counters="1"/> -->
         </field>
         <filter name="group_by_stage" position="before">
           <filter name="group_by_system" string="System" context="{'group_by':'system_id'}" />
