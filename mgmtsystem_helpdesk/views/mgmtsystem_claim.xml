@@ -1,0 +1,12 @@
+<odoo>
+    <record id="mgmtsystem_claims_form_view" model="ir.ui.view">
+        <field name="name">Management System Claims Form</field>
+        <field name="model">mgmtsystem.claim</field>
+        <field name="inherit_id" ref="mgmtsystem_claim.mgmtsystem_claims_form_view"/>
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="project_task_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>
