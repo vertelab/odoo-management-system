@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="scaffold_test.action_server">
+      <field name="name">scaffold_test server</field>
+      <field name="model_id" ref="model_scaffold_test_scaffold_test"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Inherit view -->
+
+    <record id="view_company_form_rss_url" model="ir.ui.view">
+      <field name="name">view.company.form.rss.url</field>
+      <field name="model">res.company</field>
+      <field name="inherit_id" ref="document_law.view_company_form"/>
+      <field name="arch" type="xml">
+        <page name="law_rss" position="after">
+          <page name="ai_law_context" string="Ai Law Context">
+            <group>
+              <group>
+                <field name="ai_company_context"/>
+              </group>
+            </group>
+          </page>
+        </page>
+      </field>
+    </record>
+
+
+
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="scaffold_test.menu_1_list" parent="scaffold_test.menu_1" action="scaffold_test.action_window"/>
+    <menuitem name="Server to list" id="scaffold_test" parent="scaffold_test.menu_2" action="scaffold_test.action_server"/>
+-->
+  </data>
+</odoo>
