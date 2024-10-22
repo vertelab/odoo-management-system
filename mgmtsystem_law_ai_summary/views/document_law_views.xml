@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+
+    <record id="view_law_form" model="ir.ui.view">
+      <field name="name">document.law.form</field>
+      <field name="model">document.law</field>
+      <field name="inherit_id" ref="document_law.view_law_form"/>
+      <field name="arch" type="xml">
+
+        <field name="rss_html" position="replace">
+          <field name="rss_html" widget="html" placeholder="e.g. Once upon a time..." required="0" options="{'safe': True, 'codeview': True, 'collaborative': True}" attrs="{'invisible': [('ai_summary', '!=', False)]}"/>
+          <field name="ai_summary" attrs="{'invisible': [('ai_summary', '=', False)]}"/>
+        </field>
+
+        <page name="info" position="after">
+          <page name="main document" string="Main Document" attrs="{'invisible': [('ai_summary', '=', False)]}">
+            <group>
+              <group>
+                <field name="rss_html"/>
+              </group>
+            </group>
+          </page>
+        </page>
+
+      </field>
+    </record>
+
+  </data>
+</odoo>
