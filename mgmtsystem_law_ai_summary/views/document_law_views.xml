@@ -25,5 +25,15 @@
       </field>
     </record>
 
+    <record model="ir.actions.server" id="action_ai_law_summary">
+      <field name="name">Create Law Summary</field>
+      <field name="model_id" ref="model_document_law"/>
+      <field name="state">code</field>
+      <field name="code">
+        records.create_ai_summary()
+      </field>
+      <field name="binding_model_id" ref="model_document_law"/>
+    </record>
+
   </data>
 </odoo>
