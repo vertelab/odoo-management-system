@@ -30,6 +30,10 @@
               <group>
                 <field name="ai_company_context"/>
               </group>
+              <group>
+                <field name="ai_model"/>
+                <field name="ai_api_key"/>
+              </group>
             </group>
           </page>
         </page>
