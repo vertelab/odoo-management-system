@@ -14,12 +14,12 @@ class DocumentLaw(models.Model):
     _description = 'scaffold_test.scaffold_test'
     _inherit = 'document.law'
 
-    ai_summary = fields.Text(store=True)
+    ai_policy = fields.Text(store=True)
 
     def ai_templet_prompt(self):
 
         system_prompt =\
-        """
+        _("""
         {context}
 
         ---
@@ -32,7 +32,7 @@ class DocumentLaw(models.Model):
 
         ---
         Answer: 
-        """.strip()
+        """).strip()
 
         return PromptTemplate(template=system_prompt,input_variables=["context","law"])
 
@@ -42,7 +42,7 @@ class DocumentLaw(models.Model):
             
             company_id = rec.company_id
 
-            rec.ai_summary = False
+            #rec.ai_summary = False
 
             if company_id.ai_company_context:
 
@@ -53,7 +53,7 @@ class DocumentLaw(models.Model):
 
                 _logger.error(f"{ai_answer=}")
 
-                rec.ai_summary = parser.invoke(ai_answer)
+                rec.ai_policy = parser.invoke(ai_answer)
 
     def get_llm(self,company_id):
 
