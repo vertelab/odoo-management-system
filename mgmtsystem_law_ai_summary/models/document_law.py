@@ -14,7 +14,7 @@ class DocumentLaw(models.Model):
     _description = 'scaffold_test.scaffold_test'
     _inherit = 'document.law'
 
-    ai_policy = fields.Text(store=True)
+    ai_policy = fields.Text()
 
     def ai_templet_prompt(self):
 
@@ -42,8 +42,6 @@ class DocumentLaw(models.Model):
             
             company_id = rec.company_id
 
-            #rec.ai_summary = False
-
             if company_id.ai_company_context:
 
                 ai_message = self.ai_templet_prompt().invoke({"context": company_id.ai_company_context, "law": rec.rss_text})
@@ -54,6 +52,10 @@ class DocumentLaw(models.Model):
                 _logger.error(f"{ai_answer=}")
 
                 rec.ai_policy = parser.invoke(ai_answer)
+
+                return
+
+            raise ValidationError(_("No company context for ai"))
 
     def get_llm(self,company_id):
 
