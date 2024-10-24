@@ -34,16 +34,13 @@ class MgmtsystemAddLawWizard(models.TransientModel):
                 rss_beteckning = rss_titel.split("(")[1].split(")")[0]
                 rss_rm = rss_beteckning.split(":")[0]
                 rss_dok_id = f"sfs-{rss_beteckning.replace(':','-')}"
-                rss_organ = contents.find("dd")
+                rss_organ = contents.find("dd").text
                 rss_typ = "sfs" if "sfs" in contents.findAll("dd")[2].text.lower() else False
                 rss_datum = contents.findAll("dd")[1].text
-                rss_publicerad = self.get_publishing_date(contents)
-                rss_systemdatum = self.get_publishing_date(contents)
+                rss_publicerad = contents.find('dl').findAll('dd')[-1].text
+                rss_systemdatum = contents.find('dl').findAll('dd')[-1].text
                 rss_text = "\n\n".join(map((lambda p: p.text),contents.findAll("p")))
-                rss_html = contents
-
-                # _logger.error(f"{rss_datum=}")                
-                _logger.error(f"{rss_publicerad=}")                
+                rss_html = contents               
 
                 record = {
                     "rss_titel": rss_titel,
@@ -73,14 +70,3 @@ class MgmtsystemAddLawWizard(models.TransientModel):
     def create_record(self,record):
 
         self.env["document.law"].create(record)
-
-    def get_publishing_date(self,contents):
-
-        dt_list = list(map(lambda dt: dt.text ,contents.findAll("dt")))
-
-        pub_index = dt_list.index("Senast hämtad")
-
-        return contents.findAll("dd")[pub_index].text
-
-
-
