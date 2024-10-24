@@ -8,12 +8,12 @@
       <field name="arch" type="xml">
 
         <field name="rss_html" position="replace">
-          <field name="rss_html" widget="html" placeholder="e.g. Once upon a time..." required="0" options="{'safe': True, 'codeview': True, 'collaborative': True}" attrs="{'invisible': [('ai_summary', '!=', False)]}"/>
-          <field name="ai_summary" attrs="{'invisible': [('ai_summary', '=', False)]}"/>
+          <field name="rss_html" widget="html" placeholder="e.g. Once upon a time..." required="0" options="{'safe': True, 'codeview': True, 'collaborative': True}" attrs="{'invisible': [('ai_policy', '!=', False)]}"/>
+          <field name="ai_policy" attrs="{'invisible': [('ai_policy', '=', False)]}"/>
         </field>
 
         <page name="info" position="after">
-          <page name="main document" string="Main Document" attrs="{'invisible': [('ai_summary', '=', False)]}">
+          <page name="main document" string="Main Document" attrs="{'invisible': [('ai_policy', '=', False)]}">
             <group>
               <group>
                 <field name="rss_html"/>
