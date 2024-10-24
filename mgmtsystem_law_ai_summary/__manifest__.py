@@ -37,10 +37,9 @@
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_law"],
-     #"external_dependencies": {
-     #   "bin": ["openssl",], 
-     #   "python": ["acme_tiny", "IPy",],
-     #},
+     "external_dependencies": {
+       "python": ["langchain", "langchain-openai","langchain_mistralai"],
+     },
     'data': ["views/res_company_views.xml", "views/document_law_views.xml"],
     'demo': [],
     'application': False,
