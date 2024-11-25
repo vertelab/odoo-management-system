@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="year_wheel_view_form" model="ir.ui.view">
+            <field name="name">year.wheel.view.form</field>
+            <field name="model">year.wheel</field>
+            <field name="arch" type="xml">
+                <form string="Management Year Wheel" create="false">
+                    <sheet>
+                        <div name="button_box" class="oe_button_box">
+                            <button name="action_view_activities" class="oe_stat_button" icon="fa-tasks" type="object">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value"><field name="activity_count"/></span>
+                                    <span class="o_stat_text">Activities</span>
+                                </div>
+                            </button>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="res_model_id" />
+                                <field name="res_model" />
+                                <field name="res_id" />
+                                <field name="activity_type_id" required="1" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="summary" placeholder="e.g. Discuss proposal"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="next_activity_date"/>
+                                <field name="end_date"/>
+
+                                <label for="interval"/>
+                                <div class="o_col">
+                                    <div class="o_row">
+                                        <field name="interval" class="oe_inline"/>
+                                        <field name="time_unit"/>
+                                    </div>
+                                </div>
+
+                                <field name="user_id"/>
+                            </group>
+                        </group>
+                        <field name="note" class="oe-bordered-editor" placeholder="Log a note..."/>
+                        <footer>
+                            <field name="id" invisible="1"/>
+                            <button id="year_wheel_activity" string="Schedule" name="action_create_year_wheel_activity" type="object" class="btn-primary"
+                                attrs="{'invisible': [('id', '!=', False)]}" data-hotkey="q"/>
+
+                            <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="z" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="year_wheel_view_tree" model="ir.ui.view">
+            <field name="name">year.wheel.view.tree</field>
+            <field name="model">year.wheel</field>
+            <field name="arch" type="xml">
+                <tree create="false" duplicate="false">
+                    <field name="res_model" />
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mgmtsystem_year_wheel_action" model="ir.actions.act_window">
+            <field name="name">Management Year Wheel</field>
+            <field name="res_model">year.wheel</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="mgmtsystem_yearwheel.year_wheel_view_tree"/>
+        </record>
+
+
+    </data>
+</odoo>
