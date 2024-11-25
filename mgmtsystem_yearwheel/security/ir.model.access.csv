@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mgmtsystem_yearwheel.access_year_wheel,access_year_wheel,mgmtsystem_yearwheel.model_year_wheel,base.group_user,1,1,1,1
+mgmtsystem_yearwheel.access_year_wheel_wizard,access_year_wheel_wizard,mgmtsystem_yearwheel.model_year_wheel_wizard,base.group_user,1,1,1,1
