@@ -10,17 +10,9 @@ from dateutil.relativedelta import relativedelta
 from typing import Any
 
 from odoo import api, exceptions, fields, models, _, Command
-from odoo.osv import expression
-from odoo.tools import is_html_empty
-from odoo.tools.misc import clean_context, get_lang
 
 
 class YearWheel(models.Model):
-    """ An actual activity to perform. Activities are linked to
-    documents using res_id and res_model_id fields. Activities have a deadline
-    that can be used in kanban view to display a status. Once done activities
-    are unlinked and a message is posted. This message has a new activity_type_id
-    field that indicates the activity linked to the message. """
     _name = "year.wheel"
     _description = 'Year Wheel'
     _order = 'end_date ASC, id ASC'
