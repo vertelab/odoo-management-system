@@ -1,0 +1,250 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_yearwheel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20241127\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 12:58+0000\n"
+"PO-Revision-Date: 2024-11-28 14:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+msgid "<span class=\"o_stat_text\">Activities</span>"
+msgstr "<span class=\"o_stat_text\">Aktiviteter</span>"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__activity_ids
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__activity_count
+msgid "Activities Count"
+msgstr "Antal aktiviteter"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.constraint,message:mgmtsystem_yearwheel.constraint_year_wheel_check_res_id_is_set
+msgid "Activities have to be linked to records with a not null res_id."
+msgstr "Aktiviteter måste länkas till poster med ett res_id som inte är noll."
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model,name:mgmtsystem_yearwheel.model_mail_activity
+msgid "Activity"
+msgstr "Aktivitet"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__activity_type_id
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__activity_type_id
+msgid "Activity Type"
+msgstr "Typ av aktivitet"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__user_id
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__user_id
+msgid "Assigned to"
+msgstr "Tilldelad till"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
+msgid "Create Wheel"
+msgstr "Skapa hjul"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.actions.server,name:mgmtsystem_yearwheel.mgmtsystem_year_wheel_popup_action
+#: model:ir.ui.menu,name:mgmtsystem_yearwheel.menu_popup_year_wheel
+msgid "Create Year Wheel"
+msgstr "Skapa årshjul"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__create_uid
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__create_uid
+msgid "Created by"
+msgstr "Skapad av"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__create_date
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__create_date
+msgid "Created on"
+msgstr "Skapad på"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel__time_unit__days
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel_wizard__time_unit__days
+msgid "Days"
+msgstr "Dagar"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
+msgid "Discard"
+msgstr "Kassera"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__display_name
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__res_model_id
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__res_model_id
+msgid "Document Model"
+msgstr "Dokumentmodell"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__res_name
+msgid "Document Name"
+msgstr "Dokumentets namn"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__end_date
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__end_date
+msgid "Due Date"
+msgstr "Förfallodag"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__id
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__interval
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__interval
+msgid "Interval"
+msgstr "Intervall"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel____last_update
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard____last_update
+msgid "Last Modified on"
+msgstr "Senast ändrad den"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__write_uid
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Senast uppdaterad av"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__write_date
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__write_date
+msgid "Last Updated on"
+msgstr "Senast uppdaterad den"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
+msgid "Log a note..."
+msgstr "Logga in en anteckning..."
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.actions.act_window,name:mgmtsystem_yearwheel.mgmtsystem_year_wheel_action
+#: model:ir.ui.menu,name:mgmtsystem_yearwheel.menu_view_year_wheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
+msgid "Management Year Wheel"
+msgstr "Förvaltning Årshjul"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel__time_unit__months
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel_wizard__time_unit__months
+msgid "Months"
+msgstr "Månader"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__next_activity_date
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__next_activity_date
+msgid "Next Date"
+msgstr "Nästa datum"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__note
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__note
+msgid "Note"
+msgstr "Notera"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__res_id
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__res_id
+msgid "Related Document ID"
+msgstr "ID för relaterat dokument"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__res_model
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__res_model
+msgid "Related Document Model"
+msgstr "Relaterade dokument Modell"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+msgid "Schedule"
+msgstr "Schema"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__start_date
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__start_date
+msgid "Start Date"
+msgstr "Startdatum"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__summary
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__summary
+msgid "Summary"
+msgstr "Sammanfattning"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.constraint,message:mgmtsystem_yearwheel.constraint_year_wheel_wizard_check_wheel_date_validity
+msgid "This wheel has already ended before it could even start"
+msgstr "Detta hjul har redan slutat innan det ens kunde börja"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__time_unit
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel_wizard__time_unit
+msgid "Time Unit"
+msgstr "Tidsenhet"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel__time_unit__weeks
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel_wizard__time_unit__weeks
+msgid "Weeks"
+msgstr "Veckor"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model,name:mgmtsystem_yearwheel.model_year_wheel
+#: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_mail_activity__year_wheel_id
+msgid "Year Wheel"
+msgstr "År Hjul"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model,name:mgmtsystem_yearwheel.model_year_wheel_wizard
+msgid "Year Wheel Wizard"
+msgstr "År Hjulguide"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.actions.server,name:mgmtsystem_yearwheel.ir_cron_year_wheel_scheduler_action_ir_actions_server
+#: model:ir.cron,cron_name:mgmtsystem_yearwheel.ir_cron_year_wheel_scheduler_action
+msgid "Year Wheel: Activity Manager"
+msgstr "Årshjul: Aktivitetschef"
+
+#. module: mgmtsystem_yearwheel
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel__time_unit__years
+#: model:ir.model.fields.selection,name:mgmtsystem_yearwheel.selection__year_wheel_wizard__time_unit__years
+msgid "Years"
+msgstr "År"
+
+#. module: mgmtsystem_yearwheel
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
+msgid "e.g. Discuss proposal"
+msgstr "t.ex. Diskutera förslaget"

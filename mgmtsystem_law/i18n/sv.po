@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_law
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20241127\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 12:47+0000\n"
+"PO-Revision-Date: 2024-11-28 14:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law__mgmtsystem_action_ids
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Actions"
+msgstr "Åtgärder"
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_document_page
+msgid "Adds One2many connection to document.law from document.page."
+msgstr "Lägger till One2many-anslutning till document.law från document.page."
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_mgmtsystem_claim
+msgid ""
+"Adds connection to document.law from mgmtsystem.claim through "
+"document.law.mgmtsystem.claim glue model"
+msgstr ""
+"Lägger till anslutning till document.law från mgmtsystem.claim genom "
+"document.law.mgmtsystem.claim glue model"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law__mgmtsystem_claim_ids
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Claims"
+msgstr "Fordringar"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__create_uid
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__create_uid
+msgid "Created by"
+msgstr "Skapad av"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__create_date
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__create_date
+msgid "Created on"
+msgstr "Skapad på"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__display_name
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__document_law_id
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page__document_law_ids
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__document_law_id
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_mgmtsystem_claim__document_law_ids
+msgid "Document Law"
+msgstr "Dokumenträtt"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__name
+msgid "Document Law Managementsystem Claim"
+msgstr "Dokumenthanteringssystem Krav"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law__document_page_ids
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__document_page_id
+msgid "Document Page"
+msgstr "Dokument Sida"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__name
+msgid "Document Page Law"
+msgstr "Dokument Sida Lag"
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_document_law_mgmtsystem_claim
+msgid "Glue model between document.law and mgmtsystem.claim"
+msgstr "Modell för limning mellan document.law och mgmtsystem.claim"
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_document_page_law
+msgid "Glue model between document.page and document.law"
+msgstr "Limmodell mellan document.page och document.law"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law__mgmtsystem_hazard_ids
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Hazards"
+msgstr "Faror"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__id
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim____last_update
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law____last_update
+msgid "Last Modified on"
+msgstr "Senast ändrad den"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__write_uid
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__write_uid
+msgid "Last Updated by"
+msgstr "Senast uppdaterad av"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__write_date
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_page_law__write_date
+msgid "Last Updated on"
+msgstr "Senast uppdaterad den"
+
+#. module: mgmtsystem_law
+#: model:ir.ui.menu,name:mgmtsystem_law.menu_mgmtsystem_manuals_manuals
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.mgmtsystem_claims_form_view
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_wiki_form
+msgid "Laws"
+msgstr "Lagar"
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Manual/Policy"
+msgstr "Manual/Policy"
+
+#. module: mgmtsystem_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_form
+msgid "Manuls/Policys"
+msgstr "Manuls/Policys"
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law_mgmtsystem_claim__mgmtsystem_claim_id
+msgid "Mgmtsystem Claim"
+msgstr "Krav på hanteringssystem"
+
+#. module: mgmtsystem_law
+#: model_terms:ir.actions.act_window,help:mgmtsystem_law.action_laws
+msgid "No laws at the moment."
+msgstr "Inga lagar för närvarande."
+
+#. module: mgmtsystem_law
+#: model:ir.model.fields,field_description:mgmtsystem_law.field_document_law__system_id
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law.view_law_filter
+msgid "System"
+msgstr "System"
+
+#. module: mgmtsystem_law
+#: model:ir.actions.act_window,name:mgmtsystem_law.action_laws
+msgid "mgmtsystem.law.action"
+msgstr "mgmtsystem.lag.åtgärd"
+
+#. module: mgmtsystem_law
+#: model:ir.model,name:mgmtsystem_law.model_document_law
+msgid "scaffold_test.scaffold_test"
+msgstr "ställnings_test.ställnings_test"
