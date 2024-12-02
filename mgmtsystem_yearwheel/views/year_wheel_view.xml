@@ -5,7 +5,7 @@
             <field name="name">year.wheel.view.form</field>
             <field name="model">year.wheel</field>
             <field name="arch" type="xml">
-                <form string="Management Year Wheel" create="false">
+                <form string="Management Year Wheel">
                     <sheet>
                         <div name="button_box" class="oe_button_box">
                             <button name="action_view_activities" class="oe_stat_button" icon="fa-tasks" type="object">
@@ -18,8 +18,10 @@
 
                         <group>
                             <group>
-                                <field name="res_model_id" />
-                                <field name="res_model" />
+                                <field name="resource_ref" />
+                                <field name="res_model_id" invisible="1" />
+                                <field name="res_model"/>
+
                                 <field name="res_id" />
                                 <field name="activity_type_id" required="1" options="{'no_create': True, 'no_open': True}"/>
                                 <field name="summary" placeholder="e.g. Discuss proposal"/>
@@ -57,7 +59,7 @@
             <field name="name">year.wheel.view.tree</field>
             <field name="model">year.wheel</field>
             <field name="arch" type="xml">
-                <tree create="false" duplicate="false">
+                <tree>
                     <field name="res_model" />
                     <field name="start_date"/>
                     <field name="end_date"/>
