@@ -19,51 +19,48 @@ class YearWheel(models.Model):
     _rec_name = 'summary'
 
     @api.model
+    def _selection_target_model(self):
+        return [(model.model, model.name) for model in self.env['ir.model'].sudo().search([])]
+
+    @api.model
     def default_get(self, fields):
         res = super(YearWheel, self).default_get(fields)
         if not fields or 'res_model_id' in fields and res.get('res_model'):
             res['res_model_id'] = self.env['ir.model']._get(res['res_model']).id
         return res
 
-    @api.model
-    def _default_activity_type(self):
-        default_vals = self.default_get(['res_model_id', 'res_model'])
-        if not default_vals.get('res_model_id'):
-            return False
+    @api.depends('res_model_id')
+    def _compute_resource_ref(self):
+        for rec in self:
+            if rec.res_model_id:
+                rec.resource_ref = '%s,%s' % (self.res_model, self.res_id)
+            else:
+                rec.resource_ref = False
 
-        current_model = self.env["ir.model"].sudo().browse(default_vals['res_model_id']).model
-        return self._default_activity_type_for_model(current_model)
+    @api.onchange('resource_ref')
+    def onchange_resource_ref(self):
+        if self.resource_ref:
+            self.res_id = self.resource_ref.id
+            self.res_model_id = self.env['ir.model'].search([('model', '=', self.resource_ref._name)], limit=1).id,
 
-    @api.model
-    def _default_activity_type_for_model(self, model):
-        todo_id = self.env['ir.model.data']._xmlid_to_res_id('mail.mail_activity_data_todo', raise_if_not_found=False)
-        activity_type_todo = self.env['mail.activity.type'].browse(todo_id) if todo_id else self.env[
-            'mail.activity.type']
-        if activity_type_todo and activity_type_todo.active and \
-                (activity_type_todo.res_model == model or not activity_type_todo.res_model):
-            return activity_type_todo
-        activity_type_model = self.env['mail.activity.type'].search([('res_model', '=', model)], limit=1)
-        if activity_type_model:
-            return activity_type_model
-        activity_type_generic = self.env['mail.activity.type'].search([('res_model', '=', False)], limit=1)
-        return activity_type_generic
-
-    # owner
     res_model_id = fields.Many2one(
         'ir.model', 'Document Model',
         index=True, ondelete='cascade', required=True)
     res_model = fields.Char(
         'Related Document Model',
         index=True, related='res_model_id.model', compute_sudo=True, store=True, readonly=True)
+    resource_ref = fields.Reference(string='Record Reference',
+                                    selection=_selection_target_model,
+                                    compute=_compute_resource_ref, readonly=False, required=True)
     res_id = fields.Many2oneReference(string='Related Document ID', index=True, model_field='res_model')
     res_name = fields.Char(
         'Document Name', compute='_compute_res_name', compute_sudo=True, store=True,
         readonly=True)
-    # activity
+
     activity_type_id = fields.Many2one(
         'mail.activity.type', string='Activity Type',
         domain="['|', ('res_model', '=', False), ('res_model', '=', res_model)]", ondelete='restrict',
-        default=_default_activity_type)
+        )
 
     summary = fields.Char('Summary')
     note = fields.Html('Note', sanitize_style=True)
@@ -173,3 +170,24 @@ class YearWheel(models.Model):
             'year_wheel_id': self.id
         }
         return next_activities_values
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for val in vals_list:
+            if val.get('start_date') > val.get('end_date'):
+                raise ValidationError(_('This wheel has already ended before it could even start'))
+        res = super(YearWheel, self).create(vals_list)
+        for rec in res:
+            rec.action_create_year_wheel_activity()
+        return res
+
+    def write(self, vals):
+        res = super(YearWheel, self).write(vals)
+        if self.start_date > self.end_date:
+            raise ValidationError(_('This wheel has already ended before it could even start'))
+        return res
+
+    @api.onchange('start_date', 'interval', 'time_unit')
+    def onchange_start_date(self):
+        self.next_activity_date = self.start_date
+
