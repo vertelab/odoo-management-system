@@ -35,7 +35,7 @@
     'website': 'https://vertel.se/apps/odoo-',
     'images': ['static/description/banner.png'], 
     'license': 'AGPL-3',
-    'depends': ["project", "mgmtsystem_claim","mgmtsystem_nonconformity"],
+    'depends': ["project", "helpdesk_mgmt_project", "mgmtsystem_claim","mgmtsystem_nonconformity"],
     'data': ["views/project_task.xml", "views/mgmtsystem_claim.xml", "views/mgmtsystem_nonconformity.xml"],
     'demo': [],
     'application': False,
