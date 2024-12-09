@@ -9,6 +9,7 @@
             <form string="Add Law">
                 <group>
                     <field name="law_designation" placeholder="1976:580"/>
+                    <field name="law_link" widget="url" string="Link" />
                 </group>
                 <footer>
                     <button name="add_law" string="Add Law" type="object"/>
