@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <form string="Add Law">
                 <group>
-                    <field name="law_designation"/>
+                    <field name="law_designation" placeholder="1976:580"/>
                 </group>
                 <footer>
                     <button name="add_law" string="Add Law" type="object"/>
