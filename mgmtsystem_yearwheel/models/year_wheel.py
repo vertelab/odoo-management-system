@@ -33,7 +33,7 @@ class YearWheel(models.Model):
     def _compute_resource_ref(self):
         for rec in self:
             if rec.res_model_id:
-                rec.resource_ref = '%s,%s' % (self.res_model, self.res_id)
+                rec.resource_ref = '%s,%s' % (rec.res_model, rec.res_id)
             else:
                 rec.resource_ref = False
 
