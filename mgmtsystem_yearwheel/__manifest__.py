@@ -32,11 +32,12 @@
     'website': 'https://vertel.se/apps/odoo-',
     'images': ['static/description/banner.png'],  # 560x280
     'license': 'AGPL-3',
-    'depends': ["mgmtsystem", "mail"],
+    'depends': ["mgmtsystem", "mail", "mgmtsystem_audit"],
     'data': [
         "views/year_wheel_view.xml",
         "wizard/year_wheel_wizard_view.xml",
         "views/menu_view.xml",
+        "views/mgmtsystem_audit_view.xml",
         "data/ir_cron.xml",
         "security/ir.model.access.csv"
     ],
