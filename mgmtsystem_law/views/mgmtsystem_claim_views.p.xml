@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+    
+        <record id="mgmtsystem_claims_form_view" model="ir.ui.view">
+            <field name="name">mgmtsystem_claims_form_view</field>
+            <field name="model">mgmtsystem.claim</field>
+            <field name="inherit_id" ref="mgmtsystem_claim.mgmtsystem_claims_form_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="laws" string="Laws">
+                        <field name="document_law_ids">
+                        <!-- #if VERSION >= "18.0" -->
+                            <list editable="bottom" string="Laws">
+                                <field name="document_law_id"/>
+                            </list>
+                        <!-- #elif VERSION < "18.0" -->
+                            <tree editable="bottom" string="Laws">
+                                <field name="document_law_id"/>
+                            </tree>
+                        <!-- #endif -->   
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mgmtsystem_claims_tree_view" model="ir.ui.view">
+            <field name="name">mgmtsystem_claims_tree_view</field>
+            <field name="model">mgmtsystem.claim</field>
+            <field name="inherit_id" ref="mgmtsystem_claim.mgmtsystem_claims_tree_view"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="stage_id" position="after">
+                    <field name="document_law_ids" widget="many2many_tags" optional="hide"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

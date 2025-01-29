@@ -41,6 +41,9 @@
         'mgmtsystem_manual',
         "mgmtsystem_action",
         "mgmtsystem_hazard"
+        # #if VERSION == "16.0"
+        "mgmtsystem_claim",
+        # #endif 
     ],
     'data': 
     [
@@ -48,6 +51,9 @@
         'views/document_law.xml', 
         'views/mgmtsystem.xml', 
         'views/document_page.xml',
+        # #if VERSION == "16.0"
+        'views/mgmtsystem_claim_views.xml'
+        # #endif 
     ], 
     'demo': [],
     'application': False,
