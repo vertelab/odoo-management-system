@@ -36,11 +36,12 @@
     'website': 'https://vertel.se/apps/odoo-management-system',
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',
-    'depends': ["mgmtsystem_law"],
-     "external_dependencies": {
-       "python": ["langchain", "langchain-openai","langchain_mistralai"],
-     },
-    'data': ["views/res_company_views.xml", "views/document_law_views.xml"],
+    'depends': ["mgmtsystem_law", "ai_agent"],
+    'data': 
+    [
+        "data/ai_data.xml", 
+        "views/document_law_views.xml"
+    ],
     'demo': [],
     'application': False,
     'installable': True,    
