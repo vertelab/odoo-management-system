@@ -7,9 +7,9 @@
       <field name="inherit_id" ref="document_law.view_law_tree"/>
       <field name="arch" type="xml">
         <field name="company_id" position="after">
-          <field name="system_id" />
+          <field name="system_id"/>
           <field name="document_page_ids" widget="many2many_tags" optional="hide"/>
-          <field name="mgmtsystem_claim_ids" widget="many2many_tags" optional="hide"/>
+          <!-- <field name="mgmtsystem_claim_ids" widget="many2many_tags" optional="hide"/> -->
         </field>
       </field>
     </record>
@@ -25,23 +25,23 @@
         </field>
 
         <page name="info" position="after">
-          <page name="manul/policy" string="Manual/Policy" attrs="{'invisible': [('document_page_ids','=', False )]}">
+          <page name="manul/policy" string="Manual/Policy" invisible="not document_page_ids">
             <field name="document_page_ids">
-              <tree editable="bottom" string="Manuls/Policys">
+              <list editable="bottom" string="Manuls/Policys">
                 <field name="document_page_id" domain="[('parent_id','=',%(mgmtsystem_manual.manuals)d)]"/>
-              </tree>
+              </list>
             </field>
           </page>
-          <page name="claim" string="Claims">
+          <!-- <page name="claim" string="Claims">
             <field name="mgmtsystem_claim_ids" string="Claims">
-              <tree editable="bottom" string="Claims">
+              <list editable="bottom" string="Claims">
                 <field name="mgmtsystem_claim_id"/>
-              </tree>
+              </list>
             </field>
-          </page>
+          </page> -->
           <page name="action" string="Actions">
             <field name="mgmtsystem_action_ids" string="Actions">
-              <tree>
+              <list>
                 <field name="name"/>
                 <field name="type_action"/>
                 <field name="user_id"/>
@@ -50,14 +50,14 @@
                 <field name="description"/>
                 <field name="system_id"/>
                 <field name="tag_ids"/>
-              </tree>
+              </list>
             </field>
           </page>
           <page name="hazard" string="Hazards">
             <field name="mgmtsystem_hazard_ids" string="Hazards">
-              <tree>
+              <list>
                 <field name="name"/>
-              </tree>
+              </list>
             </field>
           </page>
         </page>
@@ -71,14 +71,14 @@
       <field name="inherit_id" ref="document_law.view_law_filter"/>
       <field name="arch" type="xml">
         <field name="rss_titel" position="after">
-          <field name="system_id" />
+          <field name="system_id"/>
         </field>
         <field name="stage" position="replace">
-          <field name="system_id" icon="fa-folder" string="System" enable_counters="1" />
+          <field name="system_id" icon="fa-folder" string="System" enable_counters="1"/>
           <!-- <field name="document_page_id" icon="fa-folder" string="Manual" enable_counters="1"/> -->
         </field>
         <filter name="group_by_stage" position="before">
-          <filter name="group_by_system" string="System" context="{'group_by':'system_id'}" />
+          <filter name="group_by_system" string="System" context="{'group_by':'system_id'}"/>
         </filter>
       </field>
     </record>
@@ -86,9 +86,9 @@
     <record model="ir.actions.act_window" id="action_laws">
       <field name="name">mgmtsystem.law.action</field>
       <field name="res_model">document.law</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">list,form</field>
       <field name="view_id" ref="mgmtsystem_law.view_law_tree"/>
-      <field name="search_view_id" ref="mgmtsystem_law.view_law_filter" />
+      <field name="search_view_id" ref="mgmtsystem_law.view_law_filter"/>
       <field name="help">No laws at the moment.</field>
       <!--
       <field name="domain" eval="[('company_id','=',uid.company_id)]" />
@@ -96,4 +96,4 @@
     </record>
 
   </data>
-</odoo> 
+</odoo>

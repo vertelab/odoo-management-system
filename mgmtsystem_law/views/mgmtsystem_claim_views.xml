@@ -10,9 +10,9 @@
                 <xpath expr="//notebook" position="inside">
                     <page name="laws" string="Laws">
                         <field name="document_law_ids">
-                            <tree editable="bottom" string="Laws">
+                            <list editable="bottom" string="Laws">
                                 <field name="document_law_id"/>
-                            </tree>
+                            </list>
                         </field>
                     </page>
                 </xpath>
