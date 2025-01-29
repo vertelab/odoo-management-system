@@ -1,0 +1,56 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="ai_quest_law_summary" model="ai.quest">
+            <field name="name">Law Summary</field>
+            <field name="ai_type">law_summary</field>
+            <field name="init_type">server-action</field>
+            <field name="code">
+for record in records:
+    session = self.env['ai.quest.session'].quest_init(self)
+    response = quest.build_graph(message=record.rss_text,session=session).invoke({"messages": [HumanMessage(content=record.rss_text)]})
+    ai_message = quest.get_last_ai_message_content(response)
+    record.write({"ai_policy": ai_message})
+            </field>
+            <field name="model_id" ref="mgmtsystem_law_ai_summary.model_document_law" />
+            <field name="description">We have a lot of laws in a database. With the help of an agent, create a summary for the end user. The summary should be relevant to the company information you have gotten. If you haven't gotten any company information, just do a normal summary.</field>
+        </record>
+
+        <record id="ai_agent_law_summary_supervisor" model="ai.agent">
+            <field name="name">Law Summary Supervisor</field>
+            <field name="ai_role">You are a ai agent supervisor</field>
+            <field name="ai_goal">The goal is to give a summary of a law through the help of an agent.</field>
+            <field name="ai_backstory">
+Your job is to supervise agents in order to create summaries of laws for one or more end users.
+            </field>
+            <field name="ai_prompt_template">
+{message}
+            </field>
+            <field name="ai_type">law_summary</field>
+        </record>
+
+        <record id="ai_agent_law_summary_agent" model="ai.agent">
+            <field name="name">Law Summary Agent</field>
+            <field name="ai_role">You are a ai agent who is a expert on laws</field>
+            <field name="ai_goal">Your job is to take the law given to you by your supervisor and create a summary. The summary should be relevant to the company information you have gotten. If you haven't gotten any company information, just do a normal summary.</field>
+            <field name="ai_backstory">
+You where created in order to create summaries of laws given to you by your supervisor
+            </field>
+            <field name="ai_prompt_template">
+{message}
+            </field>
+            <field name="ai_type">law_summary</field>
+        </record>
+
+        <record id="ai_quest_agent_law_supervisor" model="ai.quest.agent">
+            <field name="ai_quest_id" ref="ai_quest_law_summary"/>
+            <field name="ai_agent_id" ref="ai_agent_law_summary_supervisor"/>
+        </record>
+
+        <record id="ai_quest_agent_law_summary_agent" model="ai.quest.agent">
+            <field name="ai_quest_id" ref="ai_quest_law_summary"/>
+            <field name="ai_agent_id" ref="ai_agent_law_summary_agent"/>
+        </record>
+
+    </data>
+</odoo>

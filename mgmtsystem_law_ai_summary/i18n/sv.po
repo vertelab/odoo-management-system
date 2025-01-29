@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_law_ai_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20241127\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 12:57+0000\n"
+"PO-Revision-Date: 2024-11-28 14:09+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mgmtsystem_law_ai_summary
+#. odoo-python
+#: code:addons/mgmtsystem_law_ai_summary/models/document_law.py:0
+#, python-format
+msgid ""
+"\n"
+"        {context}\n"
+"\n"
+"        ---\n"
+"\n"
+"        The context above is a description and summary of a company. And below is a law. Give a summary of the law and whether it is applicable to this company and its business.\n"
+"\n"
+"        ---\n"
+"        \n"
+"        {law}\n"
+"\n"
+"        ---\n"
+"        Answer: \n"
+"        "
+msgstr ""
+"\n"
+"        {context}\n"
+"\n"
+"        ---\n"
+"\n"
+"        Kontexten ovan är en beskrivning och sammanfattning av ett företag. Och nedan är en lag. Ge en sammanfattning av lagen och om den är tillämplig på detta bolag och dess verksamhet.\n"
+"\n"
+"        ---\n"
+"        \n"
+"        {law}\n"
+"\n"
+"        ---\n"
+"        Svar:\n"
+"        "
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_res_company__ai_api_key
+msgid "Ai Api Key"
+msgstr "Ai Api Nyckel"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_res_company__ai_company_context
+msgid "Ai Company Context"
+msgstr "Ai Företag Kontext"
+
+#. module: mgmtsystem_law_ai_summary
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law_ai_summary.view_company_form_rss_url
+msgid "Ai Law Context"
+msgstr "Ai Lagtext"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_res_company__ai_model
+msgid "Ai Model"
+msgstr "Ai Modell"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_document_law__ai_policy
+msgid "Ai Policy"
+msgstr "Ai Policy"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields.selection,name:mgmtsystem_law_ai_summary.selection__res_company__ai_model__chatgpt
+msgid "ChatGPT"
+msgstr "ChattGPT"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.actions.server,name:mgmtsystem_law_ai_summary.action_ai_law_summary
+msgid "Create Law Summary"
+msgstr "Skapa lagsammanfattning"
+
+#. module: mgmtsystem_law_ai_summary
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law_ai_summary.view_law_form
+msgid "Main Document"
+msgstr "Huvuddokument"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields.selection,name:mgmtsystem_law_ai_summary.selection__res_company__ai_model__mistral
+msgid "Mistral"
+msgstr "Mistral"
+
+#. module: mgmtsystem_law_ai_summary
+#. odoo-python
+#: code:addons/mgmtsystem_law_ai_summary/models/document_law.py:0
+#, python-format
+msgid "No company context for ai"
+msgstr "Inget bolagskontext för ai"
+
+#. module: mgmtsystem_law_ai_summary
+#. odoo-python
+#: code:addons/mgmtsystem_law_ai_summary/models/document_law.py:0
+#, python-format
+msgid "Pleass add a api key for your llm."
+msgstr "Var snäll och lägg till en api-nyckel för din llm."
+
+#. module: mgmtsystem_law_ai_summary
+#. odoo-python
+#: code:addons/mgmtsystem_law_ai_summary/models/document_law.py:0
+#, python-format
+msgid "Pleass selecte a llm on your company."
+msgstr "Vänligen välj en llm på ditt företag."
+
+#. module: mgmtsystem_law_ai_summary
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law_ai_summary.view_law_form
+msgid "e.g. Once upon a time..."
+msgstr "t.ex. En gång i tiden..."
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model,name:mgmtsystem_law_ai_summary.model_document_law
+#: model:ir.model,name:mgmtsystem_law_ai_summary.model_res_company
+msgid "scaffold_test.scaffold_test"
+msgstr "scaffold_test.scaffold_test"
