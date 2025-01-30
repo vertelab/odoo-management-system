@@ -5,12 +5,21 @@
             <field name="name">mgmtsystem.nonconformity.qr.tree</field>
             <field name="model">mgmtsystem.nonconformity.qr</field>
             <field name="arch" type="xml">
+                <!-- #if VERSION >= "18.0" -->
+                <list>
+                    <field name="system_id"/>
+                    <field name="department_id"/>
+                    <field name="responsible_user_id"/>
+                    <field name="manager_user_id"/>
+                </list>
+                <!-- #elif VERSION < "18.0" -->
                 <tree>
                     <field name="system_id"/>
                     <field name="department_id"/>
                     <field name="responsible_user_id"/>
                     <field name="manager_user_id"/>
                 </tree>
+                <!-- #endif -->
             </field>
         </record>
 
@@ -40,7 +49,11 @@
         <record id="action_mgmtsystem_nonconformity_action" model="ir.actions.act_window">
             <field name="name">Nonconformity QR</field>
             <field name="res_model">mgmtsystem.nonconformity.qr</field>
+            <!-- #if VERSION >= "18.0" -->
+            <field name="view_mode">list,form</field>
+            <!-- #elif VERSION < "18.0" -->
             <field name="view_mode">tree,form</field>
+            <!-- #endif -->
         </record>
 
         <menuitem id="action_mgmtsystem_nonconformity_menu" action="action_mgmtsystem_nonconformity_action" parent="mgmtsystem.menu_mgmtsystem_configuration" sequence="1"/>
