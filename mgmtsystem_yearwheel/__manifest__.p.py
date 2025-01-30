@@ -36,13 +36,21 @@
         [
             "mgmtsystem", 
             "mail",
+            # #if VERSION >= "18.0"
+            #"mgmtsystem_audit"
+            # #elif VERSION < "18.0"
             "mgmtsystem_audit"
+            # #endif
         ],
     'data': [
         "views/year_wheel_view.xml",
         "wizard/year_wheel_wizard_view.xml",
         "views/menu_view.xml",
+        # #if VERSION >= "18.0"
+        #"views/mgmtsystem_audit_view.xml",
+        # #elif VERSION < "18.0"
         "views/mgmtsystem_audit_view.xml",
+        # #endif
         "data/ir_cron.xml",
         "security/ir.model.access.csv"
     ],
