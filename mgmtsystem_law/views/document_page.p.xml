@@ -7,11 +7,21 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <page name="info" position="after">
+                <!-- #if VERSION >= "17.0" -->
+                    <page name="laws" string="Laws" invisible="parent_id != %(mgmtsystem_manual.manuals)d">
+                <!-- #elif VERSION < "17.0" -->
                     <page name="laws" string="Laws" attrs="{'invisible': [('parent_id','!=',%(mgmtsystem_manual.manuals)d)]}">
+                <!-- #endif -->
                         <field name="document_law_ids">
+                        <!-- #if VERSION >= "18.0" -->
+                            <list editable="bottom" string="Laws">
+                                <field name="document_law_id"/>
+                            </list>
+                        <!-- #elif VERSION < "18.0" -->
                             <tree editable="bottom" string="Laws">
                                 <field name="document_law_id"/>
                             </tree>
+                        <!-- #endif -->                          
                         </field>
                     </page>
                 </page>
@@ -22,7 +32,11 @@
             <field name="name">document.page.tree.inherrit</field>
             <field name="model">document.page</field>
             <field name="inherit_id" ref="document_page.view_wiki_tree"/>
+        <!-- #if VERSION >= "18.0" -->
+            <field name="type">list</field>
+        <!-- #elif VERSION < "18.0" -->
               <field name="type">tree</field>
+        <!-- #endif -->                          
             <field name="arch" type="xml">
                 <field name="content_date" position="after">
                     <field name="document_law_ids" widget="many2many_tags" optional="hide"/>
