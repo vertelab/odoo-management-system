@@ -40,7 +40,7 @@
         'document_law',
         'mgmtsystem_manual',
         "mgmtsystem_action",
-        "mgmtsystem_hazard"
+        "mgmtsystem_hazard",
     ],
     'data': 
     [
