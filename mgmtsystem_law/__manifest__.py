@@ -40,7 +40,7 @@
         'document_law',
         'mgmtsystem_manual',
         "mgmtsystem_action",
-        "mgmtsystem_hazard"
+        "mgmtsystem_hazard",
         "mgmtsystem_claim",
     ],
     'data': 
@@ -49,7 +49,7 @@
         'views/document_law.xml', 
         'views/mgmtsystem.xml', 
         'views/document_page.xml',
-        'views/mgmtsystem_claim_views.xml'
+        'views/mgmtsystem_claim_views.xml',
     ], 
     'demo': [],
     'application': False,
