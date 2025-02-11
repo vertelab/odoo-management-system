@@ -26,7 +26,7 @@
     'version': '1.0',
     'summary': """
         Makes it possible to add laws from the website lagen.nu to the Management System Law module.
-31
+32
     """,
     'category': '', # Technical Settings|Localization|Payroll Localization|Account Charts|User types|Invoicing|Sales|Human Resources|Operations|Marketing|Manufacturing|Website|Theme|Administration|Appraisals|Sign|Helpdesk|Administration|Extra Rights|Other Extra Rights|
     'description': """
