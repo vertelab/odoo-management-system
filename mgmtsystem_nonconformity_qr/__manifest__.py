@@ -35,7 +35,7 @@
     'contributor': '',
     'maintainer': 'Vertel AB',
     'repository': 'https://github.com/vertelab/odoo-management-system',
-    'depends': ['mgmtsystem', 'mgmtsystem_nonconformity'],
+    'depends': ['mgmtsystem', 'mgmtsystem_nonconformity','website'],
     'data': [
         'views/nonconformity_qr_view.xml',
         'views/templates.xml',
