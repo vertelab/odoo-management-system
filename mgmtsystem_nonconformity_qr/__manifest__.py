@@ -39,7 +39,8 @@
     'data': [
         'views/nonconformity_qr_view.xml',
         'views/templates.xml',
-        'security/ir.model.access.csv'
+        'views/res_config.xml',
+        'security/ir.model.access.csv',
     ],
     'application': False,
     'installable': True,
