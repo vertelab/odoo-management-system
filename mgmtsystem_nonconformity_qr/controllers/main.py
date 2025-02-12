@@ -28,7 +28,7 @@ class NonConformity(http.Controller):
         nonconformity_qr_id = request.env['mgmtsystem.nonconformity.qr'].browse(nonconformity_qr_id).exists()
         if not nonconformity_qr_id:
             raise NotFound("No Record Found")
-        self._check_user_impersonification(nonconformity_qr_id=nonconformity_qr_id)
+        #self._check_user_impersonification(nonconformity_qr_id=nonconformity_qr_id)
 
         extra_vals = {}
 
@@ -38,7 +38,7 @@ class NonConformity(http.Controller):
                 nonconformity_id = request.env['mgmtsystem.nonconformity'].create({
                     **kw,
                     'origin_ids': nonconformity_qr_id.origin_ids.ids,
-                    'user_id': nonconformity_qr_id.responsible_user_id.id,
+                    'user_id': request.env.user.id,
                     'system_id': nonconformity_qr_id.system_id.id,
                     'manager_user_id': nonconformity_qr_id.manager_user_id.id,
                     'department_id': nonconformity_qr_id.department_id.id,

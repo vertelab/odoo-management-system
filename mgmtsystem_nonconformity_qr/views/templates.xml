@@ -22,7 +22,7 @@
                                 <form t-att-action="'/nonconformity-qr/%s' %(nonconformity_qr.id)" enctype="multipart/form-data" method="post">
                                     <div class="row">
                                         <div t-attf-class="mb-3 col-lg-12">
-                                            <label class="col-form-label" for="name">Name</label>
+                                            <label class="col-form-label" for="name">Subject</label>
                                             <input type="text" name="name" t-attf-class="form-control" required="" />
                                         </div>
                                         <div class="w-100"/>
@@ -35,7 +35,7 @@
                                         <div class="w-100"/>
                                         <div t-attf-class="mb-3 col-lg-12">
                                             <label class="col-form-label" for="media">Image/Video</label>
-                                            <input type="file" name="media" t-attf-class="form-control" required="" multiple="multiple" />
+                                            <input type="file" name="media" t-attf-class="form-control" multiple="multiple" />
                                         </div>
                                     </div>
 
