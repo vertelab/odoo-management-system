@@ -35,7 +35,7 @@
                                         <div class="w-100"/>
                                         <div t-attf-class="mb-3 col-lg-12">
                                             <label class="col-form-label" for="media">Image/Video</label>
-                                            <input type="file" name="media" t-attf-class="form-control" multiple="multiple" capture="environment"> />
+                                            <input type="file" name="media" t-attf-class="form-control" multiple="multiple" capture="environment" />
                                         </div>
                                     </div>
 
