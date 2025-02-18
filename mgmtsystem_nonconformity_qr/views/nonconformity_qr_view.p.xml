@@ -29,6 +29,12 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div name="button_box" id="button_box" class="oe_button_box"/>
+                        <!-- #if VERSION <= "16.0" -->
+                        <field name="qr_code" widget="image" class="oe_avatar" attrs="{'invisible':[('qr_code', '=', False)]}"/>
+                        <!-- #else -->
+                        <field name="qr_code" widget="image" class="oe_avatar" invisible="qr_code == False"/>
+                        <!-- #endif -->
                         <group>
                             <group>
                                 <field name="system_id"/>
