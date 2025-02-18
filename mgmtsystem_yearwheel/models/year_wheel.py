@@ -20,7 +20,8 @@ class YearWheel(models.Model):
 
     @api.model
     def _selection_target_model(self):
-        return [(model.model, model.name) for model in self.env['ir.model'].sudo().search([])]
+        domain = [('transient', '=', False), ('is_mail_activity', '=', True)]
+        return [(model.model, model.name) for model in self.env['ir.model'].sudo().search(domain)]
 
     @api.model
     def default_get(self, fields):
@@ -45,10 +46,13 @@ class YearWheel(models.Model):
 
     res_model_id = fields.Many2one(
         'ir.model', 'Document Model',
-        index=True, ondelete='cascade', required=True)
+        index=True, ondelete='cascade', required=True,
+        domain=[('transient', '=', False), ('is_mail_activity', '=', True)])
+
     res_model = fields.Char(
         'Related Document Model',
         index=True, related='res_model_id.model', compute_sudo=True, store=True, readonly=True)
+
     resource_ref = fields.Reference(string='Record Reference',
                                     selection=_selection_target_model,
                                     compute=_compute_resource_ref, readonly=False, required=True)
@@ -60,17 +64,27 @@ class YearWheel(models.Model):
     activity_type_id = fields.Many2one(
         'mail.activity.type', string='Activity Type',
         domain="['|', ('res_model', '=', False), ('res_model', '=', res_model)]", ondelete='restrict',
-        )
+    )
 
     summary = fields.Char('Summary')
     note = fields.Html('Note', sanitize_style=True)
 
-    start_date = fields.Date('Start Date', index=True, required=True, default=fields.Date.context_today)
-    end_date = fields.Date('Due Date', index=True, required=True, default=fields.Date.context_today)
+    start_date = fields.Date('Wheel Start Date', index=True, required=True, default=fields.Date.context_today)
+    end_date = fields.Date('Wheel End Date', index=True, required=True, default=fields.Date.context_today)
 
-    next_activity_date = fields.Date('Next Date', index=True, required=True, default=fields.Date.context_today)
+    activity_due_in = fields.Integer('Activity Due In', default=1, store=True)
+    activity_due_interval = fields.Selection([
+        ('days', 'Days'),
+        ('weeks', 'Weeks'),
+        ('months', 'Months'),
+        ('years', 'Years')
+    ], default='days')
 
-    interval = fields.Integer(string="Interval", default=1, store=True)
+    next_wheel_date = fields.Date(
+        string='Next Wheel Date', readonly=True, store=True
+    )
+
+    interval = fields.Integer(string="Wheel Interval", default=1, store=True)
     time_unit = fields.Selection([
         ('days', 'Days'),
         ('weeks', 'Weeks'),
@@ -92,8 +106,8 @@ class YearWheel(models.Model):
             'name': 'Year Wheel Activities',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
-            'view_mode': 'list, form',
-            'views': [(False, 'list'), (False, 'form')],
+            'view_mode': 'tree, form',
+            'views': [(False, 'tree'), (False, 'form')],
             'domain': [('year_wheel_id', '=', self.id)]
         }
 
@@ -138,26 +152,31 @@ class YearWheel(models.Model):
         wheel_ids = self.env['year.wheel'].search([
             ('end_date', '>=', fields.Date.today()),
             ('start_date', '<=', fields.Date.today()),
-            ('next_activity_date', '=', fields.Date.today()),
+            ('next_wheel_date', '<=', fields.Date.today()),
         ])
         for wheel in wheel_ids:
-            mail_activity_id = self.env['mail.activity'].create(wheel.mail_activity_value())
-            if mail_activity_id:
-                wheel.next_activity_date = self._switch_time_unit(wheel)
+            while wheel.next_wheel_date < fields.Date.today():
+                mail_activity_id = self.env['mail.activity'].create(wheel.mail_activity_value())
+                if mail_activity_id:
+                    wheel.next_wheel_date = self._switch_time_unit(
+                        time_unit=wheel.time_unit, interval=wheel.interval, date_field=wheel.next_wheel_date
+                    )
 
-    def _switch_time_unit(self, wheel) -> relativedelta | date | datetime:
-        time_unit = wheel.time_unit
+    def _switch_time_unit(self, time_unit, interval, date_field) -> relativedelta | date | datetime:
         match time_unit:
             case "days":
-                return wheel.next_activity_date + relativedelta(days=wheel.interval)
+                return date_field + relativedelta(days=interval)
             case "weeks":
-                return wheel.next_activity_date + relativedelta(weeks=wheel.interval)
+                return date_field + relativedelta(weeks=interval)
             case "months":
-                return wheel.next_activity_date + relativedelta(months=wheel.interval)
+                return date_field + relativedelta(months=interval)
             case "years":
-                return wheel.next_activity_date + relativedelta(years=wheel.interval)
+                return date_field + relativedelta(years=interval)
 
     def mail_activity_value(self) -> dict[str, Any]:
+        date_deadline = self._switch_time_unit(
+            time_unit=self.activity_due_interval, interval=self.activity_due_in, date_field=self.next_wheel_date
+        )
         next_activities_values = {
             'activity_type_id': self.activity_type_id.id,
             'res_id': self.res_id,
@@ -166,7 +185,7 @@ class YearWheel(models.Model):
             'summary': self.summary,
             'note': self.note,
             'user_id': self.user_id.id,
-            'date_deadline': self.next_activity_date,
+            'date_deadline': date_deadline,
             'year_wheel_id': self.id
         }
         return next_activities_values
@@ -187,7 +206,9 @@ class YearWheel(models.Model):
             raise ValidationError(_('This wheel has already ended before it could even start'))
         return res
 
-    @api.onchange('start_date', 'interval', 'time_unit')
+    @api.onchange('start_date', 'interval', 'time_unit', 'next_wheel_date')
     def onchange_start_date(self):
-        self.next_activity_date = self.start_date
-
+        if not self.next_wheel_date:
+            self.next_wheel_date = self._switch_time_unit(
+                time_unit=self.time_unit, interval=self.interval, date_field=self.start_date
+            )

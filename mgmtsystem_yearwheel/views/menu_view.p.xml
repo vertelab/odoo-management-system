@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_view_year_wheel"
+            action="mgmtsystem_yearwheel.mgmtsystem_year_wheel_action"
+            parent="mgmtsystem.menu_mgmtsystem_main"
+            sequence="40"
+            groups="mgmtsystem.group_mgmtsystem_manager"
+        />
+
+    </data>
+</odoo>
