@@ -21,7 +21,9 @@ class NonConformityQR(models.Model):
     def _compute_url(self):
         base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
         for rec in self:
-            rec.url = f"{base_url}/nonconformity-qr/{rec.id}"
+            rec.url = False
+            if rec.id:
+            	rec.url = f"{base_url}/nonconformity-qr/{rec.id}"
 
     url = fields.Char(string="URL", compute=_compute_url)
 
