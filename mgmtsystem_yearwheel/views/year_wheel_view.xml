@@ -67,7 +67,6 @@
                     <field name="resource_ref" options="{'model_field': 'res_model_id', 'no_create': True}" invisible="not resource_ref"/>
                     <field name="res_model" optional="hide"/>
                     <field name="res_model_id" invisible="1"/>
-                     <field name="next_activity_date"/>
                      <field name="activity_type_id"/>
                      <field name="interval"/>
                      <field name="time_unit"/>
