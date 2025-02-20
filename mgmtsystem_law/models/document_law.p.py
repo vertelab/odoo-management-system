@@ -1,0 +1,20 @@
+import logging
+
+_logger = logging.getLogger(__name__)
+
+from odoo import models, fields, api
+from odoo.exceptions import UserError, ValidationError
+
+class DocumentLaw(models.Model):
+    _inherit = 'document.law'
+    _description = 'Adds connections to mgmtsystem modules for the document_law module.'
+
+    # #if VERSION != "18.0"
+    mgmtsystem_claim_ids = fields.One2many(comodel_name='document.law.mgmtsystem.claim', string="Claims", inverse_name="document_law_id")
+    # #endif
+    mgmtsystem_action_ids = fields.Many2many(comodel_name="mgmtsystem.action", string="Actions")
+    mgmtsystem_hazard_ids = fields.Many2many(comodel_name="mgmtsystem.hazard", string="Hazards")
+
+    document_page_ids = fields.One2many(comodel_name="document.page.law", inverse_name="document_law_id")
+    
+    system_id = fields.Many2one(comodel_name="mgmtsystem.system", string="System")
