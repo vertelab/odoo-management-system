@@ -8,12 +8,12 @@
       <field name="arch" type="xml">
 
         <field name="rss_html" position="replace">
-          <field name="rss_html" widget="html" placeholder="e.g. Once upon a time..." required="0" options="{'safe': True, 'codeview': True, 'collaborative': True}" invisible="ai_policy"/>
-          <field name="ai_policy" invisible="not ai_policy"/>
+          <field name="rss_html" widget="html" placeholder="e.g. Once upon a time..." required="0" options="{'safe': True, 'codeview': True, 'collaborative': True}" invisible="law_summary"/>
+          <field name="law_summary" invisible="not law_summary"/>
         </field>
 
         <page name="info" position="after">
-          <page name="main document" string="Main Document" invisible="not ai_policy">
+          <page name="main document" string="Main Document" invisible="not law_summary">
             <group>
               <group>
                 <field name="rss_html"/>
