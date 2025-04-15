@@ -15,18 +15,20 @@ class AIQuest(models.Model):
     
     def generate_summary(self,text):
         # Initialize the language model
-        llm = self.get_llm()
+        llm = self.ai_agent_ids[0].ai_agent_id.ai_agent_llm_id.get_llm()
         
         text_splitter = CharacterTextSplitter()
         texts = text_splitter.split_text(text)
         
         # Create Document objects
         docs = [Document(page_content=t) for t in texts]
-        
+                
         # Load the summarization chain
         chain = load_summarize_chain(llm, chain_type="map_reduce")
         
         # Generate the summary
-        summary = chain.run(docs)
+        summary = chain.invoke(docs)
         
-        return summary
+        _logger.error(f"{summary=}")
+        
+        return summary["input_documents"][0].page_content

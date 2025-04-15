@@ -7,9 +7,8 @@
             <field name="init_type">server-action</field>
             <field name="code">
 for record in records:
-    session = self.env['ai.quest.session'].quest_init(self)
-    response = quest.build(message=record.rss_text,session=session).invoke({"messages": [HumanMessage(content=record.rss_text)]})
-    ai_message = quest.get_last_ai_message_content(response)
+    response = agents[0].generate_summary(record.rss_text)
+    ai_message = markdown2html(quest.get_last_ai_message_content(response))
     record.write({"law_summary": ai_message})
             </field>
             <field name="model_id" ref="mgmtsystem_law_ai_summary.model_document_law" />
