@@ -1,21 +1,25 @@
 from odoo import models, fields, api
 
 
+INIT_TYPES = [
+    ('manual', 'Manual'),
+    ('mail', 'Mail'),
+    ('chat', 'Chat with User'),
+    ('channel', 'Chat with Channel'),
+    ('cron', 'Scheduled Action'),
+    ('server-action', 'Server Action'),
+    ('powerbox', 'Powerbox'),
+]
+
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
     needs = fields.Html(string="Needs")
     solution = fields.Html(string="Solution")
-    ai_capability = fields.Selection([
-        ('Visuellt', 'Visuellt'),
-        ('Audiellt', 'Audiellt'),
-        ('Språk', 'Språk'),
-        ('Robotik', 'Robotik'),
-        ('Upptäcka', 'Upptäcka'),
-        ('Prediktering', 'Prediktering'),
-        ('Optimera', 'Optimera'),
-        ('Skapande', 'Skapande'),
-    ], string="AI Capability")
+    ai_capability = fields.Many2many("ai.canvas.capability", string="AI Capability")
+    implementation_type = fields.Selection(
+        selection=INIT_TYPES, string='Implementation Type', required=True, default='manual'
+    )
 
 
     value = fields.Html(string="Value")
@@ -63,3 +67,8 @@ class ProjectTask(models.Model):
         return values
 
 
+class AICapability(models.Model):
+    _name = 'ai.canvas.capability'
+    _description = 'AI Canvas Capability'
+
+    name = fields.Char(string="Capability")

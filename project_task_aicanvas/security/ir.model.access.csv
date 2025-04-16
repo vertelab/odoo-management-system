@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+project_task_aicanvas.access_ai_canvas_capability,access_ai_canvas_capability,project_task_aicanvas.model_ai_canvas_capability,base.group_user,1,1,1,1

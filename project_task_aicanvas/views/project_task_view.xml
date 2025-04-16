@@ -30,7 +30,8 @@
                     <field name="solution" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="LÖSNING MED AI – Användningsfallsidé..." nolabel="1"/>
 
                     <group>
-                        <field name="ai_capability"/>
+                        <field name="ai_capability" widget="many2many_tags"/>
+                        <field name="implementation_type"/>
                     </group>
                 </page>
 

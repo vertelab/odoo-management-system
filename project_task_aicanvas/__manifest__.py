@@ -39,10 +39,13 @@
             "project",
         ],
     'data': [
+        'security/ir.model.access.csv',
         'views/project_task_view.xml',
         'views/project_project_view.xml',
+        'views/ai_canvas_capability_view.xml',
+        'data/ai_canva_capability.xml'
     ],
-    'demo': [],
+    'demo': [ ],
     'application': False,
     'installable': True,
     'auto_install': False,
