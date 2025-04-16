@@ -21,7 +21,8 @@
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
             <xpath expr="//page[last()]" position="after">
-                <page name="idea_generation" string="Idea Generation">
+                <page name="idea_generation" string="Idea Generation" invisible="not is_aicanvas">
+                    <field name="is_aicanvas" invisible="1"/>
                     <h1><label for="needs"/></h1>
                     <field name="needs" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Problem eller möjlighet..." nolabel="1"/>
 
@@ -33,7 +34,7 @@
                     </group>
                 </page>
 
-                <page name="evaluation" string="Evaluation">
+                <page name="evaluation" string="Evaluation" invisible="not is_aicanvas">
                     <h1><label for="value"/></h1>
                     <field name="value" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Add details about this task..." nolabel="1"/>
 

@@ -7,8 +7,15 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
+            <field name="label_tasks" position="before">
+                <div>
+                    <field name="is_aicanvas" class="oe_inline oe_input_align"/>
+                    <label for="is_aicanvas" class="oe_inline" string="AI Canvas"/>
+                </div>
+            </field>
+
             <xpath expr="//page[last()]" position="after">
-                <page name="project_task_ai_canvas" string="AI Canvas">
+                <page name="project_task_ai_canvas" string="AI Canvas" invisible="not is_aicanvas">
                     <field name="ai_canvas_swot_diagram" widget="mermaid" nolabel="1"/>
                 </page>
             </xpath>

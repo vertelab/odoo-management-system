@@ -12,6 +12,8 @@ _logger = logging.getLogger(__name__)
 class Project(models.Model):
     _inherit = "project.project"
 
+    is_aicanvas = fields.Boolean(string="AI Canvas", default=False, copy=False)
+
     def _get_ai_canvas_swot_diagram(self):
         for rec in self:
             # Get tasks with value and feasibility points set

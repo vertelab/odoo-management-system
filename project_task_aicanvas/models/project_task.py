@@ -23,17 +23,20 @@ class ProjectTask(models.Model):
         ('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'),
         ('6', '6'), ('7', '7'), ('8', '8'), ('9', '9'), ('10', '10'),
     ], string="Value Point", default=None, aggregator="max",
-        help="Värde (låg or hög)", group_expand='_read_group_value_point')
+        help="Värde (låg or hög) - 1 är lägst och 10 är högst", group_expand='_read_group_value_point')
 
     feasibility = fields.Html(string="Feasibility")
     feasibility_point= fields.Selection([
         ('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'),
         ('6', '6'), ('7', '7'), ('8', '8'), ('9', '9'), ('10', '10'),
     ], string="Feasibility", default=None, aggregator="max",
-        help="Genomförbarhet (svårt or lätt)", group_expand='_read_group_feasibility_point')
+        help="Genomförbarhet (svårt or lätt) - 1 är lättast och 10 är svårast",
+        group_expand='_read_group_feasibility_point'
+    )
 
     # Add coordinate field to store the calculated position in the diagram
     ai_canvas_coordinate = fields.Char(string="Coordinate", help="Coordinate position in the SWOT diagram")
+    is_aicanvas = fields.Boolean(string="AI Canvas", related="project_id.is_aicanvas", store=True)
 
     @api.model
     def _read_group_value_point(self, values, domain):
