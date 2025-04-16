@@ -60,6 +60,11 @@ class Project(models.Model):
                 else:
                     tasks_by_quadrant['y_low'].append(task)  # Low value
 
+                # Set priority based on quadrant
+                # IDEALA ANVÄNDNINGSFALL: High value, easy (y_high, x_low) - Priority 1 (highest)
+                if value >= threshold >= feasibility:
+                    task.priority = '1'  # High priority
+
             # Add coordinates to tasks
             for task in tasks_with_points:
                 # Convert value_point from 1-10 scale to 0-1 coordinate scale

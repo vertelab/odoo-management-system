@@ -67,6 +67,14 @@ class ProjectTask(models.Model):
         return values
 
 
+    def write(self, vals):
+        result = super(ProjectTask, self).write(vals)
+        # Check if value_point or feasibility_point changed and update the ai_canvas_swot_diagram if needed
+        if 'value_point' in vals or 'feasibility_point' in vals:
+            self.project_id._get_ai_canvas_swot_diagram()
+        return result
+
+
 class AICapability(models.Model):
     _name = 'ai.canvas.capability'
     _description = 'AI Canvas Capability'
