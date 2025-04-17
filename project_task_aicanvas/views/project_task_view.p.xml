@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inherit Search View -->
+    <record id="view_task_ai_canvas_search_form" model="ir.ui.view">
+        <field name="name">task.ai.canvas.search</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <filter name="stage" position="after">
+                <filter string="Feasibility Point" name="group_by_feasibility_point" context="{'group_by':'feasibility_point'}"/>
+                <filter string="Value Point" name="group_by_value_point" context="{'group_by':'value_point'}"/>
+            </filter>
+        </field>
+    </record>
+
+    <!-- Inherit Form View -->
+    <record id="view_task_canvas_form" model="ir.ui.view">
+        <field name="name">task.canvas.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page name="idea_generation" string="Idea Generation" invisible="not is_aicanvas">
+                    <field name="is_aicanvas" invisible="1"/>
+                    <h1><label for="needs"/></h1>
+                    <field name="needs" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Problem eller möjlighet..." nolabel="1"/>
+
+                    <h1><label for="solution"/></h1>
+                    <field name="solution" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="LÖSNING MED AI – Användningsfallsidé..." nolabel="1"/>
+
+                    <group>
+                        <field name="ai_capability" widget="many2many_tags"/>
+                        <field name="implementation_type"/>
+                    </group>
+                </page>
+
+                <page name="evaluation" string="Evaluation" invisible="not is_aicanvas">
+                    <h1><label for="value"/></h1>
+                    <field name="value" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Add details about this task..." nolabel="1"/>
+
+                    <group>
+                        <field name="value_point"/>
+                    </group>
+
+                    <h1><label for="feasibility"/></h1>
+                    <field name="feasibility" type="html" options="{'collaborative': true, 'resizable': false}" placeholder="Add details about this task..." nolabel="1"/>
+
+                    <group>
+                        <field name="feasibility_point"/>
+                        <field name="ai_canvas_coordinate" invisible="1"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
