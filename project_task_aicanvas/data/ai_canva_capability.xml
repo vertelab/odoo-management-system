@@ -1,0 +1,35 @@
+<odoo>
+    <data noupdate="1">
+        <record id="visuellt_capability" model="ai.canvas.capability">
+            <field name="name">Visuellt</field>
+        </record>
+
+        <record id="audiellt_capability" model="ai.canvas.capability">
+            <field name="name">Audiellt</field>
+        </record>
+
+        <record id="sprak_capability" model="ai.canvas.capability">
+            <field name="name">Språk</field>
+        </record>
+
+        <record id="robotik_capability" model="ai.canvas.capability">
+            <field name="name">Robotik</field>
+        </record>
+
+        <record id="upptackat_capability" model="ai.canvas.capability">
+            <field name="name">Upptäcka</field>
+        </record>
+
+        <record id="prediktering_capability" model="ai.canvas.capability">
+            <field name="name">Prediktering</field>
+        </record>
+
+        <record id="optimera_capability" model="ai.canvas.capability">
+            <field name="name">Optimera</field>
+        </record>
+
+        <record id="skapande_capability" model="ai.canvas.capability">
+            <field name="name">Skapande</field>
+        </record>
+    </data>
+</odoo>
