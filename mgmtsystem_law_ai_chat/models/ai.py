@@ -15,7 +15,7 @@ class AIQuestSession(models.Model):
     _inherit = 'ai.quest.session'
 
     ai_type = fields.Selection(
-        selection_add=[('mgmt-law-chat', 'Management Law')],
+        selection_add=[('mgmt-law-chat', 'Chat with Management Law')],
         ondelete={'mgmt-law-chat': 'cascade'}
     )
 
@@ -24,7 +24,7 @@ class AIAgent(models.Model):
     _inherit = "ai.agent"
 
     ai_type = fields.Selection(
-        selection_add=[('mgmt-law-chat', 'Management Law')],
+        selection_add=[('mgmt-law-chat', 'Chat with Management Law')],
         ondelete={'mgmt-law-chat': 'cascade'}
     )
 
@@ -34,15 +34,17 @@ class AIAgent(models.Model):
             document_law_id = self.env['document.law'].search([('ai_quest_id', '=', quest.id)], limit=1)
             if document_law_id:
                 res['Management Law Title'] = document_law_id.rss_titel
-                res['Management Law Content'] = document_law_id.rss_text
+                res['Management Law Content'] = document_law_id.rss_html
         return res
+
+
 
 
 class AIQuest(models.Model):
     _inherit = "ai.quest"
 
     ai_type = fields.Selection(
-        selection_add=[('mgmt-law-chat', 'Management Law')],
+        selection_add=[('mgmt-law-chat', 'Chat with Management Law')],
         ondelete={'mgmt-law-chat': 'cascade'}
     )
 
