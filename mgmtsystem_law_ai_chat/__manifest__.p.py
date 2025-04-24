@@ -37,13 +37,12 @@
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_law", "ai_agent"],
-    'data': 
-    [
+    'data': [
         'data/ai_agent_data.xml',
+        'data/ai_quest_data.xml',
     ],
     'demo': [],
     'application': False,
     'installable': True,    
     'auto_install': False,
-    #"post_init_hook": "post_init_hook",
 }
