@@ -41,6 +41,7 @@
         'data/ai_agent_data.xml',
         'data/ai_quest_data.xml',
     ],
+    'demo': [],
     'application': False,
     'installable': True,    
     'auto_install': False,
