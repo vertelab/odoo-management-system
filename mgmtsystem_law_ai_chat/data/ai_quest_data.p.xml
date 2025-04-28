@@ -1,0 +1,18 @@
+<odoo>
+    <data noupdate="1">
+        <record id="ai_agent_mgmt_law_quest" model="ai.quest">
+            <field name="name">Law Quest</field>
+            <field name="ai_type">mgmt-law-chat</field>
+            <field name="sub_description">Law Quest</field>
+            <field name="init_type">channel</field>
+            <field name="description">Law Quest is your intelligent legal companion powered by an AI agent trained specifically on management laws.
+Whether you're a student, professional, or curious mind, Law Quest simplifies legal concepts and answers your questions in real-time.
+Just ask, and our smart agent delivers accurate, concise, and understandable responses—no legal jargon, just clarity.
+            </field>
+            <field name="ai_agent_ids" model="ai.quest.agent" eval="[(0, 0, {
+                'ai_agent_id': ref('mgmtsystem_law_ai_chat.ai_agent_mgmt_law_agent'),
+            })]"/>
+            <field name="code">result = quest.build(session=session,message=message_body).invoke(message_invoke)</field>
+        </record>
+    </data>
+</odoo>
