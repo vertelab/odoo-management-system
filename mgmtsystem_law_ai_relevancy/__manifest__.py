@@ -40,6 +40,7 @@
     'data': 
     [
         "data/ai_data.xml", 
+        "data/cron.xml",
         "views/document_law_views.xml"
     ],
     'demo': [],
