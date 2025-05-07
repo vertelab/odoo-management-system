@@ -3,7 +3,8 @@
         <record id="ai_agent_mgmt_law_memory" model="ai.memory">
             <field name="name">Law Memory</field>
             <field name="vector_type">faiss</field>
-            <field name="memory_type">model</field><field name="ai_agent_llm_id" eval="[(4, ref('ai_agent.model_document_law'))]"/>
+            <field name="memory_type">model</field>
+            <field name="ai_agent_llm_id" eval="[(4, ref('ai_agent.model_document_law'))]"/>
         </record>
     </data>
 </odoo>
