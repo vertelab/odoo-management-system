@@ -1,0 +1,43 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="ai_quest_law_relevancy" model="ai.quest">
+            <field name="name">Law Relevancy</field>
+            <field name="ai_type">law_relevancy</field>
+            <field name="init_type">server-action</field>
+            <field name="code">
+if records:
+    for record in records:
+        result = quest.build(session=session,message=record.rss_text).invoke({"messages": [HumanMessage(content=record.rss_text)]})
+        if result:
+            answer = quest.get_last_ai_message_content(result)
+            dicts = quest.extract_dicts(answer)
+            if dicts:
+                record.write({'stage': 'done'})
+                if str(dicts[0].get("relevant")).lower() == "false":
+                    record.write({'active': False})
+                record.message_post( body=dicts[0].get("reason"), subtype_xmlid='mail.mt_note', message_type='comment')
+            </field>
+            <field name="model_id" ref="mgmtsystem_law.model_document_law" />
+            <field name="description">In the answer to whether a law is relevant or not for the company to be return as a json in this format {"relevant": bool, "reason": str} </field>
+        </record>
+
+        <record id="ai_agent_law_relevancy_agent" model="ai.agent">
+            <field name="name">Law Relevancy Expert</field>
+            <field name="ai_role">Your role is to determine if a law is relevant.</field>
+            <field name="ai_goal">Answer whether the law is relevant or not.</field>
+            <field name="ai_backstory">
+Sometimes a user wants to know if a law is relevant for the company or not.
+            </field>
+            <field name="ai_prompt_template">
+            </field>
+            <field name="ai_type">law_relevancy</field>
+        </record>
+
+        <record id="ai_quest_agent_law_relevancy_agent" model="ai.quest.agent">
+            <field name="ai_quest_id" ref="ai_quest_law_relevancy"/>
+            <field name="ai_agent_id" ref="ai_agent_law_relevancy_agent"/>
+        </record>
+
+    </data>
+</odoo>

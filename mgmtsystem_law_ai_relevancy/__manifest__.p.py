@@ -22,7 +22,7 @@
 # https://www.odoo.com/documentation/14.0/reference/module.html
 #
 {
-    'name': 'Management Law AI Summary',
+    'name': 'Management Law AI Relevancy',
     'version': '1.0',
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -39,7 +39,7 @@
     'depends': ["mgmtsystem_law", "ai_agent"],
     'data': 
     [
-        "data/ai_data.xml",
+        "data/ai_data.xml", 
         "data/cron.xml",
         "views/document_law_views.xml"
     ],

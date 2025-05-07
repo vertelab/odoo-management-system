@@ -10,3 +10,6 @@ class DocumentLaw(models.Model):
     _inherit = "document.law"
 
     ai_quest_id = fields.Many2one(comodel_name='ai.quest',string="",help="")
+
+
+
