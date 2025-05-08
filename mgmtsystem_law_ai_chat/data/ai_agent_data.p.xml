@@ -14,6 +14,9 @@ You have access to relevant laws and legal principles stored in your memory.
             </field>
             <field name="ai_prompt_template">{message}</field>
             <field name="ai_type">mgmt-law-chat</field>
+            <field name="ai_memory_ids" model="ai.memory" eval="[(0, 0, {
+                'ai_memory_id': ref('mgmtsystem_law_ai_chat.ai_agent_mgmt_law_memory'),
+            })]"/>
         </record>
     </data>
 </odoo>

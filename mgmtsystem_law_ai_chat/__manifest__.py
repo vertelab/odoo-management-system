@@ -40,6 +40,7 @@
     'data': [
         'data/ai_agent_data.xml',
         'data/ai_quest_data.xml',
+        'data/ai_memory_data.xml',
     ],
     'demo': [],
     'application': False,

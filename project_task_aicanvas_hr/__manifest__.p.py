@@ -19,31 +19,33 @@
 #
 ##############################################################################
 #
-# https://www.odoo.com/documentation/14.0/reference/module.html
 #
 {
-    'name': 'Management Law AI Chat',
+    'name': 'Project AI Canvas HR',
     'version': '1.0',
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.odoo.com""",
-    'category': 'Management',
+    'summary': """Project AI Canvas HR""",
+    'category': 'management',
     'description': """
-        Long description of module's purpose
+        Project/Task AI Canvas HR
     """,
-    #'sequence': 1,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system',
-    'images': ['static/description/banner.png'], # 560x280
+    'website': 'https://vertel.se/apps/odoo-ai',
+    'images': ['static/description/banner.png'],  # 560x280
     'license': 'AGPL-3',
-    'depends': ["mgmtsystem_law", "ai_agent"],
+    'depends':
+        [
+            "ai_agent_hr",
+        ],
     'data': [
+        'views/project_task_views.xml',
+        'views/hr_department_views.xml',
+
+        # data
         'data/ai_agent_data.xml',
         'data/ai_quest_data.xml',
-        'data/ai_memory_data.xml',
     ],
-    'demo': [],
+    'demo': [ ],
     'application': False,
-    'installable': True,    
+    'installable': True,
     'auto_install': False,
 }
