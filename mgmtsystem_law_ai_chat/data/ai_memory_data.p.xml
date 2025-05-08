@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="0">
+    <data noupdate="1">
         <record id="ai_agent_mgmt_law_memory" model="ai.memory">
             <field name="name">Law Memory</field>
             <field name="vector_type">faiss</field>
