@@ -75,7 +75,7 @@ class MgmtsystemAddLawWizard(models.TransientModel):
                     return dd.text
         return False
 
-    def create_record(self, record):
+    def create_record(self,record):
         try:
             allowed_company_ids = self.env.user.company_id
             if company_ids := self.env.context.get('allowed_company_ids'):
@@ -83,7 +83,8 @@ class MgmtsystemAddLawWizard(models.TransientModel):
 
             for allowed_company in allowed_company_ids:
                 record['company_id'] = allowed_company.id
-                self.env["document.law"].create(record)
+
+            self.env["document.law"].create(record)
         except Exception as e:
             raise UserError(_(e))
         
