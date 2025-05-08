@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_department_form" model="ir.ui.view">
+        <field name="name">ai.canvas.hr.department.form</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form" />
+        <field name="arch" type="xml">
+            <field name="color" position="after">
+                <field name="project_id" />
+            </field>
+            <xpath expr="//div[@name='button_box']/button[@name='action_employee_from_department']" position="before">
+                <button class="oe_stat_button" name="action_view_department_ideas" type="object" icon="fa-table">
+                    <field string="AI Canvas" name="total_canva_ideas" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    </data>
+</odoo>
