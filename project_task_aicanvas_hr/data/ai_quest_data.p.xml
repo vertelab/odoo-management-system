@@ -34,7 +34,14 @@ for rec in records:
             <field name="ai_agent_ids" model="ai.quest.agent" eval="[(0, 0, {
                 'ai_agent_id': ref('project_task_aicanvas_hr.project_task_create_quest_agent'),
             })]"/>
-            <field name="code">result = quest.build(session=session,message=message_body).invoke(message_invoke)</field>
+            <field name="code">
+for rec in records:
+     # prompt = rec._canvas_params()
+     # result = quest.build(session=session, message=rec.prompt).invoke({"messages": [HumanMessage(content=rec.prompt)]})
+     # if ideas := self._action_get_ai_canvas_idea(result):
+       #  self._action_create_project_task_ai_canvas_idea(record, ideas)
+     self._action_create_project_task_ai_canvas_idea()
+            </field>
         </record>
     </data>
 </odoo>
