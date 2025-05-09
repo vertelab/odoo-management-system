@@ -33,7 +33,6 @@ class ProjectTask(models.Model):
     #     ai_messages = [m for m in messages if isinstance(m, AIMessage)]
     #     last_ai_message = ai_messages[-1] if len(ai_messages) != 0 else None
     #     message_content = last_ai_message.content
-    #     print(self.json2dict(message_content))
     #     return self.json2dict(message_content)
 
     def _action_create_project_task_quest(self):

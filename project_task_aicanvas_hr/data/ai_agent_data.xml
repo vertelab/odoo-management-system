@@ -60,6 +60,7 @@ Example:
       "role": "",
       "goal": ""
     }
+
             </field>
             <field name="ai_prompt_template">{message}</field>
             <field name="ai_type">ai-staff</field>
