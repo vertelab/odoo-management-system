@@ -42,6 +42,6 @@ class ProjectTask(models.Model):
             'ai_type': 'ai-staff',
             'department_id': self.department_id.id,
             'ai_agent_ids': [(0, 0, {
-                'ai_agent_id': self.env.ref('project_task_aicanvas_hr.hr_department_ai_canva_agent'),
+                'ai_agent_id': self.env.ref('project_task_aicanvas_hr.hr_department_ai_canva_agent').id,
             })]
         })
