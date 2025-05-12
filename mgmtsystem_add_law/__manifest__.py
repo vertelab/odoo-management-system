@@ -28,12 +28,12 @@
         Makes it possible to add laws from the website lagen.nu to the Management System Law module.
 42
     """,
-    'category': '', # Technical Settings|Localization|Payroll Localization|Account Charts|User types|Invoicing|Sales|Human Resources|Operations|Marketing|Manufacturing|Website|Theme|Administration|Appraisals|Sign|Helpdesk|Administration|Extra Rights|Other Extra Rights|
+    'category': 'Management',
     'description': """
         Makes it possible to add laws from the website lagen.nu to the Management System Law module.
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_add_law/',
     'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_law"],
