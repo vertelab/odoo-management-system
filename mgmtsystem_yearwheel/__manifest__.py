@@ -21,7 +21,7 @@
 #
 #
 {
-    'name': 'Management System YearWheel',
+    'name': 'Management System: YearWheel',
     'version': '1.0',
     'summary': """Management System YearWheel""",
     'category': 'management',
@@ -29,7 +29,7 @@
         Management System YearWheel
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_yearwheel',
     'images': ['static/description/banner.png'],  # 560x280
     'license': 'AGPL-3',
     'depends': 
