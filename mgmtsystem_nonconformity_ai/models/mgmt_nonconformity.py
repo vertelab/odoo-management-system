@@ -9,18 +9,19 @@ _logger = logging.getLogger(__name__)
 class MgmtsystemNonconformity(models.Model):
     _inherit = "mgmtsystem.nonconformity"
 
-    ai_quest_id = fields.Many2one(comodel_name='ai.quest', string="", help="")
+    ai_quest_id = fields.Many2one(comodel_name='ai.quest', string="AI Quest", help="")
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
         if not self.stage_id.closed:
             if self.ai_quest_id:
                 self.ai_quest_id.status = 'active'
-                self.ai_quest_id.channel_id.write({'active': True, })
+                self.ai_quest_id.channel_id.write({'active': True,})
         else:
             if self.ai_quest_id.channel_id:
                 self.ai_quest_id.status = 'done'
                 self.ai_quest_id.channel_id.write({'active': False})
+
 
     @api.onchange("name", "ref")
     def _onchange_name(self):
@@ -28,7 +29,8 @@ class MgmtsystemNonconformity(models.Model):
             self.ai_quest_id.write({'name': f"[{self.ref}] {self.name}"})
             if self.ai_quest_id.channel_id:
                 self.ai_quest_id.channel_id.write({'name': f"[{self.ref}] {self.name}"})
-
+            
+ 
     @api.model
     def create(self, vals):
         mgmtsystem_nonconformity = super(MgmtsystemNonconformity, self).create(vals)
@@ -53,6 +55,7 @@ class MgmtsystemNonconformity(models.Model):
                 })
         return mgmtsystem_nonconformity
 
+            
     def write(self, vals):
         result = super(MgmtsystemNonconformity, self).write(vals)
         for mgmtsystem_nonconformity in self:
@@ -65,13 +68,13 @@ class MgmtsystemNonconformity(models.Model):
                         'init_type': 'channel',
                         'status': 'active',
                         'ai_agent_ids': [(
-                            0, 0,
-                            {'ai_agent_id': self.env.ref('mgmtsystem_nonconformity_ai.ai_agent_nonconformity_chat').id}
+                            0, 0, {'ai_agent_id': self.env.ref('mgmtsystem_nonconformity_ai.ai_agent_nonconformity_chat').id}
                         )],
                         'code': """result = quest.build(session=session,message=message_body).invoke(message_invoke)""",
                         'description': _('Chat with Management System Nonconformity'),
                     })
-                    mgmtsystem_nonconformity.ai_quest_id.channel_id = self.env['discuss.channel'].create({
+                    channel_model = 'discuss.channel'
+                    mgmtsystem_nonconformity.ai_quest_id.channel_id = self.env[channel_model].create({
                         'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
                         'ai_quest_id': mgmtsystem_nonconformity.ai_quest_id.id,
                         'description': _('Chat with Management System Nonconformity'),
