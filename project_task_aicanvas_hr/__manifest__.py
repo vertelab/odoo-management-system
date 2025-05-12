@@ -21,10 +21,10 @@
 #
 #
 {
-    'name': 'Project AI Canvas HR',
+    'name': 'Management System: Project AI Canvas HR',
     'version': '1.0',
     'summary': """Project AI Canvas HR""",
-    'category': 'management',
+    'category': 'Management',
     'description': """
         Project/Task AI Canvas HR
     """,

@@ -25,12 +25,12 @@
     'name': 'Management System: Managment System Law',
     'version': '1.0',
     'summary': "This module adds access to the Knowledge module Document Law in the management system interface.",
-    'category': '', # Technical Settings|Localization|Payroll Localization|Account Charts|User types|Invoicing|Sales|Human Resources|Operations|Marketing|Manufacturing|Website|Theme|Administration|Appraisals|Sign|Helpdesk|Administration|Extra Rights|Other Extra Rights|
+    'category': 'Management',
     'description': """
     This module's function is to add access to the Knowledge module Document Law in the management system interface, as well as to add some connections to other models in Odoo.
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmsystem_law',
     'images': ['static/description/banner.png'], 
     'license': 'AGPL-3',
     'depends': 

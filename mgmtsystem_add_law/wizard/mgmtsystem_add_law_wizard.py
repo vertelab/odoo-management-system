@@ -62,8 +62,8 @@ class MgmtsystemAddLawWizard(models.TransientModel):
                     'tag': 'reload',
                 }
 
-            raise ValidationError(_("Lagen/Förordningen värkar inte exsistera"))
-        raise UserError(_("Lagen/Förordningen finns readan"))
+            raise ValidationError(_("The law / the regulation seems not to exist"))
+        raise UserError(_("The law / the regulation exist"))
       
     def find_dd(self,soup,dt_to_find):
         dl_contents = soup.find("dl",attrs={"id": "refs-dokument"})
