@@ -42,13 +42,13 @@ class MgmtsystemNonconformity(models.Model):
                     'ai_type': 'nonconformity-chat',
                     'init_type': 'channel',
                     'status': 'active',
-                        'code': """
+                    'code': """
 record = env["mgmtsystem.nonconformity"].search([('ai_quest_id','=',quest.id)])
 result = quest.build(session=session,message=message_body,record=record).invoke(message_invoke)
-                        """,
+                    """,
                 })
                 self.env['ai.quest.agent'].create({
-                    'ai_agent_id': self.env.ref('helpdesk_ai.ai_agent_helpdesk_chat').id,
+                    'ai_agent_id': self.env.ref('mgmtsystem_nonconformity_ai.ai_agent_nonconformity_chat').id,
                     'ai_quest_id': mgmtsystem_nonconformity.ai_quest_id.id
                 })
                 mgmtsystem_nonconformity.ai_quest_id.channel_id.create({
