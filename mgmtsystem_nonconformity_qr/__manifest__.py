@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Management: Nonconformity QR',
+    'name': 'Management System: Nonconformity QR',
     'version': '0.1',
     'summary': ' Management System Nonconformity QR.',
     'category': 'Management',
