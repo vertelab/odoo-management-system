@@ -22,7 +22,7 @@
 # https://www.odoo.com/documentation/14.0/reference/module.html
 #
 {
-    'name': 'Management System Add Laws',
+    'name': 'Management System: Add Laws',
     'version': '1.0',
     'summary': """
         Makes it possible to add laws from the website lagen.nu to the Management System Law module.
