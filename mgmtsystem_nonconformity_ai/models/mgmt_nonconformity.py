@@ -13,7 +13,7 @@ class MgmtsystemNonconformity(models.Model):
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
-        if not self.stage_id.closed:
+        if not self.stage_id.state == "done":
             if self.ai_quest_id:
                 self.ai_quest_id.status = 'active'
                 self.ai_quest_id.channel_id.write({'active': True,})
