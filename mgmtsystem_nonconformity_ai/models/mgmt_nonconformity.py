@@ -6,81 +6,75 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class HelpdeskTicket(models.Model):
-    _inherit = "helpdesk.ticket"
+class MgmtsystemNonconformity(models.Model):
+    _inherit = "mgmtsystem.nonconformity"
 
-    ai_quest_id = fields.Many2one(comodel_name='ai.quest',string="",help="")
+    ai_quest_id = fields.Many2one(comodel_name='ai.quest', string="", help="")
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
         if not self.stage_id.closed:
             if self.ai_quest_id:
                 self.ai_quest_id.status = 'active'
-                self.ai_quest_id.channel_id.write({'active': True,})
+                self.ai_quest_id.channel_id.write({'active': True, })
         else:
             if self.ai_quest_id.channel_id:
                 self.ai_quest_id.status = 'done'
                 self.ai_quest_id.channel_id.write({'active': False})
 
-
-    @api.onchange("name","number")
+    @api.onchange("name", "ref")
     def _onchange_name(self):
         if self.ai_quest_id:
-            self.ai_quest_id.write({'name': f"[{self.number}] {self.name}"})
+            self.ai_quest_id.write({'name': f"[{self.ref}] {self.name}"})
             if self.ai_quest_id.channel_id:
-                self.ai_quest_id.channel_id.write({'name': f"[{self.number}] {self.name}"})
+                self.ai_quest_id.channel_id.write({'name': f"[{self.ref}] {self.name}"})
 
-
-    @api.onchange("partner_id")
-    def _onchange_partner(self):
-        if self.ai_quest_id:
-            self.ai_quest_id.write({'partner_id': self.partner_id.id if self.partner_id else False})
-            
- 
     @api.model
     def create(self, vals):
-        ticket = super(HelpdeskTicket, self).create(vals)
-        if not ticket.stage_id.closed:
-            if not ticket.ai_quest_id:
-                ticket.ai_quest_id = self.env['ai.quest'].create({
-                    'name': f"[{ticket.number}] {ticket.name}",
-                    'ai_type': 'helpdesk-chat',
+        mgmtsystem_nonconformity = super(MgmtsystemNonconformity, self).create(vals)
+        action_plan_stage = self.env.ref('mgmtsystem_nonconformity.stage_pending')
+        if self.stage_id.id == action_plan_stage.id:
+            if not mgmtsystem_nonconformity.ai_quest_id:
+                mgmtsystem_nonconformity.ai_quest_id = self.env['ai.quest'].create({
+                    'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
+                    'ai_type': 'nonconformity-chat',
                     'init_type': 'channel',
                     'status': 'active',
                     'code': """result = quest.build(session=session,message=message_body).invoke(message_invoke)"""
                 })
                 self.env['ai.quest.agent'].create({
                     'ai_agent_id': self.env.ref('helpdesk_ai.ai_agent_helpdesk_chat').id,
-                    'ai_quest_id': ticket.ai_quest_id.id
+                    'ai_quest_id': mgmtsystem_nonconformity.ai_quest_id.id
                 })
-                ticket.ai_quest_id.channel_id.create({
-                    'name': f"[{ticket.number}] {ticket.name}",
-                    'ai_quest_id': ticket.ai_qu_model_memory_type_dataest_id.id,
-                    'description': _('Chat with helpdesk tickets'),
+                mgmtsystem_nonconformity.ai_quest_id.channel_id.create({
+                    'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
+                    'ai_quest_id': mgmtsystem_nonconformity.ai_qu_model_memory_type_dataest_id.id,
+                    'description': _('Chat with Management System Nonconformity'),
                 })
-        return ticket
+        return mgmtsystem_nonconformity
 
-            
     def write(self, vals):
-        result = super(HelpdeskTicket, self).write(vals)
-        for ticket in self:
-            if not ticket.stage_id.closed:
-                if not ticket.ai_quest_id:
-                    ticket.ai_quest_id = self.env['ai.quest'].create({
-                        'name': f"[{ticket.number}] {ticket.name}",
-                        'ai_type': 'helpdesk-chat',
+        result = super(MgmtsystemNonconformity, self).write(vals)
+        for mgmtsystem_nonconformity in self:
+            action_plan_stage = self.env.ref('mgmtsystem_nonconformity.stage_pending')
+            if mgmtsystem_nonconformity.stage_id.id == action_plan_stage.id:
+                if not mgmtsystem_nonconformity.ai_quest_id:
+                    mgmtsystem_nonconformity.ai_quest_id = self.env['ai.quest'].create({
+                        'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
+                        'ai_type': 'nonconformity-chat',
                         'init_type': 'channel',
                         'status': 'active',
                         'ai_agent_ids': [(
-                            0, 0, {'ai_agent_id': self.env.ref('helpdesk_ai.ai_agent_helpdesk_chat').id}
+                            0, 0,
+                            {'ai_agent_id': self.env.ref('mgmtsystem_nonconformity_ai.ai_agent_nonconformity_chat').id}
                         )],
                         'code': """result = quest.build(session=session,message=message_body).invoke(message_invoke)""",
-                        'description': 'Answer my questions {message}',
+                        'description': _('Chat with Management System Nonconformity'),
                     })
-                    ticket.ai_quest_id.channel_id = self.env['mail.channel'].create({
-                        'name': f"[{ticket.number}] {ticket.name}",
-                        'ai_quest_id': ticket.ai_quest_id.id,
-                        'description': _('Chat with helpdesk tickets'),
+                    mgmtsystem_nonconformity.ai_quest_id.channel_id = self.env['discuss.channel'].create({
+                        'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
+                        'ai_quest_id': mgmtsystem_nonconformity.ai_quest_id.id,
+                        'description': _('Chat with Management System Nonconformity'),
                     }).id
         return result
 

@@ -15,8 +15,8 @@ class AIQuestSession(models.Model):
     _inherit = 'ai.quest.session'
 
     ai_type = fields.Selection(
-        selection_add=[('helpdesk-chat', 'Chat with ticket')],
-        ondelete={'helpdesk-chat': 'cascade'}
+        selection_add=[('nonconformity-chat', 'Chat with Nonconformity')],
+        ondelete={'nonconformity-chat': 'cascade'}
     )
 
 
@@ -24,41 +24,35 @@ class AIAgent(models.Model):
     _inherit = "ai.agent"
 
     ai_type = fields.Selection(
-        selection_add=[('helpdesk-chat', 'Chat with ticket')],
-        ondelete={'helpdesk-chat': 'cascade'}
+        selection_add=[('nonconformity-chat', 'Chat with Nonconformity')],
+        ondelete={'nonconformity-chat': 'cascade'}
     )
 
     def agent_extra_context(self, quest, record=None):
         res = super().agent_extra_context(quest=quest, record=record)
-        if self.ai_type == "helpdesk-chat":
-            helpdesk_ticket_id = self.env['helpdesk.ticket'].search([('ai_quest_id', '=', quest.id)], limit=1)
-            if helpdesk_ticket_id:
-                res['Ticket Name'] = helpdesk_ticket_id.name
-                res['Ticket number'] = helpdesk_ticket_id.number
-                res['Assigned User'] = helpdesk_ticket_id.user_id.name
-                res['Ticket Priority'] = helpdesk_ticket_id.priority
-                res['Ticket Description'] = helpdesk_ticket_id.description
-                res['Ticket Closed Date'] = helpdesk_ticket_id.closed_date
-                res['Ticket Assigned Date'] = helpdesk_ticket_id.assigned_date
-                res['Ticket Solution'] = self._ticket_solution()
+        if self.ai_type == "nonconformity-chat":
+            mgmtsystem_nonconformity_id = self.env['mgmtsystem.nonconformity'].search([
+                ('ai_quest_id', '=', quest.id)
+            ], limit=1)
+            # if mgmtsystem_nonconformity_id:
+            #     res['Ticket Name'] = helpdesk_ticket_id.name
+            #     res['Ticket number'] = helpdesk_ticket_id.number
+            #     res['Assigned User'] = helpdesk_ticket_id.user_id.name
+            #     res['Ticket Priority'] = helpdesk_ticket_id.priority
+            #     res['Ticket Description'] = helpdesk_ticket_id.description
+            #     res['Ticket Closed Date'] = helpdesk_ticket_id.closed_date
+            #     res['Ticket Assigned Date'] = helpdesk_ticket_id.assigned_date
         return res
 
-    def _ticket_solution(self):
-        message_comment_type = self.message_ids.filtered(lambda message: message.message_type == 'comment')
-        ticket_solution = _('No Solution Provided Yet!')
-        if message_comment_type:
-            ticket_solution = BeautifulSoup(
-                message_comment_type[0].body.encode('utf-8').decode('unicode_escape'), 'html.parser'
-            ).get_text()
-        return ticket_solution
+
 
 
 class AIQuest(models.Model):
     _inherit = "ai.quest"
 
     ai_type = fields.Selection(
-        selection_add=[('helpdesk-chat', 'Chat with ticket')],
-        ondelete={'helpdesk-chat': 'cascade'}
+        selection_add=[('nonconformity-chat', 'Chat with Nonconformity')],
+        ondelete={'nonconformity-chat': 'cascade'}
     )
 
     def server_action(self, records):

@@ -28,21 +28,13 @@ class AIAgent(models.Model):
         ondelete={'nonconformity-chat': 'cascade'}
     )
 
-    def agent_extra_context(self, quest, record=None):
-        res = super().agent_extra_context(quest=quest, record=record)
-        if self.ai_type == "nonconformity-chat":
-            mgmtsystem_nonconformity_id = self.env['mgmtsystem.nonconformity'].search([
-                ('ai_quest_id', '=', quest.id)
-            ], limit=1)
-            # if mgmtsystem_nonconformity_id:
-            #     res['Ticket Name'] = helpdesk_ticket_id.name
-            #     res['Ticket number'] = helpdesk_ticket_id.number
-            #     res['Assigned User'] = helpdesk_ticket_id.user_id.name
-            #     res['Ticket Priority'] = helpdesk_ticket_id.priority
-            #     res['Ticket Description'] = helpdesk_ticket_id.description
-            #     res['Ticket Closed Date'] = helpdesk_ticket_id.closed_date
-            #     res['Ticket Assigned Date'] = helpdesk_ticket_id.assigned_date
-        return res
+    # def agent_extra_context(self, quest, record=None):
+    #     res = super().agent_extra_context(quest=quest, record=record)
+    #     if self.ai_type == "nonconformity-chat":
+    #         mgmtsystem_nonconformity_id = self.env['mgmtsystem.nonconformity'].search([
+    #             ('ai_quest_id', '=', quest.id)
+    #         ], limit=1)
+    #     return res
 
 
 
@@ -55,25 +47,22 @@ class AIQuest(models.Model):
         ondelete={'nonconformity-chat': 'cascade'}
     )
 
-    def server_action(self, records):
-        if self.init_type == 'server-action' and self.server_action_id:
-            if self._check_quest_error():
-                raise UserError(self._check_quest_error())
-            vals = self._server_action_values(records=records)
-            # res = self.run(**vals)
+    # def server_action(self, records):
+    #     if self.init_type == 'server-action' and self.server_action_id:
+    #         if self._check_quest_error():
+    #             raise UserError(self._check_quest_error())
+    #         vals = self._server_action_values(records=records)
+    #
+    #         for record in records:
+    #             prompt = f"What is the solution to this helpdesk ticket: {record.number}"
+    #             result = self.run(prompt=prompt, record=record)
+    #             if result:
+    #                 ai_messages = self._get_last_ai_message(result.get('result', {}).get('messages', False))
+    #                 answer = re.sub(
+    #                     r'<think>.*?</think>', '', markdown.markdown(ai_messages.content), flags=re.DOTALL)
+    #                 record.with_user(SUPERUSER_ID).message_post(
+    #                     body=Markup(answer),
+    #                     message_type='comment',
+    #                     subtype_xmlid='mail.mt_comment',
+    #                 )
 
-            for record in records:
-                prompt = f"What is the solution to this helpdesk ticket: {record.number}"
-                result = self.run(prompt=prompt, record=record)
-                if result:
-                    ai_messages = self._get_last_ai_message(result.get('result', {}).get('messages', False))
-                    answer = re.sub(
-                        r'<think>.*?</think>', '', markdown.markdown(ai_messages.content), flags=re.DOTALL)
-                    record.with_user(SUPERUSER_ID).message_post(
-                        body=Markup(answer),
-                        message_type='comment',
-                        subtype_xmlid='mail.mt_comment',
-                    )
-
-
-            # self.log_message(f'server-action {res}')

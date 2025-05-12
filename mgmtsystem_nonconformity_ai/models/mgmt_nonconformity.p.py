@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 class MgmtsystemNonconformity(models.Model):
     _inherit = "mgmtsystem.nonconformity"
 
-    ai_quest_id = fields.Many2one(comodel_name='ai.quest',string="",help="")
+    ai_quest_id = fields.Many2one(comodel_name='ai.quest', string="AI Quest", help="")
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
@@ -23,18 +23,12 @@ class MgmtsystemNonconformity(models.Model):
                 self.ai_quest_id.channel_id.write({'active': False})
 
 
-    @api.onchange("name","number")
+    @api.onchange("name", "ref")
     def _onchange_name(self):
         if self.ai_quest_id:
-            self.ai_quest_id.write({'name': f"[{self.number}] {self.name}"})
+            self.ai_quest_id.write({'name': f"[{self.ref}] {self.name}"})
             if self.ai_quest_id.channel_id:
-                self.ai_quest_id.channel_id.write({'name': f"[{self.number}] {self.name}"})
-
-
-    @api.onchange("partner_id")
-    def _onchange_partner(self):
-        if self.ai_quest_id:
-            self.ai_quest_id.write({'partner_id': self.partner_id.id if self.partner_id else False})
+                self.ai_quest_id.channel_id.write({'name': f"[{self.ref}] {self.name}"})
             
  
     @api.model
@@ -79,7 +73,12 @@ class MgmtsystemNonconformity(models.Model):
                         'code': """result = quest.build(session=session,message=message_body).invoke(message_invoke)""",
                         'description': _('Chat with Management System Nonconformity'),
                     })
-                    mgmtsystem_nonconformity.ai_quest_id.channel_id = self.env['discuss.channel'].create({
+                    # #if VERSION >= "17.0"
+                    channel_model = 'discuss.channel'
+                    # #elif VERSION <= "16.0"
+                    channel_model = 'mail.channel'
+                    # #endif
+                    mgmtsystem_nonconformity.ai_quest_id.channel_id = self.env[channel_model].create({
                         'name': f"[{mgmtsystem_nonconformity.ref}] {mgmtsystem_nonconformity.name}",
                         'ai_quest_id': mgmtsystem_nonconformity.ai_quest_id.id,
                         'description': _('Chat with Management System Nonconformity'),
