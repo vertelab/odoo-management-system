@@ -39,6 +39,7 @@
     'data': [
         'views/project_task_views.xml',
         'views/hr_department_views.xml',
+        'views/ai_agent_views.xml',
 
         # data
         'data/ai_agent_data.xml',

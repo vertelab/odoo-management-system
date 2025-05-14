@@ -36,10 +36,6 @@ for rec in records:
             })]"/>
             <field name="code">
 for rec in records:
-     # prompt = rec._canvas_params()
-     # result = quest.build(session=session, message=rec.prompt).invoke({"messages": [HumanMessage(content=rec.prompt)]})
-     # if ideas := self._action_get_ai_canvas_idea(result):
-       #  self._action_create_project_task_quest(record, ideas)
      rec._action_create_project_task_quest()
             </field>
         </record>
