@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_law_ai_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250509\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-12 12:01+0000\n"
+"PO-Revision-Date: 2025-05-12 14:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model,name:mgmtsystem_law_ai_summary.model_ai_agent
+msgid "AI Agent"
+msgstr "AI-agent"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model,name:mgmtsystem_law_ai_summary.model_ai_quest
+msgid "AI Quest"
+msgstr "AI-uppdrag"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model,name:mgmtsystem_law_ai_summary.model_document_law
+msgid "Adds connections to mgmtsystem modules for the document_law module."
+msgstr "Lägger till kopplingar till mgmtsystem-moduler för document_law-modulen."
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_ai_agent__ai_type
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_ai_quest__ai_type
+msgid "Ai Type"
+msgstr "Ai Typ"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.actions.server,name:mgmtsystem_law_ai_summary.ir_cron_summary_law_action_ir_actions_server
+msgid "Create AI Summarys of Laws"
+msgstr "Skapa AI-sammanfattningar av lagar"
+
+#. module: mgmtsystem_law_ai_summary
+#: model:ir.model.fields,field_description:mgmtsystem_law_ai_summary.field_document_law__law_summary
+#: model:ir.model.fields.selection,name:mgmtsystem_law_ai_summary.selection__ai_agent__ai_type__law_summary
+#: model:ir.model.fields.selection,name:mgmtsystem_law_ai_summary.selection__ai_quest__ai_type__law_summary
+msgid "Law Summary"
+msgstr "Juridisk sammanfattning"
+
+#. module: mgmtsystem_law_ai_summary
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law_ai_summary.view_law_form
+msgid "Main Document"
+msgstr "Huvuddokument"
+
+#. module: mgmtsystem_law_ai_summary
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_law_ai_summary.view_law_form
+msgid "e.g. Once upon a time..."
+msgstr "t.ex. En gång i tiden..."

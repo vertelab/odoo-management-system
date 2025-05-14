@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0-20241127\n"
+"Project-Id-Version: Odoo Server 18.0-20250509\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 12:44+0000\n"
-"PO-Revision-Date: 2024-11-28 14:06+0100\n"
+"POT-Creation-Date: 2025-05-12 09:59+0000\n"
+"PO-Revision-Date: 2025-05-12 12:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -15,7 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: mgmtsystem_add_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_add_law.mgmtsystem_add_law_wizard_view_form
+msgid "1976:580"
+msgstr ""
 
 #. module: mgmtsystem_add_law
 #: model:ir.actions.act_window,name:mgmtsystem_add_law.add_law_wizard_action
@@ -47,12 +52,7 @@ msgstr "Visningsnamn"
 #. module: mgmtsystem_add_law
 #: model:ir.model.fields,field_description:mgmtsystem_add_law.field_mgmtsystem_add_law_wizard__id
 msgid "ID"
-msgstr "ID"
-
-#. module: mgmtsystem_add_law
-#: model:ir.model.fields,field_description:mgmtsystem_add_law.field_mgmtsystem_add_law_wizard____last_update
-msgid "Last Modified on"
-msgstr "Senast ändrad den"
+msgstr ""
 
 #. module: mgmtsystem_add_law
 #: model:ir.model.fields,field_description:mgmtsystem_add_law.field_mgmtsystem_add_law_wizard__write_uid
@@ -70,6 +70,16 @@ msgid "Law Designation"
 msgstr "Juridisk beteckning"
 
 #. module: mgmtsystem_add_law
+#: model:ir.model.fields,field_description:mgmtsystem_add_law.field_mgmtsystem_add_law_wizard__law_link
+msgid "Law Link"
+msgstr "Laglänk"
+
+#. module: mgmtsystem_add_law
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_add_law.mgmtsystem_add_law_wizard_view_form
+msgid "Link"
+msgstr "Länk"
+
+#. module: mgmtsystem_add_law
 #: model:ir.model,name:mgmtsystem_add_law.model_mgmtsystem_add_law_wizard
 msgid ""
 "Makes it possible to add laws from the website lagen.nu to the Management "
@@ -77,3 +87,15 @@ msgid ""
 msgstr ""
 "Gör det möjligt att lägga till lagar från webbplatsen lagen.nu till "
 "Management System Law-modulen."
+
+#. module: mgmtsystem_add_law
+#. odoo-python
+#: code:addons/mgmtsystem_add_law/wizard/mgmtsystem_add_law_wizard.p.py:0
+msgid "The law / the regulation exist"
+msgstr "Lagen/Förordningen finns readan"
+
+#. module: mgmtsystem_add_law
+#. odoo-python
+#: code:addons/mgmtsystem_add_law/wizard/mgmtsystem_add_law_wizard.p.py:0
+msgid "The law / the regulation seems not to exist"
+msgstr "Lagen/Förordningen värkar inte exsistera"
