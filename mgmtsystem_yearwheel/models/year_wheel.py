@@ -14,9 +14,33 @@ from odoo import api, exceptions, fields, models, _, Command
 
 class YearWheel(models.Model):
     _name = "year.wheel"
+    _inherit = ['mail.thread', 'mail.activity.mixin'] 
     _description = 'Year Wheel'
     _order = 'end_date ASC, id ASC'
     _rec_name = 'summary'
+    
+    code = fields.Text(
+        string="Code",
+        default="""# You have access to the variable `record` inside this code block.
+# `record` represents the current record are planing an activity on.
+#
+# Example: set a field value
+# record.name = "test"
+#
+# Example: call a method defined on the model
+# record.test_func()
+#
+# Write any custom Python logic below:
+        """
+        )
+
+    def run_code(self, record):
+        local_vars = {'record': record}
+        try:
+            exec(self.code, {}, local_vars)
+        except Exception as e:
+            # handle or log error appropriately
+            raise e
 
     @api.model
     def _selection_target_model(self):
@@ -56,12 +80,13 @@ class YearWheel(models.Model):
     resource_ref = fields.Reference(string='Record Reference',
                                     selection=_selection_target_model,
                                     compute=_compute_resource_ref, readonly=False, required=True)
+    copy_reference = fields.Boolean(string="Create a copy of reference", help="if set to true it will copy the reference and create an activity on it.")
     res_id = fields.Many2oneReference(string='Related Document ID', index=True, model_field='res_model')
     res_name = fields.Char(
         'Document Name', compute='_compute_res_name', compute_sudo=True, store=True,
         readonly=True)
 
-    activity_type_id = fields.Many2one(
+    activity_wheel_type_id = fields.Many2one(
         'mail.activity.type', string='Activity Type',
         domain="['|', ('res_model', '=', False), ('res_model', '=', res_model)]", ondelete='restrict',
     )
@@ -106,8 +131,8 @@ class YearWheel(models.Model):
             'name': 'Year Wheel Activities',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
-            'view_mode': 'tree, form',
-            'views': [(False, 'tree'), (False, 'form')],
+            'view_mode': 'list, form',
+            'views': [(False, 'list'), (False, 'form')],
             'domain': [('year_wheel_id', '=', self.id)]
         }
 
@@ -177,9 +202,17 @@ class YearWheel(models.Model):
         date_deadline = self._switch_time_unit(
             time_unit=self.activity_due_interval, interval=self.activity_due_in, date_field=self.next_wheel_date
         )
+        if self.copy_reference:
+            template_record = self.env[self.res_model].browse(self.res_id)
+            copy_record = template_record.copy()
+            copy_record.name = f"{template_record.name}-{date_deadline}"
+            self.run_code(copy_record)
+            res_id = copy_record.id
+        else:
+            res_id = self.res_id
         next_activities_values = {
-            'activity_type_id': self.activity_type_id.id,
-            'res_id': self.res_id,
+            'activity_type_id': self.activity_wheel_type_id.id,
+            'res_id': res_id,
             'res_model': self.res_model,
             'res_model_id': self.res_model_id.id,
             'summary': self.summary,
@@ -208,7 +241,7 @@ class YearWheel(models.Model):
 
     @api.onchange('start_date', 'interval', 'time_unit', 'next_wheel_date')
     def onchange_start_date(self):
-        if not self.next_wheel_date:
+        if not self.activity_ids:
             self.next_wheel_date = self._switch_time_unit(
                 time_unit=self.time_unit, interval=self.interval, date_field=self.start_date
             )
