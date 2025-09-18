@@ -131,13 +131,13 @@ class YearWheel(models.Model):
             'name': 'Year Wheel Activities',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
-            #if VERSION >= "18.0
+            # #if VERSION >= "18.0
             'view_mode': 'list, form',
             'views': [(False, 'list'), (False, 'form')],
-            #elif VERSION <= "17.0
+            # #elif VERSION <= "17.0
             'view_mode': 'tree, form',
             'views': [(False, 'tree'), (False, 'form')],
-            #endif
+            # #endif
             'domain': [('year_wheel_id', '=', self.id)]
         }
 
