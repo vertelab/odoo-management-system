@@ -37,7 +37,7 @@ class YearWheel(models.Model):
     def run_code(self, record):
         local_vars = {'record': record}
         try:
-            exec(self.code, {}, local_vars)
+            exec(record.code, {}, local_vars)
         except Exception as e:
             # handle or log error appropriately
             raise e
@@ -131,8 +131,13 @@ class YearWheel(models.Model):
             'name': 'Year Wheel Activities',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
+            #if VERSION >= "18.0
             'view_mode': 'list, form',
             'views': [(False, 'list'), (False, 'form')],
+            #elif VERSION <= "17.0
+            'view_mode': 'tree, form',
+            'views': [(False, 'tree'), (False, 'form')],
+            #endif
             'domain': [('year_wheel_id', '=', self.id)]
         }
 
