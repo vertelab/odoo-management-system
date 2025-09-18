@@ -131,3 +131,117 @@ class YearWheel(models.Model):
             'name': 'Year Wheel Activities',
             'type': 'ir.actions.act_window',
             'res_model': 'mail.activity',
+            'view_mode': 'tree, form',
+            'views': [(False, 'tree'), (False, 'form')],
+            'domain': [('year_wheel_id', '=', self.id)]
+        }
+
+    user_id = fields.Many2one(
+        'res.users', 'Assigned to',
+        default=lambda self: self.env.user,
+        index=True, required=True)
+
+    _sql_constraints = [
+        # Required on a Many2one reference field is not sufficient as actually
+        # writing 0 is considered as a valid value, because this is an integer field.
+        # We therefore need a specific constraint check.
+        ('check_res_id_is_set',
+         'CHECK(res_id IS NOT NULL AND res_id !=0 )',
+         'Activities have to be linked to records with a not null res_id.')
+    ]
+
+    def action_open_wheel(self):
+        return {
+            'name': 'Management Year Wheel',
+            'type': 'ir.actions.act_window',
+            'res_model': 'year.wheel',
+            'view_mode': 'form',
+            'views': [(self.env.ref('mgmtsystem_yearwheel.year_wheel_view_form_popup').id, 'form')],
+            'target': 'new',
+        }
+
+    @api.depends('res_model', 'res_id')
+    def _compute_res_name(self):
+        for activity in self:
+            activity.res_name = activity.res_model and \
+                                self.env[activity.res_model].browse(activity.res_id).display_name
+
+    def action_create_year_wheel_activity(self):
+        if not self.mail_activity_value():
+            raise ValidationError("No value for your activities")
+
+        if self.start_date == fields.Date.today():
+            self.env['mail.activity'].create(self.mail_activity_value())
+
+    def _cron_action_create_next_activity(self):
+        wheel_ids = self.env['year.wheel'].search([
+            ('end_date', '>=', fields.Date.today()),
+            ('start_date', '<=', fields.Date.today()),
+            ('next_wheel_date', '<=', fields.Date.today()),
+        ])
+        for wheel in wheel_ids:
+            while wheel.next_wheel_date < fields.Date.today():
+                mail_activity_id = self.env['mail.activity'].create(wheel.mail_activity_value())
+                if mail_activity_id:
+                    wheel.next_wheel_date = self._switch_time_unit(
+                        time_unit=wheel.time_unit, interval=wheel.interval, date_field=wheel.next_wheel_date
+                    )
+
+    def _switch_time_unit(self, time_unit, interval, date_field) -> relativedelta | date | datetime:
+        match time_unit:
+            case "days":
+                return date_field + relativedelta(days=interval)
+            case "weeks":
+                return date_field + relativedelta(weeks=interval)
+            case "months":
+                return date_field + relativedelta(months=interval)
+            case "years":
+                return date_field + relativedelta(years=interval)
+
+    def mail_activity_value(self) -> dict[str, Any]:
+        date_deadline = self._switch_time_unit(
+            time_unit=self.activity_due_interval, interval=self.activity_due_in, date_field=self.next_wheel_date
+        )
+        if self.copy_reference:
+            template_record = self.env[self.res_model].browse(self.res_id)
+            copy_record = template_record.copy()
+            copy_record.name = f"{template_record.name}-{date_deadline}"
+            self.run_code(copy_record)
+            res_id = copy_record.id
+        else:
+            res_id = self.res_id
+        next_activities_values = {
+            'activity_type_id': self.activity_wheel_type_id.id,
+            'res_id': res_id,
+            'res_model': self.res_model,
+            'res_model_id': self.res_model_id.id,
+            'summary': self.summary,
+            'note': self.note,
+            'user_id': self.user_id.id,
+            'date_deadline': date_deadline,
+            'year_wheel_id': self.id
+        }
+        return next_activities_values
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for val in vals_list:
+            if val.get('start_date') > val.get('end_date'):
+                raise ValidationError(_('This wheel has already ended before it could even start'))
+        res = super(YearWheel, self).create(vals_list)
+        for rec in res:
+            rec.action_create_year_wheel_activity()
+        return res
+
+    def write(self, vals):
+        res = super(YearWheel, self).write(vals)
+        if self.start_date > self.end_date:
+            raise ValidationError(_('This wheel has already ended before it could even start'))
+        return res
+
+    @api.onchange('start_date', 'interval', 'time_unit', 'next_wheel_date')
+    def onchange_start_date(self):
+        if not self.activity_ids:
+            self.next_wheel_date = self._switch_time_unit(
+                time_unit=self.time_unit, interval=self.interval, date_field=self.start_date
+            )
