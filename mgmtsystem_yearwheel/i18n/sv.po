@@ -87,7 +87,7 @@ msgstr "Dagar"
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
 msgid "Discard"
-msgstr "Kassera"
+msgstr "Slänga"
 
 #. module: mgmtsystem_yearwheel
 #: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_year_wheel__display_name
@@ -146,7 +146,7 @@ msgstr "Senast uppdaterad den"
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_yearwheel.year_wheel_view_form_popup
 msgid "Log a note..."
-msgstr "Logga in en anteckning..."
+msgstr "Logga en anteckning..."
 
 #. module: mgmtsystem_yearwheel
 #: model:ir.actions.act_window,name:mgmtsystem_yearwheel.mgmtsystem_year_wheel_action
@@ -224,12 +224,12 @@ msgstr "Veckor"
 #: model:ir.model,name:mgmtsystem_yearwheel.model_year_wheel
 #: model:ir.model.fields,field_description:mgmtsystem_yearwheel.field_mail_activity__year_wheel_id
 msgid "Year Wheel"
-msgstr "År Hjul"
+msgstr "Årshjul"
 
 #. module: mgmtsystem_yearwheel
 #: model:ir.model,name:mgmtsystem_yearwheel.model_year_wheel_wizard
 msgid "Year Wheel Wizard"
-msgstr "År Hjulguide"
+msgstr "Årshjulsguide"
 
 #. module: mgmtsystem_yearwheel
 #: model:ir.actions.server,name:mgmtsystem_yearwheel.ir_cron_year_wheel_scheduler_action_ir_actions_server
