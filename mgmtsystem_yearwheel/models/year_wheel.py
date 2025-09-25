@@ -37,7 +37,7 @@ class YearWheel(models.Model):
     def run_code(self, record):
         local_vars = {'record': record}
         try:
-            exec(self.code, {}, local_vars)
+            exec(record.code, {}, local_vars)
         except Exception as e:
             # handle or log error appropriately
             raise e

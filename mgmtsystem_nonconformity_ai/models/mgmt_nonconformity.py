@@ -29,10 +29,11 @@ class MgmtsystemNonconformity(models.Model):
             self.ai_quest_id.write({'name': f"[{self.ref}] {self.name}"})
             if self.ai_quest_id.channel_id:
                 self.ai_quest_id.channel_id.write({'name': f"[{self.ref}] {self.name}"})
-
-    @api.model_create_multi
-    def create(self, vals_list):
-        mgmtsystem_nonconformity = super(MgmtsystemNonconformity, self).create(vals_list)
+            
+ 
+    @api.model
+    def create(self, vals):
+        mgmtsystem_nonconformity = super(MgmtsystemNonconformity, self).create(vals)
         action_plan_stage = self.env.ref('mgmtsystem_nonconformity.stage_pending')
         if self.stage_id.id == action_plan_stage.id:
             if not mgmtsystem_nonconformity.ai_quest_id:

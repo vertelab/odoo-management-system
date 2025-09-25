@@ -9,8 +9,8 @@
             <field name="ai_prompt_template">{message}</field>
             <field name="ai_type">ai-staff</field>
         </record>
-        <function model="ai.agent" name="refund_moves" eval="[ref('project_task_ai_canvas_idea_agent')]"/>
 
+        <function model="ai.agent" name="refund_moves" eval="[ref('project_task_ai_canvas_idea_agent')]"/>
 
         <record id="project_task_create_quest_agent" model="ai.agent">
             <field name="name">Project Task Agent to Create Quest</field>
@@ -47,7 +47,6 @@ Example:
             <field name="ai_prompt_template">{message}</field>
             <field name="ai_type">ai-staff</field>
         </record>
-
 
         <record id="hr_department_ai_canva_agent" model="ai.agent">
             <field name="name">AI Canva Agent for HR Department</field>
