@@ -20,7 +20,7 @@ msgstr ""
 #. module: project_task_aicanvas_hr
 #: model_terms:ir.ui.view,arch_db:project_task_aicanvas_hr.view_department_form
 msgid "AI Canvas"
-msgstr ""
+msgstr "AI-duk"
 
 #. module: project_task_aicanvas_hr
 #: model:ir.model,name:project_task_aicanvas_hr.model_ai_quest
@@ -46,4 +46,4 @@ msgstr "Aktivitet"
 #. module: project_task_aicanvas_hr
 #: model:ir.model.fields,field_description:project_task_aicanvas_hr.field_hr_department__total_canva_ideas
 msgid "Total AI Canvas"
-msgstr ""
+msgstr "Total AI-duk"
