@@ -31,7 +31,6 @@ class MgmtsystemNonconformity(models.Model):
                 self.ai_quest_id.channel_id.write({'name': f"[{self.ref}] {self.name}"})
             
  
-    @api.model
     def create(self, vals):
         mgmtsystem_nonconformity = super(MgmtsystemNonconformity, self).create(vals)
         action_plan_stage = self.env.ref('mgmtsystem_nonconformity.stage_pending')
