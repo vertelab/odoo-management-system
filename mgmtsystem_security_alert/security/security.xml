@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_security_alert" model="ir.module.category">
+        <field name="name">Security Alerts</field>
+        <field name="description">Säkerhetsbevakning — automatisk inhämtning av säkerhetsvarningar</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <record id="group_security_alert_user" model="res.groups">
+        <field name="name">Security Alert User</field>
+        <field name="category_id" ref="module_category_security_alert"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_security_alert_manager" model="res.groups">
+        <field name="name">Security Alert Manager</field>
+        <field name="category_id" ref="module_category_security_alert"/>
+        <field name="implied_ids" eval="[(4, ref('group_security_alert_user'))]"/>
+    </record>
+
+    <!-- Company isolation rules -->
+    <record id="rule_security_alert_source_company" model="ir.rule">
+        <field name="name">Alert Source: Company Isolation</field>
+        <field name="model_id" ref="model_security_alert_source"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_security_alert_company" model="ir.rule">
+        <field name="name">Alert: Company Isolation</field>
+        <field name="model_id" ref="model_security_alert"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_security_software_company" model="ir.rule">
+        <field name="name">Software: Company Isolation</field>
+        <field name="model_id" ref="model_security_software"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

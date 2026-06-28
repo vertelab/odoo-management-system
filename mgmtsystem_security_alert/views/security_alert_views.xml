@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_security_alert_tree" model="ir.ui.view">
+        <field name="name">security.alert.tree</field>
+        <field name="model">security.alert</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="severity == 'critical'" decoration-warning="severity == 'high'">
+                <field name="name"/>
+                <field name="source_id"/>
+                <field name="severity"/>
+                <field name="cvss_score"/>
+                <field name="state"/>
+                <field name="published_date"/>
+                <field name="assigned_to"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_security_alert_form" model="ir.ui.view">
+        <field name="name">security.alert.form</field>
+        <field name="model">security.alert</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_acknowledge" string="Acknowledge" type="object" invisible="state != 'new'" class="btn-primary"/>
+                    <button name="action_start_work" string="Start Work" type="object" invisible="state not in ('new','acknowledged')" class="btn-primary"/>
+                    <button name="action_resolve" string="Resolve" type="object" invisible="state != 'in_progress'" class="btn-primary"/>
+                    <button name="action_false_positive" string="False Positive" type="object" invisible="state not in ('new','acknowledged','in_progress')"/>
+                    <button name="action_dismiss" string="Dismiss" type="object" invisible="state not in ('new','acknowledged')"/>
+                    <button name="action_reopen" string="Reopen" type="object" invisible="state not in ('resolved','false_positive','dismissed')"/>
+                    <button name="action_ai_assess_relevance" string="AI Assess" type="object"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,acknowledged,in_progress,resolved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="source_id"/>
+                            <field name="source_ref"/>
+                            <field name="severity"/>
+                            <field name="cvss_score"/>
+                        </group>
+                        <group>
+                            <field name="published_date"/>
+                            <field name="assigned_to"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="AI Assessment" attrs="{'invisible': [('ai_assessed_date', '=', False)]}">
+                        <field name="ai_relevance_score"/>
+                        <field name="ai_risk_assessment"/>
+                        <field name="ai_mitigation_suggestion"/>
+                        <field name="ai_assessed_date"/>
+                    </group>
+                    <group string="Affected Products"><field name="affected_products" nolabel="1"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                    <group string="Mitigation"><field name="mitigation" nolabel="1"/></group>
+                    <group string="ISO 27001">
+                        <field name="control_ids" widget="many2many_tags"/>
+                        <field name="security_event_id"/>
+                    </group>
+                    <group string="Software"><field name="software_id"/><field name="matched_software"/></group>
+                    <group string="Actions"><field name="action_ids" nolabel="1"><list><field name="action_id"/><field name="control_id"/></list></field></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_security_alert" model="ir.actions.act_window">
+        <field name="name">Security Alerts</field>
+        <field name="res_model">security.alert</field>
+        <field name="view_mode">kanban,list,form,pivot</field>
+    </record>
+</odoo>

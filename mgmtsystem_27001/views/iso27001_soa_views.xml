@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== Form View: SoA ====== -->
+    <record id="view_iso27001_soa_form" model="ir.ui.view">
+        <field name="name">iso27001.soa.form</field>
+        <field name="model">iso27001.soa</field>
+        <field name="arch" type="xml">
+            <form string="Statement of Applicability">
+                <header>
+                    <button name="action_approve" string="Approve"
+                            states="draft" type="object" class="btn-primary"/>
+                    <button name="action_archive" string="Archive"
+                            states="approved" type="object"/>
+                    <button name="action_draft" string="Reset to Draft"
+                            states="approved,archived" type="object"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,approved,archived"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="date"/>
+                            <field name="approved_by"/>
+                            <field name="date_approved" attrs="{'invisible': [('state', '!=', 'approved')]}"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Controls" name="controls">
+                            <field name="line_ids" nolabel="1">
+                                <list default_group_by="control_id" editable="bottom">
+                                    <field name="control_id"
+                                           context="{'default_system_id': system_id}"/>
+                                    <field name="applicable" widget="boolean_toggle"/>
+                                    <field name="implemented" widget="boolean_toggle"
+                                           attrs="{'invisible': [('applicable', '=', False)]}"/>
+                                    <field name="justification"/>
+                                    <field name="implementation_status"/>
+                                    <field name="linked_event_ids" widget="many2many_tags"/>
+                                    <field name="action_ids" widget="many2many_tags"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- ====== List View: SoA ====== -->
+    <record id="view_iso27001_soa_list" model="ir.ui.view">
+        <field name="name">iso27001.soa.list</field>
+        <field name="model">iso27001.soa</field>
+        <field name="arch" type="xml">
+            <list string="Statement of Applicability">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="approved_by"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'approved'"
+                       decoration-warning="state == 'draft'"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ====== Search View: SoA ====== -->
+    <record id="view_iso27001_soa_search" model="ir.ui.view">
+        <field name="name">iso27001.soa.search</field>
+        <field name="model">iso27001.soa</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="approved_by"/>
+                <separator/>
+                <filter name="state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="state_approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="state_archived" string="Archived" domain="[('state', '=', 'archived')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ====== Action: Open SoA ====== -->
+    <record id="action_open_iso27001_soa" model="ir.actions.act_window">
+        <field name="name">Statement of Applicability</field>
+        <field name="res_model">iso27001.soa</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

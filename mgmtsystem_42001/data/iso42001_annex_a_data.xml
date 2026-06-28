@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--
+            ISO 42001:2023 Annex A Reference Controls
+            9 control areas (A.2–A.10).
+            Swedish names and descriptions.
+            NOTE: Annex A is INFORMATIVE in ISO 42001 (unlike 27001 where it's normative).
+        -->
+
+        <!-- A.2 Policies related to AI -->
+        <record id="control_a_2_1" model="iso42001.control">
+            <field name="name">AI-policy</field>
+            <field name="control_ref">A.2.1</field>
+            <field name="control_area">A.2</field>
+            <field name="control_type">policy</field>
+            <field name="description">Organisationen ska upprätta och underhålla en AI-policy som är lämplig för dess syfte och omfattning. Policyn ska vara dokumenterad, kommunicerad och tillgänglig.</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="control_a_2_2" model="iso42001.control">
+            <field name="name">Överensstämmelse mellan AI-policy och andra policies</field>
+            <field name="control_ref">A.2.2</field>
+            <field name="control_area">A.2</field>
+            <field name="control_type">policy</field>
+            <field name="description">AI-policyn ska vara förenlig med organisationens övriga policies, t.ex. informationssäkerhetspolicy, dataskyddspolicy, etiska riktlinjer.</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="control_a_2_3" model="iso42001.control">
+            <field name="name">Granskning av AI-policy</field>
+            <field name="control_ref">A.2.3</field>
+            <field name="control_area">A.2</field>
+            <field name="control_type">policy</field>
+            <field name="description">AI-policyn ska granskas med planerade intervall eller vid betydande förändringar.</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <!-- A.3 Internal organization -->
+        <record id="control_a_3_1" model="iso42001.control">
+            <field name="name">AI-roller och ansvar</field>
+            <field name="control_ref">A.3.1</field>
+            <field name="control_area">A.3</field>
+            <field name="control_type">process</field>
+            <field name="description">Organisationen ska definiera och tilldela AI-relaterade roller och ansvar, inklusive ägarskap för AI-system.</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="control_a_3_2" model="iso42001.control">
+            <field name="name">Rapporteringsvägar för AI</field>
+            <field name="control_ref">A.3.2</field>
+            <field name="control_area">A.3</field>
+            <field name="control_type">process</field>
+            <field name="description">Det ska finnas etablerade rapporteringsvägar för AI-frågor till högsta ledningen.</field>
+            <field name="sequence">11</field>
+        </record>
+        <record id="control_a_3_3" model="iso42001.control">
+            <field name="name">Eskaleringsvägar för AI-etik</field>
+            <field name="control_ref">A.3.3</field>
+            <field name="control_area">A.3</field>
+            <field name="control_type">process</field>
+            <field name="description">Etablera processer för eskalering av AI-etiska frågor och incidenter.</field>
+            <field name="sequence">12</field>
+        </record>
+
+        <!-- A.4 Resources for AI systems -->
+        <record id="control_a_4_1" model="iso42001.control">
+            <field name="name">Dataresurser</field>
+            <field name="control_ref">A.4.1</field>
+            <field name="control_area">A.4</field>
+            <field name="control_type">technical</field>
+            <field name="description">Säkerställ tillräckliga och lämpliga dataresurser för AI-system, inklusive data management.</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="control_a_4_2" model="iso42001.control">
+            <field name="name">Verktyg och beräkningsresurser</field>
+            <field name="control_ref">A.4.2</field>
+            <field name="control_area">A.4</field>
+            <field name="control_type">technical</field>
+            <field name="description">Säkerställ tillräckliga verktyg, ramverk, och beräkningsresurser för utveckling och drift av AI-system.</field>
+            <field name="sequence">21</field>
+        </record>
+        <record id="control_a_4_3" model="iso42001.control">
+            <field name="name">Mänskliga resurser</field>
+            <field name="control_ref">A.4.3</field>
+            <field name="control_area">A.4</field>
+            <field name="control_type">process</field>
+            <field name="description">Säkerställ att personal med nödvändig AI-kompetens finns tillgänglig.</field>
+            <field name="sequence">22</field>
+        </record>
+
+        <!-- A.5 Assessing impacts of AI systems -->
+        <record id="control_a_5_1" model="iso42001.control">
+            <field name="name">Konsekvensbedömningsprocess</field>
+            <field name="control_ref">A.5.1</field>
+            <field name="control_area">A.5</field>
+            <field name="control_type">process</field>
+            <field name="description">Organisationen ska ha en process för att bedöma konsekvenser av AI-system på individer, grupper och samhälle.</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="control_a_5_2" model="iso42001.control">
+            <field name="name">Dokumentation av konsekvensbedömning</field>
+            <field name="control_ref">A.5.2</field>
+            <field name="control_area">A.5</field>
+            <field name="control_type">documentation</field>
+            <field name="description">Resultat från konsekvensbedömningar ska dokumenteras och sparas som dokumenterad information.</field>
+            <field name="sequence">31</field>
+        </record>
+
+        <!-- A.6 AI system life cycle -->
+        <record id="control_a_6_1" model="iso42001.control">
+            <field name="name">Design och utveckling</field>
+            <field name="control_ref">A.6.1</field>
+            <field name="control_area">A.6</field>
+            <field name="control_type">technical</field>
+            <field name="description">AI-system ska designas och utvecklas enligt fastställda processer med beaktande av etiska principer.</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="control_a_6_2" model="iso42001.control">
+            <field name="name">Verifiering och validering</field>
+            <field name="control_ref">A.6.2</field>
+            <field name="control_area">A.6</field>
+            <field name="control_type">technical</field>
+            <field name="description">AI-system ska verifieras och valideras innan driftsättning för att säkerställa att de uppfyller specificerade krav.</field>
+            <field name="sequence">41</field>
+        </record>
+        <record id="control_a_6_3" model="iso42001.control">
+            <field name="name">Driftsättning</field>
+            <field name="control_ref">A.6.3</field>
+            <field name="control_area">A.6</field>
+            <field name="control_type">process</field>
+            <field name="description">Driftsättning av AI-system ska följa en kontrollerad process med godkännandesteg.</field>
+            <field name="sequence">42</field>
+        </record>
+        <record id="control_a_6_4" model="iso42001.control">
+            <field name="name">Drift och övervakning</field>
+            <field name="control_ref">A.6.4</field>
+            <field name="control_area">A.6</field>
+            <field name="control_type">technical</field>
+            <field name="description">AI-system i drift ska övervakas kontinuerligt för prestanda, bias, säkerhet och andra relevanta aspekter.</field>
+            <field name="sequence">43</field>
+        </record>
+        <record id="control_a_6_5" model="iso42001.control">
+            <field name="name">Avveckling</field>
+            <field name="control_ref">A.6.5</field>
+            <field name="control_area">A.6</field>
+            <field name="control_type">process</field>
+            <field name="description">Avveckling av AI-system ska ske på ett kontrollerat sätt med beaktande av dataskydd och informationssäkerhet.</field>
+            <field name="sequence">44</field>
+        </record>
+
+        <!-- A.7 Data for AI systems -->
+        <record id="control_a_7_1" model="iso42001.control">
+            <field name="name">Datakvalitet</field>
+            <field name="control_ref">A.7.1</field>
+            <field name="control_area">A.7</field>
+            <field name="control_type">technical</field>
+            <field name="description">Data som används för AI-system ska vara av tillräcklig kvalitet, inklusive fullständighet, noggrannhet och aktualitet.</field>
+            <field name="sequence">50</field>
+        </record>
+        <record id="control_a_7_2" model="iso42001.control">
+            <field name="name">Dataursprung och härkomst</field>
+            <field name="control_ref">A.7.2</field>
+            <field name="control_area">A.7</field>
+            <field name="control_type">technical</field>
+            <field name="description">Organisationen ska ha kunskap om datakällors ursprung, insamlingsmetoder och eventuella begränsningar (data provenance).</field>
+            <field name="sequence">51</field>
+        </record>
+        <record id="control_a_7_3" model="iso42001.control">
+            <field name="name">Dataförberedelse</field>
+            <field name="control_ref">A.7.3</field>
+            <field name="control_area">A.7</field>
+            <field name="control_type">technical</field>
+            <field name="description">Data ska förberedas genom lämpliga processer inklusive rensning, normalisering, och feature engineering.</field>
+            <field name="sequence">52</field>
+        </record>
+
+        <!-- A.8 Information for interested parties -->
+        <record id="control_a_8_1" model="iso42001.control">
+            <field name="name">Systemdokumentation</field>
+            <field name="control_ref">A.8.1</field>
+            <field name="control_area">A.8</field>
+            <field name="control_type">documentation</field>
+            <field name="description">AI-system ska ha adekvat teknisk dokumentation inklusive model cards, systemarkitektur, och begränsningar.</field>
+            <field name="sequence">60</field>
+        </record>
+        <record id="control_a_8_2" model="iso42001.control">
+            <field name="name">Användarinformation</field>
+            <field name="control_ref">A.8.2</field>
+            <field name="control_area">A.8</field>
+            <field name="control_type">documentation</field>
+            <field name="description">Slutanvändare ska få transparent information om AI-systemets funktion, begränsningar och hur beslut fattas.</field>
+            <field name="sequence">61</field>
+        </record>
+        <record id="control_a_8_3" model="iso42001.control">
+            <field name="name">Extern rapportering</field>
+            <field name="control_ref">A.8.3</field>
+            <field name="control_area">A.8</field>
+            <field name="control_type">documentation</field>
+            <field name="description">Vid behov ska organisationen rapportera om AI-system till externa intressenter, tillsynsmyndigheter och allmänheten.</field>
+            <field name="sequence">62</field>
+        </record>
+
+        <!-- A.9 Use of AI systems -->
+        <record id="control_a_9_1" model="iso42001.control">
+            <field name="name">Avsedd användning</field>
+            <field name="control_ref">A.9.1</field>
+            <field name="control_area">A.9</field>
+            <field name="control_type">process</field>
+            <field name="description">AI-system ska endast användas för sitt avsedda ändamål enligt dokumentationen. Användning utanför specifikation ska förhindras.</field>
+            <field name="sequence">70</field>
+        </record>
+        <record id="control_a_9_2" model="iso42001.control">
+            <field name="name">Ansvarsfull användning</field>
+            <field name="control_ref">A.9.2</field>
+            <field name="control_area">A.9</field>
+            <field name="control_type">process</field>
+            <field name="description">Mål för ansvarsfull AI-användning ska fastställas, inklusive rättvisa, transparens, och mänsklig översyn.</field>
+            <field name="sequence">71</field>
+        </record>
+        <record id="control_a_9_3" model="iso42001.control">
+            <field name="name">Övervakning av användning</field>
+            <field name="control_ref">A.9.3</field>
+            <field name="control_area">A.9</field>
+            <field name="control_type">technical</field>
+            <field name="description">Användning av AI-system ska övervakas för att upptäcka avvikelser från avsedd användning och prestandaförsämring.</field>
+            <field name="sequence">72</field>
+        </record>
+
+        <!-- A.10 Third-party and customer relationships -->
+        <record id="control_a_10_1" model="iso42001.control">
+            <field name="name">Leverantörshantering av AI</field>
+            <field name="control_ref">A.10.1</field>
+            <field name="control_area">A.10</field>
+            <field name="control_type">process</field>
+            <field name="description">Organisationen ska hantera AI-relaterade risker i leverantörskedjan, inklusive granskning av tredjeparts AI-system och modeller.</field>
+            <field name="sequence">80</field>
+        </record>
+        <record id="control_a_10_2" model="iso42001.control">
+            <field name="name">Kundrelationer och AI</field>
+            <field name="control_ref">A.10.2</field>
+            <field name="control_area">A.10</field>
+            <field name="control_type">process</field>
+            <field name="description">Information om AI-användning ska kommuniceras till kunder och avtalsvillkor ska beakta AI-specifika aspekter.</field>
+            <field name="sequence">81</field>
+        </record>
+        <record id="control_a_10_3" model="iso42001.control">
+            <field name="name">Avtalsvillkor för AI</field>
+            <field name="control_ref">A.10.3</field>
+            <field name="control_area">A.10</field>
+            <field name="control_type">process</field>
+            <field name="description">Avtal med leverantörer och kunder ska innehålla relevanta AI-villkor inklusive dataskydd, immateriella rättigheter, och ansvar.</field>
+            <field name="sequence">82</field>
+        </record>
+    </data>
+</odoo>

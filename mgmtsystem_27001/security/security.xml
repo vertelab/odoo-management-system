@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ISO 27001 Group Category -->
+    <record id="module_category_iso27001" model="ir.module.category">
+        <field name="name">ISO 27001 (ISMS)</field>
+        <field name="description">Informationssäkerhetsledningssystem — moduler för ISO 27001:2022</field>
+        <field name="sequence">91</field>
+    </record>
+
+    <!-- ISO 27001 Groups -->
+    <record id="group_iso27001_user" model="res.groups">
+        <field name="name">ISO 27001 User</field>
+        <field name="category_id" ref="module_category_iso27001"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Kan läsa ISMS-dokument, gap-analyser och SoA.</field>
+    </record>
+
+    <record id="group_iso27001_manager" model="res.groups">
+        <field name="name">ISO 27001 Manager</field>
+        <field name="category_id" ref="module_category_iso27001"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso27001_user'))]"/>
+        <field name="comment">Kan skapa och redigera gap-analyser, SoA, policy och kontroller.</field>
+    </record>
+
+    <record id="group_iso27001_officer" model="res.groups">
+        <field name="name">ISO 27001 Officer</field>
+        <field name="category_id" ref="module_category_iso27001"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso27001_manager'))]"/>
+        <field name="comment">Fullständig administration av ISMS-systemet.</field>
+    </record>
+
+    <!-- Record Rules: Company Isolation -->
+    <record id="rule_iso27001_gap_company" model="ir.rule">
+        <field name="name">ISO 27001 Gap: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_gap"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso27001_gap_line_company" model="ir.rule">
+        <field name="name">ISO 27001 Gap Line: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_gap_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso27001_soa_company" model="ir.rule">
+        <field name="name">ISO 27001 SoA: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_soa"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso27001_soa_line_company" model="ir.rule">
+        <field name="name">ISO 27001 SoA Line: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_soa_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso27001_clause_company" model="ir.rule">
+        <field name="name">ISO 27001 Clause: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_clause"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso27001_policy_company" model="ir.rule">
+        <field name="name">ISO 27001 Policy: Company Isolation</field>
+        <field name="model_id" ref="model_iso27001_policy"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

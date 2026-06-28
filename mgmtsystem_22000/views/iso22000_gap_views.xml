@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_gap_tree" model="ir.ui.view">
+        <field name="name">iso22000.gap.tree</field>
+        <field name="model">iso22000.gap</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="assessed_by"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_iso22000_gap_form" model="ir.ui.view">
+        <field name="name">iso22000.gap.form</field>
+        <field name="model">iso22000.gap</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" string="Start" type="object"
+                            invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_done" string="Complete" type="object"
+                            invisible="state != 'in_progress'" class="btn-primary"/>
+                    <button name="action_draft" string="Reset" type="object"
+                            invisible="state not in ('done', 'in_progress')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Gap Analysis Name"/></h1>
+                    </div>
+                    <group>
+                        <field name="date"/>
+                        <field name="assessed_by"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group string="Notes">
+                        <field name="notes" nolabel="1"/>
+                    </group>
+                    <group string="Gap Analysis Lines">
+                        <field name="line_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="clause_id"/>
+                                <field name="maturity_level"/>
+                                <field name="status"/>
+                                <field name="finding"/>
+                                <field name="recommendation"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_iso22000_gap" model="ir.actions.act_window">
+        <field name="name">ISO 22000 Gap Analysis</field>
+        <field name="res_model">iso22000.gap</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

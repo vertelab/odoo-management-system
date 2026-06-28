@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso42001_objective_tree" model="ir.ui.view">
+        <field name="name">iso42001.objective.tree</field>
+        <field name="model">iso42001.objective</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/><field name="target_value"/><field name="owner_id"/>
+                <field name="deadline"/><field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso42001_objective_form" model="ir.ui.view">
+        <field name="name">iso42001.objective.form</field>
+        <field name="model">iso42001.objective</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_achieve" string="Mark Achieved" type="object" invisible="state != 'active'" class="btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft','active')"/>
+                    <button name="action_draft" string="Reset" type="object" invisible="state not in ('achieved','cancelled')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,achieved,cancelled"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="kpi_description"/><field name="target_value"/>
+                            <field name="current_value"/><field name="deadline"/>
+                        </group>
+                        <group>
+                            <field name="owner_id"/><field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="ISO 42001"><field name="iso42001_clause_ids" widget="many2many_tags"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso42001_objective" model="ir.actions.act_window">
+        <field name="name">AI Objectives</field>
+        <field name="res_model">iso42001.objective</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

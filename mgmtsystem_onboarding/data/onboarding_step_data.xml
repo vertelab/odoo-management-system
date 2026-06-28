@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="onboarding_step_9001_awareness" model="hr.onboarding.template.step">
+        <field name="name">ISO 9001:2026 — Kvalitetsmedvetenhet</field>
+        <field name="deadline_days">7</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av kvalitetspolicy, kvalitetsmål och den anställdes roll i kvalitetsledningssystemet.</field>
+        <field name="required" eval="True"/>
+    </record>
+    <record id="onboarding_step_9001_process" model="hr.onboarding.template.step">
+        <field name="name">ISO 9001:2026 — Processkännedom</field>
+        <field name="deadline_days">30</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av avdelningens processer, procedurer och arbetsinstruktioner. Introduktion till avvikelsehantering.</field>
+        <field name="required" eval="True"/>
+    </record>
+    <record id="onboarding_step_14001_awareness" model="hr.onboarding.template.step">
+        <field name="name">ISO 14001:2026 — Miljömedvetenhet</field>
+        <field name="deadline_days">7</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av miljöpolicy, miljöaspekter och den anställdes ansvar för miljön.</field>
+        <field name="required" eval="True"/>
+    </record>
+    <record id="onboarding_step_27001_awareness" model="hr.onboarding.template.step">
+        <field name="name">ISO 27001:2022 — Informationssäkerhetsmedvetenhet</field>
+        <field name="deadline_days">7</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av informationssäkerhetspolicy, klassificering av information och rutiner för incidentrapportering.</field>
+        <field name="required" eval="True"/>
+    </record>
+    <record id="onboarding_step_22000_awareness" model="hr.onboarding.template.step">
+        <field name="name">ISO 22000:2018 — Livsmedelssäkerhetsmedvetenhet</field>
+        <field name="deadline_days">7</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av livsmedelssäkerhetspolicy, PRP:er och HACCP. Personlig hygien och rengöringsrutiner.</field>
+        <field name="required" eval="True"/>
+    </record>
+    <record id="onboarding_step_sam_awareness" model="hr.onboarding.template.step">
+        <field name="name">SAM — Arbetsmiljömedvetenhet</field>
+        <field name="deadline_days">7</field>
+        <field name="responsible_role">manager</field>
+        <field name="description">Genomgång av arbetsmiljöpolicy, riskbedömning och rutiner för tillbudsrapportering.</field>
+        <field name="required" eval="True"/>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== Extend Action Form: ISO 27001 Clauses ====== -->
+    <record id="view_mgmtsystem_action_form_iso27001" model="ir.ui.view">
+        <field name="name">mgmtsystem.action.form.iso27001</field>
+        <field name="model">mgmtsystem.action</field>
+        <field name="inherit_id" ref="mgmtsystem_action.view_mgmtsystem_action_form"/>
+        <field name="arch" type="xml">
+            <page name="desc" position="after">
+                <page name="iso27001" string="ISO 27001">
+                    <group>
+                        <field name="iso27001_clause_ids" widget="many2many_tags"/>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

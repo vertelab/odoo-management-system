@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_config_sam" model="ir.ui.view">
+        <field name="name">res.config.settings.sam</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='employees']" position="after">
+                <div id="sam_settings" string="Arbetsmiljö (SAM)" groups="group_sam_manager">
+                    <h2>Systematiskt Arbetsmiljöarbete</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="sam_auto_create_channels"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="sam_auto_create_channels"/>
+                                <div class="text-muted">
+                                    Skapa automatiskt discuss-kanaler per avdelning för arbetsmiljödiskussioner (ISO 45001 5.4)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="sam_default_review_month"/>
+                                <field name="sam_default_review_month"/>
+                                <div class="text-muted">
+                                    Standardmånad för årlig uppföljning (ISO 45001 9.3)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

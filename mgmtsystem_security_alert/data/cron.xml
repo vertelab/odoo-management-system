@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Hourly fetch: CERT-SE, NCSC, Ubuntu USN -->
+    <record id="cron_security_alert_hourly" model="ir.cron">
+        <field name="name">Security Alert: Hourly Fetch (CERT-SE, NCSC, Ubuntu USN)</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="False"/>
+        <field name="model_id" ref="model_security_alert_source"/>
+        <field name="code">model.fetch_hourly_sources()</field>
+    </record>
+
+    <!-- Daily fetch: NVD CVE -->
+    <record id="cron_security_alert_daily" model="ir.cron">
+        <field name="name">Security Alert: Daily Fetch (NVD CVE)</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="False"/>
+        <field name="model_id" ref="model_security_alert_source"/>
+        <field name="code">model.fetch_daily_sources()</field>
+    </record>
+
+    <!-- AI assessment: every 15 min for new unassessed alerts -->
+    <record id="cron_security_alert_ai_assess" model="ir.cron">
+        <field name="name">Security Alert: AI Relevance Assessment</field>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="False"/>
+        <field name="model_id" ref="model_security_alert"/>
+        <field name="code">model.cron_ai_assess_unassessed()</field>
+    </record>
+</odoo>

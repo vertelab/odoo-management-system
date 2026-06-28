@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_sam_root"
+              name="Arbetsmiljö"
+              parent="hr.menu_hr_root"
+              sequence="100"
+              groups="group_sam_user"/>
+
+    <menuitem id="menu_sam_documents"
+              name="Dokument"
+              parent="menu_sam_root"
+              sequence="10"/>
+
+    <menuitem id="menu_sam_policy"
+              name="Arbetsmiljöpolicy"
+              parent="menu_sam_documents"
+              action="action_sam_policy"
+              sequence="10"/>
+
+    <menuitem id="menu_sam_task_delegation"
+              name="Uppgiftsfördelning"
+              parent="menu_sam_documents"
+              action="action_sam_task_delegation"
+              sequence="20"/>
+
+    <menuitem id="menu_sam_instruction"
+              name="Skyddsinstruktioner"
+              parent="menu_sam_documents"
+              action="action_sam_instruction"
+              sequence="30"/>
+
+    <menuitem id="menu_sam_risk"
+              name="Riskhantering"
+              parent="menu_sam_root"
+              sequence="20"/>
+
+    <menuitem id="menu_sam_hazard"
+              name="Riskbedömning"
+              parent="menu_sam_risk"
+              action="mgmtsystem_hazard.open_mgmtsystem_hazard_list"
+              sequence="10"/>
+
+    <menuitem id="menu_sam_action"
+              name="Handlingsplan"
+              parent="menu_sam_risk"
+              action="mgmtsystem_action.open_mgmtsystem_action_list"
+              sequence="20"/>
+
+    <menuitem id="menu_sam_inspection"
+              name="Skyddsronder"
+              parent="menu_sam_risk"
+              action="mgmtsystem_audit.open_mgmtsystem_audit_list"
+              sequence="30"/>
+
+    <menuitem id="menu_sam_incidents"
+              name="Händelser"
+              parent="menu_sam_root"
+              sequence="30"/>
+
+    <menuitem id="menu_sam_nonconformity"
+              name="Tillbud &amp; Avvikelser"
+              parent="menu_sam_incidents"
+              action="mgmtsystem_nonconformity.open_mgmtsystem_nonconformity_list"
+              sequence="10"/>
+
+    <menuitem id="menu_sam_consultation"
+              name="Medverkan / Samråd"
+              parent="menu_sam_incidents"
+              action="action_sam_consultation"
+              sequence="20"/>
+
+    <menuitem id="menu_sam_review"
+              name="Uppföljning"
+              parent="menu_sam_root"
+              sequence="40"/>
+
+    <menuitem id="menu_sam_annual_review"
+              name="Årlig uppföljning"
+              parent="menu_sam_review"
+              action="mgmtsystem_review.open_mgmtsystem_review_list"
+              sequence="10"/>
+
+    <menuitem id="menu_sam_dashboard"
+              name="Dashboard"
+              parent="menu_sam_root"
+              action="action_sam_dashboard"
+              sequence="50"/>
+
+    <menuitem id="menu_sam_config"
+              name="Konfiguration"
+              parent="menu_sam_root"
+              groups="group_sam_manager"
+              sequence="100"/>
+
+    <menuitem id="menu_sam_iso_clause"
+              name="ISO 45001 Klausuler"
+              parent="menu_sam_config"
+              action="action_sam_iso_clause"
+              sequence="10"/>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- AI Agent: Riskbedömningsassistent -->
+        <record id="ai_agent_risk_assessment" model="ai.agent">
+            <field name="name">SAM Riskbedömningsassistent</field>
+            <field name="ai_type">default</field>
+        </record>
+
+        <!-- AI Agent: Incidentanalys -->
+        <record id="ai_agent_incident_analysis" model="ai.agent">
+            <field name="name">SAM Incidentanalys</field>
+            <field name="ai_type">default</field>
+        </record>
+    </data>
+</odoo>

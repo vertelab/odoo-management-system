@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_iso27001" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.iso27001</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mgmtsystem.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='mgmtsystem_documentation_setting']" position="after">
+                <block title="ISO 27001:2022" name="mgmtsystem_iso27001_setting">
+                    <setting string="ISMS Scope"
+                            help="Define the scope of your Information Security Management System.">
+                        <field name="iso27001_scope" placeholder="e.g., All information assets related to ..."/>
+                    </setting>
+                    <setting string="Risk Acceptance Criteria"
+                            help="Define criteria for accepting information security risks.">
+                        <field name="iso27001_risk_acceptance_criteria" placeholder="e.g., Risks with value &lt;5 are acceptable..."/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

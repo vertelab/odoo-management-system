@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso14001_aspect_search" model="ir.ui.view">
+        <field name="name">iso14001.aspect.search.dashboard</field>
+        <field name="model">iso14001.aspect</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="group_significance" string="Group by Significance" domain="[]" context="{'group_by': 'significance'}"/>
+                <filter name="group_type" string="Group by Type" domain="[]" context="{'group_by': 'aspect_type'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_iso14001_dashboard" model="ir.actions.act_window">
+        <field name="name">ISO 14001 Dashboard</field>
+        <field name="res_model">iso14001.aspect</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="search_view_id" ref="view_iso14001_aspect_search"/>
+        <field name="context">{'search_default_group_significance': 1}</field>
+    </record>
+</odoo>

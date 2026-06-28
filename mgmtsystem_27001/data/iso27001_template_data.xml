@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Template: Information Security Policy -->
+        <record id="template_policy" model="iso27001.policy">
+            <field name="name">Informationssäkerhetspolicy (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>Informationssäkerhetspolicy för [Företagets namn]</h2>
+
+                <p>Denna policy fastställer ledningens åtagande för att skydda
+                organisationens informationstillgångar och säkerställa ett effektivt
+                ledningssystem för informationssäkerhet (ISMS) enligt ISO 27001:2022.</p>
+
+                <h3>Syfte</h3>
+                <p>Att skydda informationens konfidentialitet, riktighet och
+                tillgänglighet i enlighet med verksamhetens behov, lagkrav och
+                avtalsförpliktelser.</p>
+
+                <h3>Ledningens åtagande</h3>
+                <ul>
+                    <li>Säkerställa att ISMS uppnår avsedda resultat</li>
+                    <li>Tillhandahålla nödvändiga resurser för ISMS</li>
+                    <li>Kommunicera vikten av effektiv informationssäkerhetshantering</li>
+                    <li>Säkerställa att ISMS integreras i organisationens processer</li>
+                    <li>Främja ständig förbättring</li>
+                </ul>
+
+                <h3>Mål</h3>
+                <ul>
+                    <li>Skydda information mot obehörig åtkomst</li>
+                    <li>Säkerställa informationsriktighet och fullständighet</li>
+                    <li>Säkerställa tillgång till information när den behövs</li>
+                    <li>Efterleva tillämpliga lagar, författningar och avtalskrav</li>
+                    <li>Kontinuerligt förbättra ISMS</li>
+                </ul>
+
+                <h3>Ansvar</h3>
+                <p>Alla medarbetare och kontrakterade parter ansvarar för att följa
+                denna policy och rapportera informationssäkerhetsincidenter.</p>
+                ]]>
+            </field>
+        </record>
+
+        <!-- Template: Risk Assessment Methodology -->
+        <record id="template_risk_methodology" model="iso27001.policy">
+            <field name="name">Riskbedömningsmetodik (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>Metodik för riskbedömning av informationssäkerhet</h2>
+
+                <h3>Riskidentifiering</h3>
+                <p>Identifiera informationstillgångar, hot, sårbarheter och
+                konsekvenser för konfidentialitet, riktighet och tillgänglighet.</p>
+
+                <h3>Riskanalys</h3>
+                <p>Bedöm sannolikhet (1–4) och konsekvens (1–4) för varje
+                identifierad risk. Fastställ risknivå enligt riskmatrisen:
+                Grön (1–4), Orange (5–8), Röd (9–16).</p>
+
+                <h3>Riskutvärdering</h3>
+                <p>Jämför risknivåer mot organisationens riskacceptanskriterier.
+                Risker som överstiger acceptanskriterierna ska riskbehandlas.</p>
+
+                <h3>Riskbehandling</h3>
+                <p>Välj behandlingsalternativ: Acceptera, Reducera, Överföra, Undvika.
+                Välj Annex A-kontroller från ISO 27001:2022 baserat på
+                riskbehandlingsplanen.</p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

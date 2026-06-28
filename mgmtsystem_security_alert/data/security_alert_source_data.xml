@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- CERT-SE (Atom Feed) -->
+    <record id="source_cert_se" model="security.alert.source">
+        <field name="name">CERT-SE</field>
+        <field name="source_type">cert_se</field>
+        <field name="url">https://www.cert.se/feed/atom.xml</field>
+        <field name="fetch_interval">hourly</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- NCSC Aktuellt (Web Scraping) -->
+    <record id="source_ncsc" model="security.alert.source">
+        <field name="name">NCSC — Aktuellt</field>
+        <field name="source_type">ncsc</field>
+        <field name="url">https://www.ncsc.se/sv/aktuellt/</field>
+        <field name="fetch_interval">hourly</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- NVD CVE API v2.0 -->
+    <record id="source_nvd_cve" model="security.alert.source">
+        <field name="name">NVD CVE (NIST)</field>
+        <field name="source_type">nvd_cve</field>
+        <field name="url">https://services.nvd.nist.gov/rest/json/cves/2.0</field>
+        <field name="fetch_interval">daily</field>
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- Ubuntu USN -->
+    <record id="source_ubuntu_usn" model="security.alert.source">
+        <field name="name">Ubuntu Security Notices</field>
+        <field name="source_type">ubuntu_usn</field>
+        <field name="url">https://ubuntu.com/security/notices.json</field>
+        <field name="fetch_interval">hourly</field>
+        <field name="active" eval="False"/>
+    </record>
+</odoo>

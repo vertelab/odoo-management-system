@@ -1,0 +1,21 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso42001_clause_user,Clause User,model_iso42001_clause,group_iso42001_user,1,0,0,0
+access_iso42001_clause_manager,Clause Manager,model_iso42001_clause,group_iso42001_manager,1,1,1,1
+access_iso42001_policy_user,Policy User,model_iso42001_policy,group_iso42001_user,1,0,0,0
+access_iso42001_policy_manager,Policy Manager,model_iso42001_policy,group_iso42001_manager,1,1,1,1
+access_iso42001_gap_user,Gap User,model_iso42001_gap,group_iso42001_user,1,0,0,0
+access_iso42001_gap_manager,Gap Manager,model_iso42001_gap,group_iso42001_manager,1,1,1,1
+access_iso42001_gap_line_user,Gap Line User,model_iso42001_gap_line,group_iso42001_user,1,0,0,0
+access_iso42001_gap_line_manager,Gap Line Manager,model_iso42001_gap_line,group_iso42001_manager,1,1,1,1
+access_iso42001_control_user,Control User,model_iso42001_control,group_iso42001_user,1,0,0,0
+access_iso42001_control_manager,Control Manager,model_iso42001_control,group_iso42001_manager,1,1,1,1
+access_iso42001_aisystem_user,AI System User,model_iso42001_aisystem,group_iso42001_user,1,0,0,0
+access_iso42001_aisystem_manager,AI System Manager,model_iso42001_aisystem,group_iso42001_manager,1,1,1,1
+access_iso42001_impact_user,Impact Assessment User,model_iso42001_impact_assessment,group_iso42001_user,1,0,0,0
+access_iso42001_impact_manager,Impact Assessment Manager,model_iso42001_impact_assessment,group_iso42001_manager,1,1,1,1
+access_iso42001_objective_user,Objective User,model_iso42001_objective,group_iso42001_user,1,0,0,0
+access_iso42001_objective_manager,Objective Manager,model_iso42001_objective,group_iso42001_manager,1,1,1,1
+access_iso42001_soa_user,SoA User,model_iso42001_soa,group_iso42001_user,1,0,0,0
+access_iso42001_soa_manager,SoA Manager,model_iso42001_soa,group_iso42001_manager,1,1,1,1
+access_iso42001_soa_line_user,SoA Line User,model_iso42001_soa_line,group_iso42001_user,1,0,0,0
+access_iso42001_soa_line_manager,SoA Line Manager,model_iso42001_soa_line,group_iso42001_manager,1,1,1,1

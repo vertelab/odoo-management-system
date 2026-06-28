@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_security_alert_root"
+              name="Säkerhetsbevakning"
+              sequence="50"
+              groups="group_security_alert_user"/>
+
+    <menuitem id="menu_security_alert_alerts"
+              name="Varningar"
+              parent="menu_security_alert_root"
+              action="action_security_alert"
+              sequence="10"/>
+
+    <menuitem id="menu_security_alert_dashboard"
+              name="Dashboard"
+              parent="menu_security_alert_root"
+              action="action_security_alert_dashboard"
+              sequence="20"/>
+
+    <menuitem id="menu_security_alert_software"
+              name="Programvaruinventering"
+              parent="menu_security_alert_root"
+              action="action_security_software"
+              sequence="30"/>
+
+    <menuitem id="menu_security_alert_config"
+              name="Konfiguration"
+              parent="menu_security_alert_root"
+              groups="group_security_alert_manager"
+              sequence="90"/>
+
+    <menuitem id="menu_security_alert_source"
+              name="Källor"
+              parent="menu_security_alert_config"
+              action="action_security_alert_source"
+              sequence="10"/>
+
+    <menuitem id="menu_security_alert_rules"
+              name="Filtreringsregler"
+              parent="menu_security_alert_config"
+              action="action_security_alert_rule"
+              sequence="20"/>
+</odoo>

@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_security_alert_source_user,Source - User,model_security_alert_source,group_security_alert_user,1,0,0,0
+access_security_alert_source_manager,Source - Manager,model_security_alert_source,group_security_alert_manager,1,1,1,1
+access_security_alert_user,Alert - User,model_security_alert,group_security_alert_user,1,1,1,0
+access_security_alert_manager,Alert - Manager,model_security_alert,group_security_alert_manager,1,1,1,1
+access_security_alert_rule_user,Rule - User,model_security_alert_rule,group_security_alert_user,1,0,0,0
+access_security_alert_rule_manager,Rule - Manager,model_security_alert_rule,group_security_alert_manager,1,1,1,1
+access_security_alert_action_user,Action Link - User,model_security_alert_action,group_security_alert_user,1,1,1,0
+access_security_alert_action_manager,Action Link - Manager,model_security_alert_action,group_security_alert_manager,1,1,1,1
+access_security_software_user,Software - User,model_security_software,group_security_alert_user,1,0,0,0
+access_security_software_manager,Software - Manager,model_security_software,group_security_alert_manager,1,1,1,1
+access_security_software_release_user,Release - User,model_security_software_release,group_security_alert_user,1,0,0,0

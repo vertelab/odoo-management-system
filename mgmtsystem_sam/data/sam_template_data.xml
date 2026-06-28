@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- SAM Template: Exempel på Arbetsmiljöpolicy -->
+        <record id="template_policy" model="sam.policy">
+            <field name="name">Arbetsmiljöpolicy (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>Arbetsmiljöpolicy för [Företagets namn]</h2>
+                <p>Vår arbetsmiljöpolicy utgår från vår vision om en säker och hälsosam arbetsplats där ingen ska bli sjuk eller skadas av arbetet.</p>
+
+                <h3>Våra åtaganden:</h3>
+                <ul>
+                    <li>Vi arbetar systematiskt med arbetsmiljön enligt AFS 2023:1 och ISO 45001</li>
+                    <li>Vi undersöker regelbundet arbetsmiljön, bedömer risker och vidtar åtgärder</li>
+                    <li>Vi efterlever lagar och föreskrifter inom arbetsmiljöområdet</li>
+                    <li>Alla medarbetare ska ha kunskap om risker i arbetet och hur de förebyggs</li>
+                    <li>Chefer och skyddsombud samverkar aktivt i arbetsmiljöarbetet</li>
+                    <li>Vi följer upp och utvärderar arbetsmiljöarbetet årligen</li>
+                    <li>Vi strävar efter ständig förbättring av arbetsmiljön</li>
+                </ul>
+                ]]>
+            </field>
+        </record>
+
+        <!-- SAM Template: Exempel på Uppgiftsfördelning -->
+        <record id="template_task_delegation" model="sam.task_delegation">
+            <field name="name">Arbetsmiljöuppgifter - Chef (exempelmall)</field>
+            <field name="task_description">
+                <![CDATA[
+                Som chef har du ansvar för det dagliga arbetsmiljöarbetet inom din enhet.
+
+                Dina arbetsmiljöuppgifter:
+                1. Genomföra skyddsronder två gånger per år
+                2. Genomföra riskbedömningar vid förändringar
+                3. Utreda tillbud och olyckor
+                4. Introducera nya medarbetare i arbetsmiljöfrågor
+                5. Hålla regelbundna arbetsmiljömöten
+                ]]>
+            </field>
+            <field name="responsibility">
+                Ansvarar för att arbetsmiljöarbetet bedrivs enligt policy och rutiner.
+            </field>
+            <field name="resources_required">
+                Tid: ca 10% av arbetstid. Utbildning: SAM-utbildning 2 dagar.
+                Befogenheter: Besluta om åtgärder upp till 50 000 kr.
+            </field>
+        </record>
+    </data>
+</odoo>

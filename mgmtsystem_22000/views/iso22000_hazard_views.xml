@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_hazard_tree" model="ir.ui.view">
+        <field name="name">iso22000.hazard.tree</field>
+        <field name="model">iso22000.hazard</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="haccp_id"/><field name="hazard_type"/><field name="risk_level"/><field name="is_ccp"/><field name="state"/></list>
+        </field>
+    </record>
+    <record id="view_iso22000_hazard_form" model="ir.ui.view">
+        <field name="name">iso22000.hazard.form</field>
+        <field name="model">iso22000.hazard</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_assess" string="Assess Risk" type="object" invisible="state != 'identified'" class="btn-primary"/>
+                    <button name="action_control" string="Control" type="object" invisible="state != 'assessed'" class="btn-primary"/>
+                    <button name="action_review" string="Review" type="object" invisible="state != 'controlled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="identified,assessed,controlled,reviewed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="Hazard Name"/></h1></div>
+                    <group>
+                        <field name="haccp_id"/>
+                        <field name="process_step"/>
+                        <field name="hazard_type"/>
+                        <field name="is_ccp"/>
+                    </group>
+                    <group string="Risk Assessment">
+                        <field name="probability"/>
+                        <field name="severity"/>
+                        <field name="risk_level"/>
+                    </group>
+                    <group string="Hazard Description"><field name="hazard_description" nolabel="1"/></group>
+                    <group string="Control Measure"><field name="control_measure" nolabel="1"/></group>
+                    <group string="CCP Justification" invisible="not is_ccp"><field name="justification" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso22000_hazard" model="ir.actions.act_window">
+        <field name="name">Faroanalys</field>
+        <field name="res_model">iso22000.hazard</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- SAM Dashboard -->
+    <record id="action_sam_dashboard" model="ir.actions.act_window">
+        <field name="name">SAM Dashboard</field>
+        <field name="res_model">mgmtsystem.nonconformity</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="search_view_id" ref="view_sam_nonconformity_search"/>
+        <field name="context">{'search_default_group_type': 1}</field>
+    </record>
+
+    <!-- Dashboard search view -->
+    <record id="view_sam_nonconformity_search" model="ir.ui.view">
+        <field name="name">mgmtsystem.nonconformity.search.sam.dashboard</field>
+        <field name="model">mgmtsystem.nonconformity</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="group_type" string="Gruppera per typ"
+                        domain="[]"
+                        context="{'group_by': 'incident_type'}"/>
+                <filter name="group_date_month" string="Per månad"
+                        domain="[]"
+                        context="{'group_by': 'create_date:month'}"/>
+                <filter name="this_year" string="Detta år"
+                        domain="[('create_date','>=', (context_today()-relativedelta(day=1,month=1)).strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter name="incident_near_miss" string="Tillbud"
+                        domain="[('incident_type','=','near_miss')]"/>
+                <filter name="incident_accident" string="Olyckor"
+                        domain="[('incident_type','=','accident')]"/>
+                <filter name="incident_risk_obs" string="Riskobservationer"
+                        domain="[('incident_type','=','risk_observation')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Hazard pivot/graph action -->
+    <record id="action_sam_hazard_dashboard" model="ir.actions.act_window">
+        <field name="name">Risköversikt</field>
+        <field name="res_model">mgmtsystem.hazard</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="context">{'search_default_group_category': 1}</field>
+    </record>
+
+    <record id="view_sam_hazard_search" model="ir.ui.view">
+        <field name="name">mgmtsystem.hazard.search.sam</field>
+        <field name="model">mgmtsystem.hazard</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="group_category" string="Gruppera per kategori"
+                        domain="[]"
+                        context="{'group_by': 'risk_category'}"/>
+            </search>
+        </field>
+    </record>
+</odoo>

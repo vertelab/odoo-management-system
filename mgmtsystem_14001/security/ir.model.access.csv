@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso14001_clause_user,Clause User,model_iso14001_clause,group_iso14001_user,1,0,0,0
+access_iso14001_clause_manager,Clause Manager,model_iso14001_clause,group_iso14001_manager,1,1,1,1
+access_iso14001_policy_user,Policy User,model_iso14001_policy,group_iso14001_user,1,0,0,0
+access_iso14001_policy_manager,Policy Manager,model_iso14001_policy,group_iso14001_manager,1,1,1,1
+access_iso14001_gap_user,Gap User,model_iso14001_gap,group_iso14001_user,1,0,0,0
+access_iso14001_gap_manager,Gap Manager,model_iso14001_gap,group_iso14001_manager,1,1,1,1
+access_iso14001_gap_line_user,Gap Line User,model_iso14001_gap_line,group_iso14001_user,1,0,0,0
+access_iso14001_gap_line_manager,Gap Line Manager,model_iso14001_gap_line,group_iso14001_manager,1,1,1,1
+access_iso14001_aspect_user,Aspect User,model_iso14001_aspect,group_iso14001_user,1,0,0,0
+access_iso14001_aspect_manager,Aspect Manager,model_iso14001_aspect,group_iso14001_manager,1,1,1,1
+access_iso14001_impact_user,Impact User,model_iso14001_impact,group_iso14001_user,1,0,0,0
+access_iso14001_impact_manager,Impact Manager,model_iso14001_impact,group_iso14001_manager,1,1,1,1
+access_iso14001_compliance_user,Compliance User,model_iso14001_compliance,group_iso14001_user,1,0,0,0
+access_iso14001_compliance_manager,Compliance Manager,model_iso14001_compliance,group_iso14001_manager,1,1,1,1
+access_iso14001_objective_user,Objective User,model_iso14001_objective,group_iso14001_user,1,0,0,0
+access_iso14001_objective_manager,Objective Manager,model_iso14001_objective,group_iso14001_manager,1,1,1,1

@@ -1,0 +1,86 @@
+# Translation of ISO 42001:2023 AIMS — Swedish
+msgid ""
+msgstr ""
+"Project-Id-Version: mgmtsystem_42001 18.0.1.0.0\n"
+"Language: sv\n"
+
+msgid "iso42001.clause"
+msgstr "ISO 42001:2023 Claus"
+
+msgid "iso42001.policy"
+msgstr "AI-policy"
+
+msgid "iso42001.gap"
+msgstr "ISO 42001 Gap-analys"
+
+msgid "iso42001.control"
+msgstr "Annex A Kontroll"
+
+msgid "iso42001.aisystem"
+msgstr "AI-system"
+
+msgid "iso42001.impact.assessment"
+msgstr "AI-Konsekvensbedömning"
+
+msgid "iso42001.objective"
+msgstr "AI-mål"
+
+msgid "iso42001.soa"
+msgstr "Statement of Applicability"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Clause Number"
+msgstr "Klausulnummer"
+
+msgid "Approved Date"
+msgstr "Godkänd datum"
+
+msgid "AI Policy"
+msgstr "AI-policy"
+
+msgid "AI System"
+msgstr "AI-system"
+
+msgid "System Type"
+msgstr "Systemtyp"
+
+msgid "Risk Level"
+msgstr "Risknivå"
+
+msgid "AI Impact Assessment"
+msgstr "AI-Konsekvensbedömning"
+
+msgid "Fairness"
+msgstr "Rättvisa"
+
+msgid "Transparency"
+msgstr "Transparens"
+
+msgid "Privacy"
+msgstr "Integritet"
+
+msgid "Safety"
+msgstr "Säkerhet"
+
+msgid "Human Oversight"
+msgstr "Mänsklig översyn"
+
+msgid "Statement of Applicability"
+msgstr "Statement of Applicability (SoA)"
+
+msgid "Applicable"
+msgstr "Tillämplig"
+
+msgid "Implemented"
+msgstr "Implementerad"
+
+msgid "Justification"
+msgstr "Motivering"
+
+msgid "Maturity Level"
+msgstr "Mognadsnivå"
+
+msgid "Finding"
+msgstr "Iakttagelse"

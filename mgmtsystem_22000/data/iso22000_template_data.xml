@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Template: Food Safety Policy -->
+    <record id="policy_template" model="iso22000.policy">
+        <field name="name">Livsmedelssäkerhetspolicy (Mall)</field>
+        <field name="description"><![CDATA[
+            <h3>Livsmedelssäkerhetspolicy</h3>
+            <p>Vår organisation åtar sig att leverera säkra livsmedel genom ett robust
+            ledningssystem baserat på ISO 22000:2018.</p>
+            <p><strong>Principer:</strong></p>
+            <ul>
+                <li>Säkerställa att alla produkter uppfyller lagkrav och kundkrav</li>
+                <li>Upprätthålla effektiva PRP:er och HACCP-planer</li>
+                <li>Ständigt förbättra livsmedelssäkerheten</li>
+                <li>Säkerställa kompetens och medvetenhet hos all personal</li>
+                <li>Kommunicera öppet om livsmedelssäkerhetsfrågor</li>
+            </ul>
+            <p>Policyn granskas årligen vid ledningens genomgång.</p>
+        ]]></field>
+        <field name="state">draft</field>
+    </record>
+
+    <!-- Template: Hazard Analysis -->
+    <record id="hazard_biological" model="iso22000.hazard">
+        <field name="name">Exempel: Biologisk fara — Salmonella</field>
+        <field name="process_step">Råvarumottagning</field>
+        <field name="hazard_type">biological</field>
+        <field name="probability">3</field>
+        <field name="severity">5</field>
+        <field name="hazard_description">Förekomst av Salmonella i inkommande råvara</field>
+        <field name="control_measure">Leverantörsgodkännande, temperaturkontroll vid mottagning</field>
+    </record>
+
+    <!-- Template: PRP -->
+    <record id="prp_cleaning" model="iso22000.prp">
+        <field name="name">Rengöring och sanering (Mall)</field>
+        <field name="category">cleaning</field>
+        <field name="frequency">daily</field>
+        <field name="verification_method">ATP-mätning, visuell inspektion</field>
+    </record>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_objective_tree" model="ir.ui.view">
+        <field name="name">iso22000.objective.tree</field>
+        <field name="model">iso22000.objective</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="kpi_description"/>
+                <field name="owner_id"/>
+                <field name="deadline"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_iso22000_objective_form" model="ir.ui.view">
+        <field name="name">iso22000.objective.form</field>
+        <field name="model">iso22000.objective</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_achieve" string="Mark Achieved" type="object" invisible="state != 'active'" class="btn-primary"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft', 'active')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,achieved,cancelled"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="Objective Name"/></h1></div>
+                    <group>
+                        <field name="kpi_description"/>
+                        <field name="target_value"/>
+                        <field name="current_value"/>
+                        <field name="owner_id"/>
+                        <field name="deadline"/>
+                    </group>
+                    <group string="ISO 22000"><field name="iso22000_clause_ids" widget="many2many_tags"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_iso22000_objective" model="ir.actions.act_window">
+        <field name="name">Livsmedelssäkerhetsmål</field>
+        <field name="res_model">iso22000.objective</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

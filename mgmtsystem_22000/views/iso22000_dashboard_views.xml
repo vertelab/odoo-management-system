@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_gap_line_search" model="ir.ui.view">
+        <field name="name">iso22000.gap.line.search</field>
+        <field name="model">iso22000.gap.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="group_maturity" string="Group by Maturity" domain="[]" context="{'group_by': 'maturity_level'}"/>
+                <filter name="group_status" string="Group by Status" domain="[]" context="{'group_by': 'status'}"/>
+                <filter name="open_items" string="Open Items" domain="[('status', '=', 'open')]"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_iso22000_dashboard" model="ir.actions.act_window">
+        <field name="name">ISO 22000 Dashboard</field>
+        <field name="res_model">iso22000.gap.line</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="search_view_id" ref="view_iso22000_gap_line_search"/>
+        <field name="context">{'search_default_group_maturity': 1}</field>
+    </record>
+</odoo>

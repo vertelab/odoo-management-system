@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend mgmtsystem.review form -->
+    <record id="view_mgmtsystem_review_form_sam" model="ir.ui.view">
+        <field name="name">mgmtsystem.review.form.sam</field>
+        <field name="model">mgmtsystem.review</field>
+        <field name="inherit_id" ref="mgmtsystem_review.view_mgmtsystem_review_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="SAM / Årlig uppföljning">
+                    <field name="year"/>
+                    <field name="incident_statistics"/>
+                    <field name="iso_clause_ids" widget="many2many_tags"/>
+                </group>
+                <group string="Policyuppfyllnad">
+                    <field name="policy_compliance"/>
+                </group>
+                <group string="Utbildning">
+                    <field name="training_summary"/>
+                </group>
+                <group string="Förbättringar och mål">
+                    <field name="improvement_areas"/>
+                    <field name="next_year_objectives"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

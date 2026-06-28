@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ISO 9001 Template: Quality Policy Example -->
+        <record id="template_policy" model="iso9001.policy">
+            <field name="name">Kvalitetspolicy (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>Kvalitetspolicy för [Företagets namn]</h2>
+                <p>Vår kvalitetspolicy utgår från vår vision om att leverera produkter och tjänster som överträffar kundernas förväntningar.</p>
+
+                <h3>Våra åtaganden:</h3>
+                <ul>
+                    <li>Vi arbetar systematiskt med kvalitetsledning enligt ISO 9001:2026</li>
+                    <li>Vi fokuserar på kundnöjdhet och förstår kundernas behov</li>
+                    <li>Vi efterlever tillämpliga lagar och krav inom vår bransch</li>
+                    <li>Alla medarbetare är engagerade i kvalitetsarbetet och bidrar till ständig förbättring</li>
+                    <li>Vi främjar en kvalitetskultur och etiskt beteende i hela organisationen</li>
+                    <li>Vi sätter mätbara kvalitetsmål och följer upp dem regelbundet</li>
+                    <li>Vi arbetar med riskbaserat tänkande för att förebygga avvikelser</li>
+                </ul>
+
+                <p>Denna policy kommuniceras till alla medarbetare och görs tillgänglig för relevanta intressenter. 
+                Policyn granskas årligen för att säkerställa fortsatt lämplighet.</p>
+                ]]>
+            </field>
+        </record>
+
+        <!-- ISO 9001 Template: Quality Objective Example -->
+        <record id="template_objective_1" model="iso9001.objective">
+            <field name="name">Öka kundnöjdheten</field>
+            <field name="state">draft</field>
+            <field name="kpi_description">Kundnöjdhetsindex (NPS) - årlig mätning</field>
+            <field name="target_value">NPS &gt; 75</field>
+            <field name="current_value">NPS 68</field>
+            <field name="description">
+                <![CDATA[
+                <p>Mål: Öka kundnöjdheten mätt via NPS (Net Promoter Score) från nuvarande 68 till över 75.</p>
+                <p>Nyckelaktiviteter:</p>
+                <ul>
+                    <li>Implementera feedback-loop från kundsupport till produktutveckling</li>
+                    <li>Korta svarstider för kundsupport till max 4 timmar</li>
+                    <li>Genomför kvartalsvisa kundintervjuer med nyckelkunder</li>
+                </ul>
+                ]]>
+            </field>
+        </record>
+
+        <record id="template_objective_2" model="iso9001.objective">
+            <field name="name">Minska produktionsavvikelser</field>
+            <field name="state">draft</field>
+            <field name="kpi_description">Andel avvikande produkter per 1000 tillverkade enheter</field>
+            <field name="target_value">&lt; 2 per 1000</field>
+            <field name="current_value">4.5 per 1000</field>
+            <field name="description">
+                <![CDATA[
+                <p>Mål: Halvera antalet produktionsavvikelser per 1000 enheter.</p>
+                ]]>
+            </field>
+        </record>
+
+        <!-- ISO 9001 Template: Process Example -->
+        <record id="template_process_1" model="iso9001.process">
+            <field name="name">Orderhantering</field>
+            <field name="state">draft</field>
+            <field name="process_type">core</field>
+            <field name="inputs">Kundorder (via webbshop/EDI/telefon), Kundspecifikationer, Lagersaldo</field>
+            <field name="outputs">Orderbekräftelse, Plocklista, Leveransavisering, Fakturaunderlag</field>
+            <field name="resources">Affärssystem, Lagerhanteringssystem, Kundtjänstpersonal</field>
+            <field name="description">
+                <![CDATA[
+                <p>Kärnprocess för hantering av kundorder från mottagande till leverans.</p>
+                <ol>
+                    <li>Orderregistrering — kundorder registreras i affärssystemet</li>
+                    <li>Orderbekräftelse — automatisk eller manuell bekräftelse skickas till kund</li>
+                    <li>Lagerkontroll — tillgänglighet kontrolleras mot lagersaldo</li>
+                    <li>Plockning och packning — plocklista genereras, order packas</li>
+                    <li>Leverans och avisering — fraktbokning och leveransavisering</li>
+                    <li>Fakturering — underlag skickas till ekonomisystem</li>
+                </ol>
+                ]]>
+            </field>
+        </record>
+
+        <record id="template_process_2" model="iso9001.process">
+            <field name="name">Klagomålshantering</field>
+            <field name="state">draft</field>
+            <field name="process_type">support</field>
+            <field name="inputs">Kundreklamation, Returärende, Kundsynpunkter</field>
+            <field name="outputs">Åtgärdsbeslut, Kundåterkoppling, Korrigerande åtgärd, Trendanalys</field>
+            <field name="resources">Ärendehanteringssystem, Kvalitetsavdelning</field>
+            <field name="description">
+                <![CDATA[
+                <p>Stödprocess för hantering av kundklagomål och reklamationer.</p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

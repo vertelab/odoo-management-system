@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_prp_tree" model="ir.ui.view">
+        <field name="name">iso22000.prp.tree</field>
+        <field name="model">iso22000.prp</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="frequency"/>
+                <field name="last_verified"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso22000_prp_form" model="ir.ui.view">
+        <field name="name">iso22000.prp.form</field>
+        <field name="model">iso22000.prp</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_deactivate" string="Deactivate" type="object" invisible="state != 'active'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,inactive"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="PRP Name"/></h1></div>
+                    <group>
+                        <field name="category"/>
+                        <field name="frequency"/>
+                        <field name="responsible_id"/>
+                        <field name="last_verified"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group string="ISO 22000"><field name="iso22000_clause_ids" widget="many2many_tags"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                    <group string="Verification"><field name="verification_method" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso22000_prp" model="ir.actions.act_window">
+        <field name="name">Grundförutsättningar (PRP)</field>
+        <field name="res_model">iso22000.prp</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

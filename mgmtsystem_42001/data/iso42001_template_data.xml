@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_policy" model="iso42001.policy">
+            <field name="name">AI-policy (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>AI-policy för [Företagets namn]</h2>
+                <p>Vår AI-policy fastställer principerna för ansvarsfull utveckling och användning av artificiell intelligens i vår verksamhet.</p>
+                <h3>Våra AI-principer:</h3>
+                <ul>
+                    <li><strong>Rättvisa:</strong> Våra AI-system ska vara rättvisa och icke-diskriminerande</li>
+                    <li><strong>Transparens:</strong> Vi är öppna med hur våra AI-system fungerar och fattar beslut</li>
+                    <li><strong>Integritet:</strong> Vi skyddar personuppgifter och respekterar individers privatliv</li>
+                    <li><strong>Säkerhet:</strong> Våra AI-system är robusta, säkra och tillförlitliga</li>
+                    <li><strong>Mänsklig översyn:</strong> Människor har alltid det yttersta ansvaret för AI-beslut</li>
+                    <li><strong>Regelefterlevnad:</strong> Vi följer EU AI Act, GDPR och andra tillämpliga regelverk</li>
+                    <li><strong>Hållbarhet:</strong> Vi beaktar AI-systemens miljöpåverkan och strävar efter resurseffektivitet</li>
+                </ul>
+                ]]>
+            </field>
+        </record>
+
+        <record id="template_aisystem_1" model="iso42001.aisystem">
+            <field name="name">Kundtjänst-chatbot</field>
+            <field name="state">draft</field>
+            <field name="system_type">chatbot</field>
+            <field name="risk_level">medium</field>
+            <field name="purpose">Automatiserad kundtjänst för vanliga frågor och ärendehantering via chat.</field>
+            <field name="ai_technologies">LLM (GPT-4), NLP, Intent Classification</field>
+            <field name="data_sources">Kundtjänsthistorik, FAQ-databas, produktdokumentation</field>
+        </record>
+
+        <record id="template_aisystem_2" model="iso42001.aisystem">
+            <field name="name">Kreditbedömningsmodell</field>
+            <field name="state">draft</field>
+            <field name="system_type">classification</field>
+            <field name="risk_level">high</field>
+            <field name="purpose">Automatiserad kreditbedömning för konsumentkrediter baserat på historisk data.</field>
+            <field name="ai_technologies">Random Forest, XGBoost, Feature Engineering</field>
+            <field name="data_sources">Kreditupplysningsdata, transaktionshistorik, kundprofildata</field>
+        </record>
+
+        <record id="template_impact_1" model="iso42001.impact.assessment">
+            <field name="name">Konsekvensbedömning - Kreditbedömningsmodell</field>
+            <field name="state">draft</field>
+            <field name="fairness">3</field>
+            <field name="transparency">2</field>
+            <field name="privacy">4</field>
+            <field name="safety">4</field>
+            <field name="human_oversight">on_loop</field>
+            <field name="bias_mitigation">Bias-auditering med demografisk stratifiering, regular fairness testing varje kvartal</field>
+        </record>
+    </data>
+</odoo>

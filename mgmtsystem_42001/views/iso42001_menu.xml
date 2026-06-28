@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_iso42001_root"
+              name="AI (ISO 42001)"
+              sequence="60"
+              groups="group_iso42001_user"/>
+
+    <menuitem id="menu_iso42001_documents" name="Dokument" parent="menu_iso42001_root" sequence="10"/>
+
+    <menuitem id="menu_iso42001_policy" name="AI-policy" parent="menu_iso42001_documents"
+              action="action_iso42001_policy" sequence="10"/>
+
+    <menuitem id="menu_iso42001_aisystems" name="AI-system" parent="menu_iso42001_documents"
+              action="action_iso42001_aisystem" sequence="20"/>
+
+    <menuitem id="menu_iso42001_impact" name="Konsekvensbedömning" parent="menu_iso42001_documents"
+              action="action_iso42001_impact" sequence="30"/>
+
+    <menuitem id="menu_iso42001_soa" name="SoA (Statement of Applicability)" parent="menu_iso42001_documents"
+              action="action_iso42001_soa" sequence="40"/>
+
+    <menuitem id="menu_iso42001_objectives" name="AI-mål" parent="menu_iso42001_documents"
+              action="action_iso42001_objective" sequence="50"/>
+
+    <menuitem id="menu_iso42001_assessment" name="Utvärdering" parent="menu_iso42001_root" sequence="20"/>
+
+    <menuitem id="menu_iso42001_gap" name="Gap-analys" parent="menu_iso42001_assessment"
+              action="action_iso42001_gap" sequence="10"/>
+
+    <menuitem id="menu_iso42001_dashboard" name="Dashboard" parent="menu_iso42001_root"
+              action="action_iso42001_dashboard" sequence="50"/>
+
+    <menuitem id="menu_iso42001_config" name="Konfiguration" parent="menu_iso42001_root"
+              groups="group_iso42001_manager" sequence="100"/>
+
+    <menuitem id="menu_iso42001_clause" name="ISO 42001 Klausuler" parent="menu_iso42001_config"
+              action="action_iso42001_clause" sequence="10"/>
+
+    <menuitem id="menu_iso42001_controls" name="Annex A Kontroller" parent="menu_iso42001_config"
+              action="action_iso42001_control" sequence="20"/>
+</odoo>

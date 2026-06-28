@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso27001_gap_user,Gap - User,model_iso27001_gap,group_iso27001_user,1,0,0,0
+access_iso27001_gap_manager,Gap - Manager,model_iso27001_gap,group_iso27001_manager,1,1,1,1
+access_iso27001_gap_line_user,Gap Line - User,model_iso27001_gap_line,group_iso27001_user,1,0,0,0
+access_iso27001_gap_line_manager,Gap Line - Manager,model_iso27001_gap_line,group_iso27001_manager,1,1,1,1
+access_iso27001_soa_user,SoA - User,model_iso27001_soa,group_iso27001_user,1,0,0,0
+access_iso27001_soa_manager,SoA - Manager,model_iso27001_soa,group_iso27001_manager,1,1,1,1
+access_iso27001_soa_line_user,SoA Line - User,model_iso27001_soa_line,group_iso27001_user,1,0,0,0
+access_iso27001_soa_line_manager,SoA Line - Manager,model_iso27001_soa_line,group_iso27001_manager,1,1,1,1
+access_iso27001_clause_user,Clause - User,model_iso27001_clause,group_iso27001_user,1,0,0,0
+access_iso27001_clause_manager,Clause - Manager,model_iso27001_clause,group_iso27001_manager,1,1,1,1
+access_iso27001_policy_user,Policy - User,model_iso27001_policy,group_iso27001_user,1,0,0,0
+access_iso27001_policy_manager,Policy - Manager,model_iso27001_policy,group_iso27001_manager,1,1,1,1

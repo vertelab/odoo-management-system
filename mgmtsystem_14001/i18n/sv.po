@@ -1,0 +1,81 @@
+# Translation of ISO 14001:2026 EMS — Swedish
+msgid ""
+msgstr ""
+"Project-Id-Version: mgmtsystem_14001 18.0.1.0.0\n"
+"Language: sv\n"
+
+#. model:ir.model,name:iso14001.clause
+msgid "iso14001.clause"
+msgstr "ISO 14001:2026 Claus"
+
+#. model:ir.model,name:iso14001.policy
+msgid "iso14001.policy"
+msgstr "Miljöpolicy"
+
+#. model:ir.model,name:iso14001.gap
+msgid "iso14001.gap"
+msgstr "ISO 14001 Gap-analys"
+
+#. model:ir.model,name:iso14001.aspect
+msgid "iso14001.aspect"
+msgstr "Miljöaspekt"
+
+#. model:ir.model,name:iso14001.impact
+msgid "iso14001.impact"
+msgstr "Miljöpåverkan"
+
+#. model:ir.model,name:iso14001.compliance
+msgid "iso14001.compliance"
+msgstr "Lagkrav / Efterlevnad"
+
+#. model:ir.model,name:iso14001.objective
+msgid "iso14001.objective"
+msgstr "Miljömål"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Clause Number"
+msgstr "Klausulnummer"
+
+msgid "Approved Date"
+msgstr "Godkänd datum"
+
+msgid "Next Review"
+msgstr "Nästa översyn"
+
+msgid "Approved By"
+msgstr "Godkänd av"
+
+msgid "State"
+msgstr "Status"
+
+msgid "Environmental Aspect"
+msgstr "Miljöaspekt"
+
+msgid "Significance"
+msgstr "Betydande"
+
+msgid "Life Cycle Stage"
+msgstr "Livscykelsteg"
+
+msgid "Compliance Obligation"
+msgstr "Lagkrav"
+
+msgid "Source"
+msgstr "Källa"
+
+msgid "Deadline"
+msgstr "Deadline"
+
+msgid "Responsible"
+msgstr "Ansvarig"
+
+msgid "Maturity Level"
+msgstr "Mognadsnivå"
+
+msgid "Finding"
+msgstr "Iakttagelse"
+
+msgid "Recommendation"
+msgstr "Rekommendation"

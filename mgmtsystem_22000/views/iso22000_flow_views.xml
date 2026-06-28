@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_flow_tree" model="ir.ui.view">
+        <field name="name">iso22000.flow.tree</field>
+        <field name="model">iso22000.flow</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="product_id"/><field name="verification_date"/><field name="state"/></list>
+        </field>
+    </record>
+    <record id="view_iso22000_flow_form" model="ir.ui.view">
+        <field name="name">iso22000.flow.form</field>
+        <field name="model">iso22000.flow</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_verify" string="Verify On-site" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_outdated" string="Mark Outdated" type="object" invisible="state != 'verified'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,verified,outdated"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="Flow Diagram Name"/></h1></div>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="verification_date"/>
+                        <field name="verified_by"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group string="Flow Diagram"><field name="diagram" widget="image"/></group>
+                    <group string="Process Steps"><field name="steps" nolabel="1" placeholder="One step per line..."/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso22000_flow" model="ir.actions.act_window">
+        <field name="name">Flödesscheman</field>
+        <field name="res_model">iso22000.flow</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

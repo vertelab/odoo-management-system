@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== Extend Audit Form: ISO 27001 Clauses + Controls ====== -->
+    <record id="view_mgmtsystem_audit_form_iso27001" model="ir.ui.view">
+        <field name="name">mgmtsystem.audit.form.iso27001</field>
+        <field name="model">mgmtsystem.audit</field>
+        <field name="inherit_id" ref="mgmtsystem_audit.view_mgmtsystem_audit_form"/>
+        <field name="arch" type="xml">
+            <page string="Nonconformities" position="after">
+                <page name="iso27001" string="ISO 27001">
+                    <group string="Clauses Covered">
+                        <field name="iso27001_clause_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Annex A Controls Verified">
+                        <field name="iso27001_control_ids" widget="many2many_tags"/>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso14001_aspect_tree" model="ir.ui.view">
+        <field name="name">iso14001.aspect.tree</field>
+        <field name="model">iso14001.aspect</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/><field name="aspect_type"/><field name="significance"/>
+                <field name="life_cycle_stage"/><field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso14001_aspect_form" model="ir.ui.view">
+        <field name="name">iso14001.aspect.form</field>
+        <field name="model">iso14001.aspect</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_evaluate" string="Evaluate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_control" string="Under Control" type="object" invisible="state != 'evaluated'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,evaluated,controlled"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="activity"/><field name="aspect_type"/>
+                            <field name="significance"/><field name="life_cycle_stage"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="ISO 14001"><field name="iso14001_clause_ids" widget="many2many_tags"/></group>
+                    <group string="Existing Controls"><field name="controls" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso14001_aspect" model="ir.actions.act_window">
+        <field name="name">Environmental Aspects</field>
+        <field name="res_model">iso14001.aspect</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

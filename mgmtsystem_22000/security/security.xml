@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ISO 22000 Group Category -->
+    <record id="module_category_iso22000" model="ir.module.category">
+        <field name="name">ISO 22000 (FSMS)</field>
+        <field name="description">Livsmedelssäkerhet — moduler för ISO 22000:2018</field>
+        <field name="sequence">95</field>
+    </record>
+
+    <!-- ISO 22000 Groups -->
+    <record id="group_iso22000_user" model="res.groups">
+        <field name="name">ISO 22000 User</field>
+        <field name="category_id" ref="module_category_iso22000"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_iso22000_manager" model="res.groups">
+        <field name="name">ISO 22000 Manager</field>
+        <field name="category_id" ref="module_category_iso22000"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso22000_user'))]"/>
+    </record>
+
+    <record id="group_iso22000_officer" model="res.groups">
+        <field name="name">ISO 22000 Officer</field>
+        <field name="category_id" ref="module_category_iso22000"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso22000_manager'))]"/>
+    </record>
+
+    <!-- Record Rules: Company Isolation -->
+    <record id="rule_iso22000_clause_company" model="ir.rule">
+        <field name="name">ISO 22000 Clause: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_clause"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_policy_company" model="ir.rule">
+        <field name="name">ISO 22000 Policy: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_policy"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_gap_company" model="ir.rule">
+        <field name="name">ISO 22000 Gap: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_gap"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_objective_company" model="ir.rule">
+        <field name="name">ISO 22000 Objective: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_objective"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_prp_company" model="ir.rule">
+        <field name="name">ISO 22000 PRP: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_prp"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_haccp_company" model="ir.rule">
+        <field name="name">ISO 22000 HACCP: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_haccp"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_hazard_company" model="ir.rule">
+        <field name="name">ISO 22000 Hazard: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_hazard"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_ccp_company" model="ir.rule">
+        <field name="name">ISO 22000 CCP: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_ccp"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_flow_company" model="ir.rule">
+        <field name="name">ISO 22000 Flow: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_flow"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_traceability_company" model="ir.rule">
+        <field name="name">ISO 22000 Traceability: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_traceability"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso22000_emergency_company" model="ir.rule">
+        <field name="name">ISO 22000 Emergency: Company Isolation</field>
+        <field name="model_id" ref="model_iso22000_emergency"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_iso42001" model="ir.module.category">
+        <field name="name">ISO 42001 (AIMS)</field>
+        <field name="description">AI-ledningssystem — moduler för ISO/IEC 42001:2023</field>
+        <field name="sequence">93</field>
+    </record>
+    <record id="group_iso42001_user" model="res.groups">
+        <field name="name">ISO 42001 User</field>
+        <field name="category_id" ref="module_category_iso42001"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Kan läsa AIMS-dokument, AI-systemregister, konsekvensbedömningar.</field>
+    </record>
+    <record id="group_iso42001_manager" model="res.groups">
+        <field name="name">ISO 42001 Manager</field>
+        <field name="category_id" ref="module_category_iso42001"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso42001_user'))]"/>
+        <field name="comment">Kan skapa och redigera gap-analyser, SoA, AI-system och policy.</field>
+    </record>
+    <record id="group_iso42001_officer" model="res.groups">
+        <field name="name">ISO 42001 Officer</field>
+        <field name="category_id" ref="module_category_iso42001"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso42001_manager'))]"/>
+        <field name="comment">Fullständig administration av AIMS-systemet.</field>
+    </record>
+
+    <record id="rule_iso42001_clause_company" model="ir.rule">
+        <field name="name">ISO 42001 Clause: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_clause"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_policy_company" model="ir.rule">
+        <field name="name">ISO 42001 Policy: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_policy"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_gap_company" model="ir.rule">
+        <field name="name">ISO 42001 Gap: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_gap"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_gap_line_company" model="ir.rule">
+        <field name="name">ISO 42001 Gap Line: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_gap_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_control_company" model="ir.rule">
+        <field name="name">ISO 42001 Control: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_control"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_aisystem_company" model="ir.rule">
+        <field name="name">ISO 42001 AI System: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_aisystem"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_impact_assessment_company" model="ir.rule">
+        <field name="name">ISO 42001 Impact Assessment: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_impact_assessment"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_objective_company" model="ir.rule">
+        <field name="name">ISO 42001 Objective: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_objective"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_soa_company" model="ir.rule">
+        <field name="name">ISO 42001 SoA: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_soa"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+    <record id="rule_iso42001_soa_line_company" model="ir.rule">
+        <field name="name">ISO 42001 SoA Line: Company Isolation</field>
+        <field name="model_id" ref="model_iso42001_soa_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

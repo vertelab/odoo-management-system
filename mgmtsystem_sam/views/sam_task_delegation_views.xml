@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Task Delegation Tree -->
+    <record id="view_sam_task_delegation_tree" model="ir.ui.view">
+        <field name="name">sam.task.delegation.tree</field>
+        <field name="model">sam.task_delegation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="date_assigned"/>
+                <field name="date_review"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Task Delegation Form -->
+    <record id="view_sam_task_delegation_form" model="ir.ui.view">
+        <field name="name">sam.task.delegation.form</field>
+        <field name="model">sam.task_delegation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Uppgiftens namn"/></h1>
+                    </div>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="date_assigned"/>
+                        <field name="date_review"/>
+                    </group>
+                    <group string="ISO 45001">
+                        <field name="iso_clause_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Uppgiftsbeskrivning">
+                        <field name="task_description" nolabel="1"/>
+                    </group>
+                    <group string="Ansvar och resurser">
+                        <field name="responsibility"/>
+                        <field name="resources_required"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Task Delegation Action -->
+    <record id="action_sam_task_delegation" model="ir.actions.act_window">
+        <field name="name">Uppgiftsfördelning</field>
+        <field name="res_model">sam.task_delegation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

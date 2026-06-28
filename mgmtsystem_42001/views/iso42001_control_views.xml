@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso42001_control_tree" model="ir.ui.view">
+        <field name="name">iso42001.control.tree</field>
+        <field name="model">iso42001.control</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="control_ref"/><field name="name"/>
+                <field name="control_area"/><field name="control_type"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso42001_control_form" model="ir.ui.view">
+        <field name="name">iso42001.control.form</field>
+        <field name="model">iso42001.control</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="control_ref" class="oe_inline"/> - <field name="name" class="oe_inline"/></h1>
+                    </div>
+                    <group>
+                        <field name="control_area"/><field name="control_type"/>
+                        <field name="sequence"/><field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group string="ISO 42001 Clauses"><field name="iso42001_clause_ids" widget="many2many_tags"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso42001_control" model="ir.actions.act_window">
+        <field name="name">Annex A Controls</field>
+        <field name="res_model">iso42001.control</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

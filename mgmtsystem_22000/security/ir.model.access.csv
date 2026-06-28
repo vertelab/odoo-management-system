@@ -1,0 +1,25 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso22000_clause_user,Clause - User,model_iso22000_clause,group_iso22000_user,1,0,0,0
+access_iso22000_clause_manager,Clause - Manager,model_iso22000_clause,group_iso22000_manager,1,1,1,1
+access_iso22000_policy_user,Policy - User,model_iso22000_policy,group_iso22000_user,1,0,0,0
+access_iso22000_policy_manager,Policy - Manager,model_iso22000_policy,group_iso22000_manager,1,1,1,1
+access_iso22000_gap_user,Gap - User,model_iso22000_gap,group_iso22000_user,1,0,0,0
+access_iso22000_gap_manager,Gap - Manager,model_iso22000_gap,group_iso22000_manager,1,1,1,1
+access_iso22000_gap_line_user,Gap Line - User,model_iso22000_gap_line,group_iso22000_user,1,0,0,0
+access_iso22000_gap_line_manager,Gap Line - Manager,model_iso22000_gap_line,group_iso22000_manager,1,1,1,1
+access_iso22000_objective_user,Objective - User,model_iso22000_objective,group_iso22000_user,1,0,0,0
+access_iso22000_objective_manager,Objective - Manager,model_iso22000_objective,group_iso22000_manager,1,1,1,1
+access_iso22000_prp_user,PRP - User,model_iso22000_prp,group_iso22000_user,1,0,0,0
+access_iso22000_prp_manager,PRP - Manager,model_iso22000_prp,group_iso22000_manager,1,1,1,1
+access_iso22000_haccp_user,HACCP - User,model_iso22000_haccp,group_iso22000_user,1,0,0,0
+access_iso22000_haccp_manager,HACCP - Manager,model_iso22000_haccp,group_iso22000_manager,1,1,1,1
+access_iso22000_ccp_user,CCP - User,model_iso22000_ccp,group_iso22000_user,1,0,0,0
+access_iso22000_ccp_manager,CCP - Manager,model_iso22000_ccp,group_iso22000_manager,1,1,1,1
+access_iso22000_hazard_user,Hazard - User,model_iso22000_hazard,group_iso22000_user,1,0,0,0
+access_iso22000_hazard_manager,Hazard - Manager,model_iso22000_hazard,group_iso22000_manager,1,1,1,1
+access_iso22000_flow_user,Flow - User,model_iso22000_flow,group_iso22000_user,1,0,0,0
+access_iso22000_flow_manager,Flow - Manager,model_iso22000_flow,group_iso22000_manager,1,1,1,1
+access_iso22000_traceability_user,Traceability - User,model_iso22000_traceability,group_iso22000_user,1,0,0,0
+access_iso22000_traceability_manager,Traceability - Manager,model_iso22000_traceability,group_iso22000_manager,1,1,1,1
+access_iso22000_emergency_user,Emergency - User,model_iso22000_emergency,group_iso22000_user,1,0,0,0
+access_iso22000_emergency_manager,Emergency - Manager,model_iso22000_emergency,group_iso22000_manager,1,1,1,1

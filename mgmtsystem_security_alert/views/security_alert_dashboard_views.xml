@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard: Security Alert overview -->
+    <record id="view_security_alert_search" model="ir.ui.view">
+        <field name="name">security.alert.search.dashboard</field>
+        <field name="model">security.alert</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="new_alerts" string="New" domain="[('state', '=', 'new')]"/>
+                <filter name="critical" string="Critical" domain="[('severity', '=', 'critical')]"/>
+                <filter name="high" string="High" domain="[('severity', 'in', ('critical', 'high'))]"/>
+                <filter name="group_severity" string="Group by Severity" domain="[]" context="{'group_by': 'severity'}"/>
+                <filter name="group_source" string="Group by Source" domain="[]" context="{'group_by': 'source_id'}"/>
+                <filter name="group_state" string="Group by State" domain="[]" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_security_alert_dashboard" model="ir.actions.act_window">
+        <field name="name">Security Alert Dashboard</field>
+        <field name="res_model">security.alert</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="search_view_id" ref="view_security_alert_search"/>
+        <field name="context">{'search_default_group_severity': 1}</field>
+    </record>
+</odoo>

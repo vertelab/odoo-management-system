@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== Tree View: ISO 27001 Clauses ====== -->
+    <record id="view_iso27001_clause_tree" model="ir.ui.view">
+        <field name="name">iso27001.clause.tree</field>
+        <field name="model">iso27001.clause</field>
+        <field name="arch" type="xml">
+            <tree string="ISO 27001:2022 Clauses">
+                <field name="sequence" widget="handle"/>
+                <field name="clause_number"/>
+                <field name="name"/>
+                <field name="parent_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ====== Form View: ISO 27001 Clauses ====== -->
+    <record id="view_iso27001_clause_form" model="ir.ui.view">
+        <field name="name">iso27001.clause.form</field>
+        <field name="model">iso27001.clause</field>
+        <field name="arch" type="xml">
+            <form string="ISO 27001 Clause">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="clause_number"/>
+                            <field name="name"/>
+                            <field name="parent_id"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                    <group string="Children">
+                        <field name="child_ids" nolabel="1">
+                            <tree>
+                                <field name="clause_number"/>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ====== Search View: ISO 27001 Clauses ====== -->
+    <record id="view_iso27001_clause_search" model="ir.ui.view">
+        <field name="name">iso27001.clause.search</field>
+        <field name="model">iso27001.clause</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="clause_number"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ====== Action: Open Clauses ====== -->
+    <record id="action_open_iso27001_clauses" model="ir.actions.act_window">
+        <field name="name">ISO 27001:2022 Clauses</field>
+        <field name="res_model">iso27001.clause</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

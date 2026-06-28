@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== List View: Annex A Controls ====== -->
+    <record id="view_mgmtsystem_security_control_list_iso27001" model="ir.ui.view">
+        <field name="name">mgmtsystem.security.control.list.iso27001</field>
+        <field name="model">mgmtsystem.security.control</field>
+        <field name="inherit_id" ref="mgmtsystem_security_event.view_mgmtsystem_security_control_list"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="control_ref"/>
+                <field name="sequence" optional="hide"/>
+            </field>
+            <field name="description" position="after">
+                <field name="control_group" optional="hide"/>
+                <field name="control_type" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- ====== Form View: Annex A Controls ====== -->
+    <record id="view_mgmtsystem_security_control_form_iso27001" model="ir.ui.view">
+        <field name="name">mgmtsystem.security.control.form.iso27001</field>
+        <field name="model">mgmtsystem.security.control</field>
+        <field name="inherit_id" ref="mgmtsystem_security_event.view_mgmtsystem_security_control_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="control_ref"/>
+            </field>
+            <field name="description" position="after">
+                <group string="ISO 27001 Classification" colspan="4">
+                    <group>
+                        <field name="control_group"/>
+                        <field name="control_type"/>
+                    </group>
+                    <group>
+                        <field name="sequence"/>
+                    </group>
+                </group>
+                <field name="iso27001_clause_ids" widget="many2many_tags"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- ====== Search View: Annex A Controls ====== -->
+    <record id="view_mgmtsystem_security_control_search_iso27001" model="ir.ui.view">
+        <field name="name">mgmtsystem.security.control.search.iso27001</field>
+        <field name="model">mgmtsystem.security.control</field>
+        <field name="arch" type="xml">
+            <search string="Annex A Controls">
+                <field name="name"/>
+                <field name="control_ref"/>
+                <field name="description"/>
+                <separator/>
+                <filter name="group_organizational" string="Organisatoriska (5)"
+                        domain="[('control_group', '=', 'organizational')]"/>
+                <filter name="group_people" string="Personkontroller (6)"
+                        domain="[('control_group', '=', 'people')]"/>
+                <filter name="group_physical" string="Fysiska (7)"
+                        domain="[('control_group', '=', 'physical')]"/>
+                <filter name="group_technological" string="Tekniska (8)"
+                        domain="[('control_group', '=', 'technological')]"/>
+                <separator/>
+                <filter name="type_preventive" string="Förebyggande"
+                        domain="[('control_type', '=', 'preventive')]"/>
+                <filter name="type_detective" string="Upptäckande"
+                        domain="[('control_type', '=', 'detective')]"/>
+                <filter name="type_corrective" string="Korrigerande"
+                        domain="[('control_type', '=', 'corrective')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="groupby_control_group" string="Kontrollgrupp"
+                            context="{'group_by': 'control_group'}"/>
+                    <filter name="groupby_control_type" string="Kontrolltyp"
+                            context="{'group_by': 'control_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ====== Action: Open Annex A Controls ====== -->
+    <record id="action_open_iso27001_controls" model="ir.actions.act_window">
+        <field name="name">Annex A Controls</field>
+        <field name="res_model">mgmtsystem.security.control</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_mgmtsystem_security_control_search_iso27001"/>
+        <field name="context">{'search_default_groupby_control_group': 1}</field>
+    </record>
+</odoo>

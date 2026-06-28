@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_iso9001_root"
+              name="Kvalitet (ISO 9001)"
+              sequence="40"
+              groups="group_iso9001_user"/>
+
+    <menuitem id="menu_iso9001_documents"
+              name="Dokument"
+              parent="menu_iso9001_root"
+              sequence="10"/>
+
+    <menuitem id="menu_iso9001_policy"
+              name="Kvalitetspolicy"
+              parent="menu_iso9001_documents"
+              action="action_iso9001_policy"
+              sequence="10"/>
+
+    <menuitem id="menu_iso9001_processes"
+              name="Processer"
+              parent="menu_iso9001_documents"
+              action="action_iso9001_process"
+              sequence="20"/>
+
+    <menuitem id="menu_iso9001_objectives"
+              name="Kvalitetsmål"
+              parent="menu_iso9001_documents"
+              action="action_iso9001_objective"
+              sequence="30"/>
+
+    <menuitem id="menu_iso9001_assessment"
+              name="Utvärdering"
+              parent="menu_iso9001_root"
+              sequence="20"/>
+
+    <menuitem id="menu_iso9001_gap"
+              name="Gap-analys"
+              parent="menu_iso9001_assessment"
+              action="action_iso9001_gap"
+              sequence="10"/>
+
+
+
+
+    <menuitem id="menu_iso9001_dashboard"
+              name="Dashboard"
+              parent="menu_iso9001_root"
+              action="action_iso9001_dashboard"
+              sequence="50"/>
+
+    <menuitem id="menu_iso9001_config"
+              name="Konfiguration"
+              parent="menu_iso9001_root"
+              groups="group_iso9001_manager"
+              sequence="100"/>
+
+    <menuitem id="menu_iso9001_clause"
+              name="ISO 9001 Klausuler"
+              parent="menu_iso9001_config"
+              action="action_iso9001_clause"
+              sequence="10"/>
+</odoo>

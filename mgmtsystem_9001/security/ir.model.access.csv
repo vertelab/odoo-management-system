@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso9001_clause_user,Clause - User,model_iso9001_clause,group_iso9001_user,1,0,0,0
+access_iso9001_clause_manager,Clause - Manager,model_iso9001_clause,group_iso9001_manager,1,1,1,1
+access_iso9001_policy_user,Policy - User,model_iso9001_policy,group_iso9001_user,1,0,0,0
+access_iso9001_policy_manager,Policy - Manager,model_iso9001_policy,group_iso9001_manager,1,1,1,1
+access_iso9001_gap_user,Gap - User,model_iso9001_gap,group_iso9001_user,1,0,0,0
+access_iso9001_gap_manager,Gap - Manager,model_iso9001_gap,group_iso9001_manager,1,1,1,1
+access_iso9001_gap_line_user,Gap Line - User,model_iso9001_gap_line,group_iso9001_user,1,0,0,0
+access_iso9001_gap_line_manager,Gap Line - Manager,model_iso9001_gap_line,group_iso9001_manager,1,1,1,1
+access_iso9001_objective_user,Objective - User,model_iso9001_objective,group_iso9001_user,1,0,0,0
+access_iso9001_objective_manager,Objective - Manager,model_iso9001_objective,group_iso9001_manager,1,1,1,1
+access_iso9001_process_user,Process - User,model_iso9001_process,group_iso9001_user,1,0,0,0
+access_iso9001_process_manager,Process - Manager,model_iso9001_process,group_iso9001_manager,1,1,1,1

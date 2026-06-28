@@ -1,0 +1,131 @@
+# Translation of ISO 9001:2026 QMS — Swedish
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mgmtsystem_9001 18.0.1.0.0\n"
+"Language: sv\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#. model:ir.model,name:iso9001_clause
+msgid "iso9001.clause"
+msgstr "ISO 9001:2026 Claus"
+
+#. model:ir.model,name:iso9001_policy
+msgid "iso9001.policy"
+msgstr "Kvalitetspolicy"
+
+#. model:ir.model,name:iso9001_gap
+msgid "iso9001.gap"
+msgstr "ISO 9001 Gap-analysis"
+
+#. model:ir.model,name:iso9001_gap_line
+msgid "iso9001.gap.line"
+msgstr "ISO 9001 Gap-analysis rad"
+
+#. model:ir.model,name:iso9001_objective
+msgid "iso9001.objective"
+msgstr "Kvalitetsmål"
+
+#. model:ir.model,name:iso9001_process
+msgid "iso9001.process"
+msgstr "Kvalitetsprocess"
+
+#. model:ir.model.fields,field_description:iso9001_clause.name
+msgid "Name"
+msgstr "Namn"
+
+#. model:ir.model.fields,field_description:iso9001_clause.clause_number
+msgid "Clause Number"
+msgstr "Klausulnummer"
+
+#. model:ir.model.fields,field_description:iso9001_clause.display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. model:ir.model.fields,field_description:iso9001_clause.description
+msgid "Description"
+msgstr "Beskrivning"
+
+#. model:ir.model.fields,field_description:iso9001_clause.parent_id
+msgid "Parent Clause"
+msgstr "Överordnad klausul"
+
+#. model:ir.model.fields,field_description:iso9001_clause.child_ids
+msgid "Child Clauses"
+msgstr "Underordnade klausuler"
+
+#. model:ir.model.fields,field_description:iso9001_policy.name
+msgid "Policy Name"
+msgstr "Policynamn"
+
+#. model:ir.model.fields,field_description:iso9001_policy.description
+msgid "Policy Description"
+msgstr "Policybeskrivning"
+
+#. model:ir.model.fields,field_description:iso9001_policy.date_approved
+msgid "Approved Date"
+msgstr "Godkänd datum"
+
+#. model:ir.model.fields,field_description:iso9001_policy.date_review
+msgid "Next Review"
+msgstr "Nästa översyn"
+
+#. model:ir.model.fields,field_description:iso9001_policy.approved_by
+msgid "Approved By"
+msgstr "Godkänd av"
+
+#. model:ir.model.fields,field_description:iso9001_policy.state
+msgid "State"
+msgstr "Status"
+
+#. model:ir.model.fields,field_description:iso9001_objective.kpi_description
+msgid "KPI Description"
+msgstr "KPI-beskrivning"
+
+#. model:ir.model.fields,field_description:iso9001_objective.target_value
+msgid "Target Value"
+msgstr "Målvärde"
+
+#. model:ir.model.fields,field_description:iso9001_objective.current_value
+msgid "Current Value"
+msgstr "Nuvärde"
+
+#. model:ir.model.fields,field_description:iso9001_objective.owner_id
+msgid "Responsible"
+msgstr "Ansvarig"
+
+#. model:ir.model.fields,field_description:iso9001_objective.deadline
+msgid "Deadline"
+msgstr "Deadline"
+
+#. model:ir.model.fields,field_description:iso9001_process.process_type
+msgid "Process Type"
+msgstr "Processtyp"
+
+#. model:ir.model.fields,field_description:iso9001_process.inputs
+msgid "Inputs"
+msgstr "Inputs"
+
+#. model:ir.model.fields,field_description:iso9001_process.outputs
+msgid "Outputs"
+msgstr "Outputs"
+
+#. model:ir.model.fields,field_description:iso9001_process.resources
+msgid "Resources"
+msgstr "Resurser"
+
+#. model:ir.model.fields,field_description:iso9001_process.responsible_id
+msgid "Process Owner"
+msgstr "Processägare"
+
+#. model:ir.model.fields,field_description:iso9001_gap_line.maturity_level
+msgid "Maturity Level"
+msgstr "Mognadsnivå"
+
+#. model:ir.model.fields,field_description:iso9001_gap_line.finding
+msgid "Finding"
+msgstr "Iakttagelse"
+
+#. model:ir.model.fields,field_description:iso9001_gap_line.recommendation
+msgid "Recommendation"
+msgstr "Rekommendation"

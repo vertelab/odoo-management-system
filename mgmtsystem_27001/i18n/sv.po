@@ -1,0 +1,156 @@
+# Translation of mgmtsystem_27001 to Swedish.
+msgid ""
+msgstr ""
+"Project-Id-Version: mgmtsystem_27001 18.0.1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-27\n"
+"PO-Revision-Date: 2026-06-27\n"
+"Last-Translator: Vertel AB <info@vertel.se>\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_gap
+msgid "ISO 27001 Gap Analysis"
+msgstr "ISO 27001 Gap-analys"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_gap_line
+msgid "ISO 27001 Gap Analysis Line"
+msgstr "ISO 27001 Gap-analys rad"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_soa
+msgid "Statement of Applicability"
+msgstr "Förklaring om tillämplighet (SoA)"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_soa_line
+msgid "Statement of Applicability Line"
+msgstr "SoA-rad"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_clause
+msgid "ISO 27001:2022 Clause"
+msgstr "ISO 27001:2022 Klausul"
+
+#. module: mgmtsystem_27001
+#: model:ir.model,name:mgmtsystem_27001.model_iso27001_policy
+msgid "Information Security Policy"
+msgstr "Informationssäkerhetspolicy"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_mgmtsystem_security_control__control_ref
+msgid "Annex A Ref"
+msgstr "Annex A Referens"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_mgmtsystem_security_control__control_group
+msgid "Kontrollgrupp"
+msgstr "Kontrollgrupp"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_mgmtsystem_security_control__control_type
+msgid "Kontrolltyp"
+msgstr "Kontrolltyp"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap__assessed_by
+msgid "Bedömd av"
+msgstr "Bedömd av"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap__state
+msgid "Status"
+msgstr "Status"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap_line__maturity_level
+msgid "Maturity Level"
+msgstr "Mognadsnivå"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap_line__finding
+msgid "Finding"
+msgstr "Iakttagelse"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap_line__recommendation
+msgid "Recommendation"
+msgstr "Rekommendation"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_soa__approved_by
+msgid "Godkänd av"
+msgstr "Godkänd av"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_soa_line__applicable
+msgid "Tillämplig"
+msgstr "Tillämplig"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_soa_line__implemented
+msgid "Implementerad"
+msgstr "Implementerad"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_soa_line__justification
+msgid "Motivering"
+msgstr "Motivering"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_soa_line__linked_event_ids
+msgid "Linked Feared Events"
+msgstr "Kopplade hotbilder"
+
+#. module: mgmtsystem_27001
+#: model:res.groups,name:mgmtsystem_27001.group_iso27001_user
+msgid "ISO 27001 User"
+msgstr "ISO 27001 Användare"
+
+#. module: mgmtsystem_27001
+#: model:res.groups,name:mgmtsystem_27001.group_iso27001_manager
+msgid "ISO 27001 Manager"
+msgstr "ISO 27001 Ansvarig"
+
+#. module: mgmtsystem_27001
+#: model:res.groups,name:mgmtsystem_27001.group_iso27001_officer
+msgid "ISO 27001 Officer"
+msgstr "ISO 27001 Samordnare"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_policy__date_review
+msgid "Next Review"
+msgstr "Nästa översyn"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_policy__date_approved
+msgid "Approved Date"
+msgstr "Godkänt datum"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_clause__clause_number
+msgid "Clause Number"
+msgstr "Klausulnummer"
+
+#. module: mgmtsystem_27001
+#: model:ir.model.fields,field_description:mgmtsystem_27001.field_iso27001_gap_line__control_id
+msgid "Annex A Control"
+msgstr "Annex A Kontroll"
+
+#: model:ir.model.fields,help:mgmtsystem_27001.field_mgmtsystem_security_control__control_group
+msgid "ISO 27001:2022 Annex A control group"
+msgstr "ISO 27001:2022 Annex A kontrollgrupp"
+
+#: model:ir.model.fields,help:mgmtsystem_27001.field_iso27001_soa_line__applicable
+msgid "Is this control applicable to the organization?"
+msgstr "Är denna kontroll tillämplig för organisationen?"
+
+#: model:ir.model.fields,help:mgmtsystem_27001.field_iso27001_soa_line__implemented
+msgid "Is this control already implemented?"
+msgstr "Är denna kontroll redan implementerad?"

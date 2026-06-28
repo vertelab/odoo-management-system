@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ISO 45001 Clauses Tree View -->
+    <record id="view_sam_iso_clause_tree" model="ir.ui.view">
+        <field name="name">sam.iso.clause.tree</field>
+        <field name="model">sam.iso_clause</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="clause_number"/>
+                <field name="name"/>
+                <field name="parent_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ISO 45001 Clauses Form View -->
+    <record id="view_sam_iso_clause_form" model="ir.ui.view">
+        <field name="name">sam.iso.clause.form</field>
+        <field name="model">sam.iso_clause</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="clause_number" string="Clause"/>
+                        <h1>
+                            <field name="clause_number" class="oe_inline"/> -
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="parent_id"/>
+                        <field name="sequence"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_sam_iso_clause" model="ir.actions.act_window">
+        <field name="name">ISO 45001 Klausuler</field>
+        <field name="res_model">sam.iso_clause</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

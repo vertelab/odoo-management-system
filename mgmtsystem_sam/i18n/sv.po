@@ -1,0 +1,53 @@
+# Translation of mgmtsystem_sam
+# Swedish translations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mgmtsystem_sam 18.0\n"
+"Language: sv\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#. module: mgmtsystem_sam
+#: model:ir.module.category,name:mgmtsystem_sam.module_category_sam
+msgid "Arbetsmiljö (SAM)"
+msgstr "Arbetsmiljö (SAM)"
+
+#. module: mgmtsystem_sam
+#: model:res.groups,name:mgmtsystem_sam.group_sam_user
+msgid "SAM User"
+msgstr "SAM-användare"
+
+#. module: mgmtsystem_sam
+#: model:res.groups,name:mgmtsystem_sam.group_sam_manager
+msgid "SAM Manager"
+msgstr "SAM-chef"
+
+#. module: mgmtsystem_sam
+#: model:res.groups,name:mgmtsystem_sam.group_sam_officer
+msgid "SAM Officer"
+msgstr "SAM-administratör"
+
+#. module: mgmtsystem_sam
+#: model:ir.model,name:mgmtsystem_sam.model_sam_iso_clause
+msgid "ISO 45001 Clause"
+msgstr "ISO 45001 Klausul"
+
+#. module: mgmtsystem_sam
+#: model:ir.model,name:mgmtsystem_sam.model_sam_policy
+msgid "Arbetsmiljöpolicy"
+msgstr "Arbetsmiljöpolicy"
+
+#. module: mgmtsystem_sam
+#: model:ir.model,name:mgmtsystem_sam.model_sam_task_delegation
+msgid "Uppgiftsfördelning"
+msgstr "Uppgiftsfördelning"
+
+#. module: mgmtsystem_sam
+#: model:ir.model,name:mgmtsystem_sam.model_sam_instruction
+msgid "Arbets- och skyddsinstruktion"
+msgstr "Arbets- och skyddsinstruktion"
+
+#. module: mgmtsystem_sam
+#: model:ir.model,name:mgmtsystem_sam.model_sam_consultation
+msgid "Medverkan / Samråd"
+msgstr "Medverkan / Samråd"

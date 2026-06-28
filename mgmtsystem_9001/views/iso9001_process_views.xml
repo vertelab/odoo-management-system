@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Process List View -->
+    <record id="view_iso9001_process_tree" model="ir.ui.view">
+        <field name="name">iso9001.process.tree</field>
+        <field name="model">iso9001.process</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="process_type"/>
+                <field name="responsible_id"/>
+                <field name="state"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Process Form View -->
+    <record id="view_iso9001_process_form" model="ir.ui.view">
+        <field name="name">iso9001.process.form</field>
+        <field name="model">iso9001.process</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object"
+                            invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_deactivate" string="Deactivate" type="object"
+                            invisible="state != 'active'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,active,inactive"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Process Name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="process_type"/>
+                            <field name="sequence"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="ISO 9001 Clauses">
+                        <field name="iso9001_clause_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                    <group string="Process Details">
+                        <field name="inputs"/>
+                        <field name="outputs"/>
+                        <field name="resources"/>
+                    </group>
+                    <group string="KPIs">
+                        <field name="kpi_description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Process Action -->
+    <record id="action_iso9001_process" model="ir.actions.act_window">
+        <field name="name">QMS Processes</field>
+        <field name="res_model">iso9001.process</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ISO 14001:2026 Clauses — Swedish -->
+        <record id="iso14001_clause_4" model="iso14001.clause">
+            <field name="name">Organisationens förutsättningar</field>
+            <field name="clause_number">4</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="iso14001_clause_4_1" model="iso14001.clause">
+            <field name="name">Förstå organisationen och dess förutsättningar</field>
+            <field name="clause_number">4.1</field>
+            <field name="parent_id" ref="iso14001_clause_4"/>
+            <field name="sequence">11</field>
+        </record>
+        <record id="iso14001_clause_4_2" model="iso14001.clause">
+            <field name="name">Intressenters behov och förväntningar</field>
+            <field name="clause_number">4.2</field>
+            <field name="parent_id" ref="iso14001_clause_4"/>
+            <field name="sequence">12</field>
+        </record>
+        <record id="iso14001_clause_4_3" model="iso14001.clause">
+            <field name="name">Omfattning av miljöledningssystemet</field>
+            <field name="clause_number">4.3</field>
+            <field name="parent_id" ref="iso14001_clause_4"/>
+            <field name="sequence">13</field>
+        </record>
+        <record id="iso14001_clause_4_4" model="iso14001.clause">
+            <field name="name">Miljöledningssystem</field>
+            <field name="clause_number">4.4</field>
+            <field name="parent_id" ref="iso14001_clause_4"/>
+            <field name="sequence">14</field>
+        </record>
+
+        <record id="iso14001_clause_5" model="iso14001.clause">
+            <field name="name">Ledarskap</field>
+            <field name="clause_number">5</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="iso14001_clause_5_1" model="iso14001.clause">
+            <field name="name">Ledarskap och engagemang</field>
+            <field name="clause_number">5.1</field>
+            <field name="parent_id" ref="iso14001_clause_5"/>
+            <field name="sequence">21</field>
+        </record>
+        <record id="iso14001_clause_5_2" model="iso14001.clause">
+            <field name="name">Miljöpolicy</field>
+            <field name="clause_number">5.2</field>
+            <field name="parent_id" ref="iso14001_clause_5"/>
+            <field name="description">Högsta ledningen ska upprätta en miljöpolicy som inkluderar åtaganden om att skydda miljön, uppfylla lagkrav och ständigt förbättra miljöledningssystemet. Policyn ska vara dokumenterad, kommunicerad och tillgänglig för intressenter.</field>
+            <field name="sequence">22</field>
+        </record>
+        <record id="iso14001_clause_5_3" model="iso14001.clause">
+            <field name="name">Organisatoriska roller, ansvar och befogenheter</field>
+            <field name="clause_number">5.3</field>
+            <field name="parent_id" ref="iso14001_clause_5"/>
+            <field name="sequence">23</field>
+        </record>
+
+        <record id="iso14001_clause_6" model="iso14001.clause">
+            <field name="name">Planering</field>
+            <field name="clause_number">6</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="iso14001_clause_6_1" model="iso14001.clause">
+            <field name="name">Åtgärder för att hantera risker och möjligheter</field>
+            <field name="clause_number">6.1</field>
+            <field name="parent_id" ref="iso14001_clause_6"/>
+            <field name="sequence">31</field>
+        </record>
+        <record id="iso14001_clause_6_1_1" model="iso14001.clause">
+            <field name="name">Allmänt</field>
+            <field name="clause_number">6.1.1</field>
+            <field name="parent_id" ref="iso14001_clause_6_1"/>
+            <field name="sequence">32</field>
+        </record>
+        <record id="iso14001_clause_6_1_2" model="iso14001.clause">
+            <field name="name">Miljöaspekter</field>
+            <field name="clause_number">6.1.2</field>
+            <field name="parent_id" ref="iso14001_clause_6_1"/>
+            <field name="description">Organisationen ska identifiera miljöaspekter av sina aktiviteter, produkter och tjänster som den kan styra eller påverka, med beaktande av ett livscykelperspektiv. Betydande miljöaspekter ska fastställas.</field>
+            <field name="sequence">33</field>
+        </record>
+        <record id="iso14001_clause_6_1_3" model="iso14001.clause">
+            <field name="name">Lagkrav och andra krav</field>
+            <field name="clause_number">6.1.3</field>
+            <field name="parent_id" ref="iso14001_clause_6_1"/>
+            <field name="description">Organisationen ska identifiera och ha tillgång till tillämpliga lagkrav och andra krav relaterade till dess miljöaspekter.</field>
+            <field name="sequence">34</field>
+        </record>
+        <record id="iso14001_clause_6_1_4" model="iso14001.clause">
+            <field name="name">Planering av åtgärder</field>
+            <field name="clause_number">6.1.4</field>
+            <field name="parent_id" ref="iso14001_clause_6_1"/>
+            <field name="sequence">35</field>
+        </record>
+        <record id="iso14001_clause_6_2" model="iso14001.clause">
+            <field name="name">Miljömål och planering för att uppnå dem</field>
+            <field name="clause_number">6.2</field>
+            <field name="parent_id" ref="iso14001_clause_6"/>
+            <field name="sequence">36</field>
+        </record>
+        <record id="iso14001_clause_6_2_1" model="iso14001.clause">
+            <field name="name">Miljömål</field>
+            <field name="clause_number">6.2.1</field>
+            <field name="parent_id" ref="iso14001_clause_6_2"/>
+            <field name="sequence">37</field>
+        </record>
+        <record id="iso14001_clause_6_2_2" model="iso14001.clause">
+            <field name="name">Planering för att uppnå miljömål</field>
+            <field name="clause_number">6.2.2</field>
+            <field name="parent_id" ref="iso14001_clause_6_2"/>
+            <field name="sequence">38</field>
+        </record>
+
+        <record id="iso14001_clause_7" model="iso14001.clause">
+            <field name="name">Stöd</field>
+            <field name="clause_number">7</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="iso14001_clause_7_1" model="iso14001.clause">
+            <field name="name">Resurser</field>
+            <field name="clause_number">7.1</field>
+            <field name="parent_id" ref="iso14001_clause_7"/>
+            <field name="sequence">41</field>
+        </record>
+        <record id="iso14001_clause_7_2" model="iso14001.clause">
+            <field name="name">Kompetens</field>
+            <field name="clause_number">7.2</field>
+            <field name="parent_id" ref="iso14001_clause_7"/>
+            <field name="sequence">42</field>
+        </record>
+        <record id="iso14001_clause_7_3" model="iso14001.clause">
+            <field name="name">Medvetenhet</field>
+            <field name="clause_number">7.3</field>
+            <field name="parent_id" ref="iso14001_clause_7"/>
+            <field name="sequence">43</field>
+        </record>
+        <record id="iso14001_clause_7_4" model="iso14001.clause">
+            <field name="name">Kommunikation</field>
+            <field name="clause_number">7.4</field>
+            <field name="parent_id" ref="iso14001_clause_7"/>
+            <field name="sequence">44</field>
+        </record>
+        <record id="iso14001_clause_7_4_1" model="iso14001.clause">
+            <field name="name">Allmänt</field>
+            <field name="clause_number">7.4.1</field>
+            <field name="parent_id" ref="iso14001_clause_7_4"/>
+            <field name="sequence">45</field>
+        </record>
+        <record id="iso14001_clause_7_4_2" model="iso14001.clause">
+            <field name="name">Intern kommunikation</field>
+            <field name="clause_number">7.4.2</field>
+            <field name="parent_id" ref="iso14001_clause_7_4"/>
+            <field name="sequence">46</field>
+        </record>
+        <record id="iso14001_clause_7_4_3" model="iso14001.clause">
+            <field name="name">Extern kommunikation</field>
+            <field name="clause_number">7.4.3</field>
+            <field name="parent_id" ref="iso14001_clause_7_4"/>
+            <field name="sequence">47</field>
+        </record>
+        <record id="iso14001_clause_7_5" model="iso14001.clause">
+            <field name="name">Dokumenterad information</field>
+            <field name="clause_number">7.5</field>
+            <field name="parent_id" ref="iso14001_clause_7"/>
+            <field name="sequence">48</field>
+        </record>
+
+        <record id="iso14001_clause_8" model="iso14001.clause">
+            <field name="name">Verksamhet</field>
+            <field name="clause_number">8</field>
+            <field name="sequence">50</field>
+        </record>
+        <record id="iso14001_clause_8_1" model="iso14001.clause">
+            <field name="name">Planering och styrning av verksamheten</field>
+            <field name="clause_number">8.1</field>
+            <field name="parent_id" ref="iso14001_clause_8"/>
+            <field name="sequence">51</field>
+        </record>
+        <record id="iso14001_clause_8_2" model="iso14001.clause">
+            <field name="name">Nödlägesberedskap och agerande</field>
+            <field name="clause_number">8.2</field>
+            <field name="parent_id" ref="iso14001_clause_8"/>
+            <field name="description">Organisationen ska upprätta rutiner för att identifiera potentiella nödlägen och agera vid miljöincidenter. Inkluderar beredskapsplaner, övningar och utvärdering.</field>
+            <field name="sequence">52</field>
+        </record>
+
+        <record id="iso14001_clause_9" model="iso14001.clause">
+            <field name="name">Utvärdering av prestanda</field>
+            <field name="clause_number">9</field>
+            <field name="sequence">60</field>
+        </record>
+        <record id="iso14001_clause_9_1" model="iso14001.clause">
+            <field name="name">Övervakning, mätning, analys och utvärdering</field>
+            <field name="clause_number">9.1</field>
+            <field name="parent_id" ref="iso14001_clause_9"/>
+            <field name="sequence">61</field>
+        </record>
+        <record id="iso14001_clause_9_1_1" model="iso14001.clause">
+            <field name="name">Allmänt</field>
+            <field name="clause_number">9.1.1</field>
+            <field name="parent_id" ref="iso14001_clause_9_1"/>
+            <field name="sequence">62</field>
+        </record>
+        <record id="iso14001_clause_9_1_2" model="iso14001.clause">
+            <field name="name">Utvärdering av efterlevnad</field>
+            <field name="clause_number">9.1.2</field>
+            <field name="parent_id" ref="iso14001_clause_9_1"/>
+            <field name="sequence">63</field>
+        </record>
+        <record id="iso14001_clause_9_2" model="iso14001.clause">
+            <field name="name">Intern revision</field>
+            <field name="clause_number">9.2</field>
+            <field name="parent_id" ref="iso14001_clause_9"/>
+            <field name="sequence">64</field>
+        </record>
+        <record id="iso14001_clause_9_3" model="iso14001.clause">
+            <field name="name">Ledningens genomgång</field>
+            <field name="clause_number">9.3</field>
+            <field name="parent_id" ref="iso14001_clause_9"/>
+            <field name="sequence">65</field>
+        </record>
+
+        <record id="iso14001_clause_10" model="iso14001.clause">
+            <field name="name">Förbättring</field>
+            <field name="clause_number">10</field>
+            <field name="sequence">70</field>
+        </record>
+        <record id="iso14001_clause_10_1" model="iso14001.clause">
+            <field name="name">Allmänt</field>
+            <field name="clause_number">10.1</field>
+            <field name="parent_id" ref="iso14001_clause_10"/>
+            <field name="sequence">71</field>
+        </record>
+        <record id="iso14001_clause_10_2" model="iso14001.clause">
+            <field name="name">Avvikelse och korrigerande åtgärd</field>
+            <field name="clause_number">10.2</field>
+            <field name="parent_id" ref="iso14001_clause_10"/>
+            <field name="sequence">72</field>
+        </record>
+        <record id="iso14001_clause_10_3" model="iso14001.clause">
+            <field name="name">Ständig förbättring</field>
+            <field name="clause_number">10.3</field>
+            <field name="parent_id" ref="iso14001_clause_10"/>
+            <field name="sequence">73</field>
+        </record>
+    </data>
+</odoo>

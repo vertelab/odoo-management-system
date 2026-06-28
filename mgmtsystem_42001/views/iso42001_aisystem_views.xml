@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso42001_aisystem_tree" model="ir.ui.view">
+        <field name="name">iso42001.aisystem.tree</field>
+        <field name="model">iso42001.aisystem</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/><field name="system_type"/><field name="risk_level"/>
+                <field name="owner_id"/><field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso42001_aisystem_form" model="ir.ui.view">
+        <field name="name">iso42001.aisystem.form</field>
+        <field name="model">iso42001.aisystem</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_develop" string="Start Development" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_validate" string="Validate" type="object" invisible="state != 'development'" class="btn-primary"/>
+                    <button name="action_deploy" string="Deploy" type="object" invisible="state != 'validation'" class="btn-primary"/>
+                    <button name="action_retire" string="Retire" type="object" invisible="state != 'deployed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,development,validation,deployed,retired"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="system_type"/><field name="risk_level"/>
+                            <field name="owner_id"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Purpose"><field name="purpose" nolabel="1"/></group>
+                    <group string="Technical Details">
+                        <field name="ai_technologies"/>
+                        <field name="data_sources"/>
+                    </group>
+                    <group string="ISO 42001">
+                        <field name="iso42001_clause_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Documented Information">
+                        <field name="documented_information" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso42001_aisystem" model="ir.actions.act_window">
+        <field name="name">AI Systems</field>
+        <field name="res_model">iso42001.aisystem</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_iso22000_root"
+              name="Livsmedelssäkerhet (ISO 22000)"
+              sequence="45"
+              groups="group_iso22000_user"/>
+
+    <menuitem id="menu_iso22000_documents"
+              name="Dokument"
+              parent="menu_iso22000_root"
+              sequence="10"/>
+
+    <menuitem id="menu_iso22000_policy"
+              name="Livsmedelssäkerhetspolicy"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_policy"
+              sequence="10"/>
+
+    <menuitem id="menu_iso22000_prp"
+              name="Grundförutsättningar (PRP)"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_prp"
+              sequence="20"/>
+
+    <menuitem id="menu_iso22000_haccp"
+              name="HACCP-planer"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_haccp"
+              sequence="30"/>
+
+    <menuitem id="menu_iso22000_ccp"
+              name="Kritiska styrpunkter (CCP)"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_ccp"
+              sequence="40"/>
+
+    <menuitem id="menu_iso22000_hazard"
+              name="Faroanalys"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_hazard"
+              sequence="50"/>
+
+    <menuitem id="menu_iso22000_flow"
+              name="Flödesscheman"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_flow"
+              sequence="60"/>
+
+    <menuitem id="menu_iso22000_objectives"
+              name="Livsmedelssäkerhetsmål"
+              parent="menu_iso22000_documents"
+              action="action_iso22000_objective"
+              sequence="70"/>
+
+    <menuitem id="menu_iso22000_assessment"
+              name="Utvärdering"
+              parent="menu_iso22000_root"
+              sequence="20"/>
+
+    <menuitem id="menu_iso22000_gap"
+              name="Gap-analys"
+              parent="menu_iso22000_assessment"
+              action="action_iso22000_gap"
+              sequence="10"/>
+
+    <menuitem id="menu_iso22000_traceability"
+              name="Spårbarhetstest"
+              parent="menu_iso22000_assessment"
+              action="action_iso22000_traceability"
+              sequence="20"/>
+
+    <menuitem id="menu_iso22000_emergency"
+              name="Nödberedskap / Recall"
+              parent="menu_iso22000_assessment"
+              action="action_iso22000_emergency"
+              sequence="30"/>
+
+    <menuitem id="menu_iso22000_dashboard"
+              name="Dashboard"
+              parent="menu_iso22000_root"
+              action="action_iso22000_dashboard"
+              sequence="50"/>
+
+    <menuitem id="menu_iso22000_config"
+              name="Konfiguration"
+              parent="menu_iso22000_root"
+              groups="group_iso22000_manager"
+              sequence="100"/>
+
+    <menuitem id="menu_iso22000_clause"
+              name="ISO 22000 Klausuler"
+              parent="menu_iso22000_config"
+              action="action_iso22000_clause"
+              sequence="10"/>
+</odoo>

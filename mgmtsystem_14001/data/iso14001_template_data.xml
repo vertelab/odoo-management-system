@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="template_policy" model="iso14001.policy">
+            <field name="name">Miljöpolicy (exempelmall)</field>
+            <field name="state">draft</field>
+            <field name="description">
+                <![CDATA[
+                <h2>Miljöpolicy för [Företagets namn]</h2>
+                <p>Vår miljöpolicy utgår från vårt åtagande att skydda miljön och bidra till hållbar utveckling.</p>
+                <h3>Våra åtaganden:</h3>
+                <ul>
+                    <li>Förebygga föroreningar och minimera negativ miljöpåverkan</li>
+                    <li>Efterleva tillämpliga miljölagar, förordningar och andra krav</li>
+                    <li>Ständigt förbättra vårt miljöledningssystem och miljöprestanda</li>
+                    <li>Bevara resurser genom effektiv användning av energi, vatten och material</li>
+                    <li>Integrera livscykelperspektiv i produktutveckling och inköp</li>
+                    <li>Kommunicera miljöarbetet till medarbetare, kunder och övriga intressenter</li>
+                </ul>
+                ]]>
+            </field>
+        </record>
+
+        <record id="template_aspect_1" model="iso14001.aspect">
+            <field name="name">Energiförbrukning - Produktion</field>
+            <field name="state">draft</field>
+            <field name="activity">Tillverkningsprocesser i produktionshallen</field>
+            <field name="aspect_type">energy</field>
+            <field name="significance">high</field>
+            <field name="life_cycle_stage">production</field>
+        </record>
+
+        <record id="template_aspect_2" model="iso14001.aspect">
+            <field name="name">Kemikaliehantering - Avfall</field>
+            <field name="state">draft</field>
+            <field name="activity">Hantering av processkemikalier och farligt avfall</field>
+            <field name="aspect_type">waste</field>
+            <field name="significance">critical</field>
+            <field name="life_cycle_stage">production</field>
+        </record>
+
+        <record id="template_compliance_1" model="iso14001.compliance">
+            <field name="name">Miljöbalken (1998:808)</field>
+            <field name="status">to_evaluate</field>
+            <field name="source">law</field>
+            <field name="reference">SFS 1998:808</field>
+            <field name="requirement_text">Allmänna hänsynsregler, kunskapskrav, försiktighetsprincipen, bästa möjliga teknik.</field>
+        </record>
+    </data>
+</odoo>

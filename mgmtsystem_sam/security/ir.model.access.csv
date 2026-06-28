@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sam_iso_clause_user,ISO Clause - User,model_sam_iso_clause,group_sam_user,1,0,0,0
+access_sam_iso_clause_manager,ISO Clause - Manager,model_sam_iso_clause,group_sam_manager,1,1,1,1
+access_sam_policy_user,Policy - User,model_sam_policy,group_sam_user,1,0,0,0
+access_sam_policy_manager,Policy - Manager,model_sam_policy,group_sam_manager,1,1,1,1
+access_sam_task_delegation_user,Task Delegation - User,model_sam_task_delegation,group_sam_user,1,0,0,0
+access_sam_task_delegation_manager,Task Delegation - Manager,model_sam_task_delegation,group_sam_manager,1,1,1,1
+access_sam_instruction_user,Instruction - User,model_sam_instruction,group_sam_user,1,0,0,0
+access_sam_instruction_manager,Instruction - Manager,model_sam_instruction,group_sam_manager,1,1,1,1
+access_sam_consultation_user,Consultation - User,model_sam_consultation,group_sam_user,1,0,0,0
+access_sam_consultation_manager,Consultation - Manager,model_sam_consultation,group_sam_manager,1,1,1,1

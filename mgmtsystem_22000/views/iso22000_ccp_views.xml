@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_ccp_tree" model="ir.ui.view">
+        <field name="name">iso22000.ccp.tree</field>
+        <field name="model">iso22000.ccp</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="haccp_id"/><field name="critical_limit"/><field name="state"/></list>
+        </field>
+    </record>
+    <record id="view_iso22000_ccp_form" model="ir.ui.view">
+        <field name="name">iso22000.ccp.form</field>
+        <field name="model">iso22000.ccp</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_deactivate" string="Deactivate" type="object" invisible="state != 'active'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,inactive"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="CCP Name"/></h1></div>
+                    <group>
+                        <field name="haccp_id"/>
+                        <field name="hazard_id"/>
+                        <field name="critical_limit"/>
+                        <field name="frequency"/>
+                        <field name="responsible_id"/>
+                    </group>
+                    <group string="Monitoring"><field name="monitoring_method" nolabel="1"/></group>
+                    <group string="Corrective Action"><field name="corrective_action" nolabel="1"/></group>
+                    <group string="Verification"><field name="verification_method" nolabel="1"/></group>
+                    <group><field name="records_kept"/><field name="company_id" groups="base.group_multi_company"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso22000_ccp" model="ir.actions.act_window">
+        <field name="name">Kritiska styrpunkter (CCP)</field>
+        <field name="res_model">iso22000.ccp</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

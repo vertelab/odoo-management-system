@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso22000_haccp_tree" model="ir.ui.view">
+        <field name="name">iso22000.haccp.tree</field>
+        <field name="model">iso22000.haccp</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="validation_date"/>
+                <field name="review_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_iso22000_haccp_form" model="ir.ui.view">
+        <field name="name">iso22000.haccp.form</field>
+        <field name="model">iso22000.haccp</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate" string="Activate" type="object" invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_review" string="Send for Review" type="object" invisible="state != 'active'"/>
+                    <button name="action_archive" string="Archive" type="object" invisible="state not in ('draft', 'active')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,review,archived"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name" placeholder="HACCP Plan Name"/></h1></div>
+                    <group>
+                        <field name="flow_id"/>
+                        <field name="validation_date"/>
+                        <field name="validation_by"/>
+                        <field name="review_date"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group string="Products"><field name="product_ids" widget="many2many_tags"/></group>
+                    <group string="Description"><field name="description" nolabel="1"/></group>
+                    <group string="Hazard Analysis"><field name="hazard_ids" nolabel="1"><list><field name="name"/><field name="hazard_type"/><field name="risk_level"/></list></field></group>
+                    <group string="Critical Control Points"><field name="ccp_ids" nolabel="1"><list><field name="name"/><field name="critical_limit"/><field name="state"/></list></field></group>
+                    <group string="Notes"><field name="notes" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_iso22000_haccp" model="ir.actions.act_window">
+        <field name="name">HACCP-planer</field>
+        <field name="res_model">iso22000.haccp</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

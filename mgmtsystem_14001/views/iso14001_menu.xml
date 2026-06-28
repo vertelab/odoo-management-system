@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_iso14001_root"
+              name="Miljö (ISO 14001)"
+              sequence="50"
+              groups="group_iso14001_user"/>
+
+    <menuitem id="menu_iso14001_documents" name="Dokument" parent="menu_iso14001_root" sequence="10"/>
+
+    <menuitem id="menu_iso14001_policy" name="Miljöpolicy" parent="menu_iso14001_documents"
+              action="action_iso14001_policy" sequence="10"/>
+
+    <menuitem id="menu_iso14001_aspects" name="Miljöaspekter" parent="menu_iso14001_documents"
+              action="action_iso14001_aspect" sequence="20"/>
+
+    <menuitem id="menu_iso14001_compliance" name="Lagkravsregister" parent="menu_iso14001_documents"
+              action="action_iso14001_compliance" sequence="30"/>
+
+    <menuitem id="menu_iso14001_objectives" name="Miljömål" parent="menu_iso14001_documents"
+              action="action_iso14001_objective" sequence="40"/>
+
+    <menuitem id="menu_iso14001_assessment" name="Utvärdering" parent="menu_iso14001_root" sequence="20"/>
+
+    <menuitem id="menu_iso14001_gap" name="Gap-analys" parent="menu_iso14001_assessment"
+              action="action_iso14001_gap" sequence="10"/>
+
+    <menuitem id="menu_iso14001_dashboard" name="Dashboard" parent="menu_iso14001_root"
+              action="action_iso14001_dashboard" sequence="50"/>
+
+    <menuitem id="menu_iso14001_config" name="Konfiguration" parent="menu_iso14001_root"
+              groups="group_iso14001_manager" sequence="100"/>
+
+    <menuitem id="menu_iso14001_clause" name="ISO 14001 Klausuler" parent="menu_iso14001_config"
+              action="action_iso14001_clause" sequence="10"/>
+</odoo>

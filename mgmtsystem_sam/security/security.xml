@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- SAM Group Category -->
+    <record id="module_category_sam" model="ir.module.category">
+        <field name="name">Arbetsmiljö (SAM)</field>
+        <field name="description">Systematiskt Arbetsmiljöarbete — moduler för ISO 45001 och AFS 2023:1</field>
+        <field name="sequence">90</field>
+    </record>
+
+    <!-- SAM Groups -->
+    <record id="group_sam_user" model="res.groups">
+        <field name="name">SAM User</field>
+        <field name="category_id" ref="module_category_sam"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Kan läsa SAM-dokument och rapportera tillbud.</field>
+    </record>
+
+    <record id="group_sam_manager" model="res.groups">
+        <field name="name">SAM Manager</field>
+        <field name="category_id" ref="module_category_sam"/>
+        <field name="implied_ids" eval="[(4, ref('group_sam_user'))]"/>
+        <field name="comment">Kan skapa och redigera SAM-dokument, godkänna policy, stänga incidenter.</field>
+    </record>
+
+    <record id="group_sam_officer" model="res.groups">
+        <field name="name">SAM Officer</field>
+        <field name="category_id" ref="module_category_sam"/>
+        <field name="implied_ids" eval="[(4, ref('group_sam_manager'))]"/>
+        <field name="comment">Fullständig administration av SAM-systemet.</field>
+    </record>
+
+    <!-- Record Rules: Company Isolation -->
+    <record id="rule_sam_policy_company" model="ir.rule">
+        <field name="name">SAM Policy: Company Isolation</field>
+        <field name="model_id" ref="model_sam_policy"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_sam_task_delegation_company" model="ir.rule">
+        <field name="name">SAM Task Delegation: Company Isolation</field>
+        <field name="model_id" ref="model_sam_task_delegation"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_sam_instruction_company" model="ir.rule">
+        <field name="name">SAM Instruction: Company Isolation</field>
+        <field name="model_id" ref="model_sam_instruction"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

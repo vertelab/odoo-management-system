@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extend mgmtsystem.audit form -->
+    <record id="view_mgmtsystem_audit_form_sam" model="ir.ui.view">
+        <field name="name">mgmtsystem.audit.form.sam</field>
+        <field name="model">mgmtsystem.audit</field>
+        <field name="inherit_id" ref="mgmtsystem_audit.view_mgmtsystem_audit_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="SAM / Skyddsrond">
+                    <field name="checklist_type"/>
+                    <field name="location"/>
+                    <field name="department_id"/>
+                    <field name="iso_clause_ids" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

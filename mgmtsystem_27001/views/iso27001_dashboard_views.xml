@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ====== Dashboard View ====== -->
+    <record id="view_iso27001_dashboard" model="ir.ui.view">
+        <field name="name">iso27001.dashboard</field>
+        <field name="model">iso27001.gap</field>
+        <field name="arch" type="xml">
+            <board style="2-1">
+                <column>
+                    <action string="Gap Analyses"
+                            name="%(action_open_iso27001_gap)d"
+                            view_mode="list,form"/>
+                </column>
+                <column>
+                    <action string="Annex A Controls"
+                            name="%(action_open_iso27001_controls)d"
+                            view_mode="list,form"/>
+                </column>
+                <column>
+                    <action string="Statement of Applicability"
+                            name="%(action_open_iso27001_soa)d"
+                            view_mode="list,form"/>
+                </column>
+            </board>
+        </field>
+    </record>
+
+    <!-- Dashboard action -->
+    <record id="action_iso27001_dashboard" model="ir.actions.act_window">
+        <field name="name">ISO 27001 Dashboard</field>
+        <field name="res_model">iso27001.gap</field>
+        <field name="view_mode">board</field>
+        <field name="view_id" ref="view_iso27001_dashboard"/>
+    </record>
+</odoo>

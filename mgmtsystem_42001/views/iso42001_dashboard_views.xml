@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso42001_aisystem_search" model="ir.ui.view">
+        <field name="name">iso42001.aisystem.search.dashboard</field>
+        <field name="model">iso42001.aisystem</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="group_risk_level" string="Group by Risk Level" domain="[]" context="{'group_by': 'risk_level'}"/>
+                <filter name="group_type" string="Group by Type" domain="[]" context="{'group_by': 'system_type'}"/>
+                <filter name="group_state" string="Group by State" domain="[]" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_iso42001_dashboard" model="ir.actions.act_window">
+        <field name="name">ISO 42001 Dashboard</field>
+        <field name="res_model">iso42001.aisystem</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="search_view_id" ref="view_iso42001_aisystem_search"/>
+        <field name="context">{'search_default_group_risk_level': 1}</field>
+    </record>
+</odoo>
