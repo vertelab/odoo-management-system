@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- KURS: MCF Kontinuitetshantering (8 slides)                   -->
+    <!-- ============================================================ -->
+
+    <record id="slide_kontinuitet_00_intro" model="slide.slide">
+        <field name="name">Kontinuitetshantering — Varför och när?</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kontinuitetshantering — MCF:s öppna webbkurs</h2>
+
+<h3>Vad är kontinuitetshantering?</h3>
+<p>Kontinuitetshantering handlar om att säkerställa att verksamheten kan fortsätta fungera — eller snabbt återhämta sig — efter ett allvarligt avbrott. Det är er <strong>Plan B</strong>.</p>
+
+<h3>Varför är det viktigt?</h3>
+<ul>
+<li>Samhällsviktig verksamhet får inte stanna — även under kris</li>
+<li>CER-direktivet och NIS2 ställer lagkrav på kontinuitetsplanering</li>
+<li>Kunder och medborgare förväntar sig att tjänster fungerar</li>
+<li>Ett längre avbrott kan hota hela organisationens existens</li>
+</ul>
+
+<h3>Vanliga orsaker till avbrott</h3>
+<ul>
+<li>IT-haverier och cyberangrepp (ransomware, DDoS)</li>
+<li>Strömavbrott och infrastrukturbortfall</li>
+<li>Naturhändelser (översvämning, brand, storm)</li>
+<li>Pandemier och personalfrånvaro</li>
+<li>Leverantörs- och beroendekedjebortfall</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_01_bia" model="slide.slide">
+        <field name="name">1. Business Impact Analysis (BIA) — Vilka processer är kritiska?</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>BIA — kartlägg verksamhetens kritiska processer</h2>
+
+<h3>Steg i en BIA</h3>
+<ol>
+<li><strong>Identifiera</strong> alla verksamhetsprocesser</li>
+<li><strong>Prioritera</strong> — vilka är kritiska för verksamhetens överlevnad?</li>
+<li><strong>Analysera</strong> konsekvenser av avbrott över tid (1h, 4h, 24h, 1v, 1m)</li>
+<li><strong>Definiera</strong> RTO och RPO för varje process</li>
+</ol>
+
+<h3>Centrala begrepp</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Begrepp</th><th>Betydelse</th><th>Exempel</th></tr>
+<tr><td><strong>MTPD</strong></td><td>Maximum Tolerable Period of Disruption — absolut max avbrottstid innan verksamheten hotas</td><td>Fakturering: 5 dagar</td></tr>
+<tr><td><strong>RTO</strong></td><td>Recovery Time Objective — mål för återställningstid</td><td>Ordersystem: 4 timmar</td></tr>
+<tr><td><strong>RPO</strong></td><td>Recovery Point Objective — max acceptabel dataförlust</td><td>Transaktioner: max 15 min</td></tr>
+<tr><td><strong>MAO</strong></td><td>Maximum Acceptable Outage — längsta acceptabla avbrott</td><td>Kundportal: 2 timmar</td></tr>
+</table>
+
+<h3>Konsekvensområden att bedöma</h3>
+<ul>
+<li>Ekonomisk påverkan (förlorade intäkter, böter)</li>
+<li>Operativ påverkan (arbete som stannar)</li>
+<li>Legal/regulatorisk påverkan (avtalsbrott, lagbrott)</li>
+<li>Anseende/förtroende (kunder, media, medborgare)</li>
+<li>Säkerhet (personskada, miljöskada)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_02_risk" model="slide.slide">
+        <field name="name">2. Riskbedömning för kontinuitet</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Identifiera vad som kan gå fel</h2>
+
+<h3>Riskkällor</h3>
+<ul>
+<li><strong>Tekniska:</strong> serverhaveri, nätverksfel, mjukvarubuggar, cyberangrepp</li>
+<li><strong>Fysiska:</strong> strömavbrott, vattenskada, brand, inbrott</li>
+<li><strong>Personella:</strong> nyckelpersoner sjuka/slutar, pandemi, strejk</li>
+<li><strong>Externa:</strong> leverantör går i konkurs, transportstopp, politisk kris</li>
+</ul>
+
+<h3>Riskmatris — bedöm sannolikhet × konsekvens</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th></th><th>Låg konsekvens</th><th>Medel konsekvens</th><th>Hög konsekvens</th></tr>
+<tr><td><strong>Hög sannolikhet</strong></td><td style="background:#ffffcc">Medel</td><td style="background:#ffcc66">Hög</td><td style="background:#ff6666">Kritisk</td></tr>
+<tr><td><strong>Medel sannolikhet</strong></td><td style="background:#ddffdd">Låg</td><td style="background:#ffffcc">Medel</td><td style="background:#ffcc66">Hög</td></tr>
+<tr><td><strong>Låg sannolikhet</strong></td><td style="background:#ddffdd">Låg</td><td style="background:#ddffdd">Låg</td><td style="background:#ffffcc">Medel</td></tr>
+</table>
+
+<h3>Riskbehandlingsstrategier</h3>
+<ul>
+<li><strong>Acceptera</strong> — låg risk, kostnaden att skydda överstiger nyttan</li>
+<li><strong>Reducera</strong> — vidta åtgärder för att minska sannolikhet eller konsekvens</li>
+<li><strong>Överföra</strong> — försäkring, outsourcing, avtal</li>
+<li><strong>Undvika</strong> — sluta med aktiviteten helt</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_03_strategier" model="slide.slide">
+        <field name="name">3. Kontinuitetsstrategier — bygg din Plan B</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Välj rätt strategi för varje kritisk process</h2>
+
+<h3>IT- och datastrategier</h3>
+<ul>
+<li><strong>Redundanta system (aktiv/aktiv):</strong> Två datacenter som delar last — vid bortfall tar den andra över direkt</li>
+<li><strong>Failover (aktiv/passiv):</strong> Standby-miljö som aktiveras vid behov — några minuter till timmar</li>
+<li><strong>Backup och restore:</strong> Återställ från backup — kan ta timmar till dagar</li>
+<li><strong>Molntjänster:</strong> Utnyttja molnets inbyggda redundans och geo-distribution</li>
+</ul>
+
+<h3>Verksamhetsstrategier</h3>
+<ul>
+<li><strong>Manuella rutiner:</strong> Pappersbaserade alternativ när IT-system ligger nere</li>
+<li><strong>Alternativa lokaler:</strong> Avtal med grannorganisation eller coworking</li>
+<li><strong>Distansarbete:</strong> Personalen arbetar hemifrån vid lokalbortfall</li>
+<li><strong>Personalpooler:</strong> Korsutbildning så att flera kan täcka kritiska roller</li>
+</ul>
+
+<h3>Leverantörsstrategier</h3>
+<ul>
+<li>Multi-sourcing: ha minst två leverantörer för kritiska tjänster</li>
+<li>Lagerhållning: bufferlager av kritiska komponenter</li>
+<li>Avtal med konkurrent: ömsesidigt bistånd vid kris</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_04_plan" model="slide.slide">
+        <field name="name">4. Kontinuitetsplanen — så dokumenterar du</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kontinuitetsplanens struktur</h2>
+
+<h3>Innehåll</h3>
+<ol>
+<li><strong>Aktivering:</strong> När och hur aktiveras planen? Vem har mandat?</li>
+<li><strong>Larmlista:</strong> Kontaktuppgifter till krisledning, nyckelpersonal, leverantörer, myndigheter</li>
+<li><strong>Prioriterade processer:</strong> Ordning för återställning (vad måste fungera först?)</li>
+<li><strong>Återställningsprocedurer:</strong> Steg-för-steg — så tekniskt detaljerat att en utomstående kan följa</li>
+<li><strong>Kommunikationsplan:</strong> Mallar för intern/extern kommunikation</li>
+<li><strong>Resurslista:</strong> Utrustning, programvara, åtkomstuppgifter (i separat, säker förvaring)</li>
+<li><strong>Alternativa arbetssätt:</strong> Manuella rutiner, alternativa lokaler</li>
+</ol>
+
+<h3>Checklista för kontinuitetsplan</h3>
+<ul>
+<li>Planen finns i både digital och fysisk kopia</li>
+<li>Kontaktlistan är uppdaterad (kontrolleras kvartalsvis)</li>
+<li>Åtkomstuppgifter till backups och system finns säkert tillgängliga</li>
+<li>Alla nyckelpersoner vet var planen finns och sin roll</li>
+<li>Planen har övats under de senaste 12 månaderna</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_05_ovning" model="slide.slide">
+        <field name="name">5. Öva, testa och förbättra</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>En oövad plan är ingen plan</h2>
+
+<h3>Typer av övningar</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Typ</th><th>Omfattning</th><th>Kostnad</th><th>Frekvens</th></tr>
+<tr><td><strong>Genomläsning</strong></td><td>Nyckelpersoner läser igenom planen tillsammans</td><td>Låg</td><td>Halvårsvis</td></tr>
+<tr><td><strong>Tabletop</strong></td><td>Skrivbordsövning med scenario, diskussion kring beslut</td><td>Låg</td><td>Årligen</td></tr>
+<tr><td><strong>Funktionell</strong></td><td>En eller några funktioner testas praktiskt (t.ex. failover)</td><td>Medel</td><td>Årligen</td></tr>
+<tr><td><strong>Fullskalig</strong></td><td>Hela organisationen och externa parter övar tillsammans</td><td>Hög</td><td>Vart 2-3 år</td></tr>
+</table>
+
+<h3>Efter övningen — utvärdering</h3>
+<ol>
+<li>Vad fungerade enligt plan?</li>
+<li>Var uppstod problem eller fördröjningar?</li>
+<li>Saknades information, rutiner eller resurser?</li>
+<li>Var kommunikationen effektiv?</li>
+<li>Uppdatera planen baserat på lärdomar</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_06_krisledning" model="slide.slide">
+        <field name="name">6. Krisledning vid avbrott</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Krisledning — så styr du under kaos</h2>
+
+<h3>Krisledningsorganisation</h3>
+<ul>
+<li><strong>Krisledare:</strong> Beslutsfattare med mandat — oftast VD eller stf VD</li>
+<li><strong>Stabsfunktioner:</strong> Analys/Planering, Resurs/Logistik, Kommunikation, Administration/Dokumentation</li>
+<li><strong>Samband:</strong> Länk till externa aktörer (myndigheter, leverantörer, media)</li>
+</ul>
+
+<h3>Ledningsplats</h3>
+<ul>
+<li>Primär ledningsplats — och en alternativ om primär är påverkad</li>
+<li>Utrustning: telefon, whiteboard, skrivare, krispärm, krislåda</li>
+<li>Kommunikationsvägar: primär (mobil), sekundär (satellit/radio), tertiär (bud/löpare)</li>
+</ul>
+
+<h3>Beslutsfattande under kris</h3>
+<ul>
+<li><strong>Snabbhet före perfektion:</strong> Ett 80%-bra beslut nu är bättre än ett 100%-bra beslut för sent</li>
+<li><strong>Löpande lägesbild:</strong> Vad vet vi? Vad vet vi inte? Vad är prioriterat just nu?</li>
+<li><strong>Delegera:</strong> Krisledaren fattar strategiska beslut — taktiska beslut delegeras</li>
+<li><strong>Dokumentera:</strong> Alla beslut, tider och motiveringar — för utvärdering och juridisk granskning</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kontinuitet_07_sammanfattning" model="slide.slide">
+        <field name="name">Kontinuitetshantering — Sammanfattning och checklista</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kontinuitet_mcf"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din 10-punkts checklista för kontinuitet</h2>
+
+<ol>
+<li>Genomför en Business Impact Analysis (BIA)</li>
+<li>Identifiera kritiska processer och deras RTO/RPO</li>
+<li>Genomför riskbedömning — vad kan slå ut er?</li>
+<li>Välj kontinuitetsstrategier för varje kritisk process</li>
+<li>Dokumentera kontinuitetsplanen — både digitalt och fysiskt</li>
+<li>Säkerställ att backups fungerar — testa återläsning</li>
+<li>Bygg redundans för kritiska system</li>
+<li>Utse och utbilda krisledningsorganisationen</li>
+<li>Öva minst årligen — tabletop eller funktionell övning</li>
+<li>Uppdatera planen baserat på lärdomar och förändringar</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://www.msb.se">MCF/MSB</a> — vägledningar, metodstöd, övningsmallar</li>
+<li>Fullständig webbkurs på MCF:s webbplats (öppen, ca 1,5 timme)</li>
+<li>ISO 22301 — internationell standard för kontinuitetshantering</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: IT-Helpdesk Säkerhetsutbildning (10 slides)            -->
+    <!-- ============================================================ -->
+
+    <record id="slide_helpdesk_00_intro" model="slide.slide">
+        <field name="name">IT-Helpdesk — Varför du är ett högvärdigt mål</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du är den mänskliga brandväggen</h2>
+
+<h3>Varför attackeras helpdesken?</h3>
+<ul>
+<li><strong>Höga behörigheter:</strong> Du kan återställa lösenord, skapa konton, ändra åtkomst</li>
+<li><strong>Betrodd position:</strong> Användare litar på "IT-avdelningen"</li>
+<li><strong>Direktkontakt:</strong> Angripare kan ringa, chatta, skicka ärenden direkt till dig</li>
+<li><strong>Tidspress:</strong> Helpdesk är ofta underbemannad — stress leder till misstag</li>
+</ul>
+
+<h3>Vad angriparen vill uppnå</h3>
+<ul>
+<li>Återställa lösenord för att ta över konton</li>
+<li>Skapa nya konton med höga behörigheter</li>
+<li>Få dig att köra skadlig kod ("Kolla på denna bifogade fil...")</li>
+<li>Utvinna information om organisationens system, användare, struktur</li>
+<li>Få MFA godkänd — "Jag fick en push-notis, är det du?"</li>
+</ul>
+
+<h3>Denna kurs bygger på</h3>
+<ul>
+<li>Google IT Support Certificate — säkerhetsmodulen</li>
+<li>TryHackMe Pre-Security &amp; Phishing-labb</li>
+<li>NCSC:s DISA — särskilt relevanta moduler</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_01_identitet" model="slide.slide">
+        <field name="name">1. Identitetsverifiering — hur vet du vem som ringer?</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Verifiera identitet — utan att bli lurad</h2>
+
+<h3>Angriparen ringer: "Hej, det här är Johan från ekonomi. Jag har låst ut mig och måste ha ett nytt lösenord NU — jag ska in på ett viktigt möte om 5 minuter!"</h3>
+
+<h3>Varningssignaler</h3>
+<ul>
+<li><strong>Brådska:</strong> "Det är akut!", "Mötet börjar om 5 min!"</li>
+<li><strong>Namndropping:</strong> "Kalle (din chef) sa att du kunde fixa detta."</li>
+<li><strong>Auktoritet:</strong> "Jag är ny regionchef och har inte fått mitt konto än."</li>
+<li><strong>Ovanlig begäran:</strong> "Kan du skicka lösenordet via SMS till min privata telefon?"</li>
+</ul>
+
+<h3>Säker verifieringsprocedur</h3>
+<ol>
+<li><strong>Oberoende kanal:</strong> Ring tillbaka på personens registrerade nummer — inte numret de gav dig</li>
+<li><strong>Bekräfta via chef:</strong> "Jag ringer din chef och bekräftar, så återkommer jag."</li>
+<li><strong>Fastställda rutiner:</strong> Följ organisationens process för lösenordsåterställning exakt</li>
+<li><strong>Dokumentera:</strong> Anteckna tid, namn, begäran, och hur identiteten verifierades</li>
+</ol>
+
+<div class="alert alert-warning"><strong>Viktigt:</strong> Hoppa aldrig över verifieringssteg vid brådska. En legitim användare förstår. En angripare pressar dig.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_02_phishing_headers" model="slide.slide">
+        <field name="name">2. Analysera e-posthuvuden — avslöja det falska mailet</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>E-posthuvuden — din teknisk detektiv</h2>
+
+<h3>Så läser du headers</h3>
+<p>De viktigaste fälten att granska:</p>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Header</th><th>Vad du letar efter</th></tr>
+<tr><td><strong>Return-Path</strong></td><td>Vart studsar mailet? Ska matcha avsändardomänen.</td></tr>
+<tr><td><strong>Received</strong></td><td>Spåra serverns väg. Kommer det från oväntad IP/land? Läs nedifrån och upp.</td></tr>
+<tr><td><strong>Authentication-Results</strong></td><td>SPF, DKIM, DMARC — passerade de? "spf=fail" eller "dkim=none" är röda flaggor!</td></tr>
+<tr><td><strong>Message-ID</strong></td><td>Domändelen ska matcha avsändaren.</td></tr>
+</table>
+
+<h3>Praktiskt exempel</h3>
+<pre>Return-Path: &lt;phish@evil.com&gt;     ← Stämmer INTE med From: boss@foretaget.se
+Received: from mail.evil.com...    ← Servern är INTE er Exchange/Google
+Authentication-Results: spf=fail  ← SPF misslyckades — stor röd flagga!</pre>
+
+<h3>Verktyg</h3>
+<ul>
+<li>Outlook: Öppna mail → Arkiv → Egenskaper → Internetrubriker</li>
+<li>Gmail: Öppna mail → tre punkter → Visa originalet</li>
+<li>Online-headers-analysatorer: <a href="https://mxtoolbox.com/EmailHeaders.aspx">MXToolbox Email Header Analyzer</a></li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_03_vishing" model="slide.slide">
+        <field name="name">3. Vishing — röstfiske i supporttelefonen</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Vishing (voice phishing) — när angriparen ringer dig</h2>
+
+<h3>Vanliga vishing-scenarier</h3>
+<ul>
+<li><strong>"Jag är från Microsoft/er leverantör — ni har ett säkerhetsproblem."</strong></li>
+<li><strong>"Jag är ny anställd och har inte fått min inloggning än — kan du skapa ett konto?"</strong></li>
+<li><strong>"Chefen har bråttom och bad mig ringa — kan du återställa hans lösenord?"</strong></li>
+<li><strong>"Er faktura är obetald — ge mig era systemuppgifter så löser jag det."</strong></li>
+</ul>
+
+<h3>Så avslöjar du vishing</h3>
+<ol>
+<li><strong>Pausa:</strong> Låt dig inte stressas. Säg: "Jag ska bara kolla upp detta, ett ögonblick."</li>
+<li><strong>Verifiera via oberoende kanal:</strong> Ring tillbaka på känt nummer — inte numret personen ger dig</li>
+<li><strong>Fråga kontrollfrågor:</strong> "Vilket employee-ID har du?" "Vem är din närmsta chef?"</li>
+<li><strong>Var särskilt vaksam:</strong> Fredag eftermiddag, före storhelger, lunchtid — då är garden lägre</li>
+</ol>
+
+<h3>Om du misstänker vishing</h3>
+<ul>
+<li>Avsluta samtalet professionellt: "Jag måste verifiera detta, jag återkommer."</li>
+<li>Rapportera till säkerhetsavdelningen — tid, nummer, vad de begärde</li>
+<li>Varna kollegor — angriparen kan ringa nästa person i listan</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_04_mfa" model="slide.slide">
+        <field name="name">4. MFA-trötthet och Prompt Bombing</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>MFA-trötthet — den nya, effektiva attacken</h2>
+
+<h3>Vad är Prompt Bombing?</h3>
+<p>Angriparen har redan ditt lösenord (från ett tidigare läckage) och försöker nu logga in. Du får upprepade MFA-pushnotiser i hopp om att du ska:</p>
+<ul>
+<li>Av misstag trycka "Godkänn"</li>
+<li>Bli så irriterad att du godkänner "för att få tyst på det"</li>
+<li>Tro att det är en systemuppdatering som triggar notiserna</li>
+</ul>
+
+<h3>Så här ser det ut</h3>
+<ul>
+<li><strong>00:03:</strong> "Ny inloggning, godkänn?" — <em>Du avvisar</em></li>
+<li><strong>00:04:</strong> "Ny inloggning, godkänn?" — <em>Du avvisar igen</em></li>
+<li><strong>00:05:</strong> "Ny inloggning, godkänn?" — <em>Du avvisar — men det fortsätter...</em></li>
+<li><strong>00:06:</strong> Telefonen ringer: "Hej, det är IT-support. Vi ser konstig aktivitet på ditt konto. Kan du godkänna nästa push så vi kan felsöka?"</li>
+</ul>
+
+<div class="alert alert-danger"><strong>Gyllene regel:</strong> Godkänn ALDRIG en MFA-begäran som du inte själv precis har initierat. Om pushnotiserna haglar — byt lösenord omedelbart och rapportera!</div>
+
+<h3>Helpdesk — vad du måste veta</h3>
+<ul>
+<li>Hjälp aldrig användare att "godkänna" MFA-pushar via telefon</li>
+<li>Om en användare ringer om upprepade pushnotiser — be dem byta lösenord direkt, godkänn INTE</li>
+<li>Varna för kombinationsattacker: MFA-bombning + vishing-samtal</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_05_komprometterade" model="slide.slide">
+        <field name="name">5. Hantera komprometterade konton</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När en användares konto är kapat</h2>
+
+<h3>Tecken på komprometterat konto</h3>
+<ul>
+<li>Användaren rapporterar skickade mail de inte känner igen</li>
+<li>Inloggningar från ovanliga platser/tider (mitt i natten, utlandet)</li>
+<li>E-postregler som vidarebefordrar mail externt</li>
+<li>Ändrad MFA-metod eller återställningsadress</li>
+<li>Filer borttagna eller krypterade på användarens enhet</li>
+</ul>
+
+<h3>Omedelbara åtgärder</h3>
+<ol>
+<li><strong>Spärra kontot</strong> — förhindra ytterligare skada</li>
+<li><strong>Återkalla alla sessioner</strong> — logga ut överallt</li>
+<li><strong>Återställ lösenord</strong> — och tvinga ny inloggning</li>
+<li><strong>Kontrollera e-postregler</strong> — ta bort misstänkta vidarebefordringar</li>
+<li><strong>Granska loggar</strong> — vad hände under tiden kontot var komprometterat?</li>
+<li><strong>Eskalera</strong> till säkerhetsavdelningen</li>
+<li><strong>Återställ MFA</strong> — sätt upp på nytt, verifiera med ny enhet</li>
+</ol>
+
+<div class="alert alert-warning"><strong>Viktigt:</strong> Använd aldrig det komprometterade kontot för att kommunicera med användaren — angriparen kan läsa med!</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_06_behorigheter" model="slide.slide">
+        <field name="name">6. Behörigheter — "least privilege" i praktiken</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du har nycklarna till kungariket — använd dem ansvarsfullt</h2>
+
+<h3>Principen om minsta privilegium</h3>
+<p>Ge endast de behörigheter som behövs för att utföra en specifik uppgift — varken mer eller mindre.</p>
+
+<h3>Praktiska regler för helpdesk</h3>
+<ul>
+<li><strong>Använd inte ditt adminkonto för vardagliga sysslor</strong> (e-post, surf). Ha ett separat användarkonto.</li>
+<li><strong>Tidsbegränsa</strong> tillfälliga behörigheter — "Jag ger dig admin i 2 timmar, sedan återkallas det."</li>
+<li><strong>Dokumentera</strong> alla behörighetsändringar — vad, vem, varför, hur länge</li>
+<li><strong>Återställ inte lösenord</strong> till default/admin-lösenord — tvinga användaren att sätta nytt direkt</li>
+<li><strong>Dela aldrig</strong> administratörskonton — varje admin har eget konto med spårbarhet</li>
+</ul>
+
+<h3>Särskilt känsliga operationer</h3>
+<ul>
+<li>Skapa globala administratörskonton → kräv godkännande från två personer</li>
+<li>Ändra MFA/metoder → verifiera via oberoende kanal först</li>
+<li>Exportera data/mailbox → kontrollera att personen har rätt till denna data</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_07_loggar" model="slide.slide">
+        <field name="name">7. Logga och rapportera — din skyldighet</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Dokumentation räddar dig — och organisationen</h2>
+
+<h3>Vad ska dokumenteras?</h3>
+<ul>
+<li>Alla säkerhetsrelaterade ärenden: misstänkt phishing, vishing, kontointrång</li>
+<li>Alla behörighetsändringar: vem, vad, varför, tid, godkännande</li>
+<li>Alla misstänkta incidenter: även om du är osäker — hellre en falsk alarm än en missad</li>
+</ul>
+
+<h3>Vad en bra loggpost innehåller</h3>
+<ul>
+<li>Tid och datum (exakt!)</li>
+<li>Vem rapporterade / vem berördes</li>
+<li>Vad hände? (objektivt, inga antaganden)</li>
+<li>Vilka åtgärder vidtogs?</li>
+<li>Vem är informerad? (chef, säkerhetsavdelning, CERT)</li>
+</ul>
+
+<h3>Vad ska rapporteras vidare?</h3>
+<ul>
+<li>Misstänkt dataintrång → säkerhetsavdelningen + chef → eventuellt CERT-SE</li>
+<li>Personuppgiftsincident → Dataskyddsombudet (GDPR-anmälan inom 72h)</li>
+<li>Allvarligt systemfel → driftavdelningen</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_08_sociala_medier" model="slide.slide">
+        <field name="name">8. OSINT och sociala medier — angriparen researchar dig</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Angriparen har gjort hemläxan — har du?</h2>
+
+<h3>Vad angriparen kan hitta om dig</h3>
+<ul>
+<li>Ditt namn, titel, avdelning (LinkedIn, företagets webbplats)</li>
+<li>Dina kollegors och chefers namn</li>
+<li>Vilka system ni använder (jobannonser nämner ofta teknikstack)</li>
+<li>Interna projektnamn och organisationsstruktur</li>
+<li>Din semester (sociala medier — perfekt tid för attack!)</li>
+</ul>
+
+<h3>Så skyddar du dig</h3>
+<ul>
+<li>Var restriktiv med arbetsinformation på sociala medier</li>
+<li>Acceptera inte kontaktförfrågningar från okända "rekryterare" eller "branschkollegor"</li>
+<li>Var misstänksam mot personer som nämner interna projekt eller kollegor vid namn</li>
+<li>Informera inte om semesterresor publikt</li>
+<li>Googla dig själv — vad kan en angripare hitta?</li>
+</ul>
+
+<h3>Röd flagga i supportärenden</h3>
+<p>Om en person du aldrig pratat med förut nämner din chefs namn, ditt senaste projekt, eller visar detaljerad kunskap om interna system — <strong>var extra vaksam</strong>. Angripare använder OSINT för att bygga trovärdighet.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_helpdesk_09_sammanfattning" model="slide.slide">
+        <field name="name">Helpdesk Security — Sammanfattning och checklista</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_helpdesk_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din dagliga säkerhetschecklista</h2>
+
+<ol>
+<li><strong>Verifiera alltid identitet</strong> via oberoende kanal — oavsett hur bråttom det är</li>
+<li><strong>Läs e-posthuvuden</strong> vid misstänkta mail — SPF/DKIM/DMARC</li>
+<li><strong>Godkänn ALDRIG MFA</strong> som du inte själv initierat — även om "IT-support" ringer</li>
+<li><strong>Ge minsta möjliga behörighet</strong> — tidsbegränsa tillfällig åtkomst</li>
+<li><strong>Dokumentera allt</strong> — tid, person, åtgärd, godkännande</li>
+<li><strong>Rapportera misstänkta incidenter</strong> — hellre ett extra larm än en missad attack</li>
+<li><strong>Skydda din digitala närvaro</strong> — angripare använder OSINT</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://grow.google/certificates/it-support/">Google IT Support Certificate</a> — gratis att granska (audit)</li>
+<li><a href="https://tryhackme.com">TryHackMe</a> — Pre-Security &amp; Phishing-rum (gratis)</li>
+<li>NCSC:s <a href="https://www.ncsc.se">DISA-utbildning</a></li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: CSM &amp; Kundansvarig Säkerhet (8 slides)                 -->
+    <!-- ============================================================ -->
+
+    <record id="slide_csm_00_intro" model="slide.slide">
+        <field name="name">CSM &amp; Kundansvarig — Du är porten till kunden</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du är inte målet — du är språngbrädan</h2>
+
+<h3>Varför attackeras just du?</h3>
+<ul>
+<li>Du har <strong>direkt tillgång</strong> till kunders system, data och förtroende</li>
+<li>Du använder <strong>många kommunikationskanaler</strong> — e-post, Slack, Teams, Zoom, CRM</li>
+<li>Du hanterar <strong>kunddata dagligen</strong> — GDPR-risken är stor</li>
+<li>En kapad CSM kan användas för att attackera <strong>alla dina kunder</strong></li>
+</ul>
+
+<h3>Angriparens mål</h3>
+<ul>
+<li>Få dig att dela känslig kundinformation</li>
+<li>Kapa ditt konto för att skicka skadliga filer till kunder ("Uppdatera din mjukvara här...")</li>
+<li>Plantera ransomware i kundens miljö via er åtkomst</li>
+<li>Stjäla kundlistor och affärsdata</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_01_gdpr" model="slide.slide">
+        <field name="name">1. Kunddata och GDPR — vad du får och inte får</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>GDPR i kundrelationen — praktiska regler</h2>
+
+<h3>Dataminimering — din gyllene regel</h3>
+<ul>
+<li>Samla inte in mer data än du behöver</li>
+<li>Spara inte data längre än nödvändigt</li>
+<li>Radera data när syftet är uppnått</li>
+</ul>
+
+<h3>Vad får du INTE göra?</h3>
+<ul>
+<li>❌ Spara kunders lösenord i CRM-noteringar</li>
+<li>❌ Skicka personnummer/kreditkort via e-post eller chatt</li>
+<li>❌ Lagra kunddata lokalt på din dator (Excel, anteckningar)</li>
+<li>❌ Vidarebefordra kundens mail med personuppgifter till tredje part utan samtycke</li>
+<li>❌ Ta screenshots av kunddata och spara okrypterat</li>
+</ul>
+
+<h3>Vad gör du om du skickar fel?</h3>
+<ol>
+<li>Informera din chef och dataskyddsombudet omedelbart</li>
+<li>Be mottagaren radera mailet (och bekräfta)</li>
+<li>Dokumentera händelsen — tid, vad som skickades, till vem, varför</li>
+<li>Personuppgiftsincidenter kan behöva anmälas till IMY inom 72 timmar</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_02_kanaler" model="slide.slide">
+        <field name="name">2. Säkra kommunikationskanaler</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Vilken kanal för vilken information?</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Kanal</th><th>OK för</th><th>INTE OK för</th></tr>
+<tr><td><strong>E-post</strong></td><td>Allmän information, bokningar</td><td>Personnummer, lösenord, känslig data</td></tr>
+<tr><td><strong>Slack / Teams</strong></td><td>Intern kommunikation</td><td>Kund-PII, lösenord, kreditkort</td></tr>
+<tr><td><strong>Zoom / Teams möte</strong></td><td>Möten, skärmdelning</td><td>Delning av hela skrivbordet med synlig kunddata i andra fönster</td></tr>
+<tr><td><strong>CRM (Salesforce etc.)</strong></td><td>Kunddata — med rätt behörigheter</td><td>Lösenord, fullständiga kortnummer</td></tr>
+<tr><td><strong>Krypterad filöverföring</strong></td><td>Känslig kunddata</td><td>— (detta är rätt kanal!)</td></tr>
+</table>
+
+<h3>Skärmdelning — tänk på detta</h3>
+<ul>
+<li>Stäng alla andra fönster med känslig information före delning</li>
+<li>Använd "dela specifikt fönster" — inte hela skärmen</li>
+<li>Stäng notiser — e-postpopups kan avslöja annan kundinformation</li>
+<li>Kontrollera att du delar rätt — ett klick fel kan exponera hela kunddatabasen</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_03_social_engineering" model="slide.slide">
+        <field name="name">3. Social engineering mot kundansvariga</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Scenarier — så attackeras du</h2>
+
+<h3>Scenario 1: Den falska kunden</h3>
+<p>"Hej! Jag är ny kontaktperson hos [Storkund AB]. Kan du skicka över alla avtal och användarlistan? Jag ska uppdatera våra rutiner."</p>
+<ul>
+<li>Varningsflagg: Ny person + brådskande begäran om omfattande data</li>
+<li>Svar: "Välkommen! Jag ringer din företrädare [tidigare kontaktperson] och bekräftar, så skickar jag över det du behöver."</li>
+</ul>
+
+<h3>Scenario 2: Krisen</h3>
+<p>"Jag är VD för [Kund AB], vi har ett akut säkerhetsproblem! Jag måste ha administratörsåtkomst till vår miljö NU — skicka inloggningsuppgifterna till min privata mail."</p>
+<ul>
+<li>Varningsflagg: Brådska, ovanlig begäran, privat e-post</li>
+<li>Svar: Följ etablerad process. "Jag eskalerar detta till vår säkerhetsavdelning. De kontaktar er via registrerat telefonnummer."</li>
+</ul>
+
+<h3>Scenario 3: Mjukvaruuppdateringen</h3>
+<p>Du får ett mail från "kundens IT-avdelning": "Vi uppdaterar vår portal. Installera denna säkerhetsuppdatering [.exe-fil] för fortsatt access."</p>
+<ul>
+<li>Varningsflagg: Oväntad bilaga, .exe-fil, okänd avsändare</li>
+<li>Svar: Installera INTE. Kontakta kundens IT via känd kanal och fråga.</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_04_kund_hackad" model="slide.slide">
+        <field name="name">4. När kunden säger "Vi har blivit hackade via er"</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När krisen är här — agera rätt</h2>
+
+<h3>Om en kund rapporterar intrång</h3>
+<ol>
+<li><strong>Lyssna och dokumentera:</strong> Vad har hänt? När? Hur upptäcktes det? Vilka system?</li>
+<li><strong>Eskalera omedelbart</strong> till din säkerhetsavdelning och chef</li>
+<li><strong>Lova ingenting:</strong> Säg inte "det är vårt fel" eller "ni får kompensation". Låt juridik och ledning hantera ansvarsfrågan.</li>
+<li><strong>Säkra bevis:</strong> Loggar, skärmdumpar, mailkonversationer — spara allt</li>
+<li><strong>Begränsa din egen åtkomst:</strong> Överväg att tillfälligt stänga din åtkomst tills utredningen är klar</li>
+<li><strong>Kommunicera med EN röst:</strong> All kundkommunikation går via utsedd talesperson</li>
+</ol>
+
+<h3>Förberedelse — vad du ska ha klart innan</h3>
+<ul>
+<li>Krisrutin för kundincidenter — vem ringer du först?</li>
+<li>Kontaktlista: säkerhetschef, juridik, kommunikationschef</li>
+<li>Mall för initial kundrespons — professionell, empatisk, utan löften</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_05_losenord" model="slide.slide">
+        <field name="name">5. Lösenord och åtkomst — hur du skyddar ditt konto</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Ditt konto är nyckeln till alla dina kunder</h2>
+
+<h3>Grundskydd</h3>
+<ul>
+<li><strong>Unikt lösenord</strong> för jobbkontot — aldrig samma som privat</li>
+<li><strong>MFA aktiverat</strong> på ALLA tjänster — CRM, e-post, supportportal, VPN</li>
+<li><strong>Lösenordshanterare</strong> — godkänd av IT, inte "Kom-ihåg-i-webbläsaren"</li>
+<li><strong>Timeout:</strong> Lås datorn när du lämnar skrivbordet — även hemma</li>
+</ul>
+
+<h3>Vanliga misstag</h3>
+<ul>
+<li>❌ "Mitt lösenord är Företaget2025!" — förutsägbart</li>
+<li>❌ Återanvända lösenord mellan tjänster</li>
+<li>❌ Spara lösenord i CRM-noteringar, Excel eller Post-It</li>
+<li>❌ Dela konto med kollega ("vi använder samma inlogg")</li>
+</ul>
+
+<h3>Om ditt konto kapas</h3>
+<ol>
+<li>Byt lösenord omedelbart — från en annan enhet</li>
+<li>Återkalla alla sessioner</li>
+<li>Kontrollera om data har skickats/exporterats</li>
+<li>Informera chef och säkerhetsavdelning</li>
+<li>Granska vilka kunder som kan ha påverkats</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_06_device" model="slide.slide">
+        <field name="name">6. Enhetssäkerhet — din dator och mobil</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Skydda enheterna som har tillgång till kunddata</h2>
+
+<h3>Dator</h3>
+<ul>
+<li>Full-disk-kryptering (BitLocker/FileVault) — standard hos seriösa arbetsgivare</li>
+<li>Lås skärmen när du lämnar — Windows+L, Mac: Control+Command+Q</li>
+<li>Spara INTE kunddata lokalt — använd CRM/centrala system</li>
+<li>Installera endast godkänd programvara</li>
+</ul>
+
+<h3>Mobil</h3>
+<ul>
+<li>Skärmlås + auto-lock efter max 2 minuter</li>
+<li>Aktivera fjärrensning (MDM via jobbet)</li>
+<li>Installera inte appar från okända källor</li>
+<li>Använd inte publik USB-laddning — ta med egen laddare/powerbank</li>
+</ul>
+
+<h3>Vid resa — särskilt viktigt</h3>
+<ul>
+<li>Använd VPN på hotell, flygplats, kafé</li>
+<li>Förvara enheter i handbagage — inte incheckat</li>
+<li>Var uppmärksam på "shoulder surfing"</li>
+<li>Ha med integritetsfilter för skärmen</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csm_07_sammanfattning" model="slide.slide">
+        <field name="name">CSM Security — Sammanfattning och beredskap</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_security"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din dagliga säkerhetsrutin</h2>
+
+<ol>
+<li>Verifiera identitet vid ovanliga kundförfrågningar</li>
+<li>Använd rätt kanal för rätt typ av information</li>
+<li>Lagra aldrig känslig data lokalt eller i oskyddade noteringar</li>
+<li>Skydda dina inloggningar med MFA överallt</li>
+<li>Var försiktig vid skärmdelning</li>
+<li>Rapportera misstänkta incidenter omedelbart</li>
+<li>Följ GDPR — dataminimering och ändamålsbegränsning</li>
+</ol>
+
+<h3>Om du är osäker</h3>
+<ul>
+<li>Fråga din säkerhetsavdelning — hellre en fråga för mycket</li>
+<li>Använd organisationens rapporteringskanal för misstänkta mail/samtal</li>
+<li>Var extra vaksam vid tidspress — det är då angriparen slår till</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Social Engineering Försvar (8 slides)                  -->
+    <!-- ============================================================ -->
+
+    <record id="slide_soceng_00_intro" model="slide.slide">
+        <field name="name">Social Engineering — Varför människan är det svagaste (och starkaste) skyddet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Social Engineering — konsten att manipulera människor</h2>
+
+<h3>Vad är social engineering?</h3>
+<p>Social engineering är när angripare utnyttjar <strong>mänsklig psykologi</strong> istället för tekniska sårbarheter. 90% av alla cyberattacker börjar med mänsklig interaktion.</p>
+
+<h3>Varför fungerar det?</h3>
+<ul>
+<li><strong>Vi vill vara hjälpsamma</strong> — angripare utnyttjar vår naturliga vilja att assistera</li>
+<li><strong>Vi respekterar auktoritet</strong> — "Detta är ett direktiv från ledningen"</li>
+<li><strong>Vi undviker konflikt</strong> — svårt att säga nej till någon som är trevlig och påstridig</li>
+<li><strong>Vi påverkas av brådska</strong> — stressade beslut är sämre beslut</li>
+<li><strong>Vi är nyfikna</strong> — "Titta vad jag hittade om dig..."</li>
+</ul>
+
+<h3>Baserad på</h3>
+<ul>
+<li>CISA:s kostnadsfria Social Engineering-utbildning</li>
+<li>SANS Social Engineering Framework</li>
+<li>Verkliga attackscenarier och fallstudier</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_01_tekniker" model="slide.slide">
+        <field name="name">1. Attacktekniker — känn igen angriparens verktygslåda</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Angriparens verktygslåda</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Teknik</th><th>Metod</th><th>Röd flagga</th></tr>
+<tr><td><strong>Phishing</strong></td><td>Massutskick av falska mail — "Ditt konto har låsts"</td><td>Generisk hälsning, stavfel, brådska</td></tr>
+<tr><td><strong>Spear-phishing</strong></td><td>Riktat mot specifik person med research</td><td>Nämner personliga detaljer, kollegor, projekt</td></tr>
+<tr><td><strong>Vishing</strong></td><td>Telefonsamtal — "Det är från IT-support"</td><td>Begär inloggningsuppgifter, brådskar</td></tr>
+<tr><td><strong>Smishing</strong></td><td>SMS — "Din leverans har fastnat, klicka här"</td><td>Kortad länk, oväntat paket</td></tr>
+<tr><td><strong>Pretexting</strong></td><td>Påhittat scenario — "Jag är från banken/revision"</td><td>Oväntad kontakt, begär känslig data</td></tr>
+<tr><td><strong>Baiting</strong></td><td>Lockbete — USB-minne på parkeringen, gratis gåva</td><td>För bra för att vara sant</td></tr>
+<tr><td><strong>Tailgating</strong></td><td>Följer efter in genom dörren</td><td>"Håller du dörren? Jag har glömt mitt passerkort"</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_02_auktoritet" model="slide.slide">
+        <field name="name">2. Auktoritetsutnyttjande — "Jag är din chef"</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Auktoritet — den mest effektiva manipulationstekniken</h2>
+
+<h3>Så ser attacken ut</h3>
+<ul>
+<li>"Det här är VD:n. Jag är på konferens och måste ha Q3-rapporten NU. Skicka till min privata Gmail."</li>
+<li>"Jag ringer från Skatteverket. Ni har en obetald skatteskuld. Betala omedelbart till detta konto."</li>
+<li>"Polisen här. Vi utreder ett dataintrång hos er. Ge mig fjärråtkomst till er server för analys."</li>
+</ul>
+
+<h3>Psykologin bakom</h3>
+<p>Vi är socialt programmerade att lyda auktoriteter. Milgram-experimentet visade att normala människor är beredda att gå långt under auktoritetspress. Angripare utnyttjar detta systematiskt.</p>
+
+<h3>Försvara dig</h3>
+<ol>
+<li><strong>Pausa:</strong> "Jag ska bara kontrollera detta — ett ögonblick."</li>
+<li><strong>Verifiera via oberoende kanal:</strong> Ring VD:n på känt nummer</li>
+<li><strong>Ifrågasätt internt:</strong> En legitim chef uppskattar att du är säkerhetsmedveten</li>
+<li><strong>Dokumentera:</strong> Anteckna tid, nummer, begäran</li>
+</ol>
+
+<div class="alert alert-warning"><strong>Kom ihåg:</strong> Inga legitima myndigheter ringer och kräver omedelbar betalning eller fjärråtkomst!</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_03_brådska" model="slide.slide">
+        <field name="name">3. Brådska och stress — angriparens bästa vän</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Tidsfristen — när allt måste ske NU</h2>
+
+<h3>Klassiska brådskefraser</h3>
+<ul>
+<li>"Ditt konto stängs om 24 timmar!"</li>
+<li>"Fakturan måste betalas idag — annars går ärendet till kronofogden."</li>
+<li>"Jag är på väg in i ett möte och måste ha detta löst NU."</li>
+<li>"Sista chansen! Erbjudandet går ut vid midnatt."</li>
+</ul>
+
+<h3>Varför det fungerar</h3>
+<p>När hjärnan är stressad stängs de rationella, analytiska delarna ned. Amygdala (kamp/flykt-reaktionen) tar över. Du fattar beslut baserat på känsla — inte logik.</p>
+
+<h3>Motstrategi — STOP</h3>
+<ol>
+<li><strong>S</strong>toppa — ta ett andetag. Inget är så brådskande att du inte kan tänka efter.</li>
+<li><strong>T</strong>änk — är detta normalt? Skulle denna person/organisation kontakta mig så här?</li>
+<li><strong>O</strong>beroende verifiering — kontrollera via en annan kanal.</li>
+<li><strong>P</strong>rata med någon — be en kollega titta. Fyra ögon ser mer än två.</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_04_baiting" model="slide.slide">
+        <field name="name">4. Baiting och fysisk infiltration</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När angriparen är fysiskt närvarande</h2>
+
+<h3>USB-droppar</h3>
+<p>Angripare lämnar USB-minnen på parkeringen, i receptionen, i konferensrummet. Etiketten lockar: "Löner 2025", "Uppsägningar Q3", "Konfidentiellt".</p>
+<ul>
+<li><strong>Plugga ALDRIG in</strong> ett okänt USB-minne i din dator</li>
+<li>Lämna det till IT-säkerhetsavdelningen</li>
+<li>USB-minnen kan innehålla malware som aktiveras automatiskt</li>
+</ul>
+
+<h3>Tailgating (medföljning)</h3>
+<ul>
+<li>"Håll dörren, jag har händerna fulla!"</li>
+<li>"Jag är ny och har inte fått mitt passerkort än."</li>
+<li>"Jag ska till [Namn]. Du vet, på våning 3."</li>
+</ul>
+
+<h3>Försvara dig mot tailgating</h3>
+<ul>
+<li>Be personen använda sitt eget passerkort</li>
+<li>Om de inte har — hänvisa till receptionen</li>
+<li>Följ personen till receptionen — "Jag följer med dig, så ordnar de ett besökskort."</li>
+<li>Var inte rädd att vara "osmidig" — säkerhet går före social komfort</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_05_romantik" model="slide.slide">
+        <field name="name">5. Känslomässig manipulation — sympati, nyfikenhet och rädsla</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Känslor — angriparens spelplan</h2>
+
+<h3>Sympati</h3>
+<p>"Snälla, jag är ensamstående mamma och måste få in den här fakturan för att få min lön. Kan du göra ett undantag?"</p>
+<ul>
+<li>Angripare spelar på din empati</li>
+<li>Svar: "Jag förstår din situation. Låt mig kolla vad jag kan göra inom ramen för våra rutiner."</li>
+</ul>
+
+<h3>Nyfikenhet</h3>
+<p>"Någon har skickat detta klagomål om dig till HR. Läs bilagan."</p>
+<p>"Se vad dina kollegor säger om dig [länk]."</p>
+<ul>
+<li>Triggar omedelbar känslomässig respons</li>
+<li>Svar: Öppna INTE bilagan/länken. Kontakta HR direkt via känd kanal.</li>
+</ul>
+
+<h3>Rädsla</h3>
+<p>"Ditt konto har använts för olaglig aktivitet. Polisen är på väg om du inte agerar NU."</p>
+<ul>
+<li>Extrem brådska + hot → panikbeslut</li>
+<li>Svar: Lägg på. Ring polisen på 114 14. INTE numret de gav dig.</li>
+</ul>
+
+<h3>Gemensamt försvar</h3>
+<ul>
+<li>Känn igen känslan — "Jag känner mig stressad/rädd/nyfiken — är detta manipulation?"</li>
+<li>Sakta ned — tvinga dig själv att vänta minst 5 minuter innan du agerar</li>
+<li>Konsultera en kollega — "Kan du titta på detta?"</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_06_epost" model="slide.slide">
+        <field name="name">6. Praktisk övning — identifiera röda flaggor i e-post</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Analysera detta — är mailet äkta eller falskt?</h2>
+
+<h3>Övning 1</h3>
+<pre style="background:#f5f5f5; padding:10px">
+Från: IT-Support &lt;support@foretageet.se&gt;
+Ämne: Brådskande: Din mailbox är full — åtgärda omedelbart
+
+Din mailbox har nått 99% kapacitet. Du kommer inte 
+kunna ta emot mail inom 2 timmar om du inte åtgärdar.
+Klicka här för att utöka din mailbox:
+https://foretageet-se.portal.net/logn_in
+</pre>
+
+<h3>Röda flaggor — hittade du alla?</h3>
+<ol>
+<li>Avsändardomänen: "foretagee<strong>e</strong>t.se" — ett extra 'e', lätt att missa!</li>
+<li>Generisk hälsning — inget namn</li>
+<li>Brådska och hot — "inom 2 timmar"</li>
+<li>Misstänkt länk — "portal.net" är inte er domän</li>
+<li>Stavfel: "log<strong>n</strong>_in"</li>
+</ol>
+
+<h3>Övning 2</h3>
+<pre style="background:#f5f5f5; padding:10px">
+Från: Anna Karlsson &lt;anna.karlsson@kundforetag.se&gt;
+Ämne: Uppdaterade avtalsvillkor Q3 2025
+
+Hej [Ditt namn],
+
+Bifogat finner du de uppdaterade avtalsvillkoren 
+inför Q3. Vänligen signera och returnera.
+
+Med vänlig hälsning,
+Anna Karlsson
+Key Account Manager
+
+[Bifogad fil: Avtalsvillkor_Q3_2025.docx]
+</pre>
+
+<h3>Röda flaggor — subtilare denna gång</h3>
+<ol>
+<li>Ovanlig tidpunkt för avtalsuppdatering (kolla med kollega!)</li>
+<li>.docx-fil — kan innehålla makron (malware)</li>
+<li>Om du inte väntar dig avtalsuppdatering — var skeptisk</li>
+<li>Ring Anna på känt nummer och bekräfta</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_soceng_07_sammanfattning" model="slide.slide">
+        <field name="name">Social Engineering — Sammanfattning och försvarsstrategi</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_social_engineering"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Ditt försvar — STOP+A</h2>
+
+<h3>STOP-metoden</h3>
+<ul>
+<li><strong>S</strong>toppa — ta ett andetag, räkna till 5</li>
+<li><strong>T</strong>änk — är detta normalt? Spelar de på mina känslor?</li>
+<li><strong>O</strong>beroende verifiering — använd en annan kanal</li>
+<li><strong>P</strong>rata med någon — fråga en kollega</li>
+</ul>
+
+<h3>+ A — Agera</h3>
+<ul>
+<li>Rapportera till säkerhetsavdelningen</li>
+<li>Radera/blockera</li>
+<li>Varna kollegor</li>
+<li>Dokumentera</li>
+</ul>
+
+<h3>Kom ihåg</h3>
+<ul>
+<li>All input är misstänkt tills motsatsen bevisats</li>
+<li>Auktoritet + brådska + ovanlig begäran = STOR RÖD FLAGGA</li>
+<li>Det är OK att vara "osmidig" — säkerhet går först</li>
+<li>Ingen legitim organisation frågar efter lösenord, koder eller MFA-godkännanden</li>
+<li>Rapportera alltid — hellre en falsk alarm än en lyckad attack</li>
+</ul>
+
+<p><em>Fullständig CISA-utbildning finns på <a href="https://www.cisa.gov">cisa.gov</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Praktiska Labbar — Driftpersonal (8 slides)            -->
+    <!-- ============================================================ -->
+
+    <record id="slide_labb_00_intro" model="slide.slide">
+        <field name="name">Praktiska labbar — din väg till hands-on cybersäkerhet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Från teori till praktik</h2>
+
+<h3>Denna kurs guidar dig till:</h3>
+<ul>
+<li><strong>TryHackMe:</strong> Cyber Defense Pathway — interaktiva labb i webbläsaren</li>
+<li><strong>CISA FedVTE:</strong> Amerikanska myndighetens kostnadsfria video+labb-kurser</li>
+<li><strong>Öppna verktyg:</strong> Wireshark, Splunk Free, Security Onion, ELK-stacken</li>
+</ul>
+
+<h3>Varför praktiska labb?</h3>
+<ul>
+<li>Teori är bra — men du minns det du <strong>gör</strong></li>
+<li>Labbmiljöer är säkra — du kan inte förstöra något</li>
+<li>Scenarierna är verklighetstrogna — precis som en riktig incident</li>
+<li>Allt är webbaserat — ingen installation krävs för grundläggande labb</li>
+</ul>
+
+<h3>Förkunskaper</h3>
+<ul>
+<li>Grundläggande IT-kunskap (nätverk, operativsystem, terminalvana)</li>
+<li>Nyfikenhet och problemlösningsmentalitet</li>
+<li>Ett gratis TryHackMe-konto (rekommenderas)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_01_incident_response" model="slide.slide">
+        <field name="name">1. Incident Response — spåra vad som hände</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Incident Response — hitta och stoppa angriparen</h2>
+
+<h3>Vad du lär dig</h3>
+<ul>
+<li>Hur man identifierar tecken på intrång (IOCs — Indicators of Compromise)</li>
+<li>Analysera Windows Event Logs, Linux syslog, autentiseringsloggar</li>
+<li>Spåra angriparens rörelser genom nätverket (lateral movement)</li>
+<li>Isolera drabbade system utan att förstöra bevis</li>
+<li>Dokumentera incidenten för forensisk analys och rättsliga processer</li>
+</ul>
+
+<h3>Rekommenderade TryHackMe-rum</h3>
+<ul>
+<li><strong>Incident Response Fundamentals</strong> — grunderna i IR-processen</li>
+<li><strong>Investigating Windows</strong> — analysera en komprometterad Windows-maskin</li>
+<li><strong>Hunt Me: Incident Response</strong> — realistiskt scenario</li>
+</ul>
+
+<h3>CISA FedVTE</h3>
+<ul>
+<li><strong>Incident Response Training (IRT)</strong> — omfattande videokurs med labb</li>
+<li>Registrera gratis på <a href="https://fedvte.usalearning.gov">fedvte.usalearning.gov</a></li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_02_log_analysis" model="slide.slide">
+        <field name="name">2. Log Analysis — upptäck hoten före katastrofen</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Logganalys — hitta nålen i höstacken</h2>
+
+<h3>Vad du lär dig</h3>
+<ul>
+<li>Analysera webbserverloggar för att upptäcka attacker (SQLi, XSS, path traversal)</li>
+<li>Windows Event ID:er — vilka är kritiska för säkerhet? (4624, 4625, 4672, 4688, 1102)</li>
+<li>Använda grep, awk, jq för att snabbt filtrera stora loggfiler</li>
+<li>Grundläggande SIEM-användning (Splunk Free, ELK)</li>
+<li>Bygga dashboards och alert-regler</li>
+</ul>
+
+<h3>Viktiga Windows Event ID:er</h3>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>ID</th><th>Händelse</th><th>Varför viktig?</th></tr>
+<tr><td>4624</td><td>Lyckad inloggning</td><td>Vem loggade in när och varifrån?</td></tr>
+<tr><td>4625</td><td>Misslyckad inloggning</td><td>Brute force? Många försök?</td></tr>
+<tr><td>4672</td><td>Admin-inloggning</td><td>Någon fick admin-rättigheter</td></tr>
+<tr><td>4688</td><td>Process skapad</td><td>Vilka program kördes? Skadlig kod?</td></tr>
+<tr><td>1102</td><td>Säkerhetslogg rensad</td><td>Angripare försöker dölja spår!</td></tr>
+</table>
+
+<h3>Rekommenderade TryHackMe-rum</h3>
+<ul>
+<li><strong>Windows Event Logs</strong></li>
+<li><strong>Splunk: Exploring SPL</strong></li>
+<li><strong>Log Analysis</strong> — realistiska scenarier</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_03_ransomware" model="slide.slide">
+        <field name="name">3. Ransomware Response — hantera pågående angrepp</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Ransomware — när skärmen blir röd</h2>
+
+<h3>Vad du lär dig</h3>
+<ul>
+<li>Omedelbara åtgärder vid upptäckt: isolera, inte stänga av (bevara RAM för forensik)</li>
+<li>Identifiera ransomware-variant (krypteringsfiländelse, lösennota, IOCs)</li>
+<li>Kontrollera om decryptors finns tillgängliga (No More Ransom-projektet)</li>
+<li>Återställning från backup — och hur man verifierar att backupen är ren</li>
+<li>Lärdomar: hur man förhindrar återinfektion</li>
+</ul>
+
+<h3>Omedelbar checklista vid ransomware</h3>
+<ol>
+<li>Isolera drabbade system från nätverket — koppla ur kabel, stäng av Wi-Fi</li>
+<li>Stäng INTE av datorn — RAM innehåller forensiska bevis</li>
+<li>Larma säkerhetsavdelning och ledning</li>
+<li>Identifiera patient zero — vilket system infekterades först?</li>
+<li>Kontrollera backup — är den påverkad? Offline-kopia?</li>
+<li>Betala INTE — finansierar kriminell verksamhet, ingen garanti för återställning</li>
+</ol>
+
+<h3>Rekommenderat TryHackMe-rum</h3>
+<ul>
+<li><strong>Ransomware Response</strong> — realistiskt scenario</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_04_network_forensics" model="slide.slide">
+        <field name="name">4. Nätverksforensik — analysera nätverkstrafik</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Wireshark och PCAP-analys</h2>
+
+<h3>Vad du lär dig</h3>
+<ul>
+<li>Fånga och analysera nätverkstrafik med Wireshark och tcpdump</li>
+<li>Identifiera misstänkta mönster: C2-kommunikation (beaconing), data exfiltration, port scanning</li>
+<li>Följ TCP-strömmar för att se exakt vad som skickades</li>
+<li>Analysera DNS-trafik — DNS-tunnling är en vanlig exfiltrationsmetod</li>
+<li>Extrahera filer från HTTP/SMB-överföringar</li>
+</ul>
+
+<h3>Misstänkta trafikmönster</h3>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Mönster</th><th>Vad det kan betyda</th></tr>
+<tr><td>Regelbundna utgående anslutningar var 30:e sekund</td><td>C2-beaconing — angriparens kommando-kanal</td></tr>
+<tr><td>Stor utgående trafik nattetid</td><td>Data exfiltration</td></tr>
+<tr><td>Ovanliga DNS-frågor (långa subdomäner)</td><td>DNS-tunnling</td></tr>
+<tr><td>SMB/445 mellan klienter (inte mot server)</td><td>Lateral movement</td></tr>
+<tr><td>RDP från extern IP</td><td>Fjärrinloggning av angripare</td></tr>
+</table>
+
+<h3>Rekommenderade TryHackMe-rum</h3>
+<ul>
+<li><strong>Wireshark: The Basics</strong></li>
+<li><strong>Wireshark: Packet Operations</strong></li>
+<li><strong>Network Forensics</strong></li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_05_ddos" model="slide.slide">
+        <field name="name">5. DDoS — överbelastningsangrepp i praktiken</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>DDoS — när trafiken slår ut tjänsten</h2>
+
+<h3>Typer av DDoS-attacker</h3>
+<ul>
+<li><strong>Volumetriska:</strong> Översvämma bandbredd — UDP flood, ICMP flood, DNS amplification</li>
+<li><strong>Protokoll:</strong> Utnyttja protokollsvagheter — SYN flood, Ping of Death, Smurf attack</li>
+<li><strong>Applikationslager:</strong> Utmatta serverresurser — HTTP flood, Slowloris, R.U.D.Y.</li>
+</ul>
+
+<h3>Försvarsstrategier</h3>
+<ul>
+<li><strong>Rate limiting:</strong> Begränsa requests per IP — iptables, nginx, WAF</li>
+<li><strong>Anycast-nätverk:</strong> Sprid trafik över flera datacenter (Cloudflare, Akamai)</li>
+<li><strong>Scrubbing centers:</strong> Filtrera bort attacktrafik före den når din infrastruktur</li>
+<li><strong>Överdimensionering:</strong> Ha mer kapacitet än normalt behov</li>
+<li><strong>Synlighet:</strong> Övervaka trafikmönster — anomalier syns tydligt med rätt dashboards</li>
+</ul>
+
+<h3>Rekommenderat TryHackMe-rum</h3>
+<ul>
+<li><strong>DDoS</strong> — lär dig attacktyper och försvar</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_06_disaster_recovery" model="slide.slide">
+        <field name="name">6. Disaster Recovery — planera och öva återställning</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Disaster Recovery — från totalhaveri till normaldrift</h2>
+
+<h3>DR-strategier</h3>
+<ul>
+<li><strong>Backup &amp; Restore:</strong> Billigast, långsammast (timmar till dagar)</li>
+<li><strong>Pilot Light:</strong> Minimal infrastruktur redo — skala upp vid behov (minuter till timmar)</li>
+<li><strong>Warm Standby:</strong> Full infrastruktur på lägre kapacitet (minuter)</li>
+<li><strong>Active/Active:</strong> Två fullt operativa miljöer — direkt failover (sekunder)</li>
+</ul>
+
+<h3>3-2-1 backup-regeln</h3>
+<ul>
+<li><strong>3</strong> kopior av data (produktion + 2 backups)</li>
+<li><strong>2</strong> olika medier (disk, tape, moln)</li>
+<li><strong>1</strong> kopia offline/"air-gapped" (skyddad från ransomware)</li>
+</ul>
+
+<h3>Öva DR — minst årligen</h3>
+<ul>
+<li>Tabletop: diskutera scenariot med nyckelpersoner</li>
+<li>Simulering: realistiskt scenario — "Datacentret har brunnit ned"</li>
+<li>Failover-test: växla över till DR-miljö — och tillbaka</li>
+<li>Verifiera backupens integritet: återläs och kontrollera</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_labb_07_sammanfattning" model="slide.slide">
+        <field name="name">Praktiska labbar — Sammanfattning och lär-resurser</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_labb_drift"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din lär-resa — börja här</h2>
+
+<h3>TryHackMe — rekommenderad learning path</h3>
+<ol>
+<li>Pre-Security (gratis) — grundläggande nätverk, OS, webb</li>
+<li>Cyber Defense (delvis gratis) — incident response, log analysis, threat hunting</li>
+<li>Specifika rum: Incident Response, Splunk, Wireshark, Windows Event Logs</li>
+</ol>
+
+<h3>CISA FedVTE</h3>
+<ul>
+<li>Incident Response Training (IRT)</li>
+<li>Cyber Risk Management</li>
+<li>Network Monitoring and Anomaly Detection</li>
+<li>Registrera gratis: <a href="https://fedvte.usalearning.gov">fedvte.usalearning.gov</a></li>
+</ul>
+
+<h3>Öppna verktyg att labba med</h3>
+<ul>
+<li><strong>Security Onion:</strong> Komplett Linux-distribution för nätverksövervakning och intrusion detection</li>
+<li><strong>Wireshark:</strong> Nätverksanalys — gratis och öppen källkod</li>
+<li><strong>Splunk Free:</strong> SIEM/logghantering (gratis upp till 500 MB/dag)</li>
+<li><strong>ELK Stack:</strong> Elasticsearch + Logstash + Kibana — öppen källkod</li>
+<li><strong>VELOCIraptor:</strong> Digital forensics och incident response (DFIR) — öppen källkod</li>
+</ul>
+
+<p><strong>10 minuter om dagen i en labbmiljö → expert på ett år.</strong></p>
+]]>
+        </field>
+    </record>
+
+</odoo>

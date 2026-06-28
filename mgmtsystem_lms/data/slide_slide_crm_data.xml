@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- KURS 1: Inbound Sales &amp; Lead-kvalificering (8 slides)        -->
+    <!-- ============================================================ -->
+
+    <record id="slide_crmleads_00_intro" model="slide.slide">
+        <field name="name">Inbound Sales — Från lead till affärsmöjlighet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Välkommen till modern B2B-försäljning</h2>
+
+<h3>Inbound vs Outbound — vad är skillnaden?</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Inbound</th><th>Outbound</th></tr>
+<tr><td>Kunden kommer till dig — via webb, content, webinar, referral</td><td>Du går till kunden — cold calling, cold email, LinkedIn outreach</td></tr>
+<tr><td>Kunden är redan intresserad och har ofta gjort research</td><td>Du måste skapa intresse från noll</td></tr>
+<tr><td>Högre konvertering, lägre volym — men växer organiskt</td><td>Högre volym, lägre konvertering — kräver mer arbete per lead</td></tr>
+</table>
+
+<h3>Den klassiska säljtratten i CRM</h3>
+<ol>
+<li><strong>Lead (kundämne):</strong> En person eller ett företag som visat intresse — men inte kvalificerat än</li>
+<li><strong>MQL (Marketing Qualified Lead):</strong> Lead som marketing bedömt som redo för sälj</li>
+<li><strong>SQL (Sales Qualified Lead):</strong> Lead som sälj bekräftat har potential</li>
+<li><strong>Opportunity (affärsmöjlighet):</strong> Kvalificerat lead med konkret affärspotential</li>
+<li><strong>Proposal/Offert:</strong> Formell offert skickad</li>
+<li><strong>Won/Lost:</strong> Vunnen eller förlorad</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_01_bant" model="slide.slide">
+        <field name="name">1. BANT-metoden — kvalificera stenhårt</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>BANT — ditt filter mot tidslöseri</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Bokstav</th><th>Fråga</th><th>Så tar du reda på det</th></tr>
+<tr><td><strong>B</strong>udget</td><td>Har de pengar?</td><td>"Hur budgeterar ni för denna typ av lösning?" "Vem äger budgeten för detta?"</td></tr>
+<tr><td><strong>A</strong>uthority</td><td>Har de mandat att besluta?</td><td>"Vilka är med i beslutsprocessen?" "Vem har sista ordet?"</td></tr>
+<tr><td><strong>N</strong>eed</td><td>Har de ett verkligt behov?</td><td>"Vad händer om ni inte löser detta?" "Vad har ni testat tidigare?"</td></tr>
+<tr><td><strong>T</strong>imeline</td><td>När ska de köpa?</td><td>"När behöver ni ha en lösning på plats?" "Vad driver tidsplanen?"</td></tr>
+</table>
+
+<h3>BANT-score i praktiken</h3>
+<ul>
+<li>Alla 4 = HET lead — prioritera!</li>
+<li>3 av 4 = Varm lead — arbeta på den saknade biten</li>
+<li>1-2 av 4 = Kall lead — lägg i nurture-flöde, återkom senare</li>
+<li>0 av 4 = Inte ett lead — rensa ur CRM:et</li>
+</ul>
+
+<div class="alert alert-warning"><strong>Varning:</strong> Ett lead med Budget men utan Need är en "tittare". Ett lead med Need men utan Budget är en "drömmare". Båda slösar din tid.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_02_kopresa" model="slide.slide">
+        <field name="name">2. Kundens köpresa — sälj i kundens takt</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Köpresan — kundens perspektiv</h2>
+
+<h3>De fyra faserna</h3>
+<ol>
+<li><strong>Awareness (medvetenhet):</strong> "Vi har ett problem." — Kunden inser att något behöver förändras. Din roll: utbilda, inte sälja.</li>
+<li><strong>Consideration (övervägande):</strong> "Vilka lösningar finns?" — Kunden jämför alternativ. Din roll: visa hur ni löser problemet bättre än alternativen.</li>
+<li><strong>Decision (beslut):</strong> "Ska vi köpa?" — Kunden väljer leverantör. Din roll: gör det enkelt att säga ja. Ta bort risk.</li>
+<li><strong>Onboarding (införande):</strong> "Fungerar det?" — Kunden implementerar. Din roll: säkerställ snabbt värde. Överlämna till CSM.</li>
+</ol>
+
+<h3>Matcha din säljinsats mot kundens fas</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Kundens fas</th><th>Ditt fokus</th><th>Fel approach</th></tr>
+<tr><td>Awareness</td><td>Innehåll, utbildning, insikter</td><td>Pris, demo, offert</td></tr>
+<tr><td>Consideration</td><td>Demo, case, jämförelse</td><td>"Köp nu — rabatt!"</td></tr>
+<tr><td>Decision</td><td>Offert, referenser, trygghet</td><td>Mer utbildning — de har redan bestämt sig</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_03_scoring" model="slide.slide">
+        <field name="name">3. Lead scoring — låt data prioritera åt dig</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Lead scoring — jobba smartare, inte hårdare</h2>
+
+<h3>Två dimensioner av scoring</h3>
+<ul>
+<li><strong>Fit (passform):</strong> Är detta rätt typ av företag för oss? — Bransch, storlek, geografi, roll. Demografiska data.</li>
+<li><strong>Interest (intresse):</strong> Hur engagerad är de? — Webbsidbesök, e-postöppningar, whitepaper-nedladdningar, demo-bokningar. Beteendedata.</li>
+</ul>
+
+<h3>Exempel på scoring-modell</h3>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Aktivitet</th><th>Poäng</th><th>Typ</th></tr>
+<tr><td>Besökt prissidan</td><td>+15</td><td>Interest</td></tr>
+<tr><td>Laddat ned whitepaper</td><td>+10</td><td>Interest</td></tr>
+<tr><td>Bokat demo</td><td>+25</td><td>Interest</td></tr>
+<tr><td>Titel: C-level/VP</td><td>+20</td><td>Fit</td></tr>
+<tr><td>Företagsstorlek: 50-500</td><td>+10</td><td>Fit</td></tr>
+<tr><td>Bransch: Målgrupp</td><td>+15</td><td>Fit</td></tr>
+<tr><td>Obesökt på 30 dagar</td><td>-10</td><td>Interest</td></tr>
+</table>
+
+<h3>Tröskelvärden</h3>
+<ul>
+<li><strong>50+ poäng:</strong> → MQL, skickas till sälj</li>
+<li><strong>30-49 poäng:</strong> Nurture — automatisera relevant innehåll</li>
+<li><strong>&lt;30 poäng:</strong> Låt ligga — prioritera inte tid här</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_04_konvertering" model="slide.slide">
+        <field name="name">4. Leadkonvertering i CRM — från lead till opportunity</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Konvertera ett lead — steg för steg i CRM</h2>
+
+<h3>När är ett lead redo att konverteras?</h3>
+<ul>
+<li>BANT har bekräftats (minst 3 av 4)</li>
+<li>Kunden har haft ett första kvalificerande samtal</li>
+<li>Det finns en konkret nästa steg bokad (demo, behovsanalys)</li>
+<li>Lead score är över tröskelvärdet</li>
+</ul>
+
+<h3>Vad händer vid konvertering i CRM?</h3>
+<ol>
+<li><strong>Lead → Kontakt + Företag:</strong> Ett nytt eller befintligt företag skapas. Kontaktpersonen länkas.</li>
+<li><strong>Lead → Opportunity:</strong> En affärsmöjlighet skapas med förväntad intäkt, sannolikhet och förväntat avslutsdatum.</li>
+<li><strong>Aktivitetshistorik:</strong> Alla samtal, mail och anteckningar från lead-fasen följer med.</li>
+</ol>
+
+<h3>Data som MÅSTE finnas före konvertering</h3>
+<ul>
+<li>Företagsnamn och organisationsnummer (om B2B)</li>
+<li>Kontaktpersonens fullständiga namn, titel, telefon, e-post</li>
+<li>Lead source (var kom de ifrån?)</li>
+<li>Anteckningar från kvalificeringssamtal</li>
+<li>Identifierat behov och smärtpunkt</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_05_sources" model="slide.slide">
+        <field name="name">5. Lead sources — var kommer dina bästa leads ifrån?</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Mät och optimera dina lead-källor</h2>
+
+<h3>Vanliga lead sources</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Källa</th><th>Typiskt volym</th><th>Typiskt kvalitet</th><th>Kostnad</th></tr>
+<tr><td>Webbformulär (inbound)</td><td>Medel</td><td>Medel-Hög</td><td>Låg</td></tr>
+<tr><td>Content marketing (SEO)</td><td>Hög</td><td>Medel</td><td>Låg-Medel</td></tr>
+<tr><td>LinkedIn outreach</td><td>Låg-Medel</td><td>Hög</td><td>Medel (tid)</td></tr>
+<tr><td>Mässor/Events</td><td>Hög (kort tid)</td><td>Låg-Medel</td><td>Hög</td></tr>
+<tr><td>Referrals (kundrekar)</td><td>Låg</td><td>Mycket hög</td><td>Låg</td></tr>
+<tr><td>Partners</td><td>Medel</td><td>Medel-Hög</td><td>Medel</td></tr>
+<tr><td>Köpta listor</td><td>Hög</td><td>Låg</td><td>Hög per kval lead</td></tr>
+</table>
+
+<h3>Analysera dina källor i CRM</h3>
+<ul>
+<li>Konverteringsgrad per källa: lead → opportunity → won</li>
+<li>CAC (Customer Acquisition Cost) per källa</li>
+<li>Time-to-close per källa</li>
+<li>Deal size per källa</li>
+<li>→ Fördela mer resurser till källorna med bäst ROI</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_06_nurture" model="slide.slide">
+        <field name="name">6. Lead nurturing — håll liv i leads som inte är redo än</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>80% av leads köper — men inte nu</h2>
+
+<h3>Vad är lead nurturing?</h3>
+<p>Att systematiskt hålla kontakt med leads som inte är redo att köpa idag — genom relevant innehåll och värdeskapande kommunikation — tills de är redo.</p>
+
+<h3>Nurture-strategier</h3>
+<ul>
+<li><strong>Utbildningsspår:</strong> "Här är 5 saker du bör veta om [ämne]." — Skicka en artikel i veckan i 5 veckor.</li>
+<li><strong>Case-spår:</strong> "Så löste [kund X] samma utmaning." — Skicka relevanta kundcase baserat på bransch.</li>
+<li><strong>Event-spår:</strong> Bjud in till webinars, frukostseminarier, rundabordssamtal.</li>
+<li><strong>Trigger-baserat:</strong> Lead besöker prissidan → skicka automatiskt "Så fungerar vår prismodell"</li>
+</ul>
+
+<h3>Nurture-regler</h3>
+<ul>
+<li>Värde först, sälj sen — 80% innehåll, 20% säljbudskap</li>
+<li>Personifiera — använd leadets namn, företag, bransch</li>
+<li>Timing — skicka när de senast var aktiva (öppnade mail/besökte site)</li>
+<li>Ha en tydlig "slutpunkt" — efter X mail utan respons → arkivera eller be om svar</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_crmleads_07_sammanfattning" model="slide.slide">
+        <field name="name">Lead-kvalificering — Sammanfattning och checklista</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din lead-kvalificeringschecklista</h2>
+
+<ol>
+<li>Bekräfta BANT — minst 3 av 4 innan du investerar tung tid</li>
+<li>Identifiera leadets köpresefas — sälj inte offert i awareness-fasen</li>
+<li>Sätt lead score — fit + interest = prioriteringsordning</li>
+<li>Dokumentera allt i CRM — nästa person ska kunna ta över</li>
+<li>Konvertera till opportunity först när nästa steg är bokat</li>
+<li>Mät lead source — dubbla ned på det som fungerar</li>
+<li>Nurture:a kalla leads — de kan bli heta om 6 månader</li>
+<li>Rensa CRM:t regelbundet — leads utan aktivitet på 90 dagar → arkivera</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://academy.hubspot.com">HubSpot Academy</a> — Inbound Sales Certification (gratis)</li>
+<li><a href="https://trailhead.salesforce.com">Salesforce Trailhead</a> — Lead Management-moduler (gratis)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 2: Sales Pipeline Management (8 slides)                -->
+    <!-- ============================================================ -->
+
+    <record id="slide_pipeline_00_intro" model="slide.slide">
+        <field name="name">Pipeline Management — Din säljtratt är din motor</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Pipeline — från magkänsla till matematik</h2>
+
+<h3>Vad är en pipeline?</h3>
+<p>Din pipeline är summan av alla pågående affärsmöjligheter, ordnade efter hur nära avslut de är. En välskött pipeline ger dig svaret på: "Kommer jag att nå mitt mål denna månad/kvartal?"</p>
+
+<h3>Trattens faser (standard CRM)</h3>
+<ol>
+<li><strong>New/Prospecting:</strong> Nyligen konverterad från lead — första kontakt</li>
+<li><strong>Qualification:</strong> Behovsanalys genomförd, BANT bekräftad</li>
+<li><strong>Demo/Evaluation:</strong> Produkten demonstrerad, kunden utvärderar</li>
+<li><strong>Proposal/Offert:</strong> Offert skickad, förhandling pågår</li>
+<li><strong>Negotiation:</strong> Slutförhandling — pris, villkor, implementation</li>
+<li><strong>Closed Won:</strong> Avtalat och klart!</li>
+<li><strong>Closed Lost:</strong> Förlorad — men varför? Dokumentera!</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_01_konvertering" model="slide.slide">
+        <field name="name">1. Konverteringsgrader — mät varje steg i tratten</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Det som mäts blir gjort</h2>
+
+<h3>Exempel på en frisk pipeline</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Fas</th><th>Antal</th><th>Värde</th><th>Konv. till nästa</th></tr>
+<tr><td>Prospecting</td><td>100</td><td>5 000 000 kr</td><td>40% →</td></tr>
+<tr><td>Qualification</td><td>40</td><td>2 000 000 kr</td><td>50% →</td></tr>
+<tr><td>Demo/Evaluation</td><td>20</td><td>1 000 000 kr</td><td>60% →</td></tr>
+<tr><td>Proposal/Offert</td><td>12</td><td>600 000 kr</td><td>70% →</td></tr>
+<tr><td>Negotiation</td><td>8</td><td>420 000 kr</td><td>80% →</td></tr>
+<tr style="background:#ddffdd"><td><strong>Closed Won</strong></td><td><strong>6-7</strong></td><td><strong>~340 000 kr</strong></td><td></td></tr>
+</table>
+
+<h3>Analysera flaskhalsarna</h3>
+<ul>
+<li>Prospecting → Qualification 40%: För lågt? Dåliga leads eller för hård kvalificering?</li>
+<li>Qualification → Demo 50%: Normalt</li>
+<li>Demo → Proposal 60%: OK — om den sjunker, se över demo-kvaliteten</li>
+<li>Proposal → Won ~55%: Om under 30% — problem med prissättning, konkurrens, eller offertkvalitet</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_02_sannolikhet" model="slide.slide">
+        <field name="name">2. Sannolikhetsbedömning — var realistisk, inte optimistisk</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Sannolikhet — den svåraste siffran i CRM:et</h2>
+
+<h3>Standard-sannolikheter per fas</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Fas</th><th>Sannolikhet</th><th>Varför?</th></tr>
+<tr><td>Prospecting</td><td>10%</td><td>Du har knappt pratat med dem</td></tr>
+<tr><td>Qualification</td><td>25%</td><td>Behov finns, men mycket kan hända</td></tr>
+<tr><td>Demo/Evaluation</td><td>50%</td><td>De är intresserade — men jämför alternativ</td></tr>
+<tr><td>Proposal</td><td>75%</td><td>Offert ute — nu gäller uppföljning</td></tr>
+<tr><td>Negotiation</td><td>90%</td><td>Detaljer återstår — affären är nära</td></tr>
+</table>
+
+<h3>"Happy ears" — den farligaste säljsjukdomen</h3>
+<p>Att höra det man vill höra. "De var jättepositiva!" — men positiv är inte samma som köpsignal.</p>
+
+<h3>Tecken på att sannolikheten är för hög</h3>
+<ul>
+<li>Deal har legat i "Negotiation" i 3 månader — den är inte 90%</li>
+<li>Du har inte pratat med beslutsfattaren — dealen är inte 75%</li>
+<li>"De ska bara kolla med chefen" — dealen är max 25% tills chefen är med</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_03_hygien" model="slide.slide">
+        <field name="name">3. Pipeline-hygien — städa bort döda deals</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>En smutsig pipeline ljuger för dig</h2>
+
+<h3>Varningssignaler — städa nu</h3>
+<ul>
+<li>Deal har varit i samma fas >2x normal tid</li>
+<li>Ingen aktivitet (samtal, mail, möte) på 14+ dagar</li>
+<li>Förväntat avslutsdatum har passerats — och skjutits fram flera gånger</li>
+<li>Kontaktpersonen har slutat svara</li>
+<li>"Vi ska bara..." — har de sagt i 3 månader</li>
+</ul>
+
+<h3>Pipeline-hygienrutin</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Frekvens</th><th>Åtgärd</th></tr>
+<tr><td>Dagligen</td><td>Uppdatera fas på deals som rört sig</td></tr>
+<tr><td>Veckovis</td><td>Gå igenom deals utan aktivitet — skicka påminnelse eller markera "at risk"</td></tr>
+<tr><td>Månadsvis</td><td>Stäng deals som varit stumma >30 dagar som Lost (med förklaring)</td></tr>
+<tr><td>Kvartalsvis</td><td>Analysera förlorade deals — finns det mönster? Prissättning? Konkurrent? Timing?</td></tr>
+</table>
+
+<h3>Lost är inte misslyckande — om du lär dig</h3>
+<ul>
+<li>Dokumentera ALLTID "Lost reason" i CRM</li>
+<li>Kategorier: Pris, Konkurrent, Timing, Behov försvann, Beslutsfattare bytte, Budget frös</li>
+<li>Använd datan för att förbättra: säljträning, prisstrategi, produktutveckling</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_04_forecast" model="slide.slide">
+        <field name="name">4. Forecast — förutspå dina intäkter</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Forecast — från gissning till vetenskap</h2>
+
+<h3>Viktad pipeline — den enklaste forecasten</h3>
+<p>Multiplicera varje deals värde med dess sannolikhet. Summan är din viktade pipeline.</p>
+
+<h3>Exempel</h3>
+<table border="1" cellpadding="3" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Deal</th><th>Värde</th><th>Fas</th><th>Sannolikhet</th><th>Viktat</th></tr>
+<tr><td>Företag A</td><td>200 000</td><td>Proposal</td><td>75%</td><td>150 000</td></tr>
+<tr><td>Företag B</td><td>100 000</td><td>Demo</td><td>50%</td><td>50 000</td></tr>
+<tr><td>Företag C</td><td>500 000</td><td>Negotiation</td><td>90%</td><td>450 000</td></tr>
+<tr><td>Företag D</td><td>50 000</td><td>Prospecting</td><td>10%</td><td>5 000</td></tr>
+<tr style="background:#ddffdd"><td><strong>Totalt</strong></td><td><strong>850 000</strong></td><td></td><td></td><td><strong>655 000</strong></td></tr>
+</table>
+
+<h3>Commit vs Upside vs Pipeline</h3>
+<ul>
+<li><strong>Commit:</strong> Deals du är SÄKER på stängs denna period (90%+ sannolikhet, i slutförhandling)</li>
+<li><strong>Upside:</strong> Deals som KAN stängas (50-89%, bra momentum)</li>
+<li><strong>Pipeline:</strong> Allt annat — tidiga faser, långsiktiga möjligheter</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_05_dimensionering" model="slide.slide">
+        <field name="name">5. Dimensionera tratten — hur mycket behöver du jaga?</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Räkna baklänges från ditt mål</h2>
+
+<h3>Exempel: Du ska sälja för 1 000 000 kr detta kvartal</h3>
+<ol>
+<li>Genomsnittlig deal size: 100 000 kr → du behöver 10 vunna deals</li>
+<li>Win rate från Proposal: 55% → du behöver ~18 proposals</li>
+<li>Konvertering Demo → Proposal: 60% → du behöver ~30 demos</li>
+<li>Konvertering Qualification → Demo: 50% → du behöver ~60 kvalificerade leads</li>
+<li>Konvertering Lead → Qualification: 40% → du behöver ~150 leads in i tratten</li>
+</ol>
+
+<h3>Pipeline coverage — hur mycket ska finnas i tratten?</h3>
+<p>Generell regel: Din pipeline ska vara <strong>3-5x ditt mål</strong> i totalt värde.</p>
+<ul>
+<li>Mål: 1 000 000 kr → Pipeline bör vara minst 3 000 000 kr</li>
+<li>För låg pipeline = du når inte målet oavsett hur bra du säljer</li>
+<li>För hög pipeline = du jagar för många dåliga leads och stänger för få</li>
+</ul>
+
+<h3>Pipeline velocity — hur snabbt rör sig deals?</h3>
+<ul>
+<li>Antal deals × deal size × win rate / säljcykelns längd = velocity</li>
+<li>Öka velocity genom att: korta säljcykeln, öka deal size, förbättra win rate</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_06_rapporter" model="slide.slide">
+        <field name="name">6. CRM-rapporter — dashboards som styr verksamheten</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Dashboards som säljchefen faktiskt använder</h2>
+
+<h3>Obligatoriska CRM-rapporter</h3>
+<ol>
+<li><strong>Pipeline Overview:</strong> Totalt värde per fas, per säljare, per månad</li>
+<li><strong>Win/Loss Analysis:</strong> Win rate över tid, per säljare, per produkt, per konkurrent</li>
+<li><strong>Sales Velocity:</strong> Deals × värde × win rate ÷ cykellängd — trend över tid</li>
+<li><strong>Activity Metrics:</strong> Samtal, mail, möten per säljare per vecka — ledande indikator</li>
+<li><strong>Slippage Report:</strong> Deals som missat förväntat avslutsdatum — "pushade" deals</li>
+<li><strong>Aging Report:</strong> Hur länge har varje deal legat i sin nuvarande fas?</li>
+</ol>
+
+<h3>Veckans säljmöte — agendan</h3>
+<ol>
+<li>Pipeline Overview (5 min) — var står vi mot mål?</li>
+<li>Deals som rört sig (10 min) — vad har hänt sedan sist?</li>
+<li>Blockerade deals (10 min) — vad behöver hjälp för att lossna?</li>
+<li>Nästa steg (5 min) — vad ska hända denna vecka?</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pipeline_07_sammanfattning" model="slide.slide">
+        <field name="name">Pipeline Management — Sammanfattning och KPI:er</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Dina pipeline-KPI:er</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>KPI</th><th>Vad det mäter</th><th>Riktvärde</th></tr>
+<tr><td>Pipeline Coverage</td><td>Totalt pipeline-värde ÷ mål</td><td>3-5x</td></tr>
+<tr><td>Win Rate</td><td>Vunna ÷ (vunna + förlorade)</td><td>25-40%</td></tr>
+<tr><td>Avg Deal Size</td><td>Genomsnittligt affärsvärde</td><td>Ökande trend</td></tr>
+<tr><td>Sales Cycle Length</td><td>Tid från lead → won (dagar)</td><td>Minskande trend</td></tr>
+<tr><td>Pipeline Velocity</td><td>Deals × värde × win rate ÷ cykel</td><td>Ökande trend</td></tr>
+<tr><td>Slippage Rate</td><td>Deals som missar datum ÷ totala deals</td><td>&lt;20%</td></tr>
+</table>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://academy.hubspot.com">HubSpot Sales Management Training</a> (gratis)</li>
+<li><a href="https://trailhead.salesforce.com">Salesforce Trailhead</a> — Reports &amp; Dashboards (gratis)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 3: Value Based Selling (7 slides)                      -->
+    <!-- ============================================================ -->
+
+    <record id="slide_value_00_intro" model="slide.slide">
+        <field name="name">Value Based Selling — Sälj lösningen, inte produkten</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Från feature-dumpning till värdeförsäljning</h2>
+
+<h3>Feature-sälj vs Value-sälj</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#ffdddd"><td><strong>Feature-sälj (fel):</strong> "Vår plattform har AI-driven analys, 47 integrationer, och automatiserad rapportering med 15 olika mallar!"</td></tr>
+<tr style="background:#ddffdd"><td><strong>Value-sälj (rätt):</strong> "Ni sa att er ekonomiavdelning lägger 3 dagar per månad på manuell rapportering. Med vår lösning görs det automatiskt — det frigör 36 dagar per år till strategiskt arbete."</td></tr>
+</table>
+
+<h3>Tre frågor som styr mot värde</h3>
+<ol>
+<li>"Vad kostar det er att <strong>inte</strong> lösa detta problem?"</li>
+<li>"Vad skulle det betyda för er verksamhet om ni löste det?"</li>
+<li>"Hur mäter ni framgång på detta område idag?"</li>
+</ol>
+
+<h3>Nyckelprincip</h3>
+<p>Kunden köper inte din produkt. Kunden köper <strong>resultatet</strong> din produkt skapar. Din uppgift är att översätta produkt till resultat.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_01_spin" model="slide.slide">
+        <field name="name">1. SPIN-metoden — behovsanalys som avslöjar verkliga problem</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>SPIN — fråga dig fram till affären</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Fas</th><th>Frågetyp</th><th>Syfte</th><th>Exempel</th></tr>
+<tr><td><strong>S</strong>ituation</td><td>Faktafrågor — kartlägg nuläget</td><td>Förstå kontext</td><td>"Hur hanterar ni er kundsupport idag?"</td></tr>
+<tr><td><strong>P</strong>roblem</td><td>Problemfrågor — hitta smärtpunkter</td><td>Identifiera utmaningar</td><td>"Vad är den största utmaningen med er nuvarande process?"</td></tr>
+<tr><td><strong>I</strong>mplikation</td><td>Konsekvensfrågor — förstärk behovet</td><td>Gör problemet tillräckligt stort för att agera</td><td>"Vad kostar dessa förseningar er i förlorade kunder?"</td></tr>
+<tr><td><strong>N</strong>yttobehov</td><td>Lösningsfrågor — visualisera värdet</td><td>Få kunden att själv se nyttan</td><td>"Om ni kunde halvera svarstiden — vad skulle det betyda för er kundnöjdhet?"</td></tr>
+</table>
+
+<h3>Gör implikationsfrågorna ordentligt</h3>
+<p>De flesta säljare hoppar från Problem direkt till Lösning. Det är ett misstag. Utan implikationsfrågor är problemet inte tillräckligt smärtsamt för att motivera en förändring.</p>
+
+<p><strong>Exempel på kedja:</strong> "Ni har långa svarstider" → "Vad leder det till?" → "Kunder lämnar" → "Vad kostar en förlorad kund?" → "~200 000 kr/år i intäkter + 50 000 kr i anskaffningskostnad" → <em>Nu är problemet tillräckligt stort.</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_02_beslutsprocess" model="slide.slide">
+        <field name="name">2. Kartlägg beslutsprocess och intressenter</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du säljer inte till ett företag — du säljer till människor</h2>
+
+<h3>Roller i beslutsprocessen</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Roll</th><th>Vad de bryr sig om</th><th>Hur du når dem</th></tr>
+<tr><td><strong>Champion</strong> (din förespråkare)</td><td>Bli hjälte internt, lösa sitt problem</td><td>Ge ammunition: ROI-data, case, presentationsmaterial</td></tr>
+<tr><td><strong>Decision Maker</strong> (beslutsfattare)</td><td>Pengar, risk, strategisk fit</td><td>Business case, referenser, executive summary</td></tr>
+<tr><td><strong>Influencer</strong> (påverkar beslutet)</td><td>Hur påverkar lösningen deras avdelning?</td><td>Teknisk demo, integrationer, support</td></tr>
+<tr><td><strong>Blocker</strong> (stoppar dealen)</td><td>Förändringsmotstånd, konkurrerande intressen</td><td>Identifiera tidigt. Förstå deras invändning. Adressera direkt.</td></tr>
+<tr><td><strong>Economic Buyer</strong> (betalar)</td><td>Budget, ROI, total cost of ownership</td><td>TCO-kalkyl, jämförelse med alternativkostnad</td></tr>
+</table>
+
+<h3>Power Map — rita upp spelplanen</h3>
+<ul>
+<li>Rita alla intressenter på en karta</li>
+<li>Markera: Vem är för? Vem är emot? Vem är neutral?</li>
+<li>Markera: Vem har inflytande över vem?</li>
+<li>Strategi: Stärk champions, adressera blockers, informera neutrals</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_03_roi" model="slide.slide">
+        <field name="name">3. Bygg business case och ROI-kalkyl</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>ROI — gör det enkelt för kunden att säga ja</h2>
+
+<h3>Enkel ROI-kalkyl (mall)</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Post</th><th>Beräkning</th><th>Årligt värde</th></tr>
+<tr><td><strong>Kostnad för er lösning</strong></td><td>Licens + implementation + utbildning</td><td>-200 000 kr</td></tr>
+<tr><td>Tidsbesparing</td><td>3 medarbetare × 5h/vecka × 400 kr/h × 45 veckor</td><td>+270 000 kr</td></tr>
+<tr><td>Minskade fel</td><td>50 färre fel × 2000 kr/fel (administration + kundförlust)</td><td>+100 000 kr</td></tr>
+<tr><td>Ökad försäljning</td><td>Bättre kundinsikt → 5% ökning på 2M i befintlig bas</td><td>+100 000 kr</td></tr>
+<tr><td>Compliance</td><td>Undviker risk för GDPR-böter (sannolikhet 20% × 500 000 kr)</td><td>+100 000 kr</td></tr>
+<tr style="background:#ddffdd"><td><strong>Netto ROI</strong></td><td>Total nytta — kostnad</td><td><strong>+370 000 kr</strong></td></tr>
+<tr><td>Payback-tid</td><td>200 000 / (370 000 / 12)</td><td>~6,5 månader</td></tr>
+</table>
+
+<h3>3 regler för ROI-kalkyler</h3>
+<ol>
+<li>Använd <strong>kundens egna siffror</strong> — fråga: "Vad kostar en timme för era medarbetare?" "Hur många fel har ni per månad?"</li>
+<li>Var <strong>konservativ</strong> — hellre en ROI som överträffas än en som missas</li>
+<li>Dokumentera antagandena — så kan kundens ekonomiavdelning validera</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_04_paketering" model="slide.slide">
+        <field name="name">4. Paketera lösningen — offerten som en naturlig slutsats</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>En bra offert överraskar inte — den bekräftar</h2>
+
+<h3>Offertens struktur</h3>
+<ol>
+<li><strong>Situationsbeskrivning:</strong> "Ni har idag [problem X] som kostar er [Y kr/år]."</li>
+<li><strong>Lösningsbeskrivning:</strong> "Vår lösning adresserar detta genom [A, B, C]."</li>
+<li><strong>Värde/ROI:</strong> "Detta innebär [konkreta siffror] i besparing/ökad intäkt."</li>
+<li><strong>Pris och villkor:</strong> Tydligt, inga dolda avgifter</li>
+<li><strong>Implementation och tidsplan:</strong> "Så här går det till."</li>
+<li><strong>Nästa steg:</strong> "Vi föreslår ett genomgångsmöte [datum]."</li>
+</ol>
+
+<h3>Paketering — ge alternativ, inte ultimatum</h3>
+<p>Presentera 2-3 paket:</p>
+<ul>
+<li><strong>Basic:</strong> Löser kärnproblemet — lägsta pris</li>
+<li><strong>Standard:</strong> Det rekommenderade — bäst value for money</li>
+<li><strong>Premium:</strong> Full paket — all inclusive</li>
+</ul>
+<p>De flesta väljer Standard. Basic och Premium finns för att rama in det som "lagom".</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_05_pris" model="slide.slide">
+        <field name="name">5. Prismotivering — hantera prispress utan att rabattera</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>"Det är för dyrt" — vad kunden egentligen säger</h2>
+
+<h3>Vad "för dyrt" betyder</h3>
+<ol>
+<li>"Jag ser inte värdet än" → Du har inte byggt tillräckligt business case</li>
+<li>"Jag har inte budget" → Du har inte pratat med rätt person</li>
+<li>"Konkurrent X är billigare" → Du har inte differentierat tillräckligt</li>
+<li>"Jag vill ha rabatt" → Standardförhandling — ha en motprestation redo</li>
+</ol>
+
+<h3>Svara på prispress — utan att rabattera</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Invändning</th><th>Bra svar</th></tr>
+<tr><td>"Det är dyrt"</td><td>"Jag förstår. Låt oss titta på vad ni får för investeringen — ROI:n visar att lösningen betalar sig på 6 månader."</td></tr>
+<tr><td>"Konkurrenten är 30% billigare"</td><td>"Jag respekterar att ni jämför. Låt oss titta på totalkostnaden över 3 år — inklusive support, utbildning och implementation. Vi inkluderar allt."</td></tr>
+<tr><td>"Kan ni ge rabatt?"</td><td>"Vi har en standardprislista som är rättvis mot alla kunder. Vad jag KAN göra är att inkludera [extra utbildning/onboarding] utan extra kostnad."</td></tr>
+</table>
+
+<h3>Rabattera SMART — om du måste</h3>
+<ul>
+<li>Rabattera aldrig utan motprestation: "Om ni skriver på denna vecka kan jag ordna X."</li>
+<li>Ge värde, inte sänkt pris: extra tjänster istället för lägre pris</li>
+<li>Dokumentera rabatten i CRM — med orsak och godkännande</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_value_06_sammanfattning" model="slide.slide">
+        <field name="name">Value Based Selling — Sammanfattning och verktyg</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din value selling-verktygslåda</h2>
+
+<ol>
+<li><strong>SPIN-metoden</strong> — Situation → Problem → Implikation → Nyttobehov</li>
+<li><strong>Power Map</strong> — kartlägg alla intressenter: champion, DM, influencer, blocker</li>
+<li><strong>ROI-kalkyl</strong> — använd kundens egna siffror, var konservativ</li>
+<li><strong>3-paketsmodellen</strong> — Basic / Standard / Premium</li>
+<li><strong>Prismotivering</strong> — flytta fokus från pris till värde, ge värde istället för rabatt</li>
+</ol>
+
+<h3>Nyckelmeningar</h3>
+<ul>
+<li>"Vad kostar det er att inte lösa detta?"</li>
+<li>"Låt oss titta på ROI — lösningen betalar sig på X månader."</li>
+<li>"Vår totalkostnad över 3 år inkluderar allt — support, utbildning, implementation."</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 4: Offertstängning &amp; avslutsteknik (7 slides)           -->
+    <!-- ============================================================ -->
+
+    <record id="slide_stangning_00_intro" model="slide.slide">
+        <field name="name">Offertstängning — Från offert till signatur</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Den sista kilometern — ofta den svåraste</h2>
+
+<h3>Statistik som borde skrämma dig</h3>
+<ul>
+<li>~50% av alla offerter följs aldrig upp</li>
+<li>En mailad offert utan inbokat genomgångsmöte har &lt;10% chans att stängas</li>
+<li>80% av affärerna kräver 5+ uppföljningar — de flesta ger upp efter 2</li>
+</ul>
+
+<h3>Den gyllene regeln</h3>
+<div class="alert alert-warning"><strong>Skicka ALDRIG en offert utan att ha bokat ett genomgångsmöte.</strong> En offert som bara mailas över dör i inkorgen. Du måste vara där när kunden öppnar den — för att förklara, svara på frågor, och hantera invändningar i realtid.</div>
+
+<h3>Denna kurs lär dig</h3>
+<ul>
+<li>Hur du bokar genomgångsmötet — före offerten skickas</li>
+<li>Invändningshantering — pris, timing, konkurrent</li>
+<li>Förhandlingsteknik vid avslut</li>
+<li>När du ska gå vidare — och när du ska lämna</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_01_genomgang" model="slide.slide">
+        <field name="name">1. Genomgångsmötet — där offerter vinns eller förloras</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Genomgångsmötet — din viktigaste timme</h2>
+
+<h3>Före mötet</h3>
+<ul>
+<li>Skicka offerten 24-48 timmar FÖRE mötet — så de hinner läsa (men inte tillräckligt länge för att glömma)</li>
+<li>Be om att beslutsfattaren är med: "För att vi ska kunna ta beslut direkt — kan [DM] vara med?"</li>
+<li>Förbered svar på de 3 vanligaste invändningarna</li>
+</ul>
+
+<h3>Under mötet — agendan</h3>
+<ol>
+<li><strong>Återkoppla till behovet</strong> (5 min): "När vi pratade sist sa ni att [problem X] är er största utmaning..."</li>
+<li><strong>Presentera lösningen</strong> (15 min): Gå igenom offerten. Fokus på värde, inte pris.</li>
+<li><strong>Hantera invändningar</strong> (10 min): Lyssna, bekräfta, svara.</li>
+<li><strong>Be om beslutet</strong> (5 min): "Är detta något ni vill gå vidare med?" — och var TYST.</li>
+</ol>
+
+<h3>Efter mötet — samma dag</h3>
+<ul>
+<li>Skicka mötessammanfattning med alla överenskomna punkter</li>
+<li>Boka nästa möte (om avslut inte nåddes)</li>
+<li>Uppdatera CRM med status och nästa steg</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_02_invandningar" model="slide.slide">
+        <field name="name">2. Invändningshantering — pris, timing, konkurrent</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>De 5 vanligaste invändningarna — och hur du bemöter dem</h2>
+
+<h3>1. "Det är för dyrt."</h3>
+<p>→ "Jag förstår. Låt oss titta på ROI-kalkylen vi gjorde tillsammans — lösningen betalar sig på [X] månader."</p>
+
+<h3>2. "Vi måste tänka på det."</h3>
+<p>→ "Självklart. Vad specifikt är det ni behöver tänka igenom? Kanske kan jag hjälpa till med underlag?" (tvinga fram den verkliga invändningen)</p>
+
+<h3>3. "Vi har ett billigare alternativ."</h3>
+<p>→ "Jag respekterar att ni jämför. Kan vi titta på totalkostnaden över 3 år? Vår lösning inkluderar [X, Y, Z] som alternativet tar extra betalt för."</p>
+
+<h3>4. "Timingen är inte rätt."</h3>
+<p>→ "Jag förstår. När skulle vara en bättre tidpunkt? Och vad kostar det er att vänta — i tid, pengar och risk?"</p>
+
+<h3>5. "Vi kör på det vi har."</h3>
+<p>→ "Intressant. Hur fungerar er nuvarande lösning för [specifikt problem de nämnt]? Finns det något som kunde vara bättre?"</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_03_timing" model="slide.slide">
+        <field name="name">3. När du ska pusha — och när du ska backa</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Läs rummet — och agera därefter</h2>
+
+<h3>Köpsignaler — PUSHA</h3>
+<ul>
+<li>Kunden frågar om implementation, support, utbildning</li>
+<li>Kunden diskuterar internt hur lösningen ska användas</li>
+<li>Kunden frågar om betalningsvillkor eller kontraktslängd</li>
+<li>Kunden säger "när vi kör igång..." istället för "om vi kör igång"</li>
+<li>→ Fråga: "Ska vi boka ett uppstartsmöte?"</li>
+</ul>
+
+<h3>Varningssignaler — BACKA och omvärdera</h3>
+<ul>
+<li>Kunden undviker att boka nästa möte</li>
+<li>Beslutsfattaren är plötsligt "upptagen på obestämd tid"</li>
+<li>Kunden kommer med nya, tidigare onämnda invändningar</li>
+<li>Kunden jämför med alternativ som inte är konkurrenter (tecken på att behovet inte är skarpt)</li>
+<li>→ Fråga: "Jag upplever att något har förändrats. Stämmer det? Hur kan jag hjälpa?"</li>
+</ul>
+
+<h3>När du ska lämna — och hur</h3>
+<p>"Jag upplever att timingen inte är rätt just nu. Jag föreslår att vi pausar denna process och att jag hör av mig om [X månader]. Skulle det passa?"</p>
+<p>Detta gör två saker: (1) Du slösar inte mer tid, (2) Det kan trigga kunden att agera — ingen vill missa en bra lösning.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_04_psykologi" model="slide.slide">
+        <field name="name">4. Avslutets psykologi — få kunden att sälja till sig själv</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Avslutstekniker — utan att vara påträngande</h2>
+
+<h3>1. Alternativfrågan (mjukaste)</h3>
+<p>"Föredrar ni att starta implementationen i augusti eller september?"</p>
+<p>→ Förutsätter att de ska köpa. Frågan handlar bara om NÄR.</p>
+
+<h3>2. Sammanfattningsavslutet</h3>
+<p>"Så om jag sammanfattar: Ni behöver lösa [problem X], vår lösning gör det genom [A, B, C], och ROI:n är [Y kr] över 12 månader. Är vi redo att gå vidare?"</p>
+
+<h3>3. "Vad skulle krävas?"</h3>
+<p>"Vad skulle krävas för att ni ska känna er trygga med att gå vidare idag?"</p>
+<p>→ Kunden berättar exakt vad som saknas. Du kan adressera det direkt — eller konstatera att det inte går och gå vidare.</p>
+
+<h3>4. Tystnad (kraftfullast)</h3>
+<p>Ställ frågan: "Är detta något ni vill gå vidare med?" — och var sedan HELT TYST.</p>
+<p>De flesta säljare är obekväma med tystnad och fyller den med prat. Gör inte det. Låt kunden tänka och svara. Första personen som pratar efter en avslutsfråga förlorar ofta.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_05_overlamning" model="slide.slide">
+        <field name="name">5. Överlämning — från sälj till leverans</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>En vunnen affär är inte klar — den har precis börjat</h2>
+
+<h3>Överlämning till CSM/implementationsteam</h3>
+<ol>
+<li><strong>Dokumentera allt i CRM:</strong> Vad har utlovats? Vilka features? Vilken tidsplan? Vilka kontaktpersoner?</li>
+<li><strong>Introduktionsmöte:</strong> Boka ett gemensamt möte där du, kunden och CSM/implementationsteamet går igenom nästa steg</li>
+<li><strong>"Why they bought":</strong> Berätta för CSM: varför valde kunden er? Vad är deras viktigaste mål? Vad är de oroliga för?</li>
+</ol>
+
+<h3>Det sista du gör som säljare</h3>
+<ul>
+<li>Tacka kunden — ett personligt meddelande, inte bara ett autogenererat mail</li>
+<li>Be om en referens — men tajma rätt. Fråga efter 3 månader när de sett värde.</li>
+<li>Fråga om merförsäljning: "Finns det andra avdelningar hos er som har liknande utmaningar?"</li>
+</ul>
+
+<h3>Lärdomar — efter varje vunnen OCH förlorad affär</h3>
+<ul>
+<li>Vad gick bra? → Upprepa</li>
+<li>Vad gick dåligt? → Justera</li>
+<li>Vad sa kunden under processen? → Lyssna på inspelningar, läs anteckningar</li>
+<li>Dela lärdomar med teamet — en vunnen insikt gynnar alla</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_stangning_06_sammanfattning" model="slide.slide">
+        <field name="name">Offertstängning — Sammanfattning och checklista</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Checklista för varje offert</h2>
+
+<ol>
+<li>Offerten är skickad MINST 24h före genomgångsmötet</li>
+<li>Genomgångsmöte är bokat — med beslutsfattaren närvarande</li>
+<li>Offerten innehåller: problem → lösning → ROI → pris → implementation → nästa steg</li>
+<li>Du har förberett svar på de 3 troligaste invändningarna</li>
+<li>Du använder minst en avslutsteknik: alternativfråga, sammanfattning, "vad krävs?"</li>
+<li>Du är bekväm med tystnad efter avslutsfrågan</li>
+<li>Vid won: överlämning till CSM är gjord, CRM är uppdaterat</li>
+<li>Vid lost: lost reason är dokumenterad, lärdomar är dragna</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://www.linkedin.com/learning/">LinkedIn Learning</a> — Sales Pipeline Management, Asking Questions</li>
+<li>HubSpot Academy — Inbound Sales, Sales Management (gratis)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+</odoo>

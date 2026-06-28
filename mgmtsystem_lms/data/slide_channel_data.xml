@@ -35,4 +35,242 @@
         <field name="enroll">public</field>
         <field name="is_published" eval="True"/>
     </record>
+
+    <!-- ============================================================ -->
+    <!-- NCSC / CERT-SE — Cybersäkerhetsutbildningar                   -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_ncsc_disa" model="slide.channel">
+        <field name="name">Disa — Digital informationssäkerhetsutbildning för alla</field>
+        <field name="description">NCSC:s interaktiva grundutbildning i digital informationssäkerhet för samtliga medarbetare. 10 centrala områden om hur man hanterar information säkert i vardagen — från lösenord och e-post till distansarbete och social manipulation. Kan laddas ned för eget LMS. Källa: ncsc.se</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_ncsc_beslutsfattare" model="slide.channel">
+        <field name="name">Cybersäkerhet för beslutsfattare</field>
+        <field name="description">NCSC:s webbaserade utbildning (ca 5 timmar) framtagen i samarbete med Försvarshögskolan. Ger ett ledningsperspektiv på informations- och cybersäkerhet. Hjälper chefer att koppla säkerhetsarbetet till verksamhetsstyrning, riskhantering och strategisk planering. Källa: ncsc.se</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_ncsc_operativ" model="slide.channel">
+        <field name="name">Operativt informationssäkerhetsarbete</field>
+        <field name="description">NCSC:s fördjupande webbkurs i 12 korta lektioner (ca 5 min/lektion) för dig med nyckelroll i organisationens praktiska, vardagliga säkerhetsarbete. Omfattar: riskhantering, incidentrespons, säkerhetsåtgärder, kontinuitetsplanering och verksamhetsskydd. Källa: ncsc.se</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_ncsc_webinarier" model="slide.channel">
+        <field name="name">NCSC Webbinarieserie — Informationssäkerhet i fokus</field>
+        <field name="description">NCSC:s inspelade, kostnadsfria webbinarieserie med praktisk vägledning. Ämnen: NIS2/CER-direktiven och cybersäkerhetslagen, incidenthantering i informationssystem, kontinuitetshantering, Mognadsdialogen, och regulatorisk efterlevnad. Källa: ncsc.se</field>
+        <field name="channel_type">documentation</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_certse_ovning" model="slide.channel">
+        <field name="name">CERT-SE Tabletop-övningar — Incidenthantering</field>
+        <field name="description">CERT-SE:s färdiga skrivbordsövningar (tabletop) för att testa organisationens beredskap. Innehåller scenarier med diskussionsunderlag för: nätfiske (phishing), överbelastningsangrepp (DDoS) och utpressningsangrepp (ransomware). Komplett övningsmaterial för självstudier eller gruppövning. Källa: cert.se</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- OWASP ASVS v5 — Application Security Verification Standard     -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_owasp_asvs" model="slide.channel">
+        <field name="name">OWASP ASVS v5 — Application Security Verification Standard</field>
+        <field name="description">Komplett utbildning i OWASP ASVS v5.0 (2024) — standarden för verifiering av applikationssäkerhet. Genomgång av alla 14 kategorier (V1–V14), tre säkerhetsnivåer (L1 Opportunistic, L2 Standard, L3 Advanced) och praktisk tillämpning vid kravställning, utveckling, granskning och upphandling.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Skyddsombud / Arbetsmiljö                                      -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_skyddsombud" model="slide.channel">
+        <field name="name">Skyddsombud — Grundutbildning i arbetsmiljö</field>
+        <field name="description">Grundläggande utbildning för skyddsombud, arbetsmiljöombud och chefer med arbetsmiljöansvar. Baserad på Arbetsmiljölagen (AML), Arbetsmiljöverkets föreskrifter (AFS 2001:1 om SAM, AFS 2015:4 om organisatorisk/social arbetsmiljö, AFS 2023:1) och ISO 45001. Omfattar: rättslig grund, roller/ansvar, riskbedömning, skyddsrond, tillbuds- och olycksutredning, psykosocial arbetsmiljö, kemiska risker, ergonomi, hot/våld och samverkanssystem.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_miljoombud" model="slide.channel">
+        <field name="name">Miljöombud — Grundutbildning i miljöarbete</field>
+        <field name="description">Grundläggande utbildning för miljöombud, miljösamordnare och hållbarhetsansvariga. Baserad på Miljöbalken (SFS 1998:808), ISO 14001:2026 och EU:s miljölagstiftning. Omfattar: miljörättsliga grunder, miljöaspekter och miljöpåverkan, livscykelperspektiv, kemikaliehantering och substitution, avfallshantering och cirkulär ekonomi, energieffektivisering och klimatarbete, hållbar upphandling, miljörevision och miljökommunikation.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_brandskydd" model="slide.channel">
+        <field name="name">Brandskyddsombud — Systematiskt brandskyddsarbete (SBA)</field>
+        <field name="description">Utbildning för brandskyddsombud och brandskyddsansvariga. Baserad på Lagen om skydd mot olyckor (LSO 2003:778), Statens Räddningsverks föreskrifter (SRVFS 2004:3 om SBA) och Boverkets Byggregler (BBR). Omfattar: brandteori, brandorsaker, förebyggande brandskydd, utrymningsplanering, släckutrustning, SBA-dokumentation, brandskyddsrond, elbrandssäkerhet och heta arbeten.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_forsta_hjalpen" model="slide.channel">
+        <field name="name">Första hjälpen &amp; krisstöd — Livräddande insatser på arbetsplatsen</field>
+        <field name="description">Praktisk utbildning i första hjälpen och krisstöd för arbetsplatsen. Omfattar: L-ABC (Livsfarligt läge, Andning, Blödning, Cirkulation), HLR med hjärtstartare (AED), akuta sjukdomstillstånd (stroke, hjärtinfarkt, diabetes, epilepsi), trauma och frakturer, kemikalieolyckor, psykologisk första hjälpen (PFA/psykosocialt krisstöd) och upprättande av krisplan/krislåda.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- MCF — Kontinuitetshantering                                   -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_kontinuitet_mcf" model="slide.channel">
+        <field name="name">Kontinuitetshantering — MCF Webbkurs</field>
+        <field name="description">Myndigheten för Civilt Försvars (MCF) öppna e-kurs i kontinuitetshantering (ca 1,5 timme). Lär ut konsekvensanalys, riskbedömning och hur man bygger kontinuitetsplaner ("Plan B") för när drift eller samhällsviktig verksamhet drabbas av allvarliga avbrott. Omfattar: BIA (Business Impact Analysis), RTO/RPO, redundansstrategier, failover-planering, krisledning och återställning.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- IT-Helpdesk Säkerhetsutbildning                               -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_helpdesk_security" model="slide.channel">
+        <field name="name">IT-Helpdesk — Säkerhet i användarsupporten</field>
+        <field name="description">Säkerhetsutbildning specifikt för first-line support och helpdesk-personal med höga behörigheter. Baserad på Google IT Support Certificate (säkerhetsmodulen), TryHackMe Pre-Security &amp; Phishing, och NCSC:s DISA. Fokus: identitetsverifiering vid support (hur vet du att den som ringer är den de utger sig för?), upptäcka nätfiske och vishing, analysera e-posthuvuden, hantera komprometterade konton, MFA-trötthet/Prompt Bombing, och procedursäkerhet vid lösenordsåterställning.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- CSM / Kundansvarig Säkerhetsutbildning                        -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_csm_security" model="slide.channel">
+        <field name="name">CSM &amp; Kundansvarig — Säkerhet i kundrelationer</field>
+        <field name="description">Säkerhetsutbildning för Customer Success Managers, kundansvariga och säljare som hanterar kunddata och externa relationer. Baserad på CISA Social Engineering-utbildning och GDPR-krav. Fokus: att inte bli en språngbräda för angripare — säker hantering av kunddata (GDPR), dataminimering i CRM, säkra kommunikationskanaler (Zoom/Teams/Slack/e-post), vad som inte får skickas via chatt och mail, hantering av komprometterade kundkonton, och att känna igen social manipulation under stressade kundmöten.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Social Engineering — Försvar mot manipulation                 -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_social_engineering" model="slide.channel">
+        <field name="name">Social Engineering — Försvara dig mot manipulation</field>
+        <field name="description">Fördjupad utbildning i att känna igen och stå emot social manipulation. Baserad på CISA:s kostnadsfria utbildningar, SANS Social Engineering Framework och verkliga attackscenarier. Omfattar: phishing, spear-phishing, vishing (röstfiske), smishing (SMS-fiske), pretexting, baiting (USB-droppar), tailgating, auktoritetsutnyttjande, stress- och brådskotekniker, samt MFA-trötthet/Prompt Bombing. Praktisk träning i att identifiera röda flaggor i e-post, telefonsamtal och fysiska möten.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- TryHackMe & Praktiska Labb — Driftpersonal                    -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_labb_drift" model="slide.channel">
+        <field name="name">Praktisk cybersäkerhet — Labbar &amp; övningar för driftpersonal</field>
+        <field name="description">Kompletterande praktisk utbildning för drifttekniker och IT-personal. Vägleder genom TryHackMe:s Cyber Defense Pathway, CISA FedVTE och öppna labbmiljöer. Omfattar: Incident Response (spåra vad som hände när en server gick ner eller hackades), Log Analysis (upptäcka dolda fel och hot före katastrofen), Ransomware Response (hantera pågående angrepp), Nätverksforensik (analysera kraschade nätverk), och Disaster Recovery (återställa från totalhaveri). Innehåller guider till specifika kostnadsfria labb-rum och praktiska övningar.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Professionellt bemötande i IT-support                        -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_bemotande_helpdesk" model="slide.channel">
+        <field name="name">Professionellt bemötande i IT-support</field>
+        <field name="description">Utbildning i kundservice, kommunikation och stresshantering specifikt för IT-helpdesk och teknisk support. Baserad på Alison Professional Customer Service, SKR:s Kommunikation och bemötande, och MCF:s kriskommunikation. Omfattar: aktivt lyssnande, valideringsteknik (bekräfta frustration innan felsökning), hantera arga och stressade användare, avleda utan att bli defensiv, kriskommunikation vid systemavbrott, och egen stresshantering — hur du undviker att bli &quot;slasktratt&quot; för andras stress.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Customer Success Management                                   -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_csm_strategi" model="slide.channel">
+        <field name="name">Customer Success Management — Strategi, värde &amp; relationer</field>
+        <field name="description">Strategisk utbildning för Customer Success Managers och kundansvariga. Baserad på Wharton/Google CSM Fundamentals (Coursera), University of Michigan Negotiation, och Active Listening-metodik. Omfattar: från support-tänk till tillväxt-tänk, mäta och kommunicera kundvärde (ROI, effektivisering), behovsanalys med öppna frågor, &quot;win-win&quot;-förhandling när förväntningar inte matchar leverans, hantera svåra samtal utan att förstöra relationen, och proaktiv kundutveckling — att guida kunden framåt istället för att bara reagera.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Personuppgiftsbiträde — GDPR i praktiken                      -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_pub_gdpr" model="slide.channel">
+        <field name="name">Personuppgiftsbiträde — GDPR i praktiken</field>
+        <field name="description">Specialiserad utbildning för personuppgiftsbiträden — företag och personer som hanterar personuppgifter för annans räkning (IT-leverantörer, molntjänster, redovisningsbyråer). Baserad på IMY Play, GDPR Artikel 28-33, och EDPB:s riktlinjer. Omfattar: roller (ansvarig/biträde/underbiträde), PUB-avtalets innehåll och krav, instruktionslydnad — biträdet får aldrig agera utan skriftlig instruktion, säkerhetsåtgärder enligt Artikel 32 (kryptering, behörighet, pseudonymisering), underbiträden och godkännandeprocess, incidenthantering och rapporteringsskyldighet (timmar, inte dagar!), samt loggning, radering och audit.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- Kriskommunikation &amp; svåra samtal                              -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_kriskommunikation" model="slide.channel">
+        <field name="name">Kriskommunikation &amp; svåra samtal</field>
+        <field name="description">Utbildning i att kommunicera under press — vid systemavbrott, incidenter och svåra kundsamtal. Baserad på MCF:s kriskommunikationsutbildning, University of Michigan Negotiation, och Active Listening-metodik. Omfattar: tydlig och lugnande kriskommunikation, förmedla dåliga nyheter utan att förlora förtroende, förhandlingsteknik vid motstridiga intressen, hantera ilska och besvikelse professionellt, och strukturerad kommunikation under pågående incident.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- CRM & Försäljning — Säljtratt och pipeline management        -->
+    <!-- ============================================================ -->
+
+    <record id="slide_channel_crm_leads" model="slide.channel">
+        <field name="name">Inbound Sales &amp; Lead-kvalificering</field>
+        <field name="description">Grundläggande utbildning i att identifiera, kvalificera och konvertera leads till affärsmöjligheter. Baserad på HubSpot Inbound Sales Certification och Salesforce Trailhead Prospecting to Close. Omfattar: BANT-metoden (Budget, Authority, Need, Timeline), köpresa och kundens mognadsgrad, inbound vs outbound, lead scoring, konverteringslogik (lead → account/contact → opportunity), och hur du undviker att slösa tid på leads som aldrig kommer att köpa.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_crm_pipeline" model="slide.channel">
+        <field name="name">Sales Pipeline Management — Bygg, mät och optimera din säljtratt</field>
+        <field name="description">Strategisk utbildning i att bygga och förvalta en effektiv säljtratt. Baserad på HubSpot Sales Management Training, Salesforce Trailhead pipeline-övningar och LinkedIn Learning. Omfattar: trattens faser (lead → MQL → SQL → opportunity → proposal → won/lost), konverteringsgrader och flaskhalsanalys, sannolikhetsbedömning i varje fas, pipeline-hygien (städa bort döda deals), forecast och rapportering, samt hur du dimensionerar tratten för att nå dina revenue-mål.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_crm_value" model="slide.channel">
+        <field name="name">Value Based Selling — Från behovsanalys till vinnande offert</field>
+        <field name="description">Fördjupad utbildning i att sälja på värde istället för pris. Baserad på LinkedIn Learnings Sales Pipeline Management, Lundequist Value Based Selling och svensk B2B-praxis. Omfattar: djup behovsanalys (SPIN-metoden anpassad för CRM), kartlägga beslutsprocess och intressenter, bygga business case med ROI-kalkyl, paketera lösningen så att offerten blir en naturlig slutsats, prismotivering och värdekommunikation, samt hantera konkurrens och prispress utan att rabattera.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <record id="slide_channel_crm_stangning" model="slide.channel">
+        <field name="name">Offertstängning &amp; avslutsteknik</field>
+        <field name="description">Praktisk utbildning i att gå från offert till avslut. Baserad på HubSpot Sales, LinkedIn Learning och svensk säljmetodik. Omfattar: offertens psykologi — varför mailade offerter dör, den gyllene regeln: boka alltid genomgångsmöte, invändningshantering (pris, timing, konkurrent), förhandlingsteknik vid avslut, när du ska gå vidare (och när du ska lämna), överlämning till CSM/kundteam, och hur du bygger en säljprocess som gör stängningen naturlig snarare än påträngande.</field>
+        <field name="channel_type">training</field>
+        <field name="enroll">public</field>
+        <field name="is_published" eval="True"/>
+    </record>
 </odoo>
+
+

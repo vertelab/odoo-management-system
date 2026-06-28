@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- KURS 1: Disa — Digital informationssäkerhetsutbildning       -->
+    <!-- ============================================================ -->
+
+    <record id="slide_ncsc_disa_00_intro" model="slide.slide">
+        <field name="name">Välkommen till Disa</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Digital informationssäkerhet för alla</h2>
+<p>Disa är NCSC:s interaktiva grundutbildning i digital informationssäkerhet. Den riktar sig till <strong>alla medarbetare</strong> — oavsett roll eller förkunskaper.</p>
+<h3>Vad du kommer att lära dig</h3>
+<ul>
+<li>Hur du skyddar organisationens information i vardagen</li>
+<li>Praktiska verktyg för säker digital kommunikation</li>
+<li>Hur du känner igen och hanterar vanliga hot</li>
+<li>Ditt personliga ansvar för informationssäkerheten</li>
+</ul>
+<p><em>Utbildningen omfattar 10 centrala områden. Varje område tar ca 5 minuter.</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_01_losenord" model="slide.slide">
+        <field name="name">1. Lösenord och autentisering</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Lösenord — din första försvarslinje</h2>
+<h3>Grundregler för starka lösenord</h3>
+<ul>
+<li>Använd minst 12 tecken</li>
+<li>Blanda stora och små bokstäver, siffror och specialtecken</li>
+<li>Använd <strong>lösenordsfraser</strong> — en hel mening är säkrare än ett ord</li>
+<li>Återanvänd <strong>aldrig</strong> lösenord mellan tjänster</li>
+</ul>
+<h3>Flerfaktorsautentisering (MFA)</h3>
+<p>Aktivera alltid MFA där det erbjuds. Kombinera något du vet (lösenord) med något du har (mobil) eller något du är (fingeravtryck).</p>
+<h3>Lösenordshanterare</h3>
+<p>Använd en godkänd lösenordshanterare för att generera och lagra unika lösenord. Du behöver bara komma ihåg <em>ett</em> huvudlösenord.</p>
+<div class="alert alert-warning"><strong>Varning:</strong> Dela aldrig dina lösenord med någon — inte ens IT-support. Legitima supportavdelningar ber aldrig om ditt lösenord.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_02_epost" model="slide.slide">
+        <field name="name">2. E-post och nätfiske</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Känn igen nätfiske (phishing)</h2>
+<h3>Varningssignaler</h3>
+<ul>
+<li><strong>Brådska:</strong> "Ditt konto stängs om 24 timmar!"</li>
+<li><strong>Oväntad avsändare:</strong> Känner du inte avsändaren? Var skeptisk.</li>
+<li><strong>Konstig avsändaradress:</strong> Kolla hela e-postadressen, inte bara visningsnamnet</li>
+<li><strong>Stavfel och grammatik:</strong> Professionella organisationer korrekturläser</li>
+<li><strong>Misstänkta bilagor:</strong> .exe, .js, .vbs, och makron i Office-dokument</li>
+<li><strong>Ovanliga länkar:</strong> Hovra över länkar för att se den verkliga adressen</li>
+</ul>
+<h3>Om du misstänker nätfiske</h3>
+<ol>
+<li><strong>Klicka inte</strong> på några länkar eller bilagor</li>
+<li>Rapportera till IT-säkerhetsavdelningen</li>
+<li>Radera meddelandet</li>
+<li>Kontakta avsändaren via en annan kanal om du är osäker</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_03_skadlig_kod" model="slide.slide">
+        <field name="name">3. Skadlig kod och sårbarheter</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Skadlig kod — vad är det?</h2>
+<h3>Vanliga typer</h3>
+<ul>
+<li><strong>Virus:</strong> Sprids via infekterade filer, kräver användarinteraktion</li>
+<li><strong>Mask:</strong> Sprids automatiskt över nätverk</li>
+<li><strong>Trojansk häst:</strong> Utger sig för att vara legitim programvara</li>
+<li><strong>Ransomware:</strong> Krypterar dina filer och kräver lösensumma</li>
+<li><strong>Spionprogram:</strong> Övervakar din aktivitet i hemlighet</li>
+</ul>
+<h3>Så skyddar du dig</h3>
+<ul>
+<li>Håll operativsystem och programvara uppdaterade</li>
+<li>Installera endast programvara från betrodda källor</li>
+<li>Använd antivirusprogram och håll det uppdaterat</li>
+<li>Öppna inte oväntade bilagor</li>
+<li>Säkerhetskopiera viktig data regelbundet</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_04_surfning" model="slide.slide">
+        <field name="name">4. Säkert surfande</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Säker webbläsning</h2>
+<h3>Grundläggande skydd</h3>
+<ul>
+<li>Kontrollera att webbadressen börjar med <strong>https://</strong> (hänglåset)</li>
+<li>Var försiktig med vad du laddar ner från internet</li>
+<li>Undvik att spara lösenord i webbläsaren på delade datorer</li>
+<li>Rensa historik och cookies efter användning av offentliga datorer</li>
+<li>Använd <strong>privat/inkognito-läge</strong> på delade enheter</li>
+</ul>
+<h3>Offentliga Wi-Fi-nätverk</h3>
+<p>Offentliga nätverk (kaféer, hotell, flygplatser) är ofta osäkra. Använd alltid <strong>VPN</strong> när du arbetar med känslig information på sådana nätverk.</p>
+<div class="alert alert-info"><strong>Tips:</strong> Din organisations VPN krypterar all trafik och skyddar dig även på osäkra nätverk.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_05_social_manipulation" model="slide.slide">
+        <field name="name">5. Social manipulation</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Den mänskliga faktorn</h2>
+<p>Social manipulation (social engineering) är när angripare utnyttjar mänskliga beteenden snarare än tekniska sårbarheter. <strong>Du</strong> är ofta det svagaste — eller starkaste — skyddet.</p>
+<h3>Vanliga angreppsmetoder</h3>
+<ul>
+<li><strong>Pretexting:</strong> Angriparen utger sig för att vara någon annan (IT-support, kollega, leverantör)</li>
+<li><strong>Baiting:</strong> Lockbeten som gratis USB-minnen lämnade på parkeringen</li>
+<li><strong>Quid pro quo:</strong> Erbjuder hjälp i utbyte mot information</li>
+<li><strong>Tailgating:</strong> Följer efter behörig personal in i säkra utrymmen</li>
+</ul>
+<h3>Försvara dig</h3>
+<ul>
+<li>Var skeptisk mot oväntade förfrågningar — även om de verkar komma från chefen</li>
+<li>Verifiera identitet via en oberoende kanal (ring upp på känt nummer)</li>
+<li>Lämna aldrig ut känslig information utan att vara säker på mottagarens identitet</li>
+<li>Ifrågasätt — det är bättre att vara försiktig än att skapa en incident</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_06_mobila_enheter" model="slide.slide">
+        <field name="name">6. Mobila enheter och distansarbete</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Säkerhet på språng</h2>
+<h3>Mobila enheter</h3>
+<ul>
+<li>Aktivera <strong>skärmlås</strong> (PIN, lösenord eller biometri)</li>
+<li>Aktivera <strong>fjärrspårning och fjärrensning</strong></li>
+<li>Installera endast appar från officiella appbutiker</li>
+<li>Håll enheten uppdaterad — aktivera automatiska uppdateringar</li>
+<li>Anslut inte okända USB-enheter till din mobil eller dator</li>
+</ul>
+<h3>Distansarbete</h3>
+<ul>
+<li>Arbeta på en plats där skärmen inte är synlig för obehöriga</li>
+<li>Lås datorn när du lämnar arbetsplatsen — även hemma</li>
+<li>Använd VPN för all arbetsrelaterad kommunikation</li>
+<li>Förvara fysiska dokument inlåsta</li>
+<li>Använd headset vid känsliga samtal på offentlig plats</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_07_moln" model="slide.slide">
+        <field name="name">7. Molntjänster och delning</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Informationshantering i molnet</h2>
+<h3>Godkända tjänster</h3>
+<p>Använd <strong>endast</strong> av organisationen godkända molntjänster. Privata Dropbox- eller Google-konton är inte säkra för arbetsmaterial.</p>
+<h3>Klassificering av information</h3>
+<ul>
+<li><strong>Öppen:</strong> Kan delas fritt</li>
+<li><strong>Intern:</strong> Får endast delas inom organisationen</li>
+<li><strong>Konfidentiell:</strong> Endast behöriga personer</li>
+<li><strong>Hemlig:</strong> Strikt behörighetskontroll</li>
+</ul>
+<h3>Säker delning</h3>
+<ul>
+<li>Dubbelkolla mottagare innan du delar</li>
+<li>Använd utgångsdatum för delningslänkar</li>
+<li>Sätt lösenord på känsliga delade filer</li>
+<li>Återkalla delning när den inte längre behövs</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_08_incident" model="slide.slide">
+        <field name="name">8. Incidentrapportering</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>När något går fel</h2>
+<h3>Vad är en säkerhetsincident?</h3>
+<ul>
+<li>Misstänkt dataintrång eller obehörig åtkomst</li>
+<li>Förlorad eller stulen enhet med arbetsinformation</li>
+<li>Skadlig kod upptäckt på din dator</li>
+<li>Oavsiktlig spridning av känslig information</li>
+<li>Misstänkt nätfiske eller social manipulation</li>
+</ul>
+<h3>Så rapporterar du</h3>
+<ol>
+<li><strong>Agera snabbt</strong> — ju tidigare, desto mindre skada</li>
+<li>Följ organisationens incidentrapporteringsrutin</li>
+<li>Dokumentera vad som hänt: tid, plats, vad du såg</li>
+<li>Rör ingenting — bevara bevis för IT-forensisk analys</li>
+<li>Informera din närmaste chef</li>
+</ol>
+<div class="alert alert-danger"><strong>Viktigt:</strong> Försök inte dölja en incident. Tidig rapportering räddar organisationen från allvarligare konsekvenser.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_09_dataskydd" model="slide.slide">
+        <field name="name">9. Dataskydd och GDPR</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Personuppgifter — ditt ansvar</h2>
+<h3>GDPR i korthet</h3>
+<ul>
+<li><strong>Dataminimering:</strong> Samla bara in de uppgifter du behöver</li>
+<li><strong>Ändamålsbegränsning:</strong> Använd bara uppgifterna för det angivna syftet</li>
+<li><strong>Lagringsminimering:</strong> Spara inte personuppgifter längre än nödvändigt</li>
+<li><strong>Konfidentialitet:</strong> Skydda personuppgifter från obehörig åtkomst</li>
+</ul>
+<h3>Praktiska råd</h3>
+<ul>
+<li>Skicka inte personuppgifter via osäker e-post</li>
+<li>Lås din dator när du lämnar skrivbordet</li>
+<li>Skriv inte ut personuppgifter i onödan — och släng utskrifter i låst tömningsbox</li>
+<li>Kontrollera mottagare noga — en feladresserad e-post kan vara en personuppgiftsincident</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_10_fysisk" model="slide.slide">
+        <field name="name">10. Fysisk säkerhet</field>
+        <field name="sequence">11</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Säkerhet i den fysiska miljön</h2>
+<h3>På kontoret</h3>
+<ul>
+<li>Använd passerkort — låna inte ut det till andra</li>
+<li>Låt inte obehöriga följa med in (tailgating)</li>
+<li>Lås in känsliga dokument — använd <strong>clean desk-policy</strong></li>
+<li>Kontrollera att skrivare och fax inte lämnar känsliga utskrifter obevakade</li>
+</ul>
+<h3>Vid resor</h3>
+<ul>
+<li>Förvara enheter i handbagage — inte incheckat bagage</li>
+<li>Var uppmärksam på "shoulder surfing" vid arbete på offentliga platser</li>
+<li>Använd integritetsskydd för skärmen</li>
+<li>Var särskilt vaksam i länder med hög risk för industrispionage</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_disa_11_sammanfattning" model="slide.slide">
+        <field name="name">Disa — Sammanfattning och självtest</field>
+        <field name="sequence">12</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_disa"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Dina viktigaste lärdomar</h2>
+<ol>
+<li><strong>Använd starka, unika lösenord och MFA</strong> — överallt</li>
+<li><strong>Var skeptisk mot oväntad e-post</strong> — pausa innan du klickar</li>
+<li><strong>Håll programvara uppdaterad</strong> — slå på automatiska uppdateringar</li>
+<li><strong>Rapportera incidenter direkt</strong> — dölj ingenting</li>
+<li><strong>Skydda personuppgifter</strong> — tänk efter före du delar</li>
+<li><strong>Använd VPN på osäkra nätverk</strong> — särskilt vid distansarbete</li>
+<li><strong>Ifrågasätt oväntade förfrågningar</strong> — verifiera via oberoende kanal</li>
+</ol>
+<p><strong>Informationssäkerhet är allas ansvar. Varje medarbetare är en del av organisationens försvar.</strong></p>
+<p><em>Fullständig Disa-utbildning finns på <a href="https://www.ncsc.se">ncsc.se</a> för nedladdning till ert LMS.</em></p>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 2: Cybersäkerhet för beslutsfattare                      -->
+    <!-- ============================================================ -->
+
+    <record id="slide_ncsc_beslut_00_intro" model="slide.slide">
+        <field name="name">Cybersäkerhet ur ett ledningsperspektiv</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.33</field>
+        <field name="description">
+<![CDATA[
+<h2>Varför cybersäkerhet är en ledningsfråga</h2>
+<p>Denna utbildning (ca 5 timmar) är framtagen av NCSC i samarbete med <strong>Försvarshögskolan</strong> och ger ett strategiskt perspektiv på informations- och cybersäkerhet.</p>
+<h3>Målgrupp</h3>
+<ul>
+<li>VD, ledningsgrupp och styrelse</li>
+<li>Verksamhetschefer och avdelningschefer</li>
+<li>CIO, CISO och IT-chefer</li>
+</ul>
+<h3>Utbildningens mål</h3>
+<p>Efter utbildningen ska du kunna:</p>
+<ul>
+<li>Koppla cybersäkerhet till verksamhetens övergripande mål</li>
+<li>Förstå hotbildslandskapet och riskhantering på strategisk nivå</li>
+<li>Leda och styra säkerhetsarbete integrerat i verksamhetsstyrningen</li>
+<li>Uppfylla regulatoriska krav (NIS2, CER, cybersäkerhetslagen)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_01_hotbild" model="slide.slide">
+        <field name="name">Modul 1: Hotbildslandskapet</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Dagens hotbild — vad hotar din verksamhet?</h2>
+<h3>Hotaktörer</h3>
+<ul>
+<li><strong>Statliga aktörer:</strong> Cyberspionage, påverkansoperationer, sabotage</li>
+<li><strong>Kriminella grupper:</strong> Ransomware, datastöld, bedrägeri</li>
+<li><strong>Insiderhot:</strong> Oavsiktliga misstag, missnöjda medarbetare</li>
+<li><strong>Aktivister:</strong> Ideologiskt motiverade angrepp (hacktivism)</li>
+</ul>
+<h3>Det svenska säkerhetsläget</h3>
+<p>MSB och Säkerhetspolisen rapporterar att Sverige befinner sig i ett allvarligt säkerhetsläge med ökad risk för:</p>
+<ul>
+<li>Cyberangrepp mot samhällsviktig verksamhet</li>
+<li>Påverkanskampanjer riktade mot svenska organisationer</li>
+<li>Industrispionage mot svensk innovation och teknik</li>
+</ul>
+<h3>Din organisations exponering</h3>
+<p>Fundera på: Vilka tillgångar har ni som är mest värdefulla för en angripare? Kunddata? Immateriella rättigheter? Driftberoende system?</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_02_styrning" model="slide.slide">
+        <field name="name">Modul 2: Säkerhetsstyrning och ledning</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Integrera säkerhet i verksamhetsstyrningen</h2>
+<h3>ISO 27001 som ramverk</h3>
+<p>Ledningssystem för informationssäkerhet (LIS) enligt ISO 27001 ger en systematisk metod för att:</p>
+<ul>
+<li>Identifiera och värdera informationstillgångar</li>
+<li>Bedöma risker och införa kontroller</li>
+<li>Övervaka och ständigt förbättra säkerheten</li>
+<li>Uppfylla lagkrav och kundkrav</li>
+</ul>
+<h3>Ledningens ansvar</h3>
+<ol>
+<li><strong>Säkerhetspolicy:</strong> Fastställ och kommunicera en tydlig policy</li>
+<li><strong>Resurser:</strong> Avsätt tid, budget och kompetens</li>
+<li><strong>Roller:</strong> Utse CISO/informationssäkerhetsansvarig</li>
+<li><strong>Uppföljning:</strong> Kräv regelbunden rapportering till ledningsgruppen</li>
+<li><strong>Kultur:</strong> Bygg en kultur där säkerhet är allas ansvar</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_03_risk" model="slide.slide">
+        <field name="name">Modul 3: Strategisk riskhantering</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Riskhantering på strategisk nivå</h2>
+<h3>Riskaptit och riskacceptans</h3>
+<p>Som beslutsfattare måste du definiera organisationens <strong>riskaptit</strong> — hur mycket risk är ni villiga att acceptera? Detta är inte ett IT-beslut utan ett verksamhetsbeslut.</p>
+<h3>Riskhanteringsprocessen</h3>
+<ol>
+<li><strong>Identifiera</strong> hot, sårbarheter och konsekvenser</li>
+<li><strong>Analysera</strong> sannolikhet och påverkan</li>
+<li><strong>Värdera</strong> risknivå mot riskaptit</li>
+<li><strong>Behandla</strong> — acceptera, reducera, överföra eller undvika</li>
+<li><strong>Övervaka</strong> — risker förändras över tid</li>
+</ol>
+<h3>Kostnad/nytta-analys</h3>
+<p>Investeringar i säkerhet ska vara proportionerliga mot risken. Fråga: Vad kostar det att <em>inte</em> skydda denna tillgång? Ta hänsyn till:</p>
+<ul>
+<li>Direkta kostnader (böter, återställning, rättsprocesser)</li>
+<li>Indirekta kostnader (förtroendeskada, kundförluster, varumärkesskada)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_04_regelverk" model="slide.slide">
+        <field name="name">Modul 4: Regulatoriska krav — NIS2, CER och svensk lag</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Lagkrav som påverkar din verksamhet</h2>
+<h3>NIS2-direktivet (EU 2022/2555)</h3>
+<p>Utökat cybersäkerhetsdirektiv som omfattar fler sektorer och inför:</p>
+<ul>
+<li>Strängare krav på riskhantering och incidentrapportering</li>
+<li>Ledningens personliga ansvar för cybersäkerhet</li>
+<li>Sanktionsavgifter vid bristande efterlevnad</li>
+<li>Krav på leverantörskedjans säkerhet</li>
+</ul>
+<h3>CER-direktivet (EU 2022/2557)</h3>
+<p>Om kritiska verksamheters motståndskraft:</p>
+<ul>
+<li>Kontinuitetsplanering och redundans</li>
+<li>Regelbundna stresstester</li>
+<li>Incidentrapportering inom 24 timmar</li>
+</ul>
+<h3>Svensk cybersäkerhetslag</h3>
+<p>Implementerar NIS2 och CER i svensk rätt. Trädde i kraft 1 januari 2025. Omfattar flera nya sektorer.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_05_kontinuitet" model="slide.slide">
+        <field name="name">Modul 5: Kontinuitetshantering och krisledning</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Verksamheten måste fungera — även under attack</h2>
+<h3>Business Continuity Management (BCM)</h3>
+<ol>
+<li>Identifiera kritiska verksamhetsprocesser</li>
+<li>Fastställ maximalt acceptabel avbrottstid (RTO/RPO)</li>
+<li>Utveckla och dokumentera kontinuitetsplaner</li>
+<li>Öva regelbundet — genomför minst en gång per år</li>
+<li>Uppdatera planer baserat på lärdomar</li>
+</ol>
+<h3>Krisledning vid cyberincident</h3>
+<ul>
+<li><strong>Larmkedja:</strong> Vem kontaktar vem — och hur?</li>
+<li><strong>Krisledningsgrupp:</strong> Vilka ingår? VD, CISO, kommunikationschef, juridik?</li>
+<li><strong>Kommunikation:</strong> Internt, till kunder, till media, till myndigheter</li>
+<li><strong>Beslutsordning:</strong> Vem får fatta beslut om frånkoppling, utbetalning etc.?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_06_supplychain" model="slide.slide">
+        <field name="name">Modul 6: Leverantörskedjan och tredjepartsrisk</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.50</field>
+        <field name="description">
+<![CDATA[
+<h2>Din säkerhet är beroende av dina leverantörers säkerhet</h2>
+<h3>Supply chain risk management</h3>
+<ul>
+<li>Kartlägg alla kritiska leverantörer och underleverantörer</li>
+<li>Ställ säkerhetskrav vid upphandling</li>
+<li>Genomför regelbundna säkerhetsgranskningar</li>
+<li>Kräv incidentrapportering från leverantörer</li>
+<li>Ha beredskapsplaner för leverantörsbortfall</li>
+</ul>
+<h3>Molntjänster och SaaS</h3>
+<p>Särskilt viktigt vid användning av molntjänster:</p>
+<ul>
+<li>Var lagras data? (EU vs tredje land)</li>
+<li>Vilka underleverantörer använder molnleverantören?</li>
+<li>Har ni insyn i deras säkerhetsarbete?</li>
+<li>Vad händer vid en incident hos leverantören?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_beslut_07_sammanfattning" model="slide.slide">
+        <field name="name">Beslutsfattare — Sammanfattning och handlingsplan</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_beslutsfattare"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.25</field>
+        <field name="description">
+<![CDATA[
+<h2>Din handlingsplan som beslutsfattare</h2>
+<ol>
+<li><strong>Fastställ en säkerhetspolicy</strong> som är förankrad i ledningsgruppen</li>
+<li><strong>Utse en informationssäkerhetsansvarig</strong> (CISO) med tydligt mandat</li>
+<li><strong>Genomför en riskanalys</strong> av organisationens kritiska tillgångar</li>
+<li><strong>Inför ett ledningssystem</strong> för informationssäkerhet (ISO 27001)</li>
+<li><strong>Säkerställ regelefterlevnad</strong> av NIS2, CER och cybersäkerhetslagen</li>
+<li><strong>Öva kontinuitetsplaner</strong> — minst en gång per år</li>
+<li><strong>Rapportera säkerhetsläget</strong> till styrelsen kvartalsvis</li>
+</ol>
+<p><strong>Kom ihåg: Cybersäkerhet är inte ett IT-problem — det är ett verksamhetskritiskt ledningsansvar.</strong></p>
+<p><em>Den fullständiga utbildningen finns på <a href="https://www.ncsc.se">ncsc.se</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 3: Operativt informationssäkerhetsarbete (12 lektioner)  -->
+    <!-- ============================================================ -->
+
+    <record id="slide_ncsc_operativ_00_intro" model="slide.slide">
+        <field name="name">Introduktion till operativt säkerhetsarbete</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Välkommen till operativt informationssäkerhetsarbete</h2>
+<p>Denna fördjupande kurs från NCSC består av <strong>12 korta lektioner</strong> (ca 5 minuter vardera) som riktar sig till dig som har en nyckelroll i det praktiska, vardagliga säkerhetsarbetet.</p>
+<h3>Du som går kursen arbetar troligen som:</h3>
+<ul>
+<li>IT-säkerhetsansvarig / CISO</li>
+<li>Systemförvaltare eller IT-driftansvarig</li>
+<li>Säkerhetsskyddschef</li>
+<li>Informationssäkerhetssamordnare</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_01" model="slide.slide">
+        <field name="name">Lektion 1: Säkerhetsorganisation och roller</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Bygg en effektiv säkerhetsorganisation</h2>
+<ul>
+<li>Tydlig rollfördelning: CISO, säkerhetsansvariga, systemägare</li>
+<li>Rapporteringsvägar till ledningen</li>
+<li>Ansvarsfördelning enligt RACI-modellen</li>
+<li>Resursbehov: tid, budget, kompetens</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_02" model="slide.slide">
+        <field name="name">Lektion 2: Inventering och klassificering</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Du kan inte skydda det du inte känner till</h2>
+<ul>
+<li>Kartlägg informationstillgångar: system, databaser, flöden</li>
+<li>Klassificera: öppen, intern, konfidentiell, hemlig</li>
+<li>Identifiera systemägare för varje tillgång</li>
+<li>Dokumentera beroenden mellan system</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_03" model="slide.slide">
+        <field name="name">Lektion 3: Riskbedömning i praktiken</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Systematisk riskbedömning</h2>
+<ul>
+<li>Metodik: MSB:s vägledning, ISO 27005, egna modeller</li>
+<li>Hotkatalog: använd NCSC:s hotrapporter som underlag</li>
+<li>Sårbarhetsanalys: penetreringstester, sårbarhetsskanning</li>
+<li>Konsekvensanalys: påverkan på verksamhet, ekonomi, anseende</li>
+<li>Riskregister: levande dokument, uppdateras löpande</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_04" model="slide.slide">
+        <field name="name">Lektion 4: Säkerhetsåtgärder och kontroller</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Välj rätt åtgärder</h2>
+<ul>
+<li>Administrativa: policyer, rutiner, utbildning</li>
+<li>Tekniska: brandväggar, kryptering, MFA, loggning</li>
+<li>Fysiska: skalskydd, passersystem, kameraövervakning</li>
+<li>Organisatoriska: behörighetsstyrning, bakgrundskontroller</li>
+</ul>
+<p>Använd ISO 27001 Annex A som kontrollkatalog. Prioritera baserat på risk.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_05" model="slide.slide">
+        <field name="name">Lektion 5: Incidenthantering</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Från upptäckt till återställning</h2>
+<ol>
+<li><strong>Upptäckt:</strong> Larm från SIEM, antivirus, användare</li>
+<li><strong>Analys:</strong> Vad har hänt? Omfattning? Pågående?</li>
+<li><strong>Inneslutning:</strong> Isolera drabbade system, blockera IP-adresser</li>
+<li><strong>Utrotning:</strong> Ta bort skadlig kod, åtgärda sårbarhet</li>
+<li><strong>Återställning:</strong> Återställ från backup, verifiera integritet</li>
+<li><strong>Lärdomar:</strong> Vad kan förhindra återupprepning?</li>
+</ol>
+<p>Rapportera till CERT-SE vid allvarliga incidenter.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_06" model="slide.slide">
+        <field name="name">Lektion 6: Kontinuitetsplanering</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Säkerställ att verksamheten kan fortsätta</h2>
+<ul>
+<li>Business Impact Analysis (BIA): vilka processer är kritiska?</li>
+<li>RTO (Recovery Time Objective): max avbrottstid</li>
+<li>RPO (Recovery Point Objective): max dataförlust</li>
+<li>Redundans: alternativa system, platser, leverantörer</li>
+<li>Backup-strategi: 3-2-1-regeln (3 kopior, 2 medier, 1 offline)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_07" model="slide.slide">
+        <field name="name">Lektion 7: Behörighetsstyrning</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Rätt person, rätt behörighet, rätt tid</h2>
+<ul>
+<li>Principen om minsta privilegium (least privilege)</li>
+<li>Rollbaserad behörighetsstyrning (RBAC)</li>
+<li>Behörighetsgranskning: minst årligen</li>
+<li>Avveckling av konton vid personalomsättning</li>
+<li>Privilegierad åtkomsthantering (PAM) för administratörer</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_08" model="slide.slide">
+        <field name="name">Lektion 8: Loggning och övervakning</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Se vad som händer i dina system</h2>
+<ul>
+<li>Centraliserad logghantering (SIEM)</li>
+<li>Kritiska logghändelser: inloggningsförsök, behörighetsändringar, databashändelser</li>
+<li>Loggskydd: skrivskyddade, oföränderliga loggar</li>
+<li>Realtidsövervakning och larmregler</li>
+<li>Loggbevarande: minst 6 månader, längre för compliance</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_09" model="slide.slide">
+        <field name="name">Lektion 9: Sårbarhetshantering</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Hitta och åtgärda sårbarheter innan angriparen gör det</h2>
+<ul>
+<li>Regelbunden sårbarhetsskanning: minst månadsvis</li>
+<li>Patchhantering: kritiska patchar inom 24–72 timmar</li>
+<li>Penetreringstester: årligen på kritiska system</li>
+<li>CVE-bevakning: prenumerera på NCSC och leverantörers utskick</li>
+<li>Asset management: automatisk upptäckt av alla enheter i nätverket</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_10" model="slide.slide">
+        <field name="name">Lektion 10: Säkerhetsmedvetenhet och utbildning</field>
+        <field name="sequence">11</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Människan som säkerhetsresurs</h2>
+<ul>
+<li>Årlig säkerhetsutbildning för alla medarbetare (t.ex. Disa)</li>
+<li>Simulerade nätfiskeövningar</li>
+<li>Riktad utbildning för högriskgrupper (ekonomi, HR, ledning)</li>
+<li>Mätbarhet: följ upp klickfrekvens, rapporteringsgrad</li>
+<li>Säkerhetskultur: belöna rapportering, bestraffa inte misstag</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_11" model="slide.slide">
+        <field name="name">Lektion 11: Regelefterlevnad och revision</field>
+        <field name="sequence">12</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Visa att ni gör rätt — och gör rätt</h2>
+<ul>
+<li>Tillämpliga lagar: NIS2, CER, GDPR, säkerhetsskyddslagen</li>
+<li>Intern revision: årlig granskning av efterlevnad</li>
+<li>Extern revision: ISO 27001-certifiering, kundrevisioner</li>
+<li>Dokumentationskrav: policyer, riskanalyser, incidentrapporter</li>
+<li>Avvikelsehantering: dokumentera, åtgärda, följ upp</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_12" model="slide.slide">
+        <field name="name">Lektion 12: Ständig förbättring</field>
+        <field name="sequence">13</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Säkerhetsarbete tar aldrig slut</h2>
+<ul>
+<li>PDCA-cykeln: Plan, Do, Check, Act</li>
+<li>Nyckeltal (KPI:er): patchtid, incidentrespons, utbildningstäckning</li>
+<li>Ledningens genomgång: kvartalsvis rapportering till ledningen</li>
+<li>Benchmarking: jämför med branschstandarder och Mognadsdialogen</li>
+<li>Lärdomar från incidenter: uppdatera rutiner efter varje händelse</li>
+</ul>
+<p><strong>En säker organisation är en lärande organisation.</strong></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_operativ_13_sammanfattning" model="slide.slide">
+        <field name="name">Operativt säkerhetsarbete — Sammanfattning</field>
+        <field name="sequence">14</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_operativ"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Dina viktigaste verktyg</h2>
+<ol>
+<li>Systematisk riskbedömning — grunden för allt säkerhetsarbete</li>
+<li>Incidentberedskap — öva regelbundet, agera snabbt</li>
+<li>Kontinuitetsplanering — säkerställ verksamhetens överlevnad</li>
+<li>Sårbarhetshantering — patchning och scanning som rutin</li>
+<li>Behörighetsstyrning — minsta privilegium, regelbunden granskning</li>
+</ol>
+<p><em>Fullständig kurs finns på <a href="https://www.ncsc.se">ncsc.se</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 4: NCSC Webbinarieserie                                  -->
+    <!-- ============================================================ -->
+
+    <record id="slide_ncsc_webinar_00_intro" model="slide.slide">
+        <field name="name">Välkommen till NCSC:s webbinarieserie</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Informationssäkerhet i fokus</h2>
+<p>NCSC erbjuder en serie inspelade, kostnadsfria webbinarier med praktisk vägledning inom aktuella cybersäkerhetsämnen.</p>
+<p>Varje webbinarium är ca 45–60 minuter och innehåller:</p>
+<ul>
+<li>Expertgenomgång av ämnet</li>
+<li>Praktiska exempel och fallstudier</li>
+<li>Rekommendationer för implementering</li>
+<li>Frågor och svar</li>
+</ul>
+<p><em>Webbinarierna finns tillgängliga på <a href="https://www.ncsc.se">ncsc.se</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_01_nis2" model="slide.slide">
+        <field name="name">Webbinarium 1: Introduktion till NIS2 och cybersäkerhetslagen</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Så påverkar NIS2 din organisation</h2>
+<h3>Innehåll</h3>
+<ul>
+<li>NIS2-direktivets bakgrund och syfte</li>
+<li>Vilka sektorer omfattas? (Utökning från NIS1)</li>
+<li>Krav på riskhantering och incidentrapportering</li>
+<li>Ledningens personliga ansvar och sanktioner</li>
+<li>Implementering i svensk rätt — cybersäkerhetslagen</li>
+<li>Tidslinje för efterlevnad</li>
+</ul>
+<h3>Praktiska steg</h3>
+<ol>
+<li>Identifiera om er organisation omfattas</li>
+<li>Genomför en gap-analys mot NIS2-kraven</li>
+<li>Uppdatera incidentrapporteringsrutiner</li>
+<li>Säkerställ ledningens engagemang och dokumentation</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_02_incident" model="slide.slide">
+        <field name="name">Webbinarium 2: Incidenthantering i informationssystem</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Bygg en effektiv incidenthanteringsförmåga</h2>
+<h3>Innehåll</h3>
+<ul>
+<li>Incidenthanteringsprocessen steg för steg</li>
+<li>Upptäckt: verktyg, tekniker och larmkedjor</li>
+<li>Inneslutning: isolering utan att förstöra bevis</li>
+<li>Återställning: säker återställning efter angrepp</li>
+<li>Kommunikation: internt, till myndigheter, till media</li>
+<li>Lärdomar och ständig förbättring</li>
+</ul>
+<h3>CERT-SE:s roll</h3>
+<p>CERT-SE är Sveriges nationella CSIRT och kan bistå vid allvarliga incidenter med:</p>
+<ul>
+<li>Teknisk analys och rådgivning</li>
+<li>Samordning mellan drabbade organisationer</li>
+<li>Internationell samverkan vid gränsöverskridande incidenter</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_03_kontinuitet" model="slide.slide">
+        <field name="name">Webbinarium 3: Kontinuitetshantering vid cyberincident</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Håll verksamheten igång under pågående attack</h2>
+<h3>Innehåll</h3>
+<ul>
+<li>Business Continuity Management (BCM) — grunder</li>
+<li>Business Impact Analysis: identifiera kritiska processer</li>
+<li>RTO/RPO: hur snabbt måste ni återhämta er?</li>
+<li>Redundansstrategier: failover, alternativa platser</li>
+<li>Backup och återställningstestning</li>
+<li>Kommunikationsplan för avbrott</li>
+</ul>
+<h3>Checklista för kontinuitetsplan</h3>
+<ol>
+<li>Kritiska processer dokumenterade</li>
+<li>RTO/RPO fastställt för varje process</li>
+<li>Alternativa arbetssätt identifierade</li>
+<li>Återställningsprocedurer testade</li>
+<li>Planen övad under de senaste 12 månaderna</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_04_mognad" model="slide.slide">
+        <field name="name">Webbinarium 4: Mognadsdialogen — analysera er säkerhetsnivå</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Mät och utveckla er säkerhetsmognad</h2>
+<h3>Vad är Mognadsdialogen?</h3>
+<p>Ett kostnadsfritt verktyg från NCSC för att analysera organisationens nuvarande säkerhetsnivå inom ett antal områden. Hjälper er att:</p>
+<ul>
+<li>Identifiera styrkor och svagheter</li>
+<li>Prioritera förbättringsåtgärder</li>
+<li>Följa utveckling över tid</li>
+<li>Benchmarka mot andra organisationer (anonymt)</li>
+</ul>
+<h3>Områden som analyseras</h3>
+<ul>
+<li>Styrning och ledning</li>
+<li>Riskhantering</li>
+<li>Incidenthantering</li>
+<li>Kontinuitetshantering</li>
+<li>Säkerhetsåtgärder</li>
+<li>Kompetens och medvetenhet</li>
+</ul>
+<p><em>Genomför Mognadsdialogen kostnadsfritt på <a href="https://www.ncsc.se">ncsc.se</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_05_cer" model="slide.slide">
+        <field name="name">Webbinarium 5: CER-direktivet — motståndskraft i kritisk verksamhet</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.75</field>
+        <field name="description">
+<![CDATA[
+<h2>Critical Entities Resilience (CER)</h2>
+<h3>Vad är CER?</h3>
+<p>CER-direktivet (EU 2022/2557) syftar till att stärka motståndskraften hos kritiska verksamheter inom 11 sektorer: energi, transporter, bankverksamhet, vatten, digital infrastruktur, hälsa, livsmedel, etc.</p>
+<h3>Krav på organisationer</h3>
+<ul>
+<li>Genomföra riskbedömningar</li>
+<li>Ta fram motståndskraftsplaner</li>
+<li>Genomföra stresstester</li>
+<li>Rapportera allvarliga incidenter till MSB</li>
+<li>Säkerställa fysiskt skydd av anläggningar</li>
+</ul>
+<h3>Förhållande till NIS2</h3>
+<p>NIS2 fokuserar på cybersäkerhet. CER fokuserar på fysisk motståndskraft. Många organisationer omfattas av båda direktiven och ska ha ett integrerat angreppssätt.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_ncsc_webinar_06_sammanfattning" model="slide.slide">
+        <field name="name">Webbinarieserie — Sammanfattning och resurser</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_ncsc_webinarier"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Nästa steg för din organisation</h2>
+<ol>
+<li>Se de fullständiga webbinarierna på <a href="https://www.ncsc.se">ncsc.se</a></li>
+<li>Genomför Mognadsdialogen för att kartlägga er nuvarande nivå</li>
+<li>Identifiera gap mot NIS2 och CER-kraven</li>
+<li>Uppdatera incidenthanteringsrutiner</li>
+<li>Öva kontinuitetsplaner med scenarioövningar</li>
+</ol>
+<h3>Användbara resurser</h3>
+<ul>
+<li><strong>NCSC:</strong> <a href="https://www.ncsc.se">ncsc.se</a> — rådgivning, kurser, webbinarier</li>
+<li><strong>CERT-SE:</strong> <a href="https://www.cert.se">cert.se</a> — incidentrapportering, övningar, varningar</li>
+<li><strong>MSB:</strong> <a href="https://www.msb.se">msb.se</a> — vägledningar, stöd, metodstöd</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS 5: CERT-SE Tabletop-övningar                             -->
+    <!-- ============================================================ -->
+
+    <record id="slide_certse_ovning_00_intro" model="slide.slide">
+        <field name="name">Tabletop-övningar — Introduktion och metodik</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_certse_ovning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Öva er beredskap — CERT-SE:s tabletop-övningar</h2>
+<h3>Vad är en tabletop-övning?</h3>
+<p>En skrivbordsövning där ledningsgrupp och nyckelpersoner diskuterar ett simulerat scenario. Ingen teknisk miljö krävs — bara ett bord och rätt personer.</p>
+<h3>Så genomför ni övningen</h3>
+<ol>
+<li><strong>Förberedelse:</strong> Läs scenariot i förväg. Utse övningsledare.</li>
+<li><strong>Genomgång:</strong> Presentera scenariot för deltagarna (15 min)</li>
+<li><strong>Diskussion:</strong> Arbeta igenom faserna — upptäckt, analys, beslut, kommunikation (60–90 min)</li>
+<li><strong>Reflektion:</strong> Vad gjorde vi bra? Vad kan förbättras? (30 min)</li>
+<li><strong>Dokumentation:</strong> Anteckna lärdomar och uppdatera rutiner</li>
+</ol>
+<h3>Övningens mål</h3>
+<ul>
+<li>Testa incidenthanteringsrutiner</li>
+<li>Identifiera brister i planer och kommunikation</li>
+<li>Öka medvetenhet hos ledning och nyckelpersoner</li>
+<li>Skapa en kultur av kontinuerlig förbättring</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_certse_ovning_01_phishing" model="slide.slide">
+        <field name="name">Scenario 1: Nätfiskeangrepp (Phishing)</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_certse_ovning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.33</field>
+        <field name="description">
+<![CDATA[
+<h2>Scenario: Riktad nätfiskekampanj</h2>
+<h3>Situationen</h3>
+<p><strong>Dag 1, kl 09:15:</strong> Flera medarbetare på ekonomiavdelningen får ett e-postmeddelande som ser ut att komma från CFO:n. Ämnet är "Brådskande: Fakturabetalning Q2". Meddelandet innehåller en länk till "fakturadokument".</p>
+<p><strong>Kl 09:30:</strong> Två medarbetare klickar på länken och anger sina inloggningsuppgifter på en falsk inloggningssida.</p>
+<p><strong>Kl 10:00:</strong> IT-avdelningen får larm om ovanliga inloggningsförsök från extern IP-adress.</p>
+<p><strong>Kl 10:30:</strong> En misstänkt betalning på 250 000 kr initieras från ett av de komprometterade kontona.</p>
+
+<h3>Diskussionsfrågor</h3>
+<ol>
+<li>Vilka åtgärder vidtar ni omedelbart?</li>
+<li>Vem kontaktar ni först? I vilken ordning?</li>
+<li>Hur kommunicerar ni internt? Till drabbade användare? Till hela personalen?</li>
+<li>Behöver ni kontakta externa parter? Bank? Polis? CERT-SE?</li>
+<li>Hur stoppar ni den pågående betalningen?</li>
+<li>Vilka tekniska åtgärder behövs (lösenordsbyte, kontospärr, etc.)?</li>
+<li>Hur förhindrar ni att detta upprepas?</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_certse_ovning_02_ddos" model="slide.slide">
+        <field name="name">Scenario 2: Överbelastningsangrepp (DDoS)</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_certse_ovning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.33</field>
+        <field name="description">
+<![CDATA[
+<h2>Scenario: DDoS-attack mot kundportalen</h2>
+<h3>Situationen</h3>
+<p><strong>Fredag kl 16:00:</strong> Kundportalen blir plötsligt extremt långsam. Kunder ringer supporten och klagar. IT-drift ser att inkommande trafik ökat med 5000% på 10 minuter.</p>
+<p><strong>Kl 16:30:</strong> Portalen är helt oåtkomlig. Er webbhotellsleverantör bekräftar att ni utsätts för en storskalig DDoS-attack från ett botnät.</p>
+<p><strong>Kl 16:45:</strong> Ett kravmeddelande anländer: "Betala 5 BTC inom 24 timmar, annars fortsätter attacken mot er primära webbplats."</p>
+<p><strong>Lördag kl 08:00:</strong> Attacken har nu pågått i 16 timmar. Kunderna är frustrerade. Media har börjat höra av sig. Supporten är överbelastad.</p>
+
+<h3>Diskussionsfrågor</h3>
+<ol>
+<li>Hur aktiverar ni er DDoS-mitigering? Har ni en plan?</li>
+<li>Kontaktar ni angriparna? Varför/varför inte?</li>
+<li>Hur hanterar ni kundkommunikation? Media?</li>
+<li>Vilka alternativ finns för att återställa tjänsten?</li>
+<li>Behöver ni eskalera till polis/CERT-SE?</li>
+<li>Hur påverkas er verksamhet av 24, 48, 72 timmars avbrott?</li>
+<li>Vad lär vi oss om vår motståndskraft?</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_certse_ovning_03_ransomware" model="slide.slide">
+        <field name="name">Scenario 3: Utpressningsangrepp (Ransomware)</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_certse_ovning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.33</field>
+        <field name="description">
+<![CDATA[
+<h2>Scenario: Ransomware lamslår verksamheten</h2>
+<h3>Situationen</h3>
+<p><strong>Måndag kl 07:00:</strong> Morgonskiftet anländer. Ingen kan logga in. Alla skärmar visar samma meddelande: "Dina filer är krypterade. Betala 1 000 000 EUR inom 72 timmar för dekrypteringsnyckeln."</p>
+<p><strong>Kl 07:30:</strong> IT konstaterar att samtliga filservrar, databasservrar och backupservern är krypterade. Backuperna är också krypterade — angriparen har varit inne i nätverket i minst en vecka.</p>
+<p><strong>Kl 09:00:</strong> Krisledningsgrupp sammankallas. All verksamhet står stilla. Inget ordersystem, ingen fakturering, inga kundregister. 150 anställda kan inte arbeta.</p>
+<p><strong>Kl 12:00:</strong> Angriparen hotar att publicera stulna kunddata på dark web om ni inte betalar.</p>
+
+<h3>Diskussionsfrågor</h3>
+<ol>
+<li>Betala eller inte betala? Vilka faktorer väger ni in?</li>
+<li>Hur aktiverar ni krisledningen? Vem gör vad?</li>
+<li>Finns det några återställningsalternativ? Offline-backuper?</li>
+<li>Hur hanterar ni kommunikation till kunder, anställda, media?</li>
+<li>Vilka myndigheter måste kontaktas? (Polis, Integritetsskyddsmyndigheten, CERT-SE)</li>
+<li>GDPR: När och hur anmäler ni personuppgiftsincidenten?</li>
+<li>Hur återupptar ni verksamheten? Vilka prioriteringar gör ni?</li>
+<li>Hur hanterar ni förtroendekrisen med kunder vars data läckt?</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_certse_ovning_04_utvardering" model="slide.slide">
+        <field name="name">Utvärdering och lärdomar — efter övningen</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_certse_ovning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Efter övningen — gör säkerheten bättre</h2>
+<h3>Dokumentera lärdomar</h3>
+<ul>
+<li>Vad fungerade bra?</li>
+<li>Var uppstod osäkerhet? Vem skulle göra vad?</li>
+<li>Saknas rutiner, kontaktlistor eller mandat?</li>
+<li>Fanns tekniska begränsningar som försvårade responsen?</li>
+</ul>
+<h3>Uppdatera planer</h3>
+<ul>
+<li>Incidenthanteringsplan</li>
+<li>Kontinuitetsplaner</li>
+<li>Kontaktlistor (interna och externa)</li>
+<li>Kommunikationsmallar</li>
+</ul>
+<h3>Planera nästa övning</h3>
+<p>Genomför tabletop-övningar <strong>minst en gång per år</strong>. Variera scenarierna. Involvera olika delar av organisationen.</p>
+<p><em>Fler övningsscenarier och komplett material finns på <a href="https://www.cert.se">cert.se</a>.</em></p>
+]]>
+        </field>
+    </record>
+
+</odoo>

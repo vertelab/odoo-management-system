@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- KURS: Skyddsombud — Grundutbildning i arbetsmiljö             -->
+    <!-- ============================================================ -->
+
+    <record id="slide_skyddsombud_00_intro" model="slide.slide">
+        <field name="name">Skyddsombud — Introduktion: din roll och ditt uppdrag</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Skyddsombud — arbetstagarnas representant i arbetsmiljöfrågor</h2>
+
+<h3>Vad är ett skyddsombud?</h3>
+<p>Skyddsombudet är arbetstagarnas företrädare i arbetsmiljöfrågor. Rollen regleras i <strong>Arbetsmiljölagen (AML 1977:1160)</strong>, kap 6, och i <strong>Arbetsmiljöverkets föreskrifter</strong>.</p>
+
+<h3>Skyddsombudets viktigaste uppgifter</h3>
+<ul>
+<li>Företräda arbetstagarna i arbetsmiljöfrågor</li>
+<li>Delta i riskbedömningar och skyddsronder</li>
+<li>Anmäla brister till arbetsgivaren och begära åtgärder</li>
+<li>Stoppa farligt arbete vid omedelbar och allvarlig fara (§ 6:7)</li>
+<li>Delta i utredning av tillbud och olyckor</li>
+<li>Samverka med arbetsgivaren i det systematiska arbetsmiljöarbetet (SAM)</li>
+</ul>
+
+<h3>Dina rättigheter</h3>
+<ul>
+<li><strong>Rätt till utbildning</strong> (AML § 6:5) — betald av arbetsgivaren</li>
+<li><strong>Rätt till information</strong> om alla förändringar som påverkar arbetsmiljön</li>
+<li><strong>Rätt att stoppa arbete</strong> vid omedelbar och allvarlig fara (§ 6:7)</li>
+<li><strong>Anställningsskydd</strong> — du får inte försämras i anställningen på grund av ditt uppdrag</li>
+<li><strong>Tystnadsplikt</strong> gäller för företagshemligheter, inte för arbetsmiljöbrister</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_01_ramverk" model="slide.slide">
+        <field name="name">1. Rättslig grund — Arbetsmiljölagen och AFS</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Det rättsliga ramverket</h2>
+
+<h3>Arbetsmiljölagen (AML 1977:1160)</h3>
+<p>Ramblag som sätter grundläggande krav på arbetsmiljön:</p>
+<ul>
+<li><strong>Kap 2:</strong> Arbetsmiljöns beskaffenhet — arbetsförhållanden, lokaler, maskiner, risker</li>
+<li><strong>Kap 3:</strong> Allmänna skyldigheter — arbetsgivarens huvudansvar</li>
+<li><strong>Kap 6:</strong> Skyddsombud, skyddskommitté, regionala skyddsombud</li>
+</ul>
+
+<h3>Centrala föreskrifter (AFS)</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>AFS</th><th>Område</th></tr>
+<tr><td>AFS 2001:1</td><td>Systematiskt arbetsmiljöarbete (SAM) — <strong>grundstenen</strong></td></tr>
+<tr><td>AFS 2015:4</td><td>Organisatorisk och social arbetsmiljö (OSA)</td></tr>
+<tr><td>AFS 2023:1</td><td>Systematiskt arbetsmiljöarbete — grundläggande skyldigheter (uppdaterad)</td></tr>
+<tr><td>AFS 2011:18</td><td>Kemiska arbetsmiljörisker (hygieniska gränsvärden)</td></tr>
+<tr><td>AFS 2012:2</td><td>Belastningsergonomi</td></tr>
+<tr><td>AFS 1993:2</td><td>Våld och hot i arbetsmiljön</td></tr>
+<tr><td>AFS 1999:7</td><td>Första hjälpen och krisstöd</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_02_sam" model="slide.slide">
+        <field name="name">2. Systematiskt arbetsmiljöarbete (SAM)</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>SAM — grunden för allt arbetsmiljöarbete</h2>
+
+<h3>SAM-hjulet (PDCA)</h3>
+<ol>
+<li><strong>Undersök</strong> arbetsmiljön — identifiera risker och brister</li>
+<li><strong>Bedöm</strong> riskerna — sannolikhet × konsekvens</li>
+<li><strong>Åtgärda</strong> — eliminera, reducera, informera, skydda</li>
+<li><strong>Följ upp</strong> — kontrollera att åtgärderna fungerar</li>
+</ol>
+
+<h3>Skyddsombudets roll i SAM</h3>
+<ul>
+<li>Delta i den årliga undersökningen av arbetsmiljön</li>
+<li>Delta i riskbedömningar — din kännedom om verksamheten är ovärderlig</li>
+<li>Föreslå åtgärder baserat på arbetstagarnas erfarenheter</li>
+<li>Följ upp att beslutade åtgärder genomförs och fungerar</li>
+<li>Kontrollera att handlingsplanen är uppdaterad</li>
+</ul>
+
+<h3>Dokumentationskrav (arbetsgivare med 10+ anställda)</h3>
+<ul>
+<li>Arbetsmiljöpolicy</li>
+<li>Riskbedömningar</li>
+<li>Handlingsplan med tidsatta åtgärder</li>
+<li>Årlig uppföljning av SAM</li>
+<li>Fördelning av arbetsmiljöuppgifter</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_03_risk" model="slide.slide">
+        <field name="name">3. Riskbedömning och skyddsrond i praktiken</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Riskbedömning — identifiera faror innan någon skadas</h2>
+
+<h3>Metodik: Risk = Sannolikhet × Konsekvens</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Risknivå</th><th>Åtgärdskrav</th></tr>
+<tr style="background:#ffdddd"><td><strong>Hög</strong> (röd)</td><td>Omedelbar åtgärd! Överväg stopp (§ 6:7)</td></tr>
+<tr style="background:#ffffcc"><td><strong>Medel</strong> (gul)</td><td>Åtgärda snarast, inom utsatt tid</td></tr>
+<tr style="background:#ddffdd"><td><strong>Låg</strong> (grön)</td><td>Håll under uppsikt, åtgärda vid tillfälle</td></tr>
+</table>
+
+<h3>Skyddsrond — checklista</h3>
+<ol>
+<li>Förbered: tidigare protokoll, olycksstatistik, tillbudsrapporter</li>
+<li>Genomför: gå igenom arbetsplatsen systematiskt — fråga och observera</li>
+<li>Dokumentera: foton, anteckningar, avvikelser</li>
+<li>Protokollför: tydliga brister, ansvarig, deadline</li>
+<li>Följ upp: är åtgärderna genomförda? Fungerar de?</li>
+</ol>
+
+<h3>Områden att granska</h3>
+<ul>
+<li>Fysisk miljö: belysning, buller, ventilation, temperatur</li>
+<li>Ergonomi: arbetsställningar, lyft, repetitivt arbete</li>
+<li>Maskiner/verktyg: skydd, underhåll, instruktioner</li>
+<li>Kemikalier: förvaring, märkning, säkerhetsdatablad</li>
+<li>Utrymning: fria vägar, nödbelysning, brandsläckare</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_04_tillbud" model="slide.slide">
+        <field name="name">4. Tillbud och olyckor — utredning och åtgärder</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Från incident till förbättring</h2>
+
+<h3>Definitioner</h3>
+<ul>
+<li><strong>Tillbud:</strong> Oönskad händelse som kunnat leda till ohälsa eller olycksfall</li>
+<li><strong>Olycksfall:</strong> Händelse som lett till personskada</li>
+<li><strong>Allvarligt tillbud:</strong> Händelse med stor risk för allvarlig ohälsa/olycksfall</li>
+</ul>
+
+<h3>Utredningsmetodik — 5 Varför</h3>
+<ol>
+<li><strong>Vad</strong> hände? — objektiv händelsebeskrivning</li>
+<li><strong>Varför</strong> hände det? — direkta orsaker</li>
+<li><strong>Varför</strong> fanns de direkta orsakerna? — bakomliggande orsaker</li>
+<li><strong>Varför</strong> fanns de bakomliggande orsakerna? — systemorsaker</li>
+<li><strong>Varför</strong> fångades inte detta upp tidigare? — SAM-brister</li>
+</ol>
+
+<h3>Allvarliga händelser — anmälan till Arbetsmiljöverket</h3>
+<p>Arbetsgivaren <strong>ska</strong> anmäla till Arbetsmiljöverket utan dröjsmål vid:</p>
+<ul>
+<li>Dödsfall</li>
+<li>Allvarlig personskada</li>
+<li>Allvarligt tillbud</li>
+<li>Händelser som drabbat flera arbetstagare samtidigt</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_05_osa" model="slide.slide">
+        <field name="name">5. Organisatorisk och social arbetsmiljö (OSA)</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>AFS 2015:4 — Den psykosociala arbetsmiljön</h2>
+
+<h3>Tre huvudområden</h3>
+<ul>
+<li><strong>Arbetsbelastning:</strong> Resurser i balans med krav. Tydliga prioriteringar vid toppar.</li>
+<li><strong>Arbetstid:</strong> Återhämtning, skiftarbete, övertid — långvarig hög belastning är en risk.</li>
+<li><strong>Kränkande särbehandling:</strong> Mobbning, trakasserier, utfrysning — nolltolerans.</li>
+</ul>
+
+<h3>Varningssignaler</h3>
+<ul>
+<li>Hög sjukfrånvaro, hög personalomsättning</li>
+<li>Konflikter som inte löses</li>
+<li>Sömnproblem, stressrelaterade symptom</li>
+<li>"Här har vi alltid gjort så" — tecken på bristande dialog</li>
+</ul>
+
+<h3>Skyddsombudets roll vid OSA-frågor</h3>
+<ul>
+<li>Lyft frågor om arbetsbelastning i skyddskommittén</li>
+<li>Använd medarbetarenkäter och skyddsrondsprotokoll som underlag</li>
+<li>Stötta kollegor som utsätts för kränkande särbehandling</li>
+<li>Arbetsgivaren har utredningsskyldighet vid kännedom om kränkande särbehandling</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_06_kemi" model="slide.slide">
+        <field name="name">6. Kemiska risker och säkerhetsdatablad</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>AFS 2011:18 — Kemiska arbetsmiljörisker</h2>
+
+<h3>Kemikalieförteckning (Kemilistan)</h3>
+<p>Alla kemiska produkter som används ska finnas i en aktuell förteckning med:</p>
+<ul>
+<li>Produktnamn och användningsområde</li>
+<li>Faroklassificering (CLP-förordningen: faropiktogram, H-fraser)</li>
+<li>Säkerhetsdatablad (SDB) — ska vara högst 3 år gammalt</li>
+<li>Hanteringsinstruktion</li>
+</ul>
+
+<h3>Substitutionsprincipen</h3>
+<p>Farliga kemikalier <strong>ska bytas ut</strong> mot mindre farliga alternativ om det är tekniskt möjligt.</p>
+
+<h3>Skyddsombudets checklista</h3>
+<ul>
+<li>Finns aktuell kemikalieförteckning?</li>
+<li>Finns säkerhetsdatablad på svenska för alla produkter?</li>
+<li>Är behållare korrekt märkta?</li>
+<li>Finns rätt skyddsutrustning (handskar, andningsskydd, ögonskölj)?</li>
+<li>Är personalen informerad om riskerna?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_07_ergonomi" model="slide.slide">
+        <field name="name">7. Ergonomi och fysisk arbetsmiljö</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>AFS 2012:2 — Belastningsergonomi</h2>
+
+<h3>Riskfaktorer</h3>
+<ul>
+<li><strong>Tunga lyft:</strong> över 25 kg nära kroppen, eller mindre i ogynnsamma lägen</li>
+<li><strong>Repetitivt arbete:</strong> samma rörelse om och om igen — risk för förslitningsskador</li>
+<li><strong>Statiskt arbete:</strong> långvarigt stillasittande eller stående</li>
+<li><strong>Ogynnsamma arbetsställningar:</strong> vridna, böjda, sträckta positioner</li>
+<li><strong>Vibrationer:</strong> hand-arm-vibrationer (verktyg) eller helkroppsvibrationer (fordon)</li>
+</ul>
+
+<h3>Förebyggande åtgärder</h3>
+<ul>
+<li>Anpassa arbetsplatsen — höj- och sänkbara bord, rätt stol, bra belysning</li>
+<li>Lyfthjälpmedel vid tunga lyft — taklyft, lyftbord, vagnar</li>
+<li>Jobbrotation — variera arbetsuppgifter för att avlasta</li>
+<li>Mikropauser — korta pauser ofta är bättre än långa pauser sällan</li>
+</ul>
+
+<h3>Bildskärmsarbete (AFS 1998:5)</h3>
+<ul>
+<li>Skärmen i ögonhöjd, armar i 90°, fötterna i golvet</li>
+<li>Möjlighet till växling mellan sittande och stående</li>
+<li>Regelbundna pauser — 5-10 min per timme</li>
+<li>Synundersökning vid behov — betald av arbetsgivaren</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_08_vald" model="slide.slide">
+        <field name="name">8. Hot och våld i arbetsmiljön</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>AFS 1993:2 — Våld och hot i arbetsmiljön</h2>
+
+<h3>Riskbedömning</h3>
+<p>Finns risk för hot och våld i verksamheten? Exempel på riskyrken:</p>
+<ul>
+<li>Vård och omsorg</li>
+<li>Detaljhandel (ensamarbete kvällstid)</li>
+<li>Myndighetsutövning</li>
+<li>Transport och service</li>
+</ul>
+
+<h3>Förebyggande åtgärder</h3>
+<ul>
+<li><strong>Tekniska:</strong> Larm, övervakning, säkerhetsdörrar, bra belysning</li>
+<li><strong>Organisatoriska:</strong> Bemanning (inte ensamarbete vid risk), rutiner vid hot, utbildning</li>
+<li><strong>Beteende:</strong> Bemötande, konflikthantering, tydliga gränser</li>
+</ul>
+
+<h3>Efter en hot-/våldssituation</h3>
+<ol>
+<li>Säkerställ säkerheten — larma vid behov</li>
+<li>Ge omedelbart psykosocialt stöd (PFA — psychological first aid)</li>
+<li>Dokumentera och rapportera som tillbud/olycksfall</li>
+<li>Erbjud professionellt krisstöd</li>
+<li>Polisanmäl vid behov</li>
+<li>Följ upp — hur mår den drabbade efter en vecka, en månad?</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_09_skyddskommitte" model="slide.slide">
+        <field name="name">9. Skyddskommitté och samverkan</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Skyddskommitté — forumet för arbetsmiljöfrågor</h2>
+
+<h3>När ska skyddskommitté finnas?</h3>
+<p>Arbetsplatser med 50+ anställda ska ha skyddskommitté. På mindre arbetsplatser kan samverkan ske i andra former.</p>
+
+<h3>Sammansättning</h3>
+<ul>
+<li>Representanter för arbetsgivaren</li>
+<li>Skyddsombud (arbetstagarrepresentanter)</li>
+<li>Vid behov: företagshälsovård, HR, sakkunniga</li>
+</ul>
+
+<h3>Skyddskommitténs uppgifter</h3>
+<ul>
+<li>Behandla arbetsmiljöfrågor på strategisk nivå</li>
+<li>Granska handlingsplaner och åtgärdsförslag</li>
+<li>Följa upp sjukfrånvaro, tillbud och olycksfall</li>
+<li>Delta i planering av förändringar (ombyggnad, ny utrustning, omorganisation)</li>
+</ul>
+
+<h3>Bra mötesrutiner</h3>
+<ul>
+<li>Håll möten minst kvartalsvis</li>
+<li>Dagordning och protokoll — tydliga beslut med ansvarig och deadline</li>
+<li>Årshjul: följ SAM-cykeln över året</li>
+<li>Förankra hos ledningen — skyddskommittén är rådgivande, ledningen fattar beslut</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_10_fhv" model="slide.slide">
+        <field name="name">10. Företagshälsovård och rehabilitering</field>
+        <field name="sequence">11</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Företagshälsovård (FHV) — expertresurs för arbetsmiljön</h2>
+
+<h3>FHV:s roll</h3>
+<ul>
+<li>Medicinsk expertis: hälsoundersökningar, exponeringsmätningar</li>
+<li>Teknisk expertis: bullermätning, ljusmätning, ventilation</li>
+<li>Beteendevetenskaplig: stresshantering, konflikthantering</li>
+<li>Ergonomi: arbetsplatsanalys och anpassning</li>
+</ul>
+
+<h3>Rehabiliteringskedjan</h3>
+<ol>
+<li><strong>Tidig signal:</strong> upprepad korttidsfrånvaro — agera tidigt!</li>
+<li><strong>Rehabutredning:</strong> arbetsgivaren ska utreda behov av anpassning</li>
+<li><strong>Anpassning:</strong> prova alternativa arbetsuppgifter, arbetstider, hjälpmedel</li>
+<li><strong>Samverkan:</strong> Försäkringskassan, FHV, arbetsgivare, arbetstagare</li>
+</ol>
+
+<h3>Skyddsombudets roll i rehab</h3>
+<ul>
+<li>Delta i rehabutredningar om arbetstagaren önskar</li>
+<li>Bevaka att arbetsanpassning genomförs</li>
+<li>Lyft problematiska mönster — många sjukskrivna på samma avdelning?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_skyddsombud_11_sammanfattning" model="slide.slide">
+        <field name="name">Skyddsombud — Sammanfattning och årshjul</field>
+        <field name="sequence">12</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Ditt årshjul som skyddsombud</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Period</th><th>Aktivitet</th></tr>
+<tr><td>Januari</td><td>Årsuppföljning av föregående års SAM, sammanställ statistik</td></tr>
+<tr><td>Februari</td><td>Skyddskommitté: årsgenomgång, prioriteringar för året</td></tr>
+<tr><td>Mars–Maj</td><td>Årlig skyddsrond (huvudrond)</td></tr>
+<tr><td>Juni</td><td>Skyddskommitté: uppföljning skyddsrond</td></tr>
+<tr><td>September</td><td>Skyddskommitté: status handlingsplan, arbetsbelastning inför hösten</td></tr>
+<tr><td>Oktober</td><td>Uppföljningsrond, brandskyddskontroll inför vintern</td></tr>
+<tr><td>December</td><td>Skyddskommitté: budgetbehov nästa år, julbelysning/el-säkerhet</td></tr>
+</table>
+
+<h3>Dina viktigaste verktyg</h3>
+<ol>
+<li>SAM-pärmen (eller digitala SAM-systemet)</li>
+<li>Skyddsrondsprotokoll och checklistor</li>
+<li>Tillbuds- och olycksrapporteringssystem</li>
+<li>Kemikalieförteckningen</li>
+<li>Arbetsmiljöverkets webbplats: <a href="https://www.av.se">av.se</a></li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Miljöombud — Grundutbildning i miljöarbete              -->
+    <!-- ============================================================ -->
+
+    <record id="slide_miljoombud_00_intro" model="slide.slide">
+        <field name="name">Miljöombud — Introduktion: din roll i miljöarbetet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Miljöombud — organisationens miljöambassadör</h2>
+
+<h3>Vad är ett miljöombud?</h3>
+<p>Miljöombudet är en nyckelperson i organisationens systematiska miljöarbete. Som miljöombud driver du miljöfrågor i vardagen, stöttar kollegor och är länken mellan ledningens miljömål och den dagliga verksamheten.</p>
+
+<h3>Dina huvudsakliga uppgifter</h3>
+<ul>
+<li>Vara pådrivande i det praktiska miljöarbetet på din avdelning</li>
+<li>Identifiera och rapportera miljöaspekter och förbättringsmöjligheter</li>
+<li>Delta i interna miljörevisioner och skyddsronder med miljöfokus</li>
+<li>Sprida kunskap om miljömål, rutiner och lagkrav till kollegor</li>
+<li>Stötta vid kemikaliehantering, avfallssortering och energibesparing</li>
+<li>Delta i miljögruppens möten och rapportera avdelningens status</li>
+</ul>
+
+<h3>Rättslig grund</h3>
+<ul>
+<li><strong>Miljöbalken (SFS 1998:808)</strong> — Sveriges centrala miljölagstiftning</li>
+<li><strong>ISO 14001:2026</strong> — internationell standard för miljöledningssystem</li>
+<li><strong>EMAS</strong> — EU:s frivilliga miljöstyrningssystem</li>
+<li>Plus ett antal sektorsspecifika förordningar och föreskrifter</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_01_miljobalken" model="slide.slide">
+        <field name="name">1. Miljöbalken — det rättsliga ramverket</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Miljöbalken (SFS 1998:808) — Sveriges miljöramlag</h2>
+
+<h3>Fem grundpelare (portalparagraferna, kap 1)</h3>
+<ol>
+<li><strong>Hänsynsreglerna</strong> (kap 2): Försiktighetsprincipen, bästa möjliga teknik, produktvalsprincipen, hushållnings- och kretsloppsprincipen, skälighetsavvägning, bevisbörderegeln</li>
+<li><strong>Miljökvalitetsnormer</strong> (kap 5): Gränsvärden för luft, vatten, buller</li>
+<li><strong>Miljökonsekvensbeskrivning</strong> (kap 6): Identifiera och bedöma miljöpåverkan</li>
+<li><strong>Tillståndsplikt</strong> (kap 9): Vissa verksamheter kräver tillstånd (A-, B-, C-anläggningar)</li>
+<li><strong>Tillsyn och straff</strong> (kap 26, 29): Kommun och länsstyrelse utövar tillsyn. Miljöbrott kan ge fängelse.</li>
+</ol>
+
+<h3>Vad miljöombudet behöver känna till</h3>
+<ul>
+<li>Vilka tillstånd har er verksamhet?</li>
+<li>Vilka villkor gäller? Finns egenkontrollprogram?</li>
+<li>Vem är tillsynsmyndighet? (oftast kommunens miljökontor)</li>
+<li>Hur rapporterar ni miljöpåverkan?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_02_iso14001" model="slide.slide">
+        <field name="name">2. ISO 14001 — Miljöledningssystem i praktiken</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>ISO 14001:2026 — Systematisk miljöstyrning</h2>
+
+<h3>PDCA-cykeln för miljö</h3>
+<ol>
+<li><strong>Plan:</strong> Miljöutredning → Miljöpolicy → Miljöaspekter → Lagkrav → Miljömål</li>
+<li><strong>Do:</strong> Resurser, kompetens, kommunikation, dokumentation, operativ styrning, beredskap</li>
+<li><strong>Check:</strong> Övervakning, mätning, utvärdering av efterlevnad, intern revision, ledningens genomgång</li>
+<li><strong>Act:</strong> Avvikelser, korrigerande åtgärder, ständig förbättring</li>
+</ol>
+
+<h3>Nyckeldokument du bör känna till</h3>
+<ul>
+<li><strong>Miljöpolicyn</strong> — organisationens övergripande miljöåtaganden</li>
+<li><strong>Miljöaspektlistan</strong> — alla aktiviteters miljöpåverkan, bedömd efter betydelse</li>
+<li><strong>Lagförteckningen</strong> — vilka lagkrav gäller er verksamhet?</li>
+<li><strong>Miljömålen</strong> — mätbara mål och handlingsplaner</li>
+<li><strong>Nödlägesberedskapen</strong> — rutiner vid spill, brand, kemikalieolycka</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_03_aspekter" model="slide.slide">
+        <field name="name">3. Miljöaspekter — identifiera och bedöma miljöpåverkan</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Miljöaspekter — grunden för miljöarbetet</h2>
+
+<h3>Definition</h3>
+<p>En <strong>miljöaspekt</strong> är en del av organisationens aktiviteter, produkter eller tjänster som kan påverka miljön.</p>
+
+<h3>Direkta miljöaspekter (ni kontrollerar)</h3>
+<ul>
+<li>Energianvändning (el, värme, drivmedel)</li>
+<li>Vattenförbrukning och utsläpp till vatten</li>
+<li>Avfall (farligt avfall, verksamhetsavfall, förpackningar)</li>
+<li>Kemikalieanvändning och utsläpp</li>
+<li>Transporter (tjänsteresor, varutransporter)</li>
+<li>Buller, lukt, damm</li>
+<li>Markanvändning och förorenad mark</li>
+</ul>
+
+<h3>Indirekta miljöaspekter (ni påverkar)</h3>
+<ul>
+<li>Inköp av varor och tjänster (leverantörers miljöpåverkan)</li>
+<li>Kunders användning av era produkter</li>
+<li>Avfallshantering i senare led</li>
+</ul>
+
+<h3>Betydande miljöaspekter</h3>
+<p>De aspekter som har eller kan ha <strong>betydande miljöpåverkan</strong>. Dessa ska styras med mål, rutiner och övervakning. Kriterier: miljöpåverkans storlek, frekvens, lagkrav, intressentkrav.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_04_kemikalier" model="slide.slide">
+        <field name="name">4. Kemikaliehantering och substitution</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kemikalier — kontroll, substitution och säker hantering</h2>
+
+<h3>Viktiga EU-förordningar</h3>
+<ul>
+<li><strong>REACH</strong> (EG 1907/2006): Registrering, utvärdering, tillstånd och begränsningar av kemikalier</li>
+<li><strong>CLP</strong> (EG 1272/2008): Klassificering, märkning och förpackning</li>
+<li><strong>RoHS</strong> (2011/65/EU): Begränsning av farliga ämnen i elektronik</li>
+</ul>
+
+<h3>Substitutionsprincipen</h3>
+<p>Farliga kemiska produkter ska bytas ut mot mindre farliga alternativ. Detta är en lagstadgad skyldighet (Miljöbalken 2 kap 4§, produktvalsprincipen).</p>
+
+<h3>Praktiskt arbete med kemikalier</h3>
+<ul>
+<li>Kemikalieförteckning — håll den uppdaterad (minst årligen)</li>
+<li>Säkerhetsdatablad — kontrollera att de är aktuella (max 3 år gamla)</li>
+<li>Minska antalet produkter — färre kemikalier = lättare kontroll</li>
+<li>Prioritera miljömärkta produkter (Svanen, EU Ecolabel, Bra Miljöval)</li>
+<li>Dokumentera substitutioner — visa att ni arbetar aktivt</li>
+</ul>
+
+<h3>Särskilt farliga ämnen (utfasningsämnen)</h3>
+<ul>
+<li>CMR-ämnen: Cancerframkallande, Mutagena, Reproduktionstoxiska</li>
+<li>PBT/vPvB: Persistenta, Bioackumulerande, Toxiska</li>
+<li>Hormonstörande ämnen</li>
+<li>Särskilt farliga metaller: bly, kadmium, kvicksilver</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_05_avfall" model="slide.slide">
+        <field name="name">5. Avfallshantering och cirkulär ekonomi</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Avfallstrappan — EU:s avfallshierarki</h2>
+
+<h3>Prioriteringsordning (viktigast först)</h3>
+<ol>
+<li><strong>Minimera/Förebygga</strong> — köp inte onödiga produkter, minska förbrukning</li>
+<li><strong>Återanvända</strong> — reparera, rekonditionera, second-hand</li>
+<li><strong>Materialåtervinna</strong> — sortera för återvinning: plast, papper, metall, glas</li>
+<li><strong>Energiåtervinna</strong> — brännbart avfall till fjärrvärme/kraftvärme</li>
+<li><strong>Deponera</strong> — sista alternativet, endast om inget annat är möjligt</li>
+</ol>
+
+<h3>Farligt avfall — särskilda krav</h3>
+<ul>
+<li>Får <strong>inte</strong> blandas med annat avfall</li>
+<li>Ska märkas tydligt (typ av avfall, datum)</li>
+<li>Ska förvaras i täta, märkta behållare på tät, invallad yta</li>
+<li>Transporteras av godkänd transportör</li>
+<li>Anteckningsskyldighet: vad, mängd, datum, transportör, mottagare</li>
+</ul>
+
+<h3>Exempel på farligt avfall</h3>
+<ul>
+<li>Lösningsmedel, färgrester, lim</li>
+<li>Oljor, oljefilter, oljehaltigt avfall</li>
+<li>Batterier, lysrör, lågenergilampor</li>
+<li>Elektronikavfall (WEEE)</li>
+<li>Kemikalierester, sprayburkar</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_06_energi" model="slide.slide">
+        <field name="name">6. Energi och klimat — från mål till handling</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Energieffektivisering och klimatarbete</h2>
+
+<h3>Energikartläggning — var går energin åt?</h3>
+<ul>
+<li>Belysning (ofta 20-30% av elanvändningen i kontor)</li>
+<li>Uppvärmning/ventilation (ofta 50%+ av total energianvändning)</li>
+<li>IT-utrustning (servrar, datorer, skrivare)</li>
+<li>Produktionsutrustning</li>
+<li>Transporter</li>
+</ul>
+
+<h3>Energibesparingsåtgärder</h3>
+<ul>
+<li>LED-belysning med närvarostyrning</li>
+<li>Sänk inomhustemperaturen 1°C ≈ 5% energibesparing</li>
+<li>Stäng av utrustning — inte standby (standby drar 5-10% av full effekt)</li>
+<li>Optimera ventilation: rätt flöden, värmeåtervinning</li>
+<li>Egen solel: takmonterade solceller (payback ofta 8-12 år)</li>
+</ul>
+
+<h3>Transporter</h3>
+<ul>
+<li>Elbilar/laddhybrider i tjänstebilsflottan</li>
+<li>Samordna transporter, optimera rutter</li>
+<li>Digitala möten istället för resor (sparar tid + CO₂)</li>
+<li>Cykelförmåner för anställda</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_07_upphandling" model="slide.slide">
+        <field name="name">7. Hållbar upphandling och leverantörskrav</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Hållbar upphandling — påverka genom inköp</h2>
+
+<h3>Varför är inköp viktigt för miljön?</h3>
+<p>För många organisationer ligger 70-90% av miljöpåverkan i leverantörskedjan. Genom att ställa miljökrav vid inköp kan ni göra stor skillnad.</p>
+
+<h3>Miljökrav vid upphandling</h3>
+<ul>
+<li>Krav på leverantörens miljöledningssystem (ISO 14001, EMAS)</li>
+<li>Krav på produktens miljöprestanda (energiklass, miljömärkning)</li>
+<li>Krav på kemikalieinnehåll (REACH, RoHS, utfasningsämnen)</li>
+<li>Krav på förpackningar (minimerade, återvinningsbara)</li>
+<li>Krav på transport (miljöfordon, ruttoptimering)</li>
+</ul>
+
+<h3>Verktyg och kriterier</h3>
+<ul>
+<li><strong>Upphandlingsmyndighetens hållbarhetskriterier</strong> — färdiga krav för olika varugrupper</li>
+<li><strong>Miljömärkningar:</strong> Svanen, EU Ecolabel, Bra Miljöval, Energy Star, TCO Certified</li>
+<li><strong>Livscykelanalys (LCA):</strong> helhetssyn från råvara till avfall</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_08_revision" model="slide.slide">
+        <field name="name">8. Miljörevision och egenkontroll</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Revision och egenkontroll — verifiera att ni gör rätt</h2>
+
+<h3>Intern miljörevision</h3>
+<p>Systematisk granskning av miljöledningssystemet. Genomförs minst årligen enligt ISO 14001.</p>
+<ol>
+<li>Planera: revisionsprogram, omfattning, kriterier (ISO 14001, lagkrav, interna rutiner)</li>
+<li>Genomför: intervjua, observera, stickprov på dokument</li>
+<li>Rapportera: avvikelser, observationer, förbättringsförslag</li>
+<li>Följ upp: åtgärder vidtagna? Effektiva?</li>
+</ol>
+
+<h3>Egenkontroll enligt Miljöbalken</h3>
+<p>Alla tillståndspliktiga verksamheter ska ha egenkontrollprogram. Innehåller:</p>
+<ul>
+<li>Organisation och ansvarsfördelning</li>
+<li>Rutiner för kontroll av utsläpp, avfall, kemikalier</li>
+<li>Mätmetoder och mätfrekvens</li>
+<li>Dokumentation och rapportering</li>
+</ul>
+
+<h3>Miljöombudets roll vid revision</h3>
+<ul>
+<li>Delta som revisor eller som intervjuad</li>
+<li>Ta fram underlag: avfallsstatistik, energidata, kemikalielistor</li>
+<li>Föreslå förbättringsåtgärder baserat på revisionsfynd</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_miljoombud_09_sammanfattning" model="slide.slide">
+        <field name="name">Miljöombud — Sammanfattning och verktygslåda</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din verktygslåda som miljöombud</h2>
+
+<h3>Checklista — månadsvis</h3>
+<ul>
+<li>Kontrollera avfallssortering — är fraktionerna rena?</li>
+<li>Kolla kemikalieförteckning — några nya produkter?</li>
+<li>Energi: lysen släckta? Utrustning avstängd?</li>
+<li>Droppande kranar? Läckage?</li>
+</ul>
+
+<h3>Checklista — årligen</h3>
+<ul>
+<li>Uppdatera miljöaspektlista med verksamhetsförändringar</li>
+<li>Granska lagförteckningen — nya lagkrav?</li>
+<li>Delta i intern miljörevision</li>
+<li>Rapportera miljömålsstatus till miljögruppen</li>
+<li>Föreslå nya miljömål för kommande år</li>
+</ul>
+
+<h3>Användbara resurser</h3>
+<ul>
+<li><a href="https://www.naturvardsverket.se">Naturvårdsverket</a> — vägledningar, lagar, statistik</li>
+<li><a href="https://www.kemi.se">Kemikalieinspektionen</a> — PRIO-databasen, substitutionsguiden</li>
+<li><a href="https://www.energimyndigheten.se">Energimyndigheten</a> — energikartläggning, stöd</li>
+<li><a href="https://www.upphandlingsmyndigheten.se">Upphandlingsmyndigheten</a> — hållbarhetskriterier</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Brandskyddsombud — Systematiskt brandskyddsarbete (SBA) -->
+    <!-- ============================================================ -->
+
+    <record id="slide_brandskydd_00_intro" model="slide.slide">
+        <field name="name">Brandskyddsombud — Introduktion och ansvar</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Brandskyddsombud — din roll i det systematiska brandskyddsarbetet</h2>
+
+<h3>Rättslig grund</h3>
+<ul>
+<li><strong>Lagen om skydd mot olyckor (LSO 2003:778)</strong> — ägarens/nyttjanderättshavarens ansvar för brandskydd</li>
+<li><strong>SRVFS 2004:3</strong> — Statens Räddningsverks föreskrifter om SBA</li>
+<li><strong>BBR</strong> — Boverkets byggregler (brandtekniska krav vid ny-/ombyggnad)</li>
+</ul>
+
+<h3>Skyldigheter enligt LSO (kap 2 § 2)</h3>
+<p>Ägare och nyttjanderättshavare ska "i skälig omfattning hålla utrustning för släckning av brand och för livräddning vid brand".</p>
+
+<h3>Brandskyddsombudets uppgifter</h3>
+<ul>
+<li>Genomföra regelbundna brandskyddsronder</li>
+<li>Kontrollera släckutrustning, utrymningsvägar, brandlarm</li>
+<li>Dokumentera brandskyddsarbetet</li>
+<li>Utbilda och informera medarbetare</li>
+<li>Vara kontaktperson mot räddningstjänsten vid tillsyn</li>
+<li>Delta i uppdatering av brandskyddsdokumentationen</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_01_brandteori" model="slide.slide">
+        <field name="name">1. Brandteori — hur bränder uppstår och sprids</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Brandtriangeln — tre förutsättningar för brand</h2>
+
+<h3>Brand uppstår när tre element samverkar:</h3>
+<ul>
+<li><strong>Brännbart material:</strong> papper, trä, textil, plast, kemikalier, gaser</li>
+<li><strong>Syre:</strong> normalt 21% i luft — räcker gott för de flesta bränder</li>
+<li><strong>Värme/tändkälla:</strong> öppen eld, elfel, friktion, statisk elektricitet, självantändning</li>
+</ul>
+
+<h3>Brandförlopp</h3>
+<ol>
+<li><strong>Initialbrand:</strong> liten, begränsad — kan släckas med handbrandsläckare</li>
+<li><strong>Övertändning (flashover):</strong> temperatur når 500-600°C, alla brännbara ytor antänds samtidigt. 3-5 minuter i ett normalt rum.</li>
+<li><strong>Fullt utvecklad brand:</strong> temperaturer över 1000°C — endast räddningstjänst kan bekämpa</li>
+</ol>
+
+<h3>Rökens faror</h3>
+<ul>
+<li>Rök är den vanligaste dödsorsaken vid brand (inte värmen)</li>
+<li>Kolmonoxid (CO): luktfri, färglös, dödlig — binder till blodet 200× starkare än syre</li>
+<li>Vätecyanid (HCN): extremt giftig, bildas vid brand i plaster och textilier</li>
+<li>Siktnedsättning: gör utrymning svår eller omöjlig</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_02_sba" model="slide.slide">
+        <field name="name">2. Systematiskt brandskyddsarbete (SBA) — krav och dokumentation</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>SBA — dokumentation och organisation</h2>
+
+<h3>SBA-dokumentation ska innehålla</h3>
+<ol>
+<li><strong>Brandskyddspolicy:</strong> Övergripande mål och ambition</li>
+<li><strong>Brandskyddsorganisation:</strong> Vem gör vad? Brandskyddsombud, utrymningsledare</li>
+<li><strong>Byggnadsbeskrivning:</strong> Planritningar, brandceller, byggnadsklass</li>
+<li><strong>Riskinventering:</strong> Identifierade brandrisker och åtgärder</li>
+<li><strong>Utrymningsplan:</strong> Utrymningsvägar, återsamlingsplats, hjälpmedel</li>
+<li><strong>Teknisk brandskyddsbeskrivning:</strong> Brandlarm, släckutrustning, brandgasventilation</li>
+<li><strong>Kontroll- och underhållsrutiner:</strong> Vad kontrolleras, hur ofta, av vem?</li>
+<li><strong>Utbildningsplan:</strong> Vem har fått vilken utbildning?</li>
+</ol>
+
+<h3>Brandskyddsrond — årlig genomgång</h3>
+<ul>
+<li>Utrymningsvägar: fria, upplysta, utåtgående dörrar?</li>
+<li>Brandsläckare: på plats, plomberade, kontrollerade (årlig service)?</li>
+<li>Brandlarm: funktionstestat? Nödbelysning fungerar?</li>
+<li>Brandceller: dörrar stängda? Genomföringar tätade?</li>
+<li>El: överbelastade uttag? Trasiga kablar? Damm i elcentraler?</li>
+<li>Ordning: brännbart material på fel plats? Soprum städade?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_03_utrymning" model="slide.slide">
+        <field name="name">3. Utrymning — planering och genomförande</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Utrymning — så fungerar det</h2>
+
+<h3>Utrymningsvägar</h3>
+<ul>
+<li>Två av varandra oberoende utrymningsvägar från varje lokal (normalt krav)</li>
+<li>Utrymningsdörrar ska vara lätt öppningsbara utan nyckel — trycke/panikregel</li>
+<li>Utrymningsvägar ska ha nödbelysning med batteribackup (minst 60 min)</li>
+<li>Skyltning: gröna genomlysta/belysta skyltar (EN ISO 7010)</li>
+<li>Max 30 m gångavstånd till utrymningsväg i kontorsmiljö</li>
+</ul>
+
+<h3>Utrymningsövning</h3>
+<ol>
+<li>Planera: datum, scenario, observatörer</li>
+<li>Informera: alla ska veta att en övning sker (men inte exakt tid)</li>
+<li>Genomför: larma → utrym → återsamlingsplats → räkna in</li>
+<li>Utvärdera: tid? Fungerade larmet? Problem med utrymningsvägar?</li>
+<li>Dokumentera: tid, deltagare, brister, åtgärder</li>
+</ol>
+
+<h3>Särskilda behov</h3>
+<ul>
+<li>Personer med funktionsnedsättning: utrymningsstol, ledsagare, utrymningshiss</li>
+<li>Besökare: vem ansvarar för att de kommer ut?</li>
+<li>Nattetid: få personer, mörker — särskilt viktigt med nödbelysning</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_04_slackutrustning" model="slide.slide">
+        <field name="name">4. Släckutrustning — typer, användning och underhåll</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Släckutrustning — vilken typ och var?</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Typ</th><th>Färg</th><th>Användningsområde</th><th>Räckvidd</th></tr>
+<tr><td><strong>Pulver (ABC)</strong></td><td>Röd</td><td>De flesta bränder: trä, vätska, gas, el</td><td>4–6 m</td></tr>
+<tr><td><strong>Koldioxid (CO₂)</strong></td><td>Röd m. svart</td><td>Vätskebränder, elbränder (datorer, elskåp)</td><td>1–2 m</td></tr>
+<tr><td><strong>Skum</strong></td><td>Röd m. gräddfärgad</td><td>Vätskebränder, fibrösa material</td><td>4–6 m</td></tr>
+<tr><td><strong>Vatten</strong></td><td>Röd</td><td>Endast trä/papper! <strong>Aldrig el eller olja!</strong></td><td>6–8 m</td></tr>
+<tr><td><strong>Brandfilt</strong></td><td>Röd väska</td><td>Mindre bränder, personbrand (linda in)</td><td>Nära</td></tr>
+</table>
+
+<h3>Använda brandsläckare — P.A.S.S.</h3>
+<ol>
+<li><strong>P</strong> — Dra ur sprinten (Pull)</li>
+<li><strong>A</strong> — Rikta munstycket mot basen av elden (Aim)</li>
+<li><strong>S</strong> — Tryck in handtaget (Squeeze)</li>
+<li><strong>S</strong> — Svep från sida till sida (Sweep)</li>
+</ol>
+
+<h3>Underhåll</h3>
+<ul>
+<li>Årlig service av auktoriserad servicetekniker</li>
+<li>Omladdning efter användning — även om den bara är delvis tömd</li>
+<li>CO₂-släckare: vägning vartannat år (CO₂ läcker ut)</li>
+<li>Kontrollera plombering och manometer vid rond</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_05_el" model="slide.slide">
+        <field name="name">5. Elbrandssäkerhet och heta arbeten</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>El och brand — en farlig kombination</h2>
+
+<h3>Vanliga elbrandsrisker</h3>
+<ul>
+<li><strong>Överbelastade grenuttag:</strong> max 2300W per 10A-säkring — en kaffekokare + micro + vattenkokare = överbelastning</li>
+<li><strong>Daisy chain:</strong> koppla inte grenuttag i serie</li>
+<li><strong>Kabel under matta:</strong> slitage → kortslutning → brand</li>
+<li><strong>Damm i elcentraler:</strong> damm + fukt = krypströmmar = brand</li>
+<li><strong>Laddning av litiumbatterier:</strong> elcyklar, elsparkcyklar — ladda på brandsäker plats, inte i utrymningsvägar</li>
+<li><strong>Trasiga sladdar/uttag:</strong> byt ut omedelbart</li>
+</ul>
+
+<h3>Heta arbeten®</h3>
+<p>Särskilda säkerhetsregler vid svetsning, skärning, slipning, takarbeten med öppen låga:</p>
+<ul>
+<li>Tillstånd krävs av behörig tillståndsansvarig</li>
+<li>Brandvakt med släckutrustning närvarande under + minst 1 timme efter</li>
+<li>Brännbart material avlägsnas eller skyddas inom 10 m radie</li>
+<li>Genomföringar och springor tätas för att förhindra gnistspridning</li>
+<li>Larma 112 <strong>innan</strong> du försöker släcka själv om brand uppstår</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_06_atgarder" model="slide.slide">
+        <field name="name">6. Åtgärder vid brand — agera rätt</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Åtgärder vid brand — handlingsplan</h2>
+
+<h3>Prioriteringsordning</h3>
+<ol style="font-size: 1.2em;">
+<li><strong>RÄDDA</strong> — personer i fara (inklusive dig själv!)</li>
+<li><strong>LARMA</strong> — ring 112, aktivera brandlarm</li>
+<li><strong>SLÄCK</strong> — om möjligt utan risk — annars utrym!</li>
+<li><strong>UTRYM</strong> — gå till återsamlingsplatsen</li>
+</ol>
+
+<h3>Vid brand — gör så här</h3>
+<ul>
+<li>Stäng dörren efter dig — en stängd dörr bromsar brand och rök i 20-30 min</li>
+<li>Gå — spring inte. Använd trappor, <strong>aldrig hiss!</strong></li>
+<li>Känn på dörrar med handens baksida innan du öppnar — är den varm = brand på andra sidan</li>
+<li>Håll dig lågt — renast luft finns nära golvet</li>
+<li>Återsamlingsplats: kontrollera att alla kommit ut. Saknas någon — meddela räddningstjänsten</li>
+</ul>
+
+<h3>Om du är instängd</h3>
+<ul>
+<li>Stäng dörren, täta med blöta handdukar/kläder</li>
+<li>Ring 112 och berätta exakt var du är</li>
+<li>Visa dig vid fönster — vinka med något</li>
+<li>Öppna inte fönstret i onödan — syre matar branden</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_brandskydd_07_sammanfattning" model="slide.slide">
+        <field name="name">Brandskyddsombud — Sammanfattning och årshjul</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Brandskyddsombudets årshjul</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Frekvens</th><th>Aktivitet</th></tr>
+<tr><td>Veckovis</td><td>Kolla utrymningsvägar — fria? Dörrar öppningsbara?</td></tr>
+<tr><td>Månadsvis</td><td>Testa brandlarm (tyst prov), kolla nödbelysning</td></tr>
+<tr><td>Kvartalsvis</td><td>Brandskyddsrond (dokumenterad), kolla släckutrustning</td></tr>
+<tr><td>Årligen</td><td>Service släckare, utrymningsövning, uppdatera SBA-dokumentation</td></tr>
+<tr><td>Vid behov</td><td>Efter ombyggnad, ny utrustning, ny personal — uppdatera riskbild</td></tr>
+</table>
+
+<h3>Kom ihåg!</h3>
+<ol>
+<li><strong>Rädda, Larma, Släck</strong> — i den ordningen</li>
+<li>Håll utrymningsvägar fria — alltid</li>
+<li>Dokumentera allt — SBA-pärmen är ert bevis på att ni uppfyller lagen</li>
+<li>Öva regelbundet — en oövad plan är ingen plan</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Första hjälpen &amp; krisstöd                              -->
+    <!-- ============================================================ -->
+
+    <record id="slide_forstahjalpen_00_intro" model="slide.slide">
+        <field name="name">Första hjälpen &amp; Krisstöd — Introduktion</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Första hjälpen — ditt ansvar på arbetsplatsen</h2>
+
+<h3>Rättslig grund</h3>
+<ul>
+<li><strong>AFS 1999:7:</strong> Arbetsgivaren ska se till att det finns beredskap för första hjälpen och krisstöd</li>
+<li><strong>AML 3 kap 2§:</strong> Arbetsgivaren ska vidta alla åtgärder som behövs</li>
+<li>Alla har en <strong>moralisk skyldighet</strong> att hjälpa vid olycka</li>
+</ul>
+
+<h3>Prioriteringsordning vid olycka</h3>
+<ol>
+<li><strong>Säkra platsen</strong> — skydda dig själv och andra från ytterligare fara</li>
+<li><strong>Larma 112</strong> — ange: VEM du är, VAD som hänt, VAR du är, HUR MÅNGA drabbade</li>
+<li><strong>Ge första hjälpen</strong> — efter förmåga och utbildning</li>
+</ol>
+
+<h3>Vad ska finnas på arbetsplatsen?</h3>
+<ul>
+<li>Första hjälpen-tavla/skåp med grundläggande utrustning</li>
+<li>Hjärtstartare (AED) — starkt rekommenderat, särskilt vid 50+ personer</li>
+<li>Utbildad personal — minst 1 per 25 anställda rekommenderas</li>
+<li>Krislåda: filt, vatten, socker, telefonlista, instruktioner</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_01_labc" model="slide.slide">
+        <field name="name">1. L-ABC — Livräddande första hjälpen</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>L-ABC — systematiskt omhändertagande</h2>
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Bokstav</th><th>Betyder</th><th>Åtgärd</th></tr>
+<tr>
+<td style="background:#ff4444; color:white; font-size:1.2em; text-align:center"><strong>L</strong></td>
+<td><strong>Livsfarligt läge</strong></td>
+<td>Fara för dig eller den skadade? Flytta personen endast vid akut fara (brand, rasrisk, trafik).</td>
+</tr>
+<tr>
+<td style="background:#ff8844; color:white; font-size:1.2em; text-align:center"><strong>A</strong></td>
+<td><strong>Andning</strong></td>
+<td>Skapa fri luftväg: huvudet bakåt, hakan upp. Känn, lyssna, se efter andning i max 10 sek.</td>
+</tr>
+<tr>
+<td style="background:#ffaa44; color:white; font-size:1.2em; text-align:center"><strong>B</strong></td>
+<td><strong>Blödning</strong></td>
+<td>Kontrollera och stoppa kraftig blödning: tryck direkt mot såret, högläge, tryckförband.</td>
+</tr>
+<tr>
+<td style="background:#ffcc44; font-size:1.2em; text-align:center"><strong>C</strong></td>
+<td><strong>Cirkulation/Chock</strong></td>
+<td>Kontrollera tecken på chock: blek, kallsvettig, snabb andning, förvirring. Förebygg/värmechock: plant läge, högläge av ben, håll varm.</td>
+</tr>
+</table>
+
+<h3>Stabilt sidoläge</h3>
+<p>Används på medvetslös person som andrar normalt:</p>
+<ol>
+<li>Närmaste arm ut i 90°</li>
+<li>Bortre armen mot kinden</li>
+<li>Dra upp bortre knät</li>
+<li>Rulla personen mot dig</li>
+<li>Kontrollera fri luftväg</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_02_hlr" model="slide.slide">
+        <field name="name">2. HLR — Hjärt- och lungräddning med AED</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>HLR — så räddar du liv vid hjärtstopp</h2>
+
+<h3>Känn igen hjärtstopp</h3>
+<ul>
+<li>Personen är medvetslös</li>
+<li>Andas inte eller andas onormalt (agonal andning — långsamma, ljudliga andetag)</li>
+</ul>
+
+<h3>HLR-steg för vuxna</h3>
+<ol>
+<li><strong>Larma 112</strong> — sätt på högtalare, följ instruktioner</li>
+<li><strong>Bröstkompressioner:</strong> Mitt på bröstet, 5-6 cm djup, 100-120/min (takt: Stayin' Alive av Bee Gees)</li>
+<li><strong>30 kompressioner, 2 inblåsningar</strong> (om du kan och vill)</li>
+<li><strong>Enbart kompressioner är OK</strong> — bättre än inget!</li>
+<li><strong>Hämta och använd hjärtstartare (AED)</strong> så fort den finns tillgänglig</li>
+<li>Fortsätt tills ambulanspersonal tar över eller personen visar livstecken</li>
+</ol>
+
+<h3>Använda hjärtstartare (AED)</h3>
+<ol>
+<li>Öppna och slå på — följ röstinstruktionerna</li>
+<li>Placera elektroderna enligt bilden (ett under höger nyckelben, ett under vänster bröstkorg)</li>
+<li>RÖR INTE patienten under analys och defibrillering</li>
+<li>Fortsätt HLR direkt efter defibrillering</li>
+</ol>
+<div class="alert alert-success"><strong>Barn 1-8 år:</strong> Använd barnelektroder eller barnknapp. HLR: 15:2 med två inblåsare, en hand för kompressioner.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_03_akuta" model="slide.slide">
+        <field name="name">3. Akuta sjukdomstillstånd — känn igen och agera</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Vanliga akuta tillstånd — känn igen symptomen</h2>
+
+<h3>Stroke (hjärninfarkt/hjärnblödning) — AKUT-testet</h3>
+<ul>
+<li><strong>A</strong>nsikte: Be personen le — hänger ena mungipan?</li>
+<li><strong>K</strong>ropp: Be personen lyfta båda armar — faller en arm?</li>
+<li><strong>U</strong>ttal: Be personen säga en enkel mening — sluddrigt tal?</li>
+<li><strong>T</strong>id: <strong>Ring 112 omedelbart!</strong> Varje minut räknas. "Time is brain."</li>
+</ul>
+
+<h3>Hjärtinfarkt — varningstecken</h3>
+<ul>
+<li>Tryck/smärta mitt i bröstet — kan stråla ut i arm(ar), käke, rygg, mage</li>
+<li>Andnöd, kallsvett, illamående, ångest</li>
+<li><strong>Kvinnor</strong> har ofta mer diffusa symptom: trötthet, illamående, ryggvärk</li>
+<li>Ring 112 — låt personen sitta/ligga bekvämt, lossa åtsittande kläder</li>
+</ul>
+
+<h3>Diabetes — högt/lågt blodsocker</h3>
+<ul>
+<li><strong>Lågt (hypoglykemi):</strong> yrsel, svettning, förvirring, skakningar → ge socker (juice, druvsocker, sockerbit)</li>
+<li><strong>Högt (hyperglykemi):</strong> extrem törst, trötthet, acetonliknande andedräkt → kontakta vården</li>
+</ul>
+
+<h3>Epileptiskt anfall</h3>
+<ul>
+<li>Skydda mot skador — flytta undan farliga föremål, lägg något mjukt under huvudet</li>
+<li>Håll INTE fast personen — stoppa INTE något i munnen (sväljer inte tungan)</li>
+<li>Tidtagning — anfall som varar >5 minuter = ring 112</li>
+<li>Efter anfallet: stabilt sidoläge, stanna tills personen är kontaktbar</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_04_trauma" model="slide.slide">
+        <field name="name">4. Trauma, frakturer och kemikalieolyckor</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Olyckor, fall och kemikalieskador</h2>
+
+<h3>Blödning — stoppa snabbt</h3>
+<ul>
+<li>Tryck direkt mot såret med rent tyg — ge inte efter för att titta</li>
+<li>Högläge av skadad kroppsdel</li>
+<li>Tryckförband: linda fast tryckkudden</li>
+<li>Tourniquet (avsnörande förband) — endast vid livshotande blödning på armar/ben, anteckna tid!</li>
+</ul>
+
+<h3>Frakturmisstanke</h3>
+<ul>
+<li>Stabilisera: rör inte i onödan, stöd skadan</li>
+<li>Arm: bär i trekantig mitella (sjal)</li>
+<li>Ben: stöd med kudde/filt, rör inte</li>
+<li>Öppen fraktur: täck med steril duk, rör INTE benet</li>
+</ul>
+
+<h3>Kemikalieolyckor</h3>
+<ul>
+<li>Ögon: spola med ögonskölj <strong>minst 15 minuter</strong> — håll ögonlocken öppna</li>
+<li>Hud: skölj med vatten <strong>minst 15 minuter</strong>, ta av förorenade kläder</li>
+<li>Inandning: frisk luft, vila, kontakta vården</li>
+<li>Förtäring: <strong>framkalla INTE kräkning</strong> — ring Giftinformationscentralen (010-456 67 00) eller 112</li>
+<li>Ta med säkerhetsdatabladet eller produkten till sjukhus!</li>
+</ul>
+
+<h3>Brännskador</h3>
+<ul>
+<li>Kyl med svalt (inte iskallt) vatten i minst 15-20 minuter</li>
+<li>Ta av kläder/smycken nära skadan (svullnad!)</li>
+<li>Täck med ren, torr duk — ingen kräm, smör, tandkräm!</li>
+<li>Större brännskador (>handflata) = ring 112</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_05_krisstod" model="slide.slide">
+        <field name="name">5. Psykologisk första hjälpen (PFA) och krisstöd</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Psykologisk första hjälpen — PFA</h2>
+
+<p>PFA (Psychological First Aid) är ett evidensbaserat förhållningssätt för att stödja människor efter en traumatisk händelse.</p>
+
+<h3>PFA:s tre grundprinciper</h3>
+<ol>
+<li><strong>Lugn och trygghet:</strong> Skapa en säker plats. Tala lugnt. Var närvarande.</li>
+<li><strong>Sammanhang:</strong> Hjälp personen förstå vad som hänt. Informera om nästa steg.</li>
+<li><strong>Egenmakt och hopp:</strong> Låt personen fatta egna beslut. Förstärk coping-strategier.</li>
+</ol>
+
+<h3>Vad du konkret gör</h3>
+<ul>
+<li>Presentera dig, fråga om du får hjälpa</li>
+<li>Lyssna — du behöver inte ha svar. Att bara finnas där räcker långt.</li>
+<li>Fråga om praktiska behov: "Har du någon jag kan ringa? Behöver du vatten/filt?"</li>
+<li>Undvik: "Jag vet precis hur du känner", "Det var Guds mening" — låt personens upplevelse stå i centrum</li>
+<li>Erbjud professionellt stöd: företagshälsovård, präst, kurator, krisjour</li>
+</ul>
+
+<h3>Efter en allvarlig händelse på arbetsplatsen</h3>
+<ol>
+<li>Aktivera krisplanen — utse krisstödsansvarig</li>
+<li>Samla drabbade på en trygg plats — ge konkret information</li>
+<li>Erbjud avlastningssamtal (defusing) — inom 24 timmar</li>
+<li>Organisera uppföljande samtal (debriefing) — efter 3-7 dagar</li>
+<li>Följ upp efter 1 månad — finns kvarstående problem? Remittera till professionell hjälp</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_06_krisplan" model="slide.slide">
+        <field name="name">6. Krisplan och krislåda — förberedelse för arbetsplatsen</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Krisberedskap på arbetsplatsen</h2>
+
+<h3>Krisplan — innehåll</h3>
+<ol>
+<li><strong>Krisledningsgrupp:</strong> Namn, roller, kontaktuppgifter</li>
+<li><strong>Larmkedja:</strong> Vem ringer vem? Primär och sekundär kontaktväg</li>
+<li><strong>Samlingsplats:</strong> Var samlas vi? Alternativ plats?</li>
+<li><strong>Kommunikationsplan:</strong> Vem informerar internt/externt/media?</li>
+<li><strong>Resurslista:</strong> Företagshälsovård, fastighetsskötare, försäkringsbolag, städfirma</li>
+<li><strong>Återgångsplan:</strong> Hur återupptar vi normal verksamhet?</li>
+</ol>
+
+<h3>Krislåda — vad ska finnas?</h3>
+<ul>
+<li>Första hjälpen-utrustning (komplett)</li>
+<li>Filtar (minst 5 st)</li>
+<li>Vattenflaskor och druvsocker/enkla kolhydrater</li>
+<li>Ficklampa + extra batterier</li>
+<li>Telefonlista (papper! — nätet kan ligga nere)</li>
+<li>Penna och anteckningsblock</li>
+<li>Kopia av krisplanen</li>
+<li>Kontanter (små sedlar) — om betalsystemen ligger nere</li>
+<li>Powerbank för mobiltelefon</li>
+</ul>
+
+<h3>Öva krisplanen</h3>
+<ul>
+<li>Genomför en tabletop-övning minst årligen</li>
+<li>Uppdatera kontaktlistor vid personalomsättning</li>
+<li>Kontrollera krislådans innehåll årligen (batterier, vatten, första hjälpen)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_forstahjalpen_07_sammanfattning" model="slide.slide">
+        <field name="name">Första hjälpen &amp; Krisstöd — Sammanfattning</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_forsta_hjalpen"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Det viktigaste att komma ihåg</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Situation</th><th>Viktigaste åtgärd</th></tr>
+<tr><td>Hjärtstopp</td><td>Bröstkompressioner 100-120/min — börja direkt, larma 112</td></tr>
+<tr><td>Blödning</td><td>Tryck mot såret — ge inte efter!</td></tr>
+<tr><td>Stroke</td><td>AKUT-testet — ring 112 omedelbart</td></tr>
+<tr><td>Medvetslös + andas</td><td>Stabilt sidoläge, kontrollera andning regelbundet</td></tr>
+<tr><td>Kemikalie i ögat</td><td>Spola minst 15 minuter</td></tr>
+<tr><td>Krisreaktion</td><td>Lyssna — var närvarande — erbjud stöd</td></tr>
+</table>
+
+<h3>Viktiga nummer</h3>
+<ul>
+<li><strong>112</strong> — Akut hjälp (ambulans, brand, polis)</li>
+<li><strong>1177</strong> — Sjukvårdsrådgivning</li>
+<li><strong>010-456 67 00</strong> — Giftinformationscentralen</li>
+<li><strong>113 13</strong> — Information vid kriser (Sveriges Radios kristelefon)</li>
+</ul>
+
+<p><strong>Det viktigaste är att du gör något.</strong> Hellre göra något osäkert än inget säkert. Att ringa 112 är alltid rätt första steg.</p>
+]]>
+        </field>
+    </record>
+
+</odoo>

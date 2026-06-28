@@ -10,6 +10,13 @@
     'data': [
         'security/ir.model.access.csv',
         'data/slide_channel_data.xml',
+        'data/slide_slide_ncsc_data.xml',
+        'data/slide_slide_owasp_data.xml',
+        'data/slide_slide_am_data.xml',
+        'data/slide_slide_specialist_data.xml',
+        'data/slide_slide_softskills_data.xml',
+        'data/slide_slide_crm_data.xml',
+        'data/slide_quiz_diagnostic_data.xml',
     ],
     'application': False,
     'installable': True,

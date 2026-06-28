@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- KURS: Professionellt bemötande i IT-support (8 slides)       -->
+    <!-- ============================================================ -->
+
+    <record id="slide_bemotande_00_intro" model="slide.slide">
+        <field name="name">Professionellt bemötande — Din superkraft i supporten</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Varför bemötande är lika viktigt som teknik</h2>
+
+<h3>Situationen</h3>
+<p>En användare ringer helpdesken. Hon är stressad, har ett möte om 10 minuter, och hennes dator har precis kraschat. Hon är inte arg på dig — men du får ta emot frustrationen.</p>
+
+<h3>Vad denna kurs lär dig</h3>
+<ul>
+<li>Aktivt lyssnande — förstå problemet innan du löser det</li>
+<li>Validering — bekräfta känslan för att sänka temperaturen</li>
+<li>Hantera arga och stressade personer utan att själv bli defensiv</li>
+<li>Kriskommunikation vid stora systemavbrott</li>
+<li>Skydda dig själv — undvik att bli "slasktratt" för andras stress</li>
+</ul>
+
+<h3>Baserad på</h3>
+<ul>
+<li>Alison — Professional Customer Service</li>
+<li>SKR/Kunskapsguiden — Kommunikation och bemötande</li>
+<li>MCF — Introduktion till kriskommunikation</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_01_lyssnande" model="slide.slide">
+        <field name="name">1. Aktivt lyssnande — hör vad som inte sägs</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Aktivt lyssnande — 4 tekniker</h2>
+
+<h3>1. Spegling (parafrasera)</h3>
+<p>Upprepa det viktigaste användaren sagt med egna ord.</p>
+<ul>
+<li>Användare: "Jag har försökt logga in fem gånger och det funkar inte! Jag måste in på min presentation NU!"</li>
+<li>Du: <em>"Så du försöker komma in på systemet inför en viktig presentation, och inloggningen fungerar inte."</em></li>
+</ul>
+
+<h3>2. Öppna frågor</h3>
+<p>Frågor som inte kan besvaras med ja/nej — de öppnar upp samtalet.</p>
+<ul>
+<li>Dåligt: "Funkar internet?"</li>
+<li>Bra: <em>"Berätta vad som hände precis innan problemet uppstod?"</em></li>
+</ul>
+
+<h3>3. Bekräftelseljud</h3>
+<p>Små verbala signaler som visar att du lyssnar: "Mm", "Jag förstår", "Okej". I telefon är detta avgörande — användaren ser inte dina nickar.</p>
+
+<h3>4. Sammanfatta</h3>
+<p>Efter att användaren förklarat: <em>"Så om jag förstår rätt: du får ett felmeddelande när du försöker öppna PowerPoint, och det har hänt sedan lunch. Stämmer det?"</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_02_validering" model="slide.slide">
+        <field name="name">2. Validering — bekräfta frustrationen, sänk temperaturen</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Validering — det snabbaste sättet att lugna någon</h2>
+
+<h3>Vad är validering?</h3>
+<p>Att bekräfta personens känsla — inte nödvändigtvis att hålla med om sakfrågan. Du säger: "Jag ser och förstår din frustration."</p>
+
+<h3>Validering i tre steg</h3>
+<ol>
+<li><strong>Bekräfta känslan:</strong> "Jag förstår att det här är frustrerande."</li>
+<li><strong>Bekräfta situationen:</strong> "Det är verkligen dålig tajming precis innan ditt möte."</li>
+<li><strong>Gå till handling:</strong> "Låt oss lösa det här tillsammans nu."</li>
+</ol>
+
+<h3>Exempel — före och efter</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#ffdddd"><td><strong>Före:</strong> "Har du testat att starta om datorn?"</td></tr>
+<tr style="background:#ddffdd"><td><strong>Efter:</strong> "Jag förstår att det är stressande när tekniken strular precis före en presentation. Låt mig hjälpa dig — kan du berätta exakt vad som hände när du försökte öppna filen?"</td></tr>
+</table>
+
+<h3>Vad validering INTE är</h3>
+<ul>
+<li>❌ "Det är ingen fara" — förminska inte problemet</li>
+<li>❌ "Du är inte den enda som har problem" — jämför inte</li>
+<li>❌ "Sånt händer" — bagatellisera inte</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_03_arga" model="slide.slide">
+        <field name="name">3. Hantera arga och stressade användare</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När temperaturen är hög — LÅGA-metoden</h2>
+
+<h3>LÅGA — fem steg</h3>
+<ol>
+<li><strong>L</strong>yssna — låt personen prata klart. Avbryt inte. Det kan kännas länge, men ge dem 30-60 sekunder.</li>
+<li><strong>Å</strong>terspegla — "Jag hör att du är riktigt frustrerad över att systemet legat nere hela förmiddagen."</li>
+<li><strong>G</strong>å till handling — "Jag ska göra allt jag kan för att lösa detta. Här är vad jag tänker göra..."</li>
+<li><strong>A</strong>nslut — "Vi löser det här tillsammans. Jag stannar med dig tills det fungerar."</li>
+</ol>
+
+<h3>Vanligaällor — och hur du undviker dem</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Fälla</th><th>Exempel</th><th>Gör istället</th></tr>
+<tr><td>Försvara</td><td>"Det är inte vårt fel, det är leverantören."</td><td>"Jag förstår att det påverkar dig. Jag tar ansvar för att driva detta mot leverantören."</td></tr>
+<tr><td>Minimera</td><td>"Det är bara att starta om."</td><td>"Jag ska guida dig genom lösningen steg för steg."</td></tr>
+<tr><td>Teknikfokus</td><td>"Det är en DNS-felpropagering i klustret."</td><td>"Det är ett tekniskt fel i vår servermiljö som vi arbetar på att åtgärda."</td></tr>
+<tr><td>Lova för mycket</td><td>"Det är fixat om 5 minuter!"</td><td>"Jag återkommer med en statusuppdatering om 30 minuter även om jag inte har löst det än."</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_04_defensiv" model="slide.slide">
+        <field name="name">4. När du själv blir attackerad — hantera utan att bli defensiv</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>"Det här är ditt fel!" — Så hanterar du personliga angrepp</h2>
+
+<h3>Kom ihåg: Det är inte personligt</h3>
+<p>Användaren är inte arg på <strong>dig</strong>. De är frustrerade över en situation som <strong>du råkade vara den som svarade på</strong>. Du är problemlösaren, inte problemet.</p>
+
+<h3>4-stegsrespons vid personligt angrepp</h3>
+<ol>
+<li><strong>Andas</strong> — ta ett djupt andetag. Räkna till tre i huvudet.</li>
+<li><strong>Avpersonifiera</strong> — flytta fokus från "du gjorde fel" till "situationen är frustrerande"</li>
+<li><strong>Bekräfta och omdirigera:</strong> "Jag förstår att du är frustrerad. Låt mig fokusera på att lösa problemet åt dig."</li>
+<li><strong>Sätt gränser vid behov:</strong> "Jag vill verkligen hjälpa dig, men jag behöver att vi håller en professionell ton så jag kan fokusera på lösningen."</li>
+</ol>
+
+<h3>Röd linje — när du ska eskalera</h3>
+<ul>
+<li>Personliga förolämpningar</li>
+<li>Hot (verbala eller fysiska)</li>
+<li>Diskriminering/trakasserier</li>
+<li>→ Informera din chef. Du behöver inte ta emot kränkningar.</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_05_kriskomm" model="slide.slide">
+        <field name="name">5. Kriskommunikation — när allt ligger nere</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kommunicera under systemavbrott — MCF:s principer</h2>
+
+<h3>Regel #1: Säg vad du vet — och vad du inte vet</h3>
+<ul>
+<li>"Just nu vet jag att e-postsystemet är nere. Vi vet ännu inte orsaken, men vårt driftteam arbetar på det."</li>
+<li>Lova inte tider du inte kan hålla — "Vi är igång igen om 15 minuter" är farligt. Säg istället: "Jag återkommer med en uppdatering om 30 minuter."</li>
+</ul>
+
+<h3>Kommunikationsmodell för avbrott</h3>
+<ol>
+<li><strong>Bekräfta</strong> — "Vi är medvetna om problemet med [tjänst]."</li>
+<li><strong>Informera</strong> — "Vårt team undersöker orsaken just nu."</li>
+<li><strong>Lugna</strong> — "Vi prioriterar detta högst och arbetar för fullt."</li>
+<li><strong>Tidssätt</strong> — "Nästa uppdatering kommer kl [tid], oavsett om vi löst det eller ej."</li>
+<li><strong>Följ upp</strong> — Håll ditt löfte om återkoppling — även om du inte har ny info.</li>
+</ol>
+
+<h3>Vad du ALDRIG ska säga under en kris</h3>
+<ul>
+<li>❌ "Jag vet inte, jag bara jobbar här."</li>
+<li>❌ "Det här är katastrof."</li>
+<li>❌ "Vi har aldrig varit med om något liknande."</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_06_stress" model="slide.slide">
+        <field name="name">6. Egen stresshantering — du är inte en slasktratt</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Skydda dig själv — långsiktigt hållbar support</h2>
+
+<h3>Känn igen varningssignalerna</h3>
+<ul>
+<li>Du tar med dig frustration hem efter jobbet</li>
+<li>Du gruvar dig inför att svara i telefonen</li>
+<li>Du blir irriterad på användare innan de ens sagt något</li>
+<li>Du känner dig tömd efter varje arbetspass</li>
+</ul>
+
+<h3>Praktiska strategier</h3>
+<ul>
+<li><strong>Mikropaus:</strong> Efter ett tufft samtal — res dig, ta ett glas vatten, andas 30 sekunder. Ge dig själv återhämtning mellan samtalen.</li>
+<li><strong>Kompartimentalisera:</strong> När du lägger på — lämna samtalet mentalt. Nästa användare är en ny person, ny situation.</li>
+<li><strong>Debriefa:</strong> Prata med en kollega efter riktigt tuffa samtal. "Det där var jobbigt, eller hur?" räcker.</li>
+<li><strong>Fira vinsterna:</strong> Notera när du faktiskt hjälpte någon. Support är ett hjälpande yrke — kom ihåg de goda stunderna.</li>
+</ul>
+
+<h3>Gränssättning</h3>
+<ul>
+<li>Du har rätt att avsluta ett samtal där du blir kränkt — informera chefen</li>
+<li>Du har rätt till återhämtning — ta din rast, ta din lunch</li>
+<li>Du har rätt att be om hjälp — om ett ärende är över din nivå, eskalera</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_bemotande_07_sammanfattning" model="slide.slide">
+        <field name="name">Professionellt bemötande — Sammanfattning och verktygslåda</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_bemotande_helpdesk"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din kommunikationsverktygslåda</h2>
+
+<h3>Fem tekniker att använda varje dag</h3>
+<ol>
+<li><strong>Aktivt lyssnande</strong> — spegla, ställ öppna frågor, sammanfatta</li>
+<li><strong>Validering</strong> — bekräfta känslan: "Jag förstår att det är frustrerande"</li>
+<li><strong>LÅGA-metoden</strong> — Lyssna, Återspegla, Gå till handling, Anslut</li>
+<li><strong>Kriskommunikation</strong> — bekräfta, informera, lugna, tidssätt, följ upp</li>
+<li><strong>Egenvård</strong> — mikropauser, debriefa, fira vinster, sätt gränser</li>
+</ol>
+
+<h3>Nyckelmeningar att ha redo</h3>
+<ul>
+<li>"Jag förstår att det är stressande. Låt oss lösa det tillsammans."</li>
+<li>"Jag vet inte svaret ännu, men jag tar reda på det och återkommer."</li>
+<li>"Jag återkommer med en uppdatering om 30 minuter."</li>
+<li>"Tack för att du rapporterade detta — det hjälper oss att bli bättre."</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Customer Success Management (8 slides)                 -->
+    <!-- ============================================================ -->
+
+    <record id="slide_csmstrat_00_intro" model="slide.slide">
+        <field name="name">CSM — Från support till strategisk partner</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Customer Success Management — mer än support</h2>
+
+<h3>Support-tänk vs Tillväxt-tänk</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Support-tänk</th><th>Tillväxt-tänk</th></tr>
+<tr><td>Reaktiv — löser problem när de uppstår</td><td>Proaktiv — guidar kunden mot mål</td></tr>
+<tr><td>Fokuserar på produktfunktioner</td><td>Fokuserar på kundens affärsnytta</td></tr>
+<tr><td>Mäter svarstid och lösningsgrad</td><td>Mäter ROI, användning, NPS, retention</td></tr>
+<tr><td>"Hur kan jag hjälpa dig?"</td><td>"Vart vill ni vara om 6 månader, och hur tar vi er dit?"</td></tr>
+</table>
+
+<h3>Baserad på</h3>
+<ul>
+<li>Wharton/Google — CSM Fundamentals (Coursera)</li>
+<li>University of Michigan — Successful Negotiation</li>
+<li>Active Listening — avancerad samtalsmetodik</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_01_varde" model="slide.slide">
+        <field name="name">1. Kundvärde — prata ROI, inte funktioner</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kunden bryr sig om sin affär — inte din produkt</h2>
+
+<h3>Funktion → Nytta → Värde</h3>
+<ul>
+<li><strong>Funktion:</strong> "Vår plattform har automatiserad rapportering."</li>
+<li><strong>Nytta:</strong> "Ni sparar 5 timmar per vecka i manuellt rapportarbete."</li>
+<li><strong>Värde:</strong> "Det motsvarar 250 000 kr/år i arbetstid — och era controllers kan fokusera på strategisk analys istället."</li>
+</ul>
+
+<h3>Bygg ett business case per kund</h3>
+<ol>
+<li>Vad kostar kundens nuvarande process? (tid, pengar, risk)</li>
+<li>Vad tjänar kunden på att använda er lösning rätt? (effektivisering, kvalitet, compliance)</li>
+<li>Översätt till kronor och ören — men också till mjuka värden (arbetsmiljö, kundnöjdhet, konkurrenskraft)</li>
+</ol>
+
+<h3>Exempel på värdedialog</h3>
+<p><em>"Sedan ni började använda modulen för automatiserad fakturering har er hanteringstid minskat från 3 dagar till 2 timmar per månad. Det frigör [Namn] till att jobba med kunddialog istället. Har ni sett någon effekt på kundnöjdheten?"</em></p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_02_behov" model="slide.slide">
+        <field name="name">2. Behovsanalys — fråga dig fram till kundens verkliga problem</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kunden vet inte alltid vad problemet är</h2>
+
+<h3>SPIN-metoden</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Fas</th><th>Frågetyp</th><th>Exempel</th></tr>
+<tr><td><strong>S</strong>ituation</td><td>Faktafrågor — nuläget</td><td>"Hur hanterar ni era kundärenden idag?"</td></tr>
+<tr><td><strong>P</strong>roblem</td><td>Utforska smärtpunkter</td><td>"Vad tar mest tid i er process just nu?"</td></tr>
+<tr><td><strong>I</strong>mplikation</td><td>Konsekvenser av problemet</td><td>"Vad kostar det er att inte ha en automatiserad lösning?"</td></tr>
+<tr><td><strong>N</strong>yttobehov</td><td>Värdet av en lösning</td><td>"Om ni kunde halvera handläggningstiden — vad skulle det betyda?"</td></tr>
+</table>
+
+<h3>Öppna frågor som gräver djupare</h3>
+<ul>
+<li>"Berätta om en typisk dag för ditt team."</li>
+<li>"Vad är det första du tittar på när du kommer in på morgonen?"</li>
+<li>"Om du fick önska fritt — hur skulle den perfekta lösningen se ut?"</li>
+<li>"Vad skulle göra dig till hjälte på nästa ledningsmöte?"</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_03_forvantningar" model="slide.slide">
+        <field name="name">3. Förväntningshantering — när säljaren lovat för mycket</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du sitter mellan sälj och produkt — så navigerar du</h2>
+
+<h3>Scenariot</h3>
+<p>Säljaren lovade funktion X "inom Q2". Produktteamet säger "tidigast Q4". Kunden är frustrerad. Du är i mitten.</p>
+
+<h3>Hantera gapet — fyra steg</h3>
+<ol>
+<li><strong>Bekräfta besvikelsen först:</strong> "Jag förstår att ni är besvikna. Ni planerade er verksamhet utifrån Q2."</li>
+<li><strong>Var ärlig om verkligheten:</strong> "Efter att ha talat med produktteamet är den realistiska tidsplanen Q4. Jag vill vara transparent med er."</li>
+<li><strong>Erbjud alternativ:</strong> "Under tiden kan vi erbjuda en workaround — vill ni att jag sätter upp en workshop för att hitta en tillfällig lösning?"</li>
+<li><strong>Förankra internt:</strong> Återkoppla till säljorganisationen — vad lovades? Förhindra att det upprepas.</li>
+</ol>
+
+<h3>Förväntningstriangeln</h3>
+<ul>
+<li><strong>Vad sades:</strong> Vad lovade säljaren? (dokumentera!)</li>
+<li><strong>Vad hördes:</strong> Vad uppfattade kunden?</li>
+<li><strong>Vad kan levereras:</strong> Vad säger produktteamet?</li>
+<li>→ Ditt jobb: minska gapet mellan dessa tre</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_04_forhandling" model="slide.slide">
+        <field name="name">4. Win-win-förhandling — hitta lösningar båda vinner på</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Förhandling — inte vinna, utan skapa värde</h2>
+
+<h3>Principiell förhandling (Harvard-modellen)</h3>
+<ol>
+<li><strong>Separera person från problem:</strong> "Jag ser att ni är frustrerade över förseningen. Låt oss fokusera på lösningen tillsammans."</li>
+<li><strong>Fokusera på intressen, inte positioner:</strong> Kunden säger: "Vi vill ha rabatt!" — Intresset kan vara: "Vi behöver visa ledningen att vi får valuta för pengarna."</li>
+<li><strong>Hitta alternativ för ömsesidig nytta:</strong> "Rabatt är svårt just nu, men vi kan erbjuda en extra utbildningsdag och prioriterad support under er lanseringsperiod."</li>
+<li><strong>Använd objektiva kriterier:</strong> "Vår prissättning baseras på branschindex X. Låt oss titta på era användningsdata tillsammans."</li>
+</ol>
+
+<h3>När du måste säga nej</h3>
+<ul>
+<li>Var tydlig, inte vag: "Jag kan tyvärr inte sänka priset. Men här är vad jag KAN göra..."</li>
+<li>Förklara varför — utan att skylla på andra: "Vår prismodell är utformad för att vara rättvis mot alla kunder."</li>
+<li>Erbjud alltid ett alternativ: "Kan vi istället se över er paketering — kanske räcker en mindre plan?"</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_05_svara" model="slide.slide">
+        <field name="name">5. Svåra samtal — förmedla dåliga nyheter</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När du måste leverera besvikelse</h2>
+
+<h3>Prishöjning, nedstängd funktion, försenad leverans</h3>
+
+<h3>Modell: Förbered → Leverera → Hantera → Följ upp</h3>
+<ol>
+<li><strong>Förbered:</strong> Ha alla fakta. Varför? När? Konsekvenser? Alternativ?</li>
+<li><strong>Leverera rakt och empatiskt:</strong> "Jag har ett besked som jag vet är tråkigt. Från och med Q3 höjer vi priset med 8%. Jag vill förklara varför och diskutera hur vi kan göra detta så smidigt som möjligt för er."</li>
+<li><strong>Hantera reaktionen:</strong> Lyssna. Bekräfta. "Jag förstår att ni är besvikna. Låt mig förklara vad ni får för den ökade investeringen."</li>
+<li><strong>Följ upp:</strong> "Jag ringer er nästa vecka för att höra om ni har fler frågor efter att ha smält informationen."</li>
+</ol>
+
+<h3>Vad du ALDRIG ska göra</h3>
+<ul>
+<li>❌ Leverera via e-post (om det inte är omöjligt att ringa/träffas)</li>
+<li>❌ Skylla internt: "Produktteamet har strulat..."</li>
+<li>❌ Lova kompensation utan mandat: "Jag ska se om jag kan fixa rabatt..."</li>
+<li>❌ Försvinna: "Jag mailar dig..." och sedan tystnad</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_06_proaktiv" model="slide.slide">
+        <field name="name">6. Proaktiv kundutveckling — guida, reagera inte bara</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Proaktiv CSM — skapa möten, inte bara svara på frågor</h2>
+
+<h3>Quarterly Business Review (QBR) — agendan</h3>
+<ol>
+<li><strong>Summering:</strong> Vad har hänt sedan sist? Vilka mål sattes?</li>
+<li><strong>Värdebevis:</strong> Visa konkreta resultat — användningsdata, effektivisering, ROI</li>
+<li><strong>Utmaningar:</strong> Vad har varit svårt? Var finns friktion?</li>
+<li><strong>Roadmap:</strong> Vad kommer ni att lansera? Hur möter det kundens behov?</li>
+<li><strong>Nästa steg:</strong> Nya mål, action items, nästa QBR-datum</li>
+</ol>
+
+<h3>Proaktiva triggers — när du ska agera</h3>
+<ul>
+<li><strong>Användning sjunker:</strong> Kunden använder produkten mindre → boka check-in. Risk för churn.</li>
+<li><strong>Användning ökar kraftigt:</strong> Kunden växer ur sin plan → uppgraderingsmöjlighet!</li>
+<li><strong>Ny kontaktperson hos kund:</strong> Ny beslutsfattare → sätt upp ett introduktionsmöte</li>
+<li><strong>Supportärenden klustrar:</strong> Många ärenden om samma sak → utbilda eller förbättra</li>
+</ul>
+
+<h3>Health Score — mät kundens hälsa</h3>
+<ul>
+<li>Produktanvändning (daglig/månatlig)</li>
+<li>NPS (Net Promoter Score)</li>
+<li>Supportvolym och typ av ärenden</li>
+<li>Betalningshistorik</li>
+<li>Engagemang (svarar de på dina mail? Kommer de på möten?)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_csmstrat_07_sammanfattning" model="slide.slide">
+        <field name="name">CSM Strategi — Sammanfattning och verktygslåda</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_csm_strategi"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Din CSM-verktygslåda</h2>
+
+<ol>
+<li><strong>Värdedialog:</strong> Funktion → Nytta → Värde → Kronor och ören</li>
+<li><strong>SPIN-metoden:</strong> Situation → Problem → Implikation → Nyttobehov</li>
+<li><strong>Förväntningstriangeln:</strong> sagt → hört → levererat → minska gapet</li>
+<li><strong>Win-win-förhandling:</strong> Intressen, inte positioner — alltid med alternativ</li>
+<li><strong>Dåliga nyheter:</strong> Förbered → Leverera rakt och empatiskt → Hantera → Följ upp</li>
+<li><strong>Health Score:</strong> Mät användning, NPS, support, betalning, engagemang</li>
+<li><strong>QBR:</strong> Kvartalsvis strategisk genomgång med kundens ledning</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li>Coursera: Customer Success Manager Fundamentals (gratis audit)</li>
+<li>University of Michigan: Successful Negotiation (gratis audit)</li>
+<li>Gainsight: CSM Playbook (öppna resurser)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Personuppgiftsbiträde — GDPR (10 slides)               -->
+    <!-- ============================================================ -->
+
+    <record id="slide_pub_00_intro" model="slide.slide">
+        <field name="name">Personuppgiftsbiträde — Varför du har ett eget lagansvar</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Du är personuppgiftsbiträde — vad betyder det?</h2>
+
+<h3>Definition (GDPR Artikel 4.8)</h3>
+<p>Ett <strong>personuppgiftsbiträde</strong> är en fysisk eller juridisk person som behandlar personuppgifter <strong>för den personuppgiftsansvariges räkning</strong>.</p>
+
+<h3>Exempel på biträden</h3>
+<ul>
+<li>IT-leverantörer som driftar kunders system</li>
+<li>Molntjänstleverantörer (AWS, Azure — ni är biträden!)</li>
+<li>Löneadministratörer och redovisningsbyråer</li>
+<li>Marknadsföringsbyråer som hanterar kundregister</li>
+</ul>
+
+<h3>Ditt ansvar — det här måste du veta</h3>
+<ol>
+<li>Du har ett <strong>eget lagstadgat ansvar</strong> — inte bara kundens</li>
+<li>Du får <strong>aldrig</strong> agera utan skriftlig instruktion från kunden</li>
+<li>Du måste ha <strong>tillräcklig säkerhet</strong> (Artikel 32)</li>
+<li>Du måste <strong>rapportera incidenter omedelbart</strong> till kunden</li>
+<li>Du får <strong>inte</strong> anlita underbiträden utan kundens godkännande (Artikel 28.2)</li>
+</ol>
+
+<div class="alert alert-warning"><strong>Viktigt:</strong> IMY kan granska dig direkt som biträde — inte bara din kund. Sanktionsavgifter kan drabba dig.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_01_roller" model="slide.slide">
+        <field name="name">1. Roller — Ansvarig, biträde, underbiträde</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Vem är vad — och varför det spelar roll</h2>
+
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Roll</th><th>Ansvar</th><th>Exempel</th></tr>
+<tr><td><strong>Personuppgifts-<br/>ansvarig (PUA)</strong></td><td>Bestämmer SYFTE och MEDEL för behandlingen. Ytterst ansvarig för att GDPR följs.</td><td>Kunden — företaget vars data du hanterar</td></tr>
+<tr><td><strong>Personuppgifts-<br/>biträde (PUB)</strong></td><td>Behandlar personuppgifter PÅ UPPDRAG av den ansvariga. Har eget lagansvar för säkerhet och instruktionslydnad.</td><td>Ni — IT-leverantören, molntjänsten</td></tr>
+<tr><td><strong>Underbiträde</strong></td><td>Anlitas av biträdet för att utföra specifik behandling. Måste godkännas av den ansvariga.</td><td>Er underleverantör — serverhall, backup-tjänst</td></tr>
+</table>
+
+<h3>Är ni ansvarig eller biträde? — Testet</h3>
+<ul>
+<li>Bestämmer ni SYFTET med datan? → Ni är ansvarig</li>
+<li>Bestämmer ni MEDLEN (hur datan behandlas)? → Ni är ansvarig</li>
+<li>Följer ni bara instruktioner från kunden? → Ni är biträde</li>
+</ul>
+
+<div class="alert alert-danger"><strong>Fara:</strong> Om ni börjar använda kundens data för egna syften (t.ex. analysera användarbeteenden för produktutveckling) — då blir NI personuppgiftsansvarig för den behandlingen. Detta kräver egen laglig grund!</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_02_pubavtal" model="slide.slide">
+        <field name="name">2. PUB-avtalet — ditt viktigaste dokument</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Personuppgiftsbiträdesavtal (PUB-avtal) — GDPR Artikel 28.3</h2>
+
+<h3>Avtalet MÅSTE innehålla:</h3>
+<ol>
+<li><strong>Ändamål och varaktighet:</strong> Varför och hur länge behandlas personuppgifterna?</li>
+<li><strong>Typ av personuppgifter:</strong> Vilka kategorier? (Namn, e-post, personnummer?)</li>
+<li><strong>Kategorier av registrerade:</strong> Vems data? (Kunder, anställda, patienter?)</li>
+<li><strong>Instruktioner:</strong> Exakt vad biträdet får och inte får göra</li>
+<li><strong>Säkerhetsåtgärder:</strong> Tekniska och organisatoriska åtgärder (Artikel 32)</li>
+<li><strong>Underbiträden:</strong> Vilka får anlitas? Process för godkännande av nya</li>
+<li><strong>Rättigheter för registrerade:</strong> Hur hjälper ni kunden med begäran om tillgång/radering?</li>
+<li><strong>Incidenthantering:</strong> Rapporteringsskyldighet och tidsfrister</li>
+<li><strong>Återlämning/radering:</strong> Vad händer med datan när avtalet upphör?</li>
+<li><strong>Revision:</strong> Kundens rätt att granska er efterlevnad</li>
+</ol>
+
+<h3>PUB-avtalet är inte frivilligt</h3>
+<p>GDPR Artikel 28.3: "Behandling av ett personuppgiftsbiträde ska styras av ett avtal." Utan avtal = olaglig behandling = sanktionsavgift.</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_03_instruktion" model="slide.slide">
+        <field name="name">3. Instruktionslydnad — du får bara göra exakt det kunden säger</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Artikel 28.10 och 29 — instruktionslydnad</h2>
+
+<h3>Grundregeln</h3>
+<p>Biträdet får <strong>endast</strong> behandla personuppgifter enligt den personuppgiftsansvarigas <strong>dokumenterade instruktioner</strong>.</p>
+
+<h3>Vad betyder detta i praktiken?</h3>
+<ul>
+<li>❌ Ni får inte använda kundens data för att träna er AI-modell</li>
+<li>❌ Ni får inte analysera kundens data för att sälja insikter till tredje part</li>
+<li>❌ Ni får inte flytta data till ett annat land utan instruktion/godkännande</li>
+<li>✓ Ni får bara göra det som uttryckligen står i avtalet och instruktionerna</li>
+</ul>
+
+<h3>Om kunden instruerar er att göra något olagligt</h3>
+<p>GDPR Artikel 28.3: Om en instruktion strider mot GDPR ska biträdet <strong>omedelbart informera</strong> den ansvariga. Om den ansvariga ändå insisterar — kontakta jurist. Ni kan hållas ansvariga.</p>
+
+<h3>Dokumentera instruktionerna</h3>
+<ul>
+<li>Spara alla instruktioner skriftligt</li>
+<li>Logga ändringar — vem bad om vad, när?</li>
+<li>Om kunden ringer och ber er "bara göra en snabb export" — be om skriftlig bekräftelse först</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_04_sakerhet" model="slide.slide">
+        <field name="name">4. Säkerhetsåtgärder — Artikel 32</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Artikel 32 — Säkerhet i samband med behandlingen</h2>
+
+<h3>Biträdet ska vidta "lämpliga tekniska och organisatoriska åtgärder"</h3>
+
+<h3>Vad krävs? (med beaktande av risk, kostnad och teknik)</h3>
+<ul>
+<li><strong>Pseudonymisering och kryptering</strong> av personuppgifter — både i vila och under överföring</li>
+<li><strong>Konfidentialitet:</strong> Endast behörig personal har åtkomst</li>
+<li><strong>Integritet:</strong> Data får inte ändras obehörigt</li>
+<li><strong>Tillgänglighet och motståndskraft:</strong> Systemen ska fungera och tåla angrepp</li>
+<li><strong>Återställning:</strong> Snabb återställning vid fysiskt/tekniskt incident</li>
+<li><strong>Regelbunden testning:</strong> Utvärdera, granska och testa säkerheten löpande</li>
+</ul>
+
+<h3>Konkreta åtgärder (checklista)</h3>
+<ul>
+<li>Kryptering: AES-256 för lagrad data, TLS 1.3 för överföring</li>
+<li>Åtkomstkontroll: RBAC, MFA, minsta privilegium, loggning av all åtkomst</li>
+<li>Backup: 3-2-1-regeln, krypterad, testad återläsning kvartalsvis</li>
+<li>Sårbarhetshantering: månatlig scanning, patchar inom SLA</li>
+<li>Penetreringstest: årligen på kritiska system</li>
+<li>Utbildning: alla som hanterar personuppgifter ska ha GDPR-utbildning</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_05_underbitraden" model="slide.slide">
+        <field name="name">5. Underbiträden — när du anlitar underleverantörer</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Artikel 28.2 och 28.4 — Krav på underbiträden</h2>
+
+<h3>Du får inte bara byta molnleverantör</h3>
+<p>För att anlita ett underbiträde krävs:</p>
+<ol>
+<li><strong>Skriftligt godkännande</strong> från den personuppgiftsansvariga (kunden) — i förväg</li>
+<li><strong>Skriftligt avtal</strong> med underbiträdet med samma skyldigheter som ditt PUB-avtal</li>
+<li><strong>Ansvar:</strong> Om underbiträdet missköter sig — DU är ansvarig mot kunden</li>
+</ol>
+
+<h3>Två modeller för godkännande</h3>
+<ul>
+<li><strong>Specifikt godkännande:</strong> Varje nytt underbiträde måste godkännas av kunden i förväg</li>
+<li><strong>Generellt godkännande:</strong> Kunden godkänner en lista. Nya underbiträden anmäls, och kunden har rätt att invända inom X dagar.</li>
+</ul>
+
+<h3>"Men jag bytte ju bara serverhall..."</h3>
+<p>Om den nya serverhallen innebär en ny juridisk person som behandlar data → det är ett nytt underbiträde → kunden måste godkänna.</p>
+
+<div class="alert alert-warning"><strong>Kom ihåg:</strong> Lista alla era underbiträden i PUB-avtalet. Uppdatera listan vid förändringar. Informera kunden.</div>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_06_incident" model="slide.slide">
+        <field name="name">6. Incidenthantering — rapportera till kunden omedelbart</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Artikel 33 — Personuppgiftsincident</h2>
+
+<h3>Vad är en personuppgiftsincident?</h3>
+<p>En säkerhetshändelse som leder till oavsiktlig eller olaglig:</p>
+<ul>
+<li><strong>Förstöring</strong> av personuppgifter</li>
+<li><strong>Förlust</strong> av personuppgifter</li>
+<li><strong>Ändring</strong> av personuppgifter</li>
+<li><strong>Obehörigt röjande</strong> av eller åtkomst till personuppgifter</li>
+</ul>
+
+<h3>Rapporteringskedjan</h3>
+<ol>
+<li><strong>Biträdet</strong> upptäcker en incident → <strong>omedelbart</strong> rapportera till den ansvariga (kunden)</li>
+<li><strong>Den ansvariga</strong> ska anmäla till IMY inom <strong>72 timmar</strong> från upptäckt</li>
+</ol>
+
+<div class="alert alert-danger"><strong>Kritiskt:</strong> IMY:s 72-timmarsfrist gäller den ansvariga. Om du som biträde väntar 48 timmar med att rapportera till kunden — har kunden bara 24 timmar på sig. Rapportera inom TIMMAR, inte dagar!</div>
+
+<h3>Vad ska rapporten innehålla?</h3>
+<ul>
+<li>Vad har hänt? (beskriv incidenten)</li>
+<li>Vilka kategorier av personuppgifter berörs?</li>
+<li>Ungefärligt antal registrerade</li>
+<li>Sannolika konsekvenser</li>
+<li>Vilka åtgärder har vidtagits?</li>
+<li>Kontaktperson hos er</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_07_loggning" model="slide.slide">
+        <field name="name">7. Loggning, radering och audit</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Dokumentera allt — för din egen skull</h2>
+
+<h3>Loggning — Artikel 30 (Register över behandling)</h3>
+<p>Som biträde ska ni föra ett register över alla kategorier av behandling som utförs för kunders räkning:</p>
+<ul>
+<li>Namn och kontaktuppgifter till varje kund (ansvarig)</li>
+<li>Kategorier av behandling (drift, backup, supportåtkomst)</li>
+<li>Överföringar till tredjeland — och vilka skyddsåtgärder som används</li>
+<li>Allmän beskrivning av tekniska och organisatoriska säkerhetsåtgärder</li>
+</ul>
+
+<h3>Radering — när avtalet upphör (Artikel 28.3.g)</h3>
+<p>Ni ska, enligt kundens val:</p>
+<ul>
+<li>Radera alla personuppgifter, ELLER</li>
+<li>Återlämna alla personuppgifter till kunden</li>
+<li>Och radera befintliga kopior — om inte lagring krävs enligt annan lag</li>
+</ul>
+
+<h3>Audit — kundens rätt att granska er (Artikel 28.3.h)</h3>
+<ul>
+<li>Kunden har rätt att genomföra revisioner och inspektioner</li>
+<li>Ni ska bistå med information och tillgång</li>
+<li>Ni ska informera kunden om ni anser att en instruktion strider mot GDPR</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_08_overforing" model="slide.slide">
+        <field name="name">8. Tredjelandsöverföring — när data lämnar EU/EES</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>GDPR Kapitel V — Överföring till tredjeland</h2>
+
+<h3>Grundregel</h3>
+<p>Personuppgifter får bara överföras till länder utanför EU/EES om tillräcklig skyddsnivå kan garanteras.</p>
+
+<h3>Godkända överföringsmekanismer</h3>
+<ul>
+<li><strong>Adekvansbeslut:</strong> EU har godkänt landet (t.ex. Storbritannien, Japan, Schweiz — men INTE USA utan ytterligare åtgärder!)</li>
+<li><strong>Standardavtalsklausuler (SCC):</strong> EU:s standardiserade avtalsvillkor — måste användas + kompletteras med TIA (Transfer Impact Assessment)</li>
+<li><strong>Bindande företagsbestämmelser (BCR):</strong> För koncerninterna överföringar</li>
+</ul>
+
+<h3>USA — särskild problematik (Schrems II)</h3>
+<p>EU-U.S. Data Privacy Framework (2023) ger adekvansbeslut för certifierade företag. Kontrollera att er amerikanska molnleverantör är certifierad. Om inte — SCC + TIA krävs.</p>
+
+<h3>Checklista för dig som biträde</h3>
+<ul>
+<li>Vet ni var all kunddata lagras? (exakt datacenter-land)</li>
+<li>Har ni tredjelandsöverföringar dokumenterade i PUB-avtalet?</li>
+<li>Har ni SCC/TIA på plats för alla tredjelandsöverföringar?</li>
+<li>Är era underbiträdens överföringar kartlagda?</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_pub_09_sammanfattning" model="slide.slide">
+        <field name="name">Personuppgiftsbiträde — Sammanfattning och självgranskning</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_pub_gdpr"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Självgranskning — kan ni svara ja på alla?</h2>
+
+<ol>
+<li>Har ni PUB-avtal med ALLA kunder vars data ni behandlar?</li>
+<li>Följer ni strikt kundernas dokumenterade instruktioner?</li>
+<li>Använder ni kunddata för EGNA syften? (→ Då är ni ansvarig!)</li>
+<li>Har ni tillräckliga säkerhetsåtgärder enligt Artikel 32?</li>
+<li>Är alla underbiträden godkända av kunden och dokumenterade?</li>
+<li>Kan ni rapportera en incident till kund inom TIMMAR?</li>
+<li>Radera/återlämnar ni data när avtalet upphör?</li>
+<li>Är tredjelandsöverföringar dokumenterade med SCC/TIA?</li>
+<li>Har ni ett register över behandlingar (Artikel 30)?</li>
+<li>Kan ni ta emot en kundrevision av er säkerhet?</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://www.imy.se">IMY (Integritetsskyddsmyndigheten)</a></li>
+<li><a href="https://www.imy.se/play/">IMY Play</a> — gratis videoutbildning</li>
+<li><a href="https://edpb.europa.eu">EDPB</a> — europeiska dataskyddsstyrelsens riktlinjer</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <!-- ============================================================ -->
+    <!-- KURS: Kriskommunikation &amp; svåra samtal (6 slides)            -->
+    <!-- ============================================================ -->
+
+    <record id="slide_kriskomm_00_intro" model="slide.slide">
+        <field name="name">Kriskommunikation — Konsten att kommunicera under press</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När orden måste sitta — varje gång</h2>
+
+<h3>Tre typiska situationer</h3>
+<ul>
+<li><strong>Systemavbrott:</strong> 5000 kunder kan inte logga in. Telefonerna kokar. Media ringer.</li>
+<li><strong>Dataintrång:</strong> Kunddata kan ha läckt. Ni vet inte hur mycket. Kunder är rädda och arga.</li>
+<li><strong>Svårt personligt samtal:</strong> Du måste meddela kunden att deras efterlängtade funktion är nedlagd, eller att priset höjs kraftigt.</li>
+</ul>
+
+<h3>Denna kurs ger dig</h3>
+<ul>
+<li>Struktur för tydlig och lugnande kommunikation</li>
+<li>Hur du förmedlar dåliga nyheter utan att förlora förtroende</li>
+<li>Förhandlingsteknik när intressen krockar</li>
+<li>Professionell hantering av ilska och besvikelse</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kriskomm_01_struktur" model="slide.slide">
+        <field name="name">1. Strukturerad kriskommunikation</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Kriskommunikationens gyllene regler</h2>
+
+<h3>1. Var först — eller var irrelevant</h3>
+<p>Informationsvakuum fylls snabbt — av rykten, spekulationer och frustration. Berätta vad ni vet, även om det är lite: "Vi är medvetna om driftstörningen och arbetar på att åtgärda den."</p>
+
+<h3>2. Var ärlig om osäkerhet</h3>
+<p>"Vi vet just nu inte vad som orsakat störningen, men vårt team undersöker detta med högsta prioritet." Folk accepterar osäkerhet — de accepterar inte att bli ljugna för.</p>
+
+<h3>3. Visa empati — inte bara fakta</h3>
+<p>"Vi förstår att detta påverkar er verksamhet och ber om ursäkt för de problem det orsakar."</p>
+
+<h3>4. Ge en tidsram för nästa uppdatering</h3>
+<p>"Nästa uppdatering kommer kl 14:00, oavsett om vi har löst problemet eller ej." — Och håll den tiden.</p>
+
+<h3>5. En röst utåt</h3>
+<p>Alla i organisationen ska hänvisa till den officiella kommunikationen. Inga parallella berättelser. "Jag kan inte kommentera mer än vår officiella statusuppdatering — ny information kommer kl 14."</p>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kriskomm_02_dalignyheter" model="slide.slide">
+        <field name="name">2. Förmedla dåliga nyheter — utan att förlora förtroende</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Dåliga nyheter — så gör du det rätt</h2>
+
+<h3>Direkt, ärligt, empatiskt</h3>
+
+<h3>Fel sätt:</h3>
+<p style="background:#ffdddd; padding:10px">"Hej! Tyvärr har vi ett litet problem. Vi måste höja priset lite, men det är inte så farligt, och ni får massa nya funktioner som kompensation! Det är faktiskt jättebra för er!"</p>
+
+<h3>Rätt sätt:</h3>
+<p style="background:#ddffdd; padding:10px">"Hej Maria. Jag ringer för att jag har ett besked som kan vara utmanande. Från och med Q3 kommer ert pris att öka med 12%. Jag vill förklara varför, vad ni får för den ökade investeringen, och ge dig tid att ställa frågor. Har du ett par minuter nu, eller ska vi boka en tid?"</p>
+
+<h3>Varför fungerar det rätta sättet?</h3>
+<ul>
+<li><strong>Förvarnar:</strong> "ett besked som kan vara utmanande" — förbereder mottagaren</li>
+<li><strong>Rakt budskap:</strong> 12% — inget ludd, inga omskrivningar</li>
+<li><strong>Visar att du förstår:</strong> Erbjuder tid och utrymme för frågor</li>
+<li><strong>Tar ansvar:</strong> "Jag ringer för att..." — inte ett opersonligt mail</li>
+</ul>
+
+<h3>Efter beskedet — tre steg</h3>
+<ol>
+<li><strong>Lyssna</strong> — låt reaktionen komma. Avbryt inte.</li>
+<li><strong>Bekräfta</strong> — "Jag förstår att det här inte är vad ni ville höra."</li>
+<li><strong>Föreslå</strong> — "Jag vill gärna boka ett uppföljningsmöte nästa vecka för att diskutera hur vi bäst hanterar detta tillsammans."</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kriskomm_03_forhandling" model="slide.slide">
+        <field name="name">3. Förhandling under press — hitta vägar framåt</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Förhandling när det är spänt</h2>
+
+<h3>BATNA — ditt viktigaste förhandlingsverktyg</h3>
+<p><strong>B</strong>est <strong>A</strong>lternative <strong>T</strong>o a <strong>N</strong>egotiated <strong>A</strong>greement = Bästa alternativet om förhandlingen misslyckas.</p>
+
+<h3>Exempel</h3>
+<ul>
+<li>Kunden hotar att lämna. Din BATNA: "Vi har 200 andra kunder på denna produkt. Ert bortfall är hanterbart — men vi värderar er relation."</li>
+<li>Kunden kräver en funktion som inte finns. Din BATNA: "Vi kan erbjuda en workaround. Alternativt kan ni byta till [konkurrent X] — men de saknar [funktion Y]."</li>
+</ul>
+
+<h3>Förhandlingstekniker</h3>
+<ul>
+<li><strong>Ankring:</strong> Sätt första budet — det påverkar resten av förhandlingen</li>
+<li><strong>Tystnad:</strong> Efter ditt bud — vänta. Låt motparten fylla tystnaden</li>
+<li><strong>Paketera:</strong> "Vi kan inte sänka priset, men vi kan inkludera utbildning och förlängd support."</li>
+<li><strong>Fokusera på intressen:</strong> "Jag hör att ni är missnöjda med supporttiden. Låt oss prata om en SLA som möter era behov."</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kriskomm_04_ilska" model="slide.slide">
+        <field name="name">4. Hantera ilska och besvikelse professionellt</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>När kunden exploderar — så håller du dig professionell</h2>
+
+<h3>Ilska är ofta rädsla i mask</h3>
+<p>När en kund är arg handlar det oftast om:</p>
+<ul>
+<li>Rädsla för att misslyckas inför sin chef</li>
+<li>Rädsla för att förlora pengar eller kunder</li>
+<li>Känsla av maktlöshet — de kan inte påverka situationen</li>
+</ul>
+
+<h3>4-stegsmetod vid utbrott</h3>
+<ol>
+<li><strong>Lyssna färdigt:</strong> Avbryt inte. Låt personen tömma sig.</li>
+<li><strong>Bekräfta känslan:</strong> "Jag hör att du är förbannad — och jag förstår varför."</li>
+<li><strong>Gå från känsla till problem:</strong> "När du är redo vill jag gärna förstå exakt vad som hänt så vi kan hitta en lösning."</li>
+<li><strong>Erbjud konkret handling:</strong> "Här är vad jag kan göra just nu: [åtgärd]. Är det OK?"</li>
+</ol>
+
+<h3>När du själv blir arg — STOPPA</h3>
+<ul>
+<li>Känn igen signalen: spänd käke, ökad puls, vilja att "sätta dit" personen</li>
+<li>Ta en paus: "Jag vill verkligen lösa detta. Låt mig ta en kort paus så jag kan tänka klart."</li>
+<li>Flytta fokus: från "Du har fel!" till "Hur löser vi detta?"</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_kriskomm_05_skriftligt" model="slide.slide">
+        <field name="name">5. Skriftlig kommunikation i kris — ton och timing</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_kriskommunikation"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Skriv så att kunden känner sig sedd — även i ett massutskick</h2>
+
+<h3>Statusuppdatering under pågående incident — mall</h3>
+<pre style="background:#f5f5f5; padding:15px; white-space:pre-wrap">
+Ämne: Statusuppdatering — Driftstörning [Tjänst X] | 2025-01-15 kl 14:00
+
+Hej,
+
+Vi fortsätter att arbeta med driftstörningen som påverkar [Tjänst X].
+
+<b>Vad vi vet:</b> [kort, tydlig beskrivning]
+<b>Vad vi gör:</b> [konkreta åtgärder]
+<b>Påverkan:</b> [vilka tjänster/funktioner]
+<b>Nästa uppdatering:</b> kl 15:00
+
+Vi beklagar verkligen de problem detta orsakar er verksamhet.
+
+Vänliga hälsningar,
+[Namn], [Titel]
+</pre>
+
+<h3>När du måste säga nej via e-post</h3>
+<ul>
+<li>Börja med uppskattning — inte med NEJ: "Tack för din detaljerade feature request."</li>
+<li>Var tydlig med nej: "Tyvärr kan vi inte prioritera denna funktion under 2025."</li>
+<li>Förklara — kort och ärligt: "Vår roadmap för i år är redan fastställd."</li>
+<li>Erbjud alternativ: "Vi kan däremot erbjuda en workaround som jag gärna visar."</li>
+<li>Avsluta med öppenhet: "Hör gärna av dig om du vill diskutera vidare."</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+</odoo>

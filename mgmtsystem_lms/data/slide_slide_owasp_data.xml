@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- ============================================================ -->
+    <!-- OWASP ASVS v5.0 — Application Security Verification Standard  -->
+    <!-- ============================================================ -->
+
+    <record id="slide_owasp_00_intro" model="slide.slide">
+        <field name="name">OWASP ASVS v5 — Introduktion och översikt</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Vad är OWASP ASVS?</h2>
+<p>OWASP <strong>Application Security Verification Standard</strong> (ASVS) är en öppen standard för att verifiera säkerheten i applikationer. Version 5.0 släpptes 2024 och är den mest aktuella versionen.</p>
+
+<h3>ASVS används för</h3>
+<ul>
+<li><strong>Kravställning:</strong> Definiera säkerhetskrav vid utveckling och upphandling</li>
+<li><strong>Granskning:</strong> Pentest och säkerhetsgranskning mot en internationell standard</li>
+<li><strong>Verifiering:</strong> Automatiserad och manuell verifiering av applikationssäkerhet</li>
+<li><strong>Upphandling:</strong> Ställ krav på leverantörer med ett standardiserat ramverk</li>
+</ul>
+
+<h3>Tre säkerhetsnivåer</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%">
+<tr style="background:#f0f0f0"><th>Nivå</th><th>Namn</th><th>Beskrivning</th></tr>
+<tr><td><strong>L1</strong></td><td>Opportunistic</td><td>Grundläggande skydd. Kan verifieras automatiskt. Passar för applikationer med låg risk.</td></tr>
+<tr><td><strong>L2</strong></td><td>Standard</td><td>Rekommenderad nivå för de flesta applikationer. Kräver manuell granskning av kritiska kontroller.</td></tr>
+<tr><td><strong>L3</strong></td><td>Advanced</td><td>Högsta skyddsnivå. För applikationer med mycket höga säkerhetskrav (finans, hälsa, kritisk infra).</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_01_arch" model="slide.slide">
+        <field name="name">V1 — Arkitektur, design och hothotmodellering</field>
+        <field name="sequence">2</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V1: Architecture, Design and Threat Modeling</h2>
+<p>Säkerhet måste byggas in från grunden — inte läggas till i efterhand.</p>
+
+<h3>Centrala krav (urval)</h3>
+<ul>
+<li><strong>V1.1:</strong> Dokumenterad säkerhetsarkitektur med tydliga säkerhetszoner och trust boundaries</li>
+<li><strong>V1.2:</strong> Hotmodellering genomförd för alla kritiska flöden och komponenter (STRIDE, attack trees)</li>
+<li><strong>V1.4:</strong> Alla komponenter (bibliotek, ramverk, tjänster) är dokumenterade och versionhanterade (SBOM)</li>
+<li><strong>V1.8:</strong> Separation av miljöer — dev, test, stage, prod är isolerade med olika credentials</li>
+<li><strong>V1.11:</strong> Centraliserade, återanvändbara säkerhetskontroller — inte ad-hoc i varje modul</li>
+</ul>
+
+<h3>Praktisk tillämpning</h3>
+<ul>
+<li>Rita upp dataflöden och identifiera var känslig data passerar</li>
+<li>STRIDE per komponent: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege</li>
+<li>Använd OWASP Threat Dragon eller Microsoft Threat Modeling Tool</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_02_auth" model="slide.slide">
+        <field name="name">V2 — Autentisering</field>
+        <field name="sequence">3</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V2: Authentication</h2>
+<p>Verifiera att användare är den de utger sig för att vara — på ett säkert sätt.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V2.1:</strong> Lösenordskrav: minst 12 tecken, tillåt alla unicode-tecken, kontrollera mot kända komprometterade lösenord (Have I Been Pwned API)</li>
+<li><strong>V2.2:</strong> Multifaktorautentisering (MFA) — TOTP, FIDO2/WebAuthn, PKI-baserat för L3</li>
+<li><strong>V2.3:</strong> Kontolåsning: temporär låsning efter N misslyckade försök, inte permanent</li>
+<li><strong>V2.5:</strong> Återställning av credentials: tidsbegränsad engångslänk, MFA-krävd, informera användaren</li>
+<li><strong>V2.8:</strong> Anti-automation: CAPTCHA, rate limiting, IP-baserade begränsningar</li>
+</ul>
+
+<h3>Nivåskillnader</h3>
+<ul>
+<li><strong>L1:</strong> Lösenordspolicy, rate limiting, ingen default credential</li>
+<li><strong>L2:</strong> MFA krävs för kritiska funktioner, koll mot komprometterade lösenord</li>
+<li><strong>L3:</strong> FIDO2/WebAuthn, phishing-resistent MFA, kontinuerlig autentisering</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_03_session" model="slide.slide">
+        <field name="name">V3 — Sessionshantering</field>
+        <field name="sequence">4</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V3: Session Management</h2>
+<p>Säkerställ att användarsessioner inte kan kapas eller manipuleras.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V3.2:</strong> Session cookies: HttpOnly, Secure, SameSite (Strict/Lax), __Host- prefix</li>
+<li><strong>V3.3:</strong> Session fixation-skydd: nytt sessions-ID vid varje inloggning och privilegiehöjning</li>
+<li><strong>V3.4:</strong> Sessions-timeout: idle timeout (15 min L2) + absolut timeout (8h L2, 2h L3)</li>
+<li><strong>V3.5:</strong> Utloggning: ogiltigförklara sessionen server-side, inte bara klient-side</li>
+<li><strong>V3.7:</strong> Sessions-ID: genereras av godkänd CSPRNG, minst 128 bitars entropi</li>
+</ul>
+
+<h3>JWT-specifika krav</h3>
+<ul>
+<li>Verifiera signaturen (alg:none-attacken!)</li>
+<li>Sätt expiration (exp), issued at (iat), not before (nbf)</li>
+<li>Använd audience (aud) och issuer (iss) claims</li>
+<li>Förvara aldrig känslig data i JWT-payload (den är base64-kodad, ej krypterad)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_04_access" model="slide.slide">
+        <field name="name">V4 — Åtkomstkontroll (Access Control)</field>
+        <field name="sequence">5</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V4: Access Control</h2>
+<p>OWASP Top 10 #1 — Broken Access Control är den vanligaste sårbarheten.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V4.1:</strong> Least Privilege: alla användare har minsta möjliga behörighet för sin roll</li>
+<li><strong>V4.2:</strong> Server-side enforcement: åtkomstkontroll sker på servern — aldrig lita på klienten</li>
+<li><strong>V4.3:</strong> Deny by default: all åtkomst nekas om inte uttryckligen tillåten</li>
+<li><strong>V4.5:</strong> Horisontell access control (IDOR): användare A kan inte komma åt användare B:s data (/api/orders/123)</li>
+<li><strong>V4.7:</strong> Vertikal access control: vanlig användare kan inte nå administratörsfunktioner</li>
+<li><strong>V4.9:</strong> Context-baserad: användare kan endast utföra åtgärder i tillåten kontext (t.ex. sin egen organisation)</li>
+</ul>
+
+<h3>Anti-mönster att undvika</h3>
+<ul>
+<li>Att dölja admin-funktioner i frontend — de måste skyddas server-side</li>
+<li>Att använda sekventiella ID:n utan ägarskapskontroll</li>
+<li>CORS konfigurerad med "*" och credentials: true (säkerhetshål)</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_05_validation" model="slide.slide">
+        <field name="name">V5 — Validering, sanering och kodning</field>
+        <field name="sequence">6</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V5: Validation, Sanitization and Encoding</h2>
+<p>All input är fientlig. Validera, sanera och koda korrekt för att förhindra injektionsattacker.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V5.1:</strong> Inputvalidering på server-sidan för ALL input (headers, cookies, query strings, body, filuppladdningar)</li>
+<li><strong>V5.2:</strong> Mass Assignment-skydd: acceptera endast tillåtna fält — inte blint binda request till modell</li>
+<li><strong>V5.3:</strong> Output encoding kontextspecifik: HTML-encoding, JavaScript-encoding, URL-encoding, CSS-encoding</li>
+<li><strong>V5.4:</strong> Parametriserade queries/prepared statements — aldrig strängkonkatenering i SQL</li>
+<li><strong>V5.5:</strong> XSS-skydd: Content Security Policy (CSP), sanitizer (DOMPurify), template engines med auto-escaping</li>
+</ul>
+
+<h3>Kontextspecifik output encoding</h3>
+<table border="1" cellpadding="4" cellspacing="0" style="border-collapse:collapse">
+<tr style="background:#f0f0f0"><th>Kontext</th><th>Encoding</th></tr>
+<tr><td>HTML body</td><td>&amp;lt; &amp;gt; &amp;amp; &amp;quot;</td></tr>
+<tr><td>HTML attribute</td><td>Förutom ovan: hex-encoding av alla icke-alfanumeriska</td></tr>
+<tr><td>JavaScript</td><td>\xHH eller \uHHHH för specialtecken + JSON.stringify</td></tr>
+<tr><td>URL</td><td>Percent-encoding (%20, %3C, etc.)</td></tr>
+<tr><td>CSS</td><td>\HH för specialtecken</td></tr>
+</table>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_06_crypto" model="slide.slide">
+        <field name="name">V6 — Lagrad kryptografi</field>
+        <field name="sequence">7</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V6: Stored Cryptography</h2>
+<p>Kryptografiska misslyckanden (OWASP Top 10 #2) — använd rätt algoritmer på rätt sätt.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V6.1:</strong> Lösenordshashning: Argon2id (förstahandsval), bcrypt, scrypt, PBKDF2 — <strong>aldrig</strong> MD5/SHA-1/SHA-256 för lösenord</li>
+<li><strong>V6.2:</strong> Nyckelhantering: separata nycklar för olika ändamål, nyckelrotation, HSM/KMS för L3</li>
+<li><strong>V6.3:</strong> Symmetrisk kryptering: AES-GCM (128/256 bit), ChaCha20-Poly1305 — <strong>inte</strong> ECB-läge, <strong>inte</strong> CBC utan HMAC</li>
+<li><strong>V6.4:</strong> Asymmetrisk: RSA 3072+ bit eller ECC (Curve25519, P-256) — <strong>inte</strong> RSA 1024</li>
+<li><strong>V6.5:</strong> Slumpgenerering: CSPRNG (os.urandom, Secrets, /dev/urandom) — <strong>inte</strong> Math.random()</li>
+</ul>
+
+<h3>Vanliga misstag</h3>
+<ul>
+<li>Att "rulla egen krypto" — använd alltid etablerade bibliotek (libsodium, WebCrypto, Tink)</li>
+<li>Hardkodade nycklar i källkoden</li>
+<li>Samma IV/Nonce återanvänds (katastrofalt med GCM)</li>
+<li>TLS/HTTPS saknas — all känslig kommunikation måste vara krypterad in transit</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_07_logging" model="slide.slide">
+        <field name="name">V7 — Felloggning och logghantering</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V7: Error Handling and Logging</h2>
+<p>Säkerhetsloggning och övervakning (OWASP Top 10 #9) är avgörande för detektion och forensik.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V7.1:</strong> Logga säkerhetshändelser: autentiseringsförsök (lyckade/misslyckade), behörighetsändringar, dataåtkomst, inputvalideringsfel</li>
+<li><strong>V7.2:</strong> Logginnehåll: tidstämpel (UTC), händelsetyp, användar-ID, IP-adress, request-ID, user-agent</li>
+<li><strong>V7.3:</strong> Loggskydd: skrivskyddade, append-only, oföränderliga loggar — skydda mot manipulation</li>
+<li><strong>V7.4:</strong> Inga känsliga data i loggar: lösenord, sessions-ID, personnummer, kreditkortsnummer, API-nycklar</li>
+<li><strong>V7.5:</strong> Generic error messages: visa inte stack traces, versionsnummer, sökvägar i felmeddelanden</li>
+</ul>
+
+<h3>Vad en bra loggpost innehåller</h3>
+<pre>
+{
+  "timestamp": "2025-06-28T14:30:00.000Z",
+  "level": "WARN",
+  "event": "AUTH_FAILURE",
+  "user_id": "usr_abc123",
+  "ip": "203.0.113.42",
+  "request_id": "req_def456",
+  "reason": "invalid_password",
+  "user_agent": "Mozilla/5.0 ..."
+}
+</pre>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_08_data" model="slide.slide">
+        <field name="name">V8 — Dataskydd</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V8: Data Protection</h2>
+<p>Skydda känslig data — både i vila (at rest) och under bearbetning (in use).</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V8.1:</strong> Dataklassificering enligt organisationens nivåer (publik, intern, konfidentiell, hemlig)</li>
+<li><strong>V8.2:</strong> Minimera datainsamling — samla endast in data som verksamheten behöver (GDPR art. 5.1.c)</li>
+<li><strong>V8.3:</strong> Känslig data i vila: AES-256-GCM eller motsvarande för databaser, filsystem, backups</li>
+<li><strong>V8.4:</strong> Maskering/trunkering: visa endast de sista 4 siffrorna av kortnummer, maskera personnummer i gränssnitt</li>
+<li><strong>V8.6:</strong> Data retention: radera/sanera data när den inte längre behövs (automatisera med TTL/jobb)</li>
+<li><strong>V8.9:</strong> Cachen får inte innehålla känslig data utan korrekt åtkomstkontroll</li>
+</ul>
+
+<h3>Sensitive Data Exposure — undvik</h3>
+<ul>
+<li>Känslig data i URL:er (GET-parametrar) — syns i serverloggar, browser history, Referer-headers</li>
+<li>Konfidentiella API-svar som cachas av CDN eller proxy</li>
+<li>Debug-lägen i produktion som exponerar data</li>
+<li>Backuper utan kryptering</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_09_communication" model="slide.slide">
+        <field name="name">V9 — Kommunikationssäkerhet</field>
+        <field name="sequence">10</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V9: Communication Security</h2>
+<p>Skydda data under överföring (in transit) — mellan klient och server, mellan tjänster, till externa API:er.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V9.1:</strong> HTTPS överallt: HSTS (max-age minst 1 år, includeSubDomains, preload), redirect HTTP→HTTPS (301)</li>
+<li><strong>V9.2:</strong> TLS-konfiguration: TLS 1.2 minimum (TLS 1.3 rekommenderas), starka cipher suites (ECDHE, AEAD)</li>
+<li><strong>V9.3:</strong> Certifikathantering: giltiga certifikat (Let's Encrypt eller betrodd CA), automatisk förnyelse</li>
+<li><strong>V9.4:</strong> Server-to-server: mutual TLS (mTLS) för intern servicekommunikation vid L2+</li>
+<li><strong>V9.5:</strong> Certificate pinning: vid L3 för mobila applikationer</li>
+<li><strong>V9.7:</strong> Verifiera TLS-certifikat — acceptera inte self-signed eller ogiltiga certifikat</li>
+</ul>
+
+<h3>TLS-härdning (Mozilla Intermediate)</h3>
+<ul>
+<li>TLS 1.2, TLS 1.3</li>
+<li>ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384</li>
+<li>HSTS: max-age=63072000; includeSubDomains; preload</li>
+<li>Testa med: <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a>, testssl.sh</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_10_malicious" model="slide.slide">
+        <field name="name">V10 — Skadlig kod och integritetskontroller</field>
+        <field name="sequence">11</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V10: Malicious Code</h2>
+<p>Skydda mot skadlig kod i leveranskedjan — kod, beroenden och byggartefakter.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V10.1:</strong> Code integrity: signera kod och verifiera signaturer före deployment</li>
+<li><strong>V10.2:</strong> Dependency scanning: SCA-verktyg (Software Composition Analysis) — Dependency-Check, Snyk, OWASP Dependency-Track</li>
+<li><strong>V10.3:</strong> CI/CD pipeline security: isolerade byggmiljöer, secrets i vault (inte i pipeline-konfig), signerade commits</li>
+<li><strong>V10.4:</strong> Skydd mot prototype pollution (JavaScript), deserialiseringsattacker, DLL/assembly hijacking</li>
+<li><strong>V10.5:</strong> Subresource Integrity (SRI) för externa skript: <code>&lt;script src="..." integrity="sha384-..."&gt;</code></li>
+<li><strong>V10.6:</strong> SBOM (Software Bill of Materials): dokumentera alla beroenden i CycloneDX- eller SPDX-format</li>
+</ul>
+
+<h3>Supply chain security checklist</h3>
+<ol>
+<li>Lås beroenden med exakta versioner (package-lock.json, Pipfile.lock)</li>
+<li>Använd privata artifact repositories (Artifactory, Nexus) för interna paket</li>
+<li>Kontrollera signaturer och checksummor för nedladdade artefakter</li>
+<li>Övervaka CVE:er för alla beroenden löpande</li>
+<li>Genomför kodgranskning av tredjepartskomponenter</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_11_business" model="slide.slide">
+        <field name="name">V11 — Affärslogik</field>
+        <field name="sequence">12</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V11: Business Logic</h2>
+<p>De farligaste sårbarheterna är ofta inte tekniska — utan logiska. De hittas sällan av automatiska skannrar.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V11.1:</strong> Flödesintegritet: en operation måste följa det avsedda flödet (t.ex. varukorg → checkout → betalning → bekräftelse)</li>
+<li><strong>V11.2:</strong> Anti-automation: rate limiting, CAPTCHA, device fingerprinting för känsliga operationer</li>
+<li><strong>V11.3:</strong> Validering av affärsregler: negativa kvantiteter, nollpriser, orimliga rabatter, manipulering av fraktkostnad</li>
+<li><strong>V11.4:</strong> Race conditions: atomära operationer, optimistisk/pessimistisk låsning (t.ex. kuponger som används flera gånger)</li>
+<li><strong>V11.5:</strong> Round-up/down attacker: validera totalsummor server-side, inte lita på klientens beräkningar</li>
+</ul>
+
+<h3>Vanliga logikbuggar</h3>
+<ul>
+<li>Användare kan ändra priset i request innan köp (price manipulation)</li>
+<li>Kupongkoder kan appliceras flera gånger (race condition vid checkout)</li>
+<li>Negativ kvantitet ger negativ totalsumma (refund utan köp)</li>
+<li>Hoppa över betalningssteget genom att direkt anropa orderbekräftelse-endpointen</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_12_files" model="slide.slide">
+        <field name="name">V12 — Filer och resurser</field>
+        <field name="sequence">13</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V12: Files and Resources</h2>
+<p>Filuppladdningar är en av de vanligaste attackvektorerna. Validera allt.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V12.1:</strong> Filtypvalidering: validera MIME-typ (content-type) på servern och verifiera "magic bytes" — lita inte på filändelsen</li>
+<li><strong>V12.2:</strong> Filnamnshantering: generera nya filnamn (UUID), acceptera inte användarlevererade filnamn rakt av (path traversal!)</li>
+<li><strong>V12.3:</strong> Fillagring: lagra filer utanför webroot eller i objektlagring (S3), skanna med antivirus vid uppladdning</li>
+<li><strong>V12.4:</strong> Filstorleksgränser: max storlek för både enskilda filer och totalsumma per request</li>
+<li><strong>V12.5:</strong> Farliga filtyper: blockera .exe, .js, .vbs, .ps1, .sh, .php, .jsp, .war, .dll</li>
+<li><strong>V12.7:</strong> SSRF-skydd: validera URL:er som användaren anger (blockera internal IPs, metadata endpoints, file://, gopher://)</li>
+</ul>
+
+<h3>XML External Entity (XXE)</h3>
+<p>Inaktivera DTD/Entity-upplösning i alla XML-parsers — detta är default i moderna bibliotek, men verifiera!</p>
+<pre># Python defusedxml
+import defusedxml.ElementTree as ET  # istället för xml.etree.ElementTree</pre>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_13_api" model="slide.slide">
+        <field name="name">V13 — API och webbtjänster</field>
+        <field name="sequence">14</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V13: API and Web Services</h2>
+<p>REST, GraphQL, SOAP, gRPC — alla API-typer har sina specifika säkerhetsutmaningar.</p>
+
+<h3>Centrala krav (REST)</h3>
+<ul>
+<li><strong>V13.1:</strong> API-dokumentation: OpenAPI/Swagger — men publicera inte i produktion</li>
+<li><strong>V13.2:</strong> API-autentisering: OAuth 2.0/OIDC för delegerad åtkomst, API-nycklar endast för lågrisk, JWT (signerad!) för service-to-service</li>
+<li><strong>V13.3:</strong> Rate limiting per API-nyckel/användare/IP — skydd mot brute force och scraping</li>
+<li><strong>V13.4:</strong> GraphQL-säkerhet: query depth/bredd limit, query cost analysis, persisted queries, introspection avstängd i prod</li>
+<li><strong>V13.5:</strong> CORS-konfiguration: specifika origins, inte "*"</li>
+</ul>
+
+<h3>REST API-säkerhetschecklista</h3>
+<ol>
+<li>Alla endpoints validerar JWT/session cookie</li>
+<li>RBAC/ABAC på varje endpoint — inte bara på frontend</li>
+<li>Content-Type-validering (application/json)</li>
+<li>Inputvalidering på varje parameter</li>
+<li>Rate limiting: 100 req/min per användare, 1000 req/min per IP</li>
+</ol>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_14_config" model="slide.slide">
+        <field name="name">V14 — Konfiguration och distribution</field>
+        <field name="sequence">15</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>V14: Configuration</h2>
+<p>Security misconfiguration (OWASP Top 10 #5) — hårda konfiguration från dev till prod.</p>
+
+<h3>Centrala krav</h3>
+<ul>
+<li><strong>V14.1:</strong> Härda alla miljöer: stäng av onödiga features, headers, metoder (TRACE, OPTIONS), kataloglistning</li>
+<li><strong>V14.2:</strong> HTTP Security Headers: CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy</li>
+<li><strong>V14.3:</strong> Secrets management: inga hårdkodade hemligheter — använd vault (HashiCorp Vault, AWS Secrets Manager, environment variables)</li>
+<li><strong>V14.4:</strong> Cross-Origin Resource Sharing (CORS): konfigurerat med minimalt nödvändig åtkomst</li>
+<li><strong>V14.5:</strong> Content Security Policy (CSP): strikt CSP utan 'unsafe-inline' och 'unsafe-eval'</li>
+<li><strong>V14.8:</strong> Separat deploy-användare med minimala rättigheter</li>
+</ul>
+
+<h3>Viktigaste HTTP Headers</h3>
+<pre>
+Content-Security-Policy: default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+</pre>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_15_implementation" model="slide.slide">
+        <field name="name">Praktisk tillämpning — ASVS i utvecklingsprocessen</field>
+        <field name="sequence">16</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.17</field>
+        <field name="description">
+<![CDATA[
+<h2>Integrera ASVS i er utvecklingsprocess</h2>
+
+<h3>I kravfasen</h3>
+<ul>
+<li>Använd ASVS som kravkatalog vid upphandling — "Applikationen ska uppfylla ASVS L2"</li>
+<li>Definiera vilken nivå (L1/L2/L3) som gäller för projektet</li>
+<li>Skapa ett subset av ASVS-krav som är relevanta för er applikation</li>
+</ul>
+
+<h3>I utvecklingsfasen</h3>
+<ul>
+<li>Säkerhetskrav som acceptance criteria i user stories</li>
+<li>SAST (Static Application Security Testing) i CI/CD-pipelinen för automatiserade kontroller</li>
+<li>Pre-commit hooks: hemlighetsscanning (TruffleHog, Gitleaks), linting av säkerhetskonfiguration</li>
+</ul>
+
+<h3>I testfasen</h3>
+<ul>
+<li>DAST (Dynamic Application Security Testing) — OWASP ZAP, Burp Suite</li>
+<li>Manuell pentest mot ASVS-kraven</li>
+<li>Använd OWASP ASVS-checklistan som testprotokoll</li>
+</ul>
+
+<h3>I drift</h3>
+<ul>
+<li>Regelbunden sårbarhetsscanning (minst kvartalsvis)</li>
+<li>Uppdatera ASVS-efterlevnad vid större förändringar</li>
+<li>Kontinuerlig övervakning: RASP, WAF, SIEM-regler</li>
+</ul>
+]]>
+        </field>
+    </record>
+
+    <record id="slide_owasp_16_sammanfattning" model="slide.slide">
+        <field name="name">ASVS v5 — Sammanfattning och resurser</field>
+        <field name="sequence">17</field>
+        <field name="slide_category">article</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_owasp_asvs"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="False"/>
+        <field name="completion_time">0.08</field>
+        <field name="description">
+<![CDATA[
+<h2>Sammanfattning — OWASP ASVS v5.0</h2>
+
+<h3>De 14 kategorierna</h3>
+<ol>
+<li><strong>V1</strong> Arkitektur & hotmodellering — säkerhet från grunden</li>
+<li><strong>V2</strong> Autentisering — verifiera identitet</li>
+<li><strong>V3</strong> Sessionshantering — skydda sessioner</li>
+<li><strong>V4</strong> Åtkomstkontroll — rätt person, rätt data</li>
+<li><strong>V5</strong> Validering & kodning — stoppa injektioner</li>
+<li><strong>V6</strong> Kryptografi — skydda data</li>
+<li><strong>V7</strong> Loggning — upptäck och utred</li>
+<li><strong>V8</strong> Dataskydd — skydda känslig information</li>
+<li><strong>V9</strong> Kommunikation — TLS och säker överföring</li>
+<li><strong>V10</strong> Skadlig kod — supply chain security</li>
+<li><strong>V11</strong> Affärslogik — skydda verksamhetsregler</li>
+<li><strong>V12</strong> Filer — säker filhantering</li>
+<li><strong>V13</strong> API — säkra webbtjänster</li>
+<li><strong>V14</strong> Konfiguration — hårda alla miljöer</li>
+</ol>
+
+<h3>Resurser</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-application-security-verification-standard/">OWASP ASVS officiell webbplats</a></li>
+<li><a href="https://github.com/OWASP/ASVS">ASVS på GitHub</a> — ladda ned senaste versionen</li>
+<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/">OWASP Cheat Sheet Series</a></li>
+</ul>
+]]>
+        </field>
+    </record>
+
+</odoo>

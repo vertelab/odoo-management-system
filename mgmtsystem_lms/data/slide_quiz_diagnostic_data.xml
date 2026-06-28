@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="quiz_crm_leads" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Inbound Sales &amp; Lead-kvalificering</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_leads"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_crm_leads_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_leads"/>
+        <field name="question">Vad står förkortningen BANT för inom lead-kvalificering?</field>
+    </record>
+
+    <record id="quiz_crm_leads_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q1"/>
+        <field name="text_value">Budget, Authority, Need, Timeline</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_leads_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q1"/>
+        <field name="text_value">Business, Analysis, Negotiation, Tracking</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q1"/>
+        <field name="text_value">Buyer, Account, Need, Transaction</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q1"/>
+        <field name="text_value">Budget, Analysis, Need, Target</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_leads"/>
+        <field name="question">Vad är ett MQL?</field>
+    </record>
+
+    <record id="quiz_crm_leads_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q2"/>
+        <field name="text_value">Marketing Qualified Lead — ett lead som marketing bedömt som redo för sälj</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_leads_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q2"/>
+        <field name="text_value">Manual Quality Lead — ett lead som granskats manuellt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q2"/>
+        <field name="text_value">Maximum Quality Level — den högsta lead-kvaliteten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q2"/>
+        <field name="text_value">Multi-Question Lead — ett lead från flera källor</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_leads"/>
+        <field name="question">När är ett lead redo att konverteras till en opportunity i CRM?</field>
+    </record>
+
+    <record id="quiz_crm_leads_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q3"/>
+        <field name="text_value">När BANT har bekräftats (minst 3 av 4) och nästa steg är bokat</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_leads_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q3"/>
+        <field name="text_value">Så fort leadet skapats i CRM</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q3"/>
+        <field name="text_value">När leadet har öppnat minst 3 e-postutskick</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q3"/>
+        <field name="text_value">Efter att en offert har skickats</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_leads"/>
+        <field name="question">Vilken fas i kundens köpresa kommer FÖRST?</field>
+    </record>
+
+    <record id="quiz_crm_leads_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q4"/>
+        <field name="text_value">Awareness (medvetenhet)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_leads_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q4"/>
+        <field name="text_value">Consideration (övervägande)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q4"/>
+        <field name="text_value">Decision (beslut)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q4"/>
+        <field name="text_value">Onboarding (införande)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_leads"/>
+        <field name="question">Vad är lead nurturing?</field>
+    </record>
+
+    <record id="quiz_crm_leads_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q5"/>
+        <field name="text_value">Att systematiskt hålla kontakt med leads som inte är redo att köpa genom relevant innehåll</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_leads_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q5"/>
+        <field name="text_value">Att snabbt konvertera alla leads till opportunities</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q5"/>
+        <field name="text_value">Att ta bort leads som inte svarar efter första kontakten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_leads_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_leads_q5"/>
+        <field name="text_value">Att köpa in leads från externa listor</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Sales Pipeline Management</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_pipeline"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_pipeline"/>
+        <field name="question">Vad menas med "pipeline coverage"?</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q1"/>
+        <field name="text_value">Förhållandet mellan totalt pipeline-värde och säljmål (bör vara 3-5x)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q1"/>
+        <field name="text_value">Hur många säljare som är aktiva i pipelinen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q1"/>
+        <field name="text_value">Hur många dagar en deal i genomsnitt ligger i tratten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q1"/>
+        <field name="text_value">Antalet nya leads som läggs till per vecka</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_pipeline"/>
+        <field name="question">Vilken sannolikhet är rimlig för en deal i "Prospecting"-fasen?</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q2"/>
+        <field name="text_value">10%</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q2"/>
+        <field name="text_value">50%</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q2"/>
+        <field name="text_value">75%</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q2"/>
+        <field name="text_value">90%</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_pipeline"/>
+        <field name="question">Vad är "happy ears" inom försäljning?</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q3"/>
+        <field name="text_value">Att höra det man vill höra — tolka artighet som köpsignal</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q3"/>
+        <field name="text_value">När en kund är genuint entusiastisk</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q3"/>
+        <field name="text_value">En säljteknik där man speglar kundens positiva känslor</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q3"/>
+        <field name="text_value">När säljteamet firar en stor vinst</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_pipeline"/>
+        <field name="question">Hur ofta bör du gå igenom och städa din pipeline (pipeline-hygien)?</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q4"/>
+        <field name="text_value">Dagligen för uppdateringar, veckovis för påminnelser, månadsvis för att stänga döda deals</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q4"/>
+        <field name="text_value">En gång per år vid årsbokslutet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q4"/>
+        <field name="text_value">Endast när chefen ber om en rapport</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q4"/>
+        <field name="text_value">Aldrig — CRM sköter sig självt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_pipeline"/>
+        <field name="question">Vad mäter "Sales Velocity"?</field>
+    </record>
+
+    <record id="quiz_crm_pipeline_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q5"/>
+        <field name="text_value">Hur snabbt deals rör sig genom pipelinen: deals × värde × win rate ÷ cykellängd</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q5"/>
+        <field name="text_value">Hur många samtal en säljare gör per dag</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q5"/>
+        <field name="text_value">Hur snabbt CRM-systemet svarar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_pipeline_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_pipeline_q5"/>
+        <field name="text_value">Hur fort en ny säljare når full produktivitet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Value Based Selling</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_value"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_crm_value_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_value"/>
+        <field name="question">Vad står SPIN för i SPIN-metoden?</field>
+    </record>
+
+    <record id="quiz_crm_value_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q1"/>
+        <field name="text_value">Situation, Problem, Implikation, Nyttobehov</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_value_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q1"/>
+        <field name="text_value">Sales, Process, Integration, Negotiation</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q1"/>
+        <field name="text_value">Strategy, Planning, Implementation, Numbers</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q1"/>
+        <field name="text_value">Solution, Price, Implementation, Next-steps</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_value"/>
+        <field name="question">Vilken är den viktigaste skillnaden mellan feature-sälj och value-sälj?</field>
+    </record>
+
+    <record id="quiz_crm_value_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q2"/>
+        <field name="text_value">Feature-sälj pratar om produkten. Value-sälj pratar om kundens resultat.</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_value_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q2"/>
+        <field name="text_value">Feature-sälj är billigare. Value-sälj är dyrare.</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q2"/>
+        <field name="text_value">Feature-sälj använder CRM. Value-sälj använder Excel.</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q2"/>
+        <field name="text_value">Det finns ingen skillnad — det är samma sak.</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_value"/>
+        <field name="question">Vad är en "Power Map" i säljsammanhang?</field>
+    </record>
+
+    <record id="quiz_crm_value_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q3"/>
+        <field name="text_value">En kartläggning av alla intressenter i beslutsprocessen — champion, DM, influencer, blocker</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_value_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q3"/>
+        <field name="text_value">En graf som visar elförbrukningen i kundens lokaler</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q3"/>
+        <field name="text_value">En lista över de mest lönsamma kunderna</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q3"/>
+        <field name="text_value">En karta över säljarnas geografiska områden</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_value"/>
+        <field name="question">Vilken är nyckelregeln för ROI-kalkyler enligt kursen?</field>
+    </record>
+
+    <record id="quiz_crm_value_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q4"/>
+        <field name="text_value">Använd kundens egna siffror, var konservativ, dokumentera antaganden</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_value_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q4"/>
+        <field name="text_value">Var så optimistisk som möjligt för att imponera</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q4"/>
+        <field name="text_value">Använd generella branschsiffror — kundspecifika data är för svårt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q4"/>
+        <field name="text_value">ROI-kalkyler är onödiga — pris är det enda som spelar roll</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_value"/>
+        <field name="question">Hur bör du svara på invändningen "Konkurrenten är 30% billigare"?</field>
+    </record>
+
+    <record id="quiz_crm_value_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q5"/>
+        <field name="text_value">Jämför totalkostnad över tid och inkludera allt som konkurrenten tar extra betalt för</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_value_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q5"/>
+        <field name="text_value">Sänk priset med 30% direkt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q5"/>
+        <field name="text_value">Säg att konkurrenten har sämre kvalitet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_value_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_value_q5"/>
+        <field name="text_value">Ignorera invändningen och byt ämne</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Offertstängning &amp; avslutsteknik</field>
+        <field name="sequence">8</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_crm_stangning"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_stangning"/>
+        <field name="question">Vad är den gyllene regeln för offerter?</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q1"/>
+        <field name="text_value">Skicka ALDRIG en offert utan att ha bokat ett genomgångsmöte</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q1"/>
+        <field name="text_value">Skicka offerten så snabbt som möjligt — helst inom 1 timme</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q1"/>
+        <field name="text_value">Använd alltid den billigaste prismodellen först</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q1"/>
+        <field name="text_value">Offerten ska vara minst 20 sidor lång för att vara trovärdig</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_stangning"/>
+        <field name="question">Vad är "alternativfrågan" som avslutsteknik?</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q2"/>
+        <field name="text_value">"Föredrar ni att starta implementationen i augusti eller september?"</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q2"/>
+        <field name="text_value">"Vill ni köpa eller inte?"</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q2"/>
+        <field name="text_value">"Ska jag skicka fakturan nu eller sen?"</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q2"/>
+        <field name="text_value">"Har ni några frågor?"</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_stangning"/>
+        <field name="question">Vad innebär "tystnad" som avslutsteknik?</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q3"/>
+        <field name="text_value">Ställ avslutsfrågan och var sedan helt tyst — låt kunden tänka och svara först</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q3"/>
+        <field name="text_value">Håll tyst under hela mötet och låt kunden prata</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q3"/>
+        <field name="text_value">Skicka offerten utan kommentarer</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q3"/>
+        <field name="text_value">Vänta en vecka med att följa upp</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_stangning"/>
+        <field name="question">Vilket är ett tecken på att du ska PUSHA mot avslut (köpsignal)?</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q4"/>
+        <field name="text_value">Kunden frågar om implementation, support eller utbildning</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q4"/>
+        <field name="text_value">Kunden säger att de måste tänka på saken</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q4"/>
+        <field name="text_value">Kunden nämner att konkurrenten är billigare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q4"/>
+        <field name="text_value">Kunden avbokar mötet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_crm_stangning"/>
+        <field name="question">Vad ska du göra direkt efter en vunnen affär?</field>
+    </record>
+
+    <record id="quiz_crm_stangning_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q5"/>
+        <field name="text_value">Dokumentera allt i CRM, boka överlämningsmöte med CSM, tacka kunden personligt</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q5"/>
+        <field name="text_value">Gå direkt på nästa lead — affären är klar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q5"/>
+        <field name="text_value">Fira med teamet och glöm administrationen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_crm_stangning_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_crm_stangning_q5"/>
+        <field name="text_value">Skicka ett automatiskt "Tack för din beställning"-mail</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001" model="slide.slide">
+        <field name="name">Diagnostiskt prov: ISO 9001:2026 — Kvalitetsledning</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_9001"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_9001_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_9001"/>
+        <field name="question">Vad står PDCA för i kvalitetsledningssammanhang?</field>
+    </record>
+
+    <record id="quiz_9001_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q1"/>
+        <field name="text_value">Plan, Do, Check, Act</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_9001_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q1"/>
+        <field name="text_value">Prepare, Develop, Control, Assess</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q1"/>
+        <field name="text_value">Process, Document, Certify, Audit</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q1"/>
+        <field name="text_value">Plan, Deliver, Control, Analyze</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_9001"/>
+        <field name="question">Vilka är de sju kvalitetsprinciperna enligt ISO 9001?</field>
+    </record>
+
+    <record id="quiz_9001_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q2"/>
+        <field name="text_value">Kundfokus, Ledarskap, Medarbetarengagemang, Processinriktning, Förbättring, Faktabaserade beslut, Relationshantering</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_9001_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q2"/>
+        <field name="text_value">Pris, Produkt, Plats, Påverkan, Personal, Process, Prestanda</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q2"/>
+        <field name="text_value">Kvalitet, Kvantitet, Kontroll, Kommunikation, Kompetens, Kostnad, Kund</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q2"/>
+        <field name="text_value">Plan, Pris, Process, Personal, Produkt, Plats, Promotion</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_9001"/>
+        <field name="question">Vad är syftet med en internrevision i ett kvalitetsledningssystem?</field>
+    </record>
+
+    <record id="quiz_9001_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q3"/>
+        <field name="text_value">Att systematiskt granska att ledningssystemet fungerar som planerat och uppfyller kraven</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_9001_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q3"/>
+        <field name="text_value">Att förbereda inför den externa certifieringsrevisionen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q3"/>
+        <field name="text_value">Att hitta fel hos medarbetare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q3"/>
+        <field name="text_value">Att minska antalet anställda</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_9001"/>
+        <field name="question">Vad menas med "riskbaserat tänkande" i ISO 9001?</field>
+    </record>
+
+    <record id="quiz_9001_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q4"/>
+        <field name="text_value">Att identifiera risker och möjligheter som kan påverka kvalitetsledningssystemets resultat</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_9001_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q4"/>
+        <field name="text_value">Att alltid välja det säkraste alternativet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q4"/>
+        <field name="text_value">Att undvika alla former av risk</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q4"/>
+        <field name="text_value">Att fokusera enbart på finansiella risker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_9001"/>
+        <field name="question">Vad är en avvikelse i kvalitetsledningssystemet?</field>
+    </record>
+
+    <record id="quiz_9001_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q5"/>
+        <field name="text_value">Ett avsteg från specificerade krav eller standarder</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_9001_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q5"/>
+        <field name="text_value">En medarbetare som inte följer policyn</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q5"/>
+        <field name="text_value">Ett fel i det finansiella systemet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_9001_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_9001_q5"/>
+        <field name="text_value">En kund som klagar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001" model="slide.slide">
+        <field name="name">Diagnostiskt prov: ISO 14001:2026 — Miljöledning</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_14001"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_14001_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_14001"/>
+        <field name="question">Vad är en miljöaspekt enligt ISO 14001?</field>
+    </record>
+
+    <record id="quiz_14001_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q1"/>
+        <field name="text_value">En del av organisationens aktiviteter, produkter eller tjänster som kan påverka miljön</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_14001_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q1"/>
+        <field name="text_value">Ett lagkrav inom miljöområdet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q1"/>
+        <field name="text_value">En åsikt om miljön från en intressent</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q1"/>
+        <field name="text_value">En typ av miljöcertifiering</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_14001"/>
+        <field name="question">Vad innebär livscykelperspektivet i ISO 14001?</field>
+    </record>
+
+    <record id="quiz_14001_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q2"/>
+        <field name="text_value">Att man ser på miljöpåverkan från råvara till avfall — hela produktens livscykel</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_14001_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q2"/>
+        <field name="text_value">Att man bara fokuserar på den egna fabrikens utsläpp</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q2"/>
+        <field name="text_value">Att man analyserar hur länge en produkt håller</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q2"/>
+        <field name="text_value">Att man jämför olika produkters pris över tid</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_14001"/>
+        <field name="question">Vad är substitutionsprincipen?</field>
+    </record>
+
+    <record id="quiz_14001_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q3"/>
+        <field name="text_value">Att byta ut farliga kemikalier mot mindre farliga alternativ när det är tekniskt möjligt</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_14001_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q3"/>
+        <field name="text_value">Att ersätta gamla maskiner med nya</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q3"/>
+        <field name="text_value">Att byta ut personal som inte följer miljörutiner</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q3"/>
+        <field name="text_value">Att ersätta pappersdokument med digitala</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_14001"/>
+        <field name="question">Vilken är den högsta prioriteten i avfallstrappan?</field>
+    </record>
+
+    <record id="quiz_14001_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q4"/>
+        <field name="text_value">Minimera/Förebygga — att inte skapa avfall från början</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_14001_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q4"/>
+        <field name="text_value">Materialåtervinna</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q4"/>
+        <field name="text_value">Energiåtervinna</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q4"/>
+        <field name="text_value">Deponera</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_14001"/>
+        <field name="question">Vad krävs för att en miljöaspekt ska klassas som "betydande"?</field>
+    </record>
+
+    <record id="quiz_14001_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q5"/>
+        <field name="text_value">Den har eller kan ha betydande miljöpåverkan baserat på fastställda kriterier</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_14001_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q5"/>
+        <field name="text_value">Den nämns i miljöbalken</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q5"/>
+        <field name="text_value">Den kostar mer än 100 000 kr att åtgärda</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_14001_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_14001_q5"/>
+        <field name="text_value">Minst tre intressenter har påpekat den</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001" model="slide.slide">
+        <field name="name">Diagnostiskt prov: ISO 27001:2022 — Informationssäkerhet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_27001"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_27001_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_27001"/>
+        <field name="question">Vad är de tre grundpelarna i informationssäkerhet (CIA-triaden)?</field>
+    </record>
+
+    <record id="quiz_27001_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q1"/>
+        <field name="text_value">Konfidentialitet, Integritet, Tillgänglighet</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_27001_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q1"/>
+        <field name="text_value">Kontroll, Identitet, Autentisering</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q1"/>
+        <field name="text_value">Kommunikation, Integration, Automation</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q1"/>
+        <field name="text_value">Kvalitet, Innovation, Ansvar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_27001"/>
+        <field name="question">Vad är syftet med Annex A i ISO 27001?</field>
+    </record>
+
+    <record id="quiz_27001_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q2"/>
+        <field name="text_value">En katalog med informationssäkerhetskontroller som organisationer kan välja att implementera</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_27001_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q2"/>
+        <field name="text_value">En lista över obligatoriska dokument</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q2"/>
+        <field name="text_value">En förteckning över certifieringsorgan</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q2"/>
+        <field name="text_value">En ordlista med tekniska termer</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_27001"/>
+        <field name="question">Vad är en informationssäkerhetspolicy?</field>
+    </record>
+
+    <record id="quiz_27001_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q3"/>
+        <field name="text_value">Ett dokument som fastställer ledningens övergripande mål och inriktning för informationssäkerhetsarbetet</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_27001_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q3"/>
+        <field name="text_value">Ett tekniskt dokument som beskriver brandväggsregler</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q3"/>
+        <field name="text_value">En lista över alla lösenord i organisationen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q3"/>
+        <field name="text_value">En instruktion för hur man installerar antivirusprogram</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_27001"/>
+        <field name="question">Vad menas med riskägare i ISO 27001?</field>
+    </record>
+
+    <record id="quiz_27001_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q4"/>
+        <field name="text_value">Den person som har ansvar och befogenhet att hantera en specifik risk</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_27001_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q4"/>
+        <field name="text_value">Den som äger IT-systemet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q4"/>
+        <field name="text_value">En extern konsult som gör riskanalys</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q4"/>
+        <field name="text_value">Försäkringsbolaget som täcker cyberrisker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_27001"/>
+        <field name="question">Hur ofta ska ledningens genomgång av informationssäkerhetssystemet genomföras?</field>
+    </record>
+
+    <record id="quiz_27001_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q5"/>
+        <field name="text_value">Minst årligen, eller oftare vid behov</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_27001_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q5"/>
+        <field name="text_value">Vart femte år</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q5"/>
+        <field name="text_value">Endast vid certifieringsrevision</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_27001_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_27001_q5"/>
+        <field name="text_value">Aldrig — det är ISMS-ansvarigs uppgift</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000" model="slide.slide">
+        <field name="name">Diagnostiskt prov: ISO 22000:2018 — Livsmedelssäkerhet</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_22000"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_22000_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_22000"/>
+        <field name="question">Vad står HACCP för?</field>
+    </record>
+
+    <record id="quiz_22000_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q1"/>
+        <field name="text_value">Hazard Analysis and Critical Control Points</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_22000_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q1"/>
+        <field name="text_value">Health And Consumer Care Protection</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q1"/>
+        <field name="text_value">Handling And Cooking Control Procedures</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q1"/>
+        <field name="text_value">Hygiene Assessment and Certification Program</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_22000"/>
+        <field name="question">Vad är en CCP (Critical Control Point)?</field>
+    </record>
+
+    <record id="quiz_22000_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q2"/>
+        <field name="text_value">Ett processteg där en fara kan elimineras eller reduceras till en acceptabel nivå</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_22000_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q2"/>
+        <field name="text_value">En temperatur som är kritisk för matlagning</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q2"/>
+        <field name="text_value">En punkt där kunder kan lämna klagomål</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q2"/>
+        <field name="text_value">En kontrollpunkt för leverantörsgodkännande</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_22000"/>
+        <field name="question">Vad står PRP för?</field>
+    </record>
+
+    <record id="quiz_22000_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q3"/>
+        <field name="text_value">Prerequisite Programs — grundförutsättningar för livsmedelssäkerhet</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_22000_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q3"/>
+        <field name="text_value">Product Recall Procedure</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q3"/>
+        <field name="text_value">Primary Risk Prevention</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q3"/>
+        <field name="text_value">Process Review Panel</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_22000"/>
+        <field name="question">Vad är spårbarhet i livsmedelskedjan?</field>
+    </record>
+
+    <record id="quiz_22000_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q4"/>
+        <field name="text_value">Förmågan att spåra ett livsmedel genom alla steg från primärproduktion till slutkonsument</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_22000_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q4"/>
+        <field name="text_value">Att veta hur lång tid maten håller</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q4"/>
+        <field name="text_value">Att kunna följa ett paket under transport</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q4"/>
+        <field name="text_value">Att dokumentera alla recept i tillverkningen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_22000"/>
+        <field name="question">Vad är en faroanalys?</field>
+    </record>
+
+    <record id="quiz_22000_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q5"/>
+        <field name="text_value">En systematisk genomgång av vilka faror (biologiska, kemiska, fysikaliska) som kan uppstå i processen</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_22000_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q5"/>
+        <field name="text_value">En analys av företagets ekonomiska risker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q5"/>
+        <field name="text_value">En utvärdering av personalens kompetens</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_22000_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_22000_q5"/>
+        <field name="text_value">En kontroll av temperaturloggar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam" model="slide.slide">
+        <field name="name">Diagnostiskt prov: SAM — Systematiskt Arbetsmiljöarbete</field>
+        <field name="sequence">1</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_sam"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_sam_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_sam"/>
+        <field name="question">Vad menas med systematiskt arbetsmiljöarbete (SAM)?</field>
+    </record>
+
+    <record id="quiz_sam_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q1"/>
+        <field name="text_value">Ett strukturerat och löpande arbete för att undersöka, riskbedöma, åtgärda och följa upp arbetsmiljön</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_sam_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q1"/>
+        <field name="text_value">En årlig skyddsrond</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q1"/>
+        <field name="text_value">En lista över arbetsmiljöregler</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q1"/>
+        <field name="text_value">En utbildning för chefer</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_sam"/>
+        <field name="question">Vilken är arbetsgivarens huvudskyldighet enligt Arbetsmiljölagen?</field>
+    </record>
+
+    <record id="quiz_sam_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q2"/>
+        <field name="text_value">Att vidta alla åtgärder som behövs för att förebygga ohälsa och olycksfall</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_sam_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q2"/>
+        <field name="text_value">Att betala ut lön i tid</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q2"/>
+        <field name="text_value">Att tillhandahålla gratis kaffe</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q2"/>
+        <field name="text_value">Att anställa ett skyddsombud</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_sam"/>
+        <field name="question">Vad är en riskbedömning enligt AFS 2001:1?</field>
+    </record>
+
+    <record id="quiz_sam_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q3"/>
+        <field name="text_value">En bedömning av sannolikheten för och konsekvenserna av att ohälsa eller olycksfall inträffar</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_sam_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q3"/>
+        <field name="text_value">En medicinsk undersökning av personalen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q3"/>
+        <field name="text_value">En ekonomisk utvärdering av arbetsplatsen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q3"/>
+        <field name="text_value">En mätning av bullernivån</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_sam"/>
+        <field name="question">Vad är ett tillbud?</field>
+    </record>
+
+    <record id="quiz_sam_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q4"/>
+        <field name="text_value">En oönskad händelse som kunnat leda till ohälsa eller olycksfall</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_sam_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q4"/>
+        <field name="text_value">En anmälan till Arbetsmiljöverket</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q4"/>
+        <field name="text_value">Ett planerat möte om arbetsmiljö</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q4"/>
+        <field name="text_value">En konflikt mellan två medarbetare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_sam"/>
+        <field name="question">Hur ofta ska arbetsgivaren följa upp det systematiska arbetsmiljöarbetet?</field>
+    </record>
+
+    <record id="quiz_sam_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q5"/>
+        <field name="text_value">Årligen, samt vid förändringar i verksamheten</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_sam_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q5"/>
+        <field name="text_value">Vart femte år</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q5"/>
+        <field name="text_value">Endast efter en olycka</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_sam_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_sam_q5"/>
+        <field name="text_value">När Arbetsmiljöverket kräver det</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Skyddsombud</field>
+        <field name="sequence">13</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_skyddsombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_skyddsombud"/>
+        <field name="question">Vilken lag reglerar skyddsombudets roll och rättigheter?</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q1"/>
+        <field name="text_value">Arbetsmiljölagen (AML) — främst kapitel 6</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q1"/>
+        <field name="text_value">Semesterlagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q1"/>
+        <field name="text_value">Arbetstidslagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q1"/>
+        <field name="text_value">Lagen om anställningsskydd (LAS)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_skyddsombud"/>
+        <field name="question">Vad innebär skyddsombudets stopprätt (AML § 6:7)?</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q2"/>
+        <field name="text_value">Rätt att stoppa arbete vid omedelbar och allvarlig fara för liv eller hälsa</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q2"/>
+        <field name="text_value">Rätt att stoppa produktionen av kostnadsskäl</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q2"/>
+        <field name="text_value">Rätt att avbryta ett möte</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q2"/>
+        <field name="text_value">Rätt att stänga av en medarbetare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_skyddsombud"/>
+        <field name="question">Vad behandlar AFS 2015:4?</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q3"/>
+        <field name="text_value">Organisatorisk och social arbetsmiljö (arbetsbelastning, arbetstid, kränkande särbehandling)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q3"/>
+        <field name="text_value">Kemiska arbetsmiljörisker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q3"/>
+        <field name="text_value">Belastningsergonomi</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q3"/>
+        <field name="text_value">Systematiskt arbetsmiljöarbete</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_skyddsombud"/>
+        <field name="question">Vilket är det första steget i SAM-hjulet (PDCA för arbetsmiljö)?</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q4"/>
+        <field name="text_value">Undersök arbetsmiljön</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q4"/>
+        <field name="text_value">Åtgärda risker</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q4"/>
+        <field name="text_value">Följ upp åtgärder</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q4"/>
+        <field name="text_value">Dokumentera allt</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_skyddsombud"/>
+        <field name="question">Vad är en skyddskommitté?</field>
+    </record>
+
+    <record id="quiz_skyddsombud_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q5"/>
+        <field name="text_value">Ett samverkansforum mellan arbetsgivare och arbetstagare för arbetsmiljöfrågor</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q5"/>
+        <field name="text_value">En grupp som utreder olyckor</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q5"/>
+        <field name="text_value">En extern konsultgrupp</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_skyddsombud_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_skyddsombud_q5"/>
+        <field name="text_value">Ett certifieringsorgan för arbetsmiljö</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Miljöombud</field>
+        <field name="sequence">11</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_miljoombud"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_miljoombud_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_miljoombud"/>
+        <field name="question">Vilken är Sveriges centrala miljölagstiftning?</field>
+    </record>
+
+    <record id="quiz_miljoombud_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q1"/>
+        <field name="text_value">Miljöbalken (SFS 1998:808)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_miljoombud_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q1"/>
+        <field name="text_value">Arbetsmiljölagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q1"/>
+        <field name="text_value">Plan- och bygglagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q1"/>
+        <field name="text_value">Skogsvårdslagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_miljoombud"/>
+        <field name="question">Vad är en miljöaspekt?</field>
+    </record>
+
+    <record id="quiz_miljoombud_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q2"/>
+        <field name="text_value">En del av verksamhetens aktiviteter, produkter eller tjänster som kan påverka miljön</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_miljoombud_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q2"/>
+        <field name="text_value">En åsikt om verksamhetens miljöpåverkan</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q2"/>
+        <field name="text_value">Ett krav från tillsynsmyndigheten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q2"/>
+        <field name="text_value">En finansiell kostnad för miljöåtgärder</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_miljoombud"/>
+        <field name="question">Vad är produktvalsprincipen (en av hänsynsreglerna i Miljöbalken)?</field>
+    </record>
+
+    <record id="quiz_miljoombud_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q3"/>
+        <field name="text_value">Att välja den minst farliga produkten eller metoden när alternativ finns</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_miljoombud_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q3"/>
+        <field name="text_value">Att alltid välja den billigaste produkten</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q3"/>
+        <field name="text_value">Att fråga kunderna vilken produkt de föredrar</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q3"/>
+        <field name="text_value">Att byta produkt varje år</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_miljoombud"/>
+        <field name="question">Vad är farligt avfall?</field>
+    </record>
+
+    <record id="quiz_miljoombud_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q4"/>
+        <field name="text_value">Avfall som är explosivt, brandfarligt, giftigt, frätande eller smittfarligt</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_miljoombud_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q4"/>
+        <field name="text_value">Allt avfall som inte kan återvinnas</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q4"/>
+        <field name="text_value">Avfall från kontorsverksamhet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q4"/>
+        <field name="text_value">Avfall som väger mer än 10 kg</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_miljoombud"/>
+        <field name="question">Vilken standard är den internationella standarden för miljöledningssystem?</field>
+    </record>
+
+    <record id="quiz_miljoombud_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q5"/>
+        <field name="text_value">ISO 14001</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_miljoombud_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q5"/>
+        <field name="text_value">ISO 9001</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q5"/>
+        <field name="text_value">ISO 27001</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_miljoombud_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_miljoombud_q5"/>
+        <field name="text_value">ISO 45001</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd" model="slide.slide">
+        <field name="name">Diagnostiskt prov: Brandskyddsombud</field>
+        <field name="sequence">9</field>
+        <field name="slide_category">quiz</field>
+        <field name="channel_id" ref="mgmtsystem_lms.slide_channel_brandskydd"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">0.17</field>
+    </record>
+
+    <record id="quiz_brandskydd_q1" model="slide.question">
+        <field name="slide_id" ref="quiz_brandskydd"/>
+        <field name="question">Vilken lag reglerar brandskyddet i Sverige?</field>
+    </record>
+
+    <record id="quiz_brandskydd_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q1"/>
+        <field name="text_value">Lagen om skydd mot olyckor (LSO)</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_brandskydd_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q1"/>
+        <field name="text_value">Arbetsmiljölagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q1"/>
+        <field name="text_value">Miljöbalken</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q1"/>
+        <field name="text_value">Bygglagen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q2" model="slide.question">
+        <field name="slide_id" ref="quiz_brandskydd"/>
+        <field name="question">Vad är brandtriangeln?</field>
+    </record>
+
+    <record id="quiz_brandskydd_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q2"/>
+        <field name="text_value">Tre förutsättningar för brand: brännbart material, syre och värme/tändkälla</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_brandskydd_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q2"/>
+        <field name="text_value">Tre typer av brandsläckare</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q2"/>
+        <field name="text_value">Tre personer som ansvarar för brandskyddet</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q2"/>
+        <field name="text_value">Tre faser i en brands utveckling</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q3" model="slide.question">
+        <field name="slide_id" ref="quiz_brandskydd"/>
+        <field name="question">Vad ska du göra först vid en brand?</field>
+    </record>
+
+    <record id="quiz_brandskydd_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q3"/>
+        <field name="text_value">Rädda personer i fara</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_brandskydd_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q3"/>
+        <field name="text_value">Ringa försäkringsbolaget</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q3"/>
+        <field name="text_value">Hämta viktiga dokument</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q3"/>
+        <field name="text_value">Filma med mobilen</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q4" model="slide.question">
+        <field name="slide_id" ref="quiz_brandskydd"/>
+        <field name="question">Vilken släckare får INTE användas vid elbränder?</field>
+    </record>
+
+    <record id="quiz_brandskydd_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q4"/>
+        <field name="text_value">Vattensläckare</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_brandskydd_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q4"/>
+        <field name="text_value">Pulversläckare (ABC)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q4"/>
+        <field name="text_value">Koldioxidsläckare (CO₂)</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q4"/>
+        <field name="text_value">Alla är OK vid elbränder</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q5" model="slide.question">
+        <field name="slide_id" ref="quiz_brandskydd"/>
+        <field name="question">Vad menas med en brandcell?</field>
+    </record>
+
+    <record id="quiz_brandskydd_q5_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q5"/>
+        <field name="text_value">En avgränsad del av en byggnad där en brand kan begränsas under en viss tid</field>
+        <field name="is_correct" eval="True"/>
+    </record>
+
+    <record id="quiz_brandskydd_q5_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q5"/>
+        <field name="text_value">En grupp brandskyddsombud</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q5_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q5"/>
+        <field name="text_value">En mobil enhet för brandsläckning</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+
+    <record id="quiz_brandskydd_q5_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_brandskydd_q5"/>
+        <field name="text_value">En digital modell för brandspridning</field>
+        <field name="is_correct" eval="False"/>
+    </record>
+</odoo>
