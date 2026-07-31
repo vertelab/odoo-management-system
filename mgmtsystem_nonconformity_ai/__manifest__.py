@@ -9,41 +9,24 @@
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
 ##############################################################################
 
 {
     'name': 'Management Nonconformity: Chat with Nonconformity',
-    'version': '1.0.3',
-    'summary': 'Mailbox for AI',
+    'version': '18.0.1.0.0',
+    'summary': 'AI-coworker per nonconformity (chat via discuss.channel)',
     'category': 'helpdesk',
-    'description': """
-        Mailbox for AI
-    """,
-    #'sequence': '1',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_nonconformity_ai',
-    'images': ['static/description/banner.png'],  # 560x280 px.
     'license': 'AGPL-3',
-    'contributor': '',
-    'maintainer': 'Vertel AB',
-    'repository': 'https://github.com/vertelab/odoo-ai',
-    # Any module necessary for this one to work correctly
     'depends': [
-        'ai_agent',
+        'mgmtsystem_nonconformity',
+        'ai_agent_core',
     ],
     'data': [
-        'data/ai_agent_data.xml',
+        'data/ai_coworker_data.xml',
     ],
     'installable': True,
     'auto_install': False,
     'application': False,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

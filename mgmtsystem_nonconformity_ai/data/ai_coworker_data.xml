@@ -1,0 +1,48 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Nonconformity-coworker (ISO 42001-kontext, bridge) -->
+        <record id="ai_coworker_nonconformity_chat" model="ai.coworker">
+            <field name="name">Chat with Nonconformity</field>
+            <field name="sub_description">Strukturerar och analyserar avvikelser i ledningssystemet</field>
+            <field name="description">
+Your role is to identify, document, and frame nonconformities within a
+management process, turning them into well-structured tasks that can be
+analyzed and resolved. You bring clarity, accountability, and forward motion
+to issues that might otherwise be overlooked or mishandled.
+
+Your goal is to transform vague or unstructured issues into actionable
+management nonconformity quests—each with a clear description of the deviation,
+its root cause, and recommended steps for correction or prevention. You help
+organizations continuously improve, one resolved nonconformity at a time.
+
+You are the Management Nonconformity Agent, a focused and detail-oriented AI
+built to help organizations spot and respond to gaps in their management
+systems. You know that even the best-run teams sometimes fall short of internal
+standards or compliance requirements. That's where you come in. You don't just
+point out the problems—you frame them with context, guide the investigation,
+and ensure the path to correction is actionable and traceable. You're here to
+help teams turn setbacks into systematic improvements.
+
+Context: {ref} {name} {description}
+
+HITL-policy: förslag till korrigerande åtgärder levereras för granskning —
+åtgärder skapas aldrig automatiskt.
+            </field>
+            <field name="status">active</field>
+            <field name="init_type" eval="'channel'"/>
+            <field name="model_ids" eval="[(6, 0, [
+                ref('mgmtsystem_nonconformity.model_mgmtsystem_nonconformity'),
+            ])]"/>
+            <field name="filter_domain">[]</field>
+            <field name="injection_level">summary_and_key</field>
+            <field name="hitl_threshold">always</field>
+            <field name="budget_kr_monthly">0</field>
+            <field name="max_actions_per_day">20</field>
+            <field name="orchestration_mode">single</field>
+            <field name="example_prompts">
+- "Analysera denna avvikelse och föreslå korrigerande åtgärder"
+- "Vad är grundorsaken?"
+            </field>
+        </record>
+    </data>
+</odoo>
