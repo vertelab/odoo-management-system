@@ -8,3 +8,4 @@ from . import security_alert_action
 from . import security_software
 from . import security_software_release
 from . import res_config
+from . import ai_zabbix_alert

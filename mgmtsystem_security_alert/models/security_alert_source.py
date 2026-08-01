@@ -21,6 +21,7 @@ class SecurityAlertSource(models.Model):
             ("ncsc", "NCSC (Web Scraping)"),
             ("nvd_cve", "NVD CVE (API v2.0)"),
             ("ubuntu_usn", "Ubuntu USN (REST API)"),
+            ("zabbix", "Zabbix"),
         ],
         string="Source Type",
         required=True,

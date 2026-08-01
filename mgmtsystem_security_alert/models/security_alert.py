@@ -133,10 +133,10 @@ class SecurityAlert(models.Model):
     def action_ai_assess_relevance(self):
         """Call AI to assess if this alert is relevant."""
         self.ensure_one()
-        try:
-            agent = self.env["ai.agent"].get_agent("security_alert_relevance")
-        except Exception:
-            _logger.warning("AI agent not available for alert assessment")
+        coworker = self.env['ai.coworker'].search(
+            [('name', '=', 'Security Alert Relevance')], limit=1)
+        if not coworker:
+            _logger.warning('AI coworker not available for alert assessment')
             return False
 
         software_context = self._get_software_inventory_context()
@@ -149,7 +149,12 @@ class SecurityAlert(models.Model):
             f"Bedöm relevans på en skala 0-1 och ge en kort riskanalys."
         )
         try:
-            result = agent.ask(prompt)
+            result_text = coworker.run(prompt)
+            import json as _json
+            try:
+                result = _json.loads(result_text)
+            except Exception:
+                result = {'score': 0.5, 'risk_assessment': result_text[:500]}
             self.write({
                 "ai_relevance_score": result.get("score", 0.0) if isinstance(result, dict) else 0.5,
                 "ai_risk_assessment": result.get("risk_assessment", "") if isinstance(result, dict) else str(result),
@@ -157,7 +162,7 @@ class SecurityAlert(models.Model):
                 "ai_assessed_date": fields.Datetime.now(),
             })
         except Exception as e:
-            _logger.warning("AI assessment failed: %s", e)
+            _logger.warning('AI assessment failed: %s', e)
 
     def _get_software_inventory_context(self):
         software = self.env["security.software"].search([

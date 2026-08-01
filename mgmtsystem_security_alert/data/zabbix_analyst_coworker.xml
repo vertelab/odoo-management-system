@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Zabbix Analyst tools (task 3.2, D5) — read_only, läser via ai.zabbix.config -->
+
+    <record id="tool_zabbix_problems" model="ai.tool">
+        <field name="name">zabbix_problems</field>
+        <field name="description">Hämta aktiva Zabbix-problem (triggers i PROBLEM-status) via ai.zabbix.config. Returnerar lista med trigger, host, severity, tid.</field>
+        <field name="parameters">{"type": "object", "properties": {"limit": {"type": "integer", "description": "max antal problem (default 20)"}}, "required": []}</field>
+        <field name="risk_level">read_only</field>
+        <field name="code"><![CDATA[
+async def execute(limit=20):
+    """Aktiva Zabbix-problem."""
+    cfg = env['ai.zabbix.config'].search([('active', '=', True)], limit=1)
+    if not cfg:
+        return 'Ingen aktiv ai.zabbix.config hittades'
+    try:
+        problems = cfg._zabbix_problems(limit=int(limit))
+        return json.dumps(problems, ensure_ascii=False, default=str)
+    except Exception as e:
+        return 'Zabbix-fel: %s' % e
+]]></field>
+    </record>
+
+    <record id="tool_zabbix_hosts" model="ai.tool">
+        <field name="name">zabbix_hosts</field>
+        <field name="description">Hämta Zabbix-värdar (hosts) med status via ai.zabbix.config. Returnerar lista med host-id, namn, status (0=övervakad, 1=ej övervakad).</field>
+        <field name="parameters">{"type": "object", "properties": {"limit": {"type": "integer", "description": "max antal värdar (default 50)"}}, "required": []}</field>
+        <field name="risk_level">read_only</field>
+        <field name="code"><![CDATA[
+async def execute(limit=50):
+    """Zabbix-värdar."""
+    cfg = env['ai.zabbix.config'].search([('active', '=', True)], limit=1)
+    if not cfg:
+        return 'Ingen aktiv ai.zabbix.config hittades'
+    try:
+        hosts = cfg._zabbix_hosts(limit=int(limit))
+        return json.dumps(hosts, ensure_ascii=False, default=str)
+    except Exception as e:
+        return 'Zabbix-fel: %s' % e
+]]></field>
+    </record>
+
+    <record id="tool_zabbix_alerts" model="ai.tool">
+        <field name="name">zabbix_alerts</field>
+        <field name="description">Hämta senaste Zabbix-händelser/alerts via ai.zabbix.config. Returnerar lista med event-id, trigger, severity, status, tid.</field>
+        <field name="parameters">{"type": "object", "properties": {"limit": {"type": "integer", "description": "max antal händelser (default 20)"}}, "required": []}</field>
+        <field name="risk_level">read_only</field>
+        <field name="code"><![CDATA[
+async def execute(limit=20):
+    """Senaste Zabbix-händelser."""
+    cfg = env['ai.zabbix.config'].search([('active', '=', True)], limit=1)
+    if not cfg:
+        return 'Ingen aktiv ai.zabbix.config hittades'
+    try:
+        events = cfg._zabbix_alerts(limit=int(limit))
+        return json.dumps(events, ensure_ascii=False, default=str)
+    except Exception as e:
+        return 'Zabbix-fel: %s' % e
+]]></field>
+    </record>
+
+    <!-- Zabbix Analyst (task 3.1, D4) — web_ui, read_only -->
+    <record id="coworker_zabbix_analyst" model="ai.coworker">
+        <field name="name">Zabbix Analyst</field>
+        <field name="sub_description">Analyserar Zabbix-problem och säkerhetslarm i ledningssystemet</field>
+        <field name="description">
+Du är Zabbix Analyst — en AI-coworker som hjälper driftteamet att
+analysera Zabbix-övervakning och säkerhetslarm.
+
+Förmågor:
+- zabbix_problems: aktiva problem/triggers i Zabbix
+- zabbix_hosts: värdar med status
+- zabbix_alerts: senaste händelser
+- Du har också tillgång till security.alert-posterna i Odoo för kontext.
+
+Arbetsregler:
+1. Hämta alltid data från Zabbix via verktygen — gissa aldrig.
+2. Du är READ-ONLY: skapa/ändra/radera INGENTING i Odoo eller Zabbix.
+3. Vid behov av åtgärd: föreslå (workspace.activity.suggestion) — utför
+   inte själv.
+4. Prioritera severity: disaster > high > average > warning > info.
+5. Sammanfatta på svenska: vad är problemet, var, hur allvarligt, och
+   rekommenderad åtgärd.
+        </field>
+        <field name="status">active</field>
+        <field name="model_ids" eval="[(6, 0, [
+            ref('mgmtsystem_security_alert.model_security_alert'),
+            ref('ai_agent_zabbix.model_ai_zabbix_config'),
+        ])]"/>
+        <field name="filter_domain">[]</field>
+        <field name="injection_level">summary_and_key</field>
+        <field name="hitl_threshold">never</field>
+        <field name="budget_kr_monthly">0</field>
+        <field name="max_actions_per_day">100</field>
+        <field name="orchestration_mode">single</field>
+        <field name="tool_ids" eval="[(6, 0, [
+            ref('mgmtsystem_security_alert.tool_zabbix_problems'),
+            ref('mgmtsystem_security_alert.tool_zabbix_hosts'),
+            ref('mgmtsystem_security_alert.tool_zabbix_alerts'),
+        ])]"/>
+        <field name="example_prompts">
+- "Vilka problem är aktiva just nu?"
+- "Visa mig alla kritiska larm i Zabbix"
+- "Finns det problem på srv-prod-01?"
+        </field>
+        <field name="heartbeat_enabled">True</field>
+    </record>
+
+    <!-- Web-UI-initiering (task 3.1) — visas i /ai/chat -->
+    <record id="coworker_zabbix_analyst_webui" model="ai.coworker.init_type">
+        <field name="coworker_id" ref="coworker_zabbix_analyst"/>
+        <field name="init_type">web_ui</field>
+        <field name="active">True</field>
+        <field name="sequence">10</field>
+        <field name="show_in_chat">True</field>
+    </record>
+
+</odoo>

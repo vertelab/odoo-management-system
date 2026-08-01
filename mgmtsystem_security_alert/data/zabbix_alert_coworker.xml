@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Zabbix-källa (task 2.1) — idempotent via noupdate+xmlid -->
+    <data noupdate="1">
+        <record id="security_alert_source_zabbix" model="security.alert.source">
+            <field name="name">Zabbix</field>
+            <field name="source_type">zabbix</field>
+            <field name="url">https://zabbix.vertel.se</field>
+            <field name="active">True</field>
+            <field name="fetch_interval">hourly</field>
+        </record>
+    </data>
+
+    <!-- Tool: skapa security.alert från Zabbix-data (D5, task 2.2) -->
+    <record id="tool_zabbix_create_alert" model="ai.tool">
+        <field name="name">zabbix_create_alert</field>
+        <field name="description">Skapa en security.alert i Odoo från ett Zabbix-larm. Severity mappas automatiskt: info→info, warning→low, average→medium, high→high, disaster→critical. Idempotent via source_ref.</field>
+        <field name="parameters">{"type": "object", "properties": {"name": {"type": "string", "description": "larmnamn (trigger-name)"}, "severity": {"type": "string", "description": "Zabbix-severity: info/warning/average/high/disaster"}, "description": {"type": "string", "description": "larmbeskrivning"}, "source_ref": {"type": "string", "description": "unik referens (t.ex. trigger-id:event-id)"}, "host": {"type": "string", "description": "värdnamn"}}, "required": ["name", "severity"]}</field>
+        <field name="risk_level">write</field>
+        <field name="code"><![CDATA[
+async def execute(name, severity='info', description='', source_ref='', host=None, trigger_id=None):
+    """Skapa security.alert (idempotent)."""
+    return env['ai.coworker'].zabbix_create_alert(
+        name=str(name), severity=str(severity), description=str(description),
+        source_ref=str(source_ref), host=host, trigger_id=trigger_id)
+]]></field>
+    </record>
+
+    <!-- Zabbix Alert Handler (task 2.2) — webhook-init -->
+    <record id="coworker_zabbix_alert_handler" model="ai.coworker">
+        <field name="name">Zabbix Alert Handler</field>
+        <field name="sub_description">Tar emot Zabbix-larm via webhook och skapar security.alert</field>
+        <field name="description">
+Du är Zabbix Alert Handler — en AI-coworker som tar emot Zabbix-larm
+(JSON via webhook) och skapar security.alert-poster i Odoo.
+
+Payload-format (Zabbix media-type):
+{
+  "trigger_name": "...", "trigger_id": "...", "host": "...",
+  "severity": "info|warning|average|high|disaster",
+  "status": "PROBLEM|OK", "message": "...", "event_id": "..."
+}
+
+Arbetsregler:
+1. TOLKA payloaden. Hämta trigger_name, host, severity, status, message,
+   trigger_id/event_id.
+2. Om status är "OK" (recovery) — skapa INGEN ny alert; svara bara med
+   bekräftelse ("larmet återställt").
+3. Annars anropa zabbix_create_alert med:
+   - name = trigger_name
+   - severity = Zabbix-severity (mappas automatiskt)
+   - description = message + host-kontext
+   - source_ref = trigger_id:event_id (unik)
+   - host = host
+4. Svara kort med vad som skapades (eller att larmet redan fanns).
+        </field>
+        <field name="status">active</field>
+        <field name="model_ids" eval="[(6, 0, [
+            ref('mgmtsystem_security_alert.model_security_alert'),
+        ])]"/>
+        <field name="filter_domain">[]</field>
+        <field name="injection_level">summary_and_key</field>
+        <field name="hitl_threshold">never</field>
+        <field name="budget_kr_monthly">0</field>
+        <field name="max_actions_per_day">1000</field>
+        <field name="orchestration_mode">single</field>
+        <field name="tool_ids" eval="[(6, 0, [
+            ref('mgmtsystem_security_alert.tool_zabbix_create_alert'),
+        ])]"/>
+        <field name="example_prompts">
+- Zabbix-larm: high CPU på srv-prod-01 (severity high)
+- Recovery: status OK för trigger 12345
+        </field>
+        <field name="heartbeat_enabled">True</field>
+    </record>
+
+    <!-- Webhook-initiering: Zabbix media-type POST:ar till
+         /ai/webhook/<coworker_id> med Bearer-secret (task 2.3).
+         Secret sätts via UI innan driftsättning. -->
+    <record id="coworker_zabbix_alert_handler_webhook" model="ai.coworker.init_type">
+        <field name="coworker_id" ref="coworker_zabbix_alert_handler"/>
+        <field name="init_type">webhook</field>
+        <field name="active">True</field>
+        <field name="sequence">10</field>
+    </record>
+
+</odoo>

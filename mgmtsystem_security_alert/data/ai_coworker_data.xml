@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- AI Coworker: Security Alert Relevance (migrerad från ai.agent) -->
+    <record id="coworker_security_alert_relevance" model="ai.coworker">
+        <field name="name">Security Alert Relevance</field>
+        <field name="sub_description">Bedömer relevansen av säkerhetsvarningar mot programvaruinventeringen</field>
+        <field name="description"><![CDATA[
+Du är en säkerhetsanalytiker. Bedöm säkerhetsvarningens relevans för vår organisation.
+Svara i JSON-format:
+{
+    "score": <0.0-1.0>,
+    "risk_assessment": "<kort riskanalys>",
+    "mitigation": "<rekommenderad åtgärd>"
+}
+]]></field>
+        <field name="status">active</field>
+        <field name="model_ids" eval="[(6, 0, [
+            ref('mgmtsystem_security_alert.model_security_alert'),
+        ])]"/>
+        <field name="filter_domain">[]</field>
+        <field name="injection_level">summary_and_key</field>
+        <field name="hitl_threshold">never</field>
+        <field name="budget_kr_monthly">0</field>
+        <field name="max_actions_per_day">200</field>
+        <field name="orchestration_mode">single</field>
+        <field name="example_prompts">
+- Bedöm relevansen av CVE-2025-0001 mot vår inventering
+- Är denna USN relevant för våra servrar?
+        </field>
+        <field name="heartbeat_enabled">True</field>
+    </record>
+
+    <record id="coworker_security_alert_relevance_manual" model="ai.coworker.init_type">
+        <field name="coworker_id" ref="coworker_security_alert_relevance"/>
+        <field name="init_type">manual</field>
+        <field name="active">True</field>
+        <field name="sequence">10</field>
+    </record>
+</odoo>

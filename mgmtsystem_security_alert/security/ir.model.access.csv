@@ -10,3 +10,11 @@ access_security_alert_action_manager,Action Link - Manager,model_security_alert_
 access_security_software_user,Software - User,model_security_software,group_security_alert_user,1,0,0,0
 access_security_software_manager,Software - Manager,model_security_software,group_security_alert_manager,1,1,1,1
 access_security_software_release_user,Release - User,model_security_software_release,group_security_alert_user,1,0,0,0
+access_ai_tool_security_user,AI Tool - Security User,ai_agent_core.model_ai_tool,group_security_alert_user,1,0,0,0
+access_ai_tool_security_manager,AI Tool - Security Manager,ai_agent_core.model_ai_tool,group_security_alert_manager,1,1,1,1
+access_ai_coworker_security_user,AI Coworker - Security User,ai_agent_core.model_ai_coworker,group_security_alert_user,1,0,0,0
+access_ai_coworker_security_manager,AI Coworker - Security Manager,ai_agent_core.model_ai_coworker,group_security_alert_manager,1,1,1,1
+access_ai_coworker_inittype_security_user,AI Coworker Init - Security User,ai_agent_core.model_ai_coworker_init_type,group_security_alert_user,1,0,0,0
+access_ai_coworker_inittype_security_manager,AI Coworker Init - Security Manager,ai_agent_core.model_ai_coworker_init_type,group_security_alert_manager,1,1,1,1
+access_ai_zabbix_config_security_user,AI Zabbix - Security User,ai_agent_zabbix.model_ai_zabbix_config,group_security_alert_user,1,0,0,0
+access_ai_zabbix_config_security_manager,AI Zabbix - Security Manager,ai_agent_zabbix.model_ai_zabbix_config,group_security_alert_manager,1,1,1,1
