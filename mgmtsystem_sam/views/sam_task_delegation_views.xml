@@ -50,6 +50,6 @@
     <record id="action_sam_task_delegation" model="ir.actions.act_window">
         <field name="name">Uppgiftsfördelning</field>
         <field name="res_model">sam.task_delegation</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>

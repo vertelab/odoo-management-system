@@ -139,7 +139,7 @@
         <record id="action_law_package" model="ir.actions.act_window">
             <field name="name">Law Packages</field>
             <field name="res_model">bpm.law.package</field>
-            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_mode">kanban,list,form</field>
         </record>
 
         <menuitem id="menu_law_packages"

@@ -54,6 +54,6 @@
     <record id="action_sam_instruction" model="ir.actions.act_window">
         <field name="name">Arbets- och skyddsinstruktioner</field>
         <field name="res_model">sam.instruction</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>

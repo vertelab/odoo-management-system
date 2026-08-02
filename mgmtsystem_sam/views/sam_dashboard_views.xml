@@ -4,7 +4,7 @@
     <record id="action_sam_dashboard" model="ir.actions.act_window">
         <field name="name">SAM Dashboard</field>
         <field name="res_model">mgmtsystem.nonconformity</field>
-        <field name="view_mode">pivot,graph,tree</field>
+        <field name="view_mode">pivot,graph,list</field>
         <field name="search_view_id" ref="view_sam_nonconformity_search"/>
         <field name="context">{'search_default_group_type': 1}</field>
     </record>
