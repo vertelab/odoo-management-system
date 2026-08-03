@@ -33,7 +33,7 @@ Svara i JSON-format:
     <record id="coworker_security_alert_relevance_manual" model="ai.coworker.init_type">
         <field name="coworker_id" ref="coworker_security_alert_relevance"/>
         <field name="init_type">manual</field>
-        <field name="active">True</field>
+        <field name="enabled">True</field>
         <field name="sequence">10</field>
     </record>
 </odoo>

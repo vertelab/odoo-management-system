@@ -80,7 +80,7 @@ Arbetsregler:
     <record id="coworker_zabbix_alert_handler_webhook" model="ai.coworker.init_type">
         <field name="coworker_id" ref="coworker_zabbix_alert_handler"/>
         <field name="init_type">webhook</field>
-        <field name="active">True</field>
+        <field name="enabled">True</field>
         <field name="sequence">10</field>
     </record>
 

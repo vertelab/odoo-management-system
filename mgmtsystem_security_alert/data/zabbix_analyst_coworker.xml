@@ -110,7 +110,7 @@ Arbetsregler:
     <record id="coworker_zabbix_analyst_webui" model="ai.coworker.init_type">
         <field name="coworker_id" ref="coworker_zabbix_analyst"/>
         <field name="init_type">web_ui</field>
-        <field name="active">True</field>
+        <field name="enabled">True</field>
         <field name="sequence">10</field>
         <field name="show_in_chat">True</field>
     </record>
