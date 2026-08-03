@@ -6,126 +6,157 @@ msgstr ""
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_clause
 msgid "iso9001.clause"
 msgstr "ISO 9001:2026 Claus"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_policy
 msgid "iso9001.policy"
 msgstr "Kvalitetspolicy"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_gap
 msgid "iso9001.gap"
 msgstr "ISO 9001 Gap-analysis"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_gap_line
 msgid "iso9001.gap.line"
 msgstr "ISO 9001 Gap-analysis rad"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_objective
 msgid "iso9001.objective"
 msgstr "Kvalitetsmål"
 
+#. module: mgmtsystem_9001
 #. model:ir.model,name:iso9001_process
 msgid "iso9001.process"
 msgstr "Kvalitetsprocess"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.name
 msgid "Name"
 msgstr "Namn"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.clause_number
 msgid "Clause Number"
 msgstr "Klausulnummer"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.display_name
 msgid "Display Name"
 msgstr "Visningsnamn"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.description
 msgid "Description"
 msgstr "Beskrivning"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.parent_id
 msgid "Parent Clause"
 msgstr "Överordnad klausul"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_clause.child_ids
 msgid "Child Clauses"
 msgstr "Underordnade klausuler"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.name
 msgid "Policy Name"
 msgstr "Policynamn"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.description
 msgid "Policy Description"
 msgstr "Policybeskrivning"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.date_approved
 msgid "Approved Date"
 msgstr "Godkänd datum"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.date_review
 msgid "Next Review"
 msgstr "Nästa översyn"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.approved_by
 msgid "Approved By"
 msgstr "Godkänd av"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_policy.state
 msgid "State"
 msgstr "Status"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_objective.kpi_description
 msgid "KPI Description"
 msgstr "KPI-beskrivning"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_objective.target_value
 msgid "Target Value"
 msgstr "Målvärde"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_objective.current_value
 msgid "Current Value"
 msgstr "Nuvärde"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_objective.owner_id
 msgid "Responsible"
 msgstr "Ansvarig"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_objective.deadline
 msgid "Deadline"
 msgstr "Deadline"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_process.process_type
 msgid "Process Type"
 msgstr "Processtyp"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_process.inputs
 msgid "Inputs"
 msgstr "Inputs"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_process.outputs
 msgid "Outputs"
 msgstr "Outputs"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_process.resources
 msgid "Resources"
 msgstr "Resurser"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_process.responsible_id
 msgid "Process Owner"
 msgstr "Processägare"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_gap_line.maturity_level
 msgid "Maturity Level"
 msgstr "Mognadsnivå"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_gap_line.finding
 msgid "Finding"
 msgstr "Iakttagelse"
 
+#. module: mgmtsystem_9001
 #. model:ir.model.fields,field_description:iso9001_gap_line.recommendation
 msgid "Recommendation"
 msgstr "Rekommendation"
