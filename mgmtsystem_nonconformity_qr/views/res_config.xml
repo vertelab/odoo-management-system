@@ -6,7 +6,7 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="mgmtsystem.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('app_settings_block')]//div[@id='mgmtsystem_systems_setting']" position="inside">
+            <xpath expr="//block[@name='mgmtsystem_systems_setting']" position="inside">
                 <div class="col-xs-12 col-md-6 o_setting_box">
                     <div class="o_setting_left_pane">
                         <field name="allow_qr_code" />
