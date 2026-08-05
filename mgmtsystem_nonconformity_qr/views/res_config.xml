@@ -4,7 +4,7 @@
     <record id="view_mgmtsystem_configuration" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.inherit.mgmtsystem</field>
         <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="mgmtsystem.view_mgmtsystem_configuration" />
+        <field name="inherit_id" ref="mgmtsystem.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('app_settings_block')]/div[@id='mgmtsystem_systems_setting']" position="inside">
                 <div class="col-xs-12 col-md-6 o_setting_box">
