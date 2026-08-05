@@ -34,7 +34,7 @@
     'license': 'AGPL-3',
     'depends':
         [
-            "ai_agent_hr",
+            "ai_agent_core",
         ],
     'data': [
         'views/project_task_views.xml',
@@ -43,7 +43,6 @@
 
         # data
         'data/ai_agent_data.xml',
-        'data/ai_quest_data.xml',
     ],
     'demo': [ ],
     'application': False,

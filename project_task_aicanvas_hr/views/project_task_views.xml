@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
                 <field name="department_id" />
-                <field name="ai_quest_id" />
+                <field name="ai_coworker_id" />
             </field>
         </field>
     </record>

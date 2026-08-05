@@ -4,8 +4,8 @@ from langchain_core.messages import AIMessage
 
 
 
-class AIQuest(models.Model):
-    _inherit = "ai.quest"
+class AICoworker(models.Model):
+    _inherit = "ai.coworker"
 
     def _action_get_ai_canvas_idea(self, bot_response):
         if bot_response.get('messages', False):

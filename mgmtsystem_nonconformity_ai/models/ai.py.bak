@@ -30,16 +30,10 @@ class MgmtsystemNonconformity(models.Model):
                 self.ai_coworker_id.channel_id.write(
                     {'name': f"[{self.ref}] {self.name}"})
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        for vals in vals_list:
-            if not vals.get("ref"):
-                vals["ref"] = self.env["ir.sequence"].next_by_code(
-                    "mgmtsystem.nonconformity") or "NEW"
-        records = super().create(vals_list)
-        for record in records:
-            record._ensure_nonconformity_coworker()
-        return records
+    def create(self, vals):
+        record = super(MgmtsystemNonconformity, self).create(vals)
+        record._ensure_nonconformity_coworker()
+        return record
 
     def write(self, vals):
         result = super(MgmtsystemNonconformity, self).write(vals)

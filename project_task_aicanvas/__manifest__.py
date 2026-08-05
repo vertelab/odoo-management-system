@@ -37,6 +37,7 @@
             "mgmtsystem",
             "mail",
             "project",
+            "ai_agent_core",
         ],
     'data': [
         'security/ir.model.access.csv',
