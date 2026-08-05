@@ -36,7 +36,7 @@
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_chat',
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',
-    'depends': ["mgmtsystem_law", "ai_agent"],
+    'depends': ["mgmtsystem_law", "ai_agent_core"],
     'data': [
         'data/ai_memory_data.xml',
         'data/ai_agent_data.xml',
