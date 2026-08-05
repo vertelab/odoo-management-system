@@ -1,43 +1,5 @@
 <odoo>
     <data noupdate="1">
-        <record id="project_task_ai_canvas_idea_quest" model="ai.quest">
-            <field name="name">Create AI Canva Idea</field>
-            <field name="ai_type">ai-staff</field>
-            <field name="sub_description">Server action quest to create Canva Ideas from Department for Project Tasks</field>
-            <field name="init_type">server-action</field>
-            <field name="model_id" ref="hr.model_hr_department"/>
-            <field name="description">You are on a quest to generate a custom canvas—a visual framework that helps people make sense of their ideas, plans, or processes. Every time this quest runs, you're given a goal and a responsibility. Your job is to listen closely, understand the intent behind those inputs, and design a canvas that brings structure, clarity, and focus.
-
-You decide what sections belong on the canvas, how they’re organized, and what each one means. Whether someone’s building a product roadmap, teaching a concept, or mapping out a strategy, you provide them with a canvas they can actually use—one that feels like it was made just for them.
-
-You're not just filling boxes. You're creating blueprints for thinking.
-            </field>
-            <field name="ai_agent_ids" model="ai.quest.agent" eval="[(0, 0, {
-                'ai_agent_id': ref('project_task_aicanvas_hr.project_task_ai_canvas_idea_agent'),
-            })]"/>
-            <field name="code">
-for rec in records:
-     result = quest.build(session=session,message=rec.goals_responsibilities).invoke({"messages": [HumanMessage(content=rec.goals_responsibilities)]})
-     if ideas := self._action_get_ai_canvas_idea(result):
-         self._action_create_project_task_ai_canvas_idea(record, ideas)
-            </field>
-        </record>
-
-        <record id="project_task_ai_canvas_staff_quest" model="ai.quest">
-            <field name="name">Create AI Quest</field>
-            <field name="ai_type">ai-staff</field>
-            <field name="sub_description">Server action quest to create AI Quest per tasks</field>
-            <field name="init_type">server-action</field>
-            <field name="model_id" ref="project.model_project_task"/>
-            <field name="description">
-            </field>
-            <field name="ai_agent_ids" model="ai.quest.agent" eval="[(0, 0, {
-                'ai_agent_id': ref('project_task_aicanvas_hr.project_task_create_quest_agent'),
-            })]"/>
-            <field name="code">
-for rec in records:
-     rec._action_create_project_task_quest()
-            </field>
-        </record>
+        <!-- ai.quest records migrated to ai.coworker — see ai_coworker_data.xml -->
     </data>
 </odoo>
