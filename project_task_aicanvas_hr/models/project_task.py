@@ -16,7 +16,6 @@ class ProjectTask(models.Model):
             'status': 'active',
             'orchestration_mode': 'single',
         })
-        # Assign the HR canvas agent
         agent_ref = self.env.ref(
             'project_task_aicanvas_hr.hr_department_ai_canva_agent',
             raise_if_not_found=False)

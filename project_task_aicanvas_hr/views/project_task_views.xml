@@ -1,15 +1,15 @@
 <odoo>
     <data>
-        <record id="ai_canvas_view_task_form" model="ir.ui.view">
-        <field name="name">ai.canvas.project.task.form</field>
-        <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_form2" />
-        <field name="arch" type="xml">
-            <field name="tag_ids" position="after">
-                <field name="department_id" />
-                <field name="ai_coworker_id" />
+        <!-- Project Task form — show ai_coworker_id -->
+        <record id="view_task_aicanvas_hr_form" model="ir.ui.view">
+            <field name="name">project.task.aicanvas.hr.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="user_ids" position="after">
+                    <field name="ai_coworker_id" />
+                </field>
             </field>
-        </field>
-    </record>
+        </record>
     </data>
 </odoo>
