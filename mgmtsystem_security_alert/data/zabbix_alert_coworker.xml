@@ -61,8 +61,6 @@ Arbetsregler:
         <field name="filter_domain">[]</field>
         <field name="injection_level">summary_and_key</field>
         <field name="hitl_threshold">never</field>
-        <field name="budget_kr_monthly">0</field>
-        <field name="max_actions_per_day">1000</field>
         <field name="orchestration_mode">single</field>
         <field name="tool_ids" eval="[(6, 0, [
             ref('mgmtsystem_security_alert.tool_zabbix_create_alert'),

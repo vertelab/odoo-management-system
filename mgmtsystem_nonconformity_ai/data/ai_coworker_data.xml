@@ -36,8 +36,6 @@ HITL-policy: förslag till korrigerande åtgärder levereras för granskning —
             <field name="filter_domain">[]</field>
             <field name="injection_level">summary_and_key</field>
             <field name="hitl_threshold">always</field>
-            <field name="budget_kr_monthly">0</field>
-            <field name="max_actions_per_day">20</field>
             <field name="orchestration_mode">single</field>
             <field name="example_prompts">
 - "Analysera denna avvikelse och föreslå korrigerande åtgärder"
