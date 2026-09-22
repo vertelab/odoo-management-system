@@ -33,7 +33,7 @@
     """,
     #'sequence': 1,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_relevancy/',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_relevancy',
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_law", "ai_agent_core"],

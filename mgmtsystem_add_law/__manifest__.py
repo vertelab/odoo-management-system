@@ -33,7 +33,7 @@
         Makes it possible to add laws from the website lagen.nu to the Management System Law module.
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_add_law/',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_add_law',
     'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_law"],

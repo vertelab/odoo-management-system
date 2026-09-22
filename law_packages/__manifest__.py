@@ -25,7 +25,7 @@ Features:
 - Integration with mgmtsystem_law for management system tracking
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se',
+    'website': 'https://vertel.se/apps/odoo-management-system/law_packages',
     'license': 'AGPL-3',
     'depends': [
         'mgmtsystem_law',

@@ -32,7 +32,7 @@
         Makes it possible to link action to any odoo model and record.
     """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_action_ref/',
+    'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_action_ref',
     'license': 'AGPL-3',
     'depends': ["mgmtsystem_action"],
     'data': [
