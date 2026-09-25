@@ -6,26 +6,19 @@
     'version': '18.0.1.0.0',
     'summary': 'Automatisk säkerhetsbevakning — CERT-SE, NCSC, CVE/NVD, Ubuntu USN',
     'category': 'Management',
-    'description': """
-        Automatisk säkerhetsbevakning för ledningssystemet.
+    'description': '''
+Security Alert Monitoring
+=========================
 
-        Hämtar säkerhetsvarningar från fyra källor:
-        - CERT-SE (Atom RSS)
-        - NCSC Aktuellt (web scraping)
-        - NVD CVE (REST API v2.0)
-        - Ubuntu Security Notices (REST API)
+    Automatic security monitoring for the management system.
 
-        Funktioner:
-        - Automatisk schemalagd inhämtning (cron)
-        - Programvaruinventering för CVE-filtrering
-        - AI-relevansbedömning av varningar
-        - Koppling till ISO 27001 Annex A-kontroller
-        - Koppling till EBIOS security events
-        - Åtgärdshantering via mgmtsystem.action
-        - Dashboard med pivot/grafer
+Fetches security advisories from four sources:
 
-        Kräver pip-paket: feedparser, beautifulsoup4, requests
-    """,
+    - CERT-SE (Atom RSS)
+    - NCSC Aktuellt (web scraping)
+    - NVD CVE (REST API v2.0)
+    - Ubuntu Security Notices
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_security_alert',
     'license': 'AGPL-3',

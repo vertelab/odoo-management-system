@@ -23,14 +23,21 @@
 #
 {
     'name': 'Management System:Law AI Relevancy',
-    'version': '1.0',
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.odoo.com""",
+    'version': '18.0.1.0.0',
+    'summary': "Scores the relevancy of legal documents with AI.",
     'category': 'Management',
-    'description': """
-        Long description of module's purpose
-    """,
+    'description': '''
+Management System:Law AI Relevancy
+==================================
+
+    Scores the relevancy of legal documents with AI.
+
+    Features:
+
+        - Automation: Scheduled jobs: Decide Whether a Law is Relevant, Decide Whether a Law is Relevant.
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on ai.agent, ai.quest, document.law.
+    ''',
     #'sequence': 1,
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_relevancy',

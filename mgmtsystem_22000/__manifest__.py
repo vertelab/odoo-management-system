@@ -6,24 +6,17 @@
     'version': '18.0.1.0.0',
     'summary': 'ISO 22000:2018 FSMS — klausuler, gap-analys, policy, PRP, HACCP, CCP, spårbarhet',
     'category': 'Management',
-    'description': """
-        Ledningssystem för livsmedelssäkerhet (FSMS) enligt ISO 22000:2018.
+    'description': '''
+ISO 22000:2018 — Livsmedelssäkerhet
+===================================
 
-        Implementerar:
-        - Samtliga klausuler 4–10 med svenska beskrivningar
-        - Gap-analys med mognadsbedömning (maturity 0–5) per klausul
-        - Livsmedelssäkerhetspolicy med signeringsflöde
-        - Grundförutsättningar (PRP) — hygien, rengöring, infrastruktur
-        - HACCP-planer med faroanalys
-        - Kritiska styrpunkter (CCP) med övervakning och korrigerande åtgärder
-        - Flödesscheman för produktionskedjan
-        - Spårbarhetstest (framåt/bakåt)
-        - Nödberedskap och recall-planer
-        - Livsmedelssäkerhetsmål med KPI:er
-        - Dashboard för FSMS-status
+    Food Safety Management System (FSMS) per ISO 22000:2018.
 
-        Bygger på OCA mgmtsystem-moduler.
-    """,
+Implements:
+
+    - All clauses 4-10 with descriptions.
+    - Gap analysis with maturity assessment (0-5) per clause.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_22000',
     'license': 'AGPL-3',

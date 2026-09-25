@@ -6,23 +6,23 @@
     'version': '18.0.1.0.0',
     'summary': 'Systematiskt Arbetsmiljöarbete enligt ISO 45001 och AFS 2023:1',
     'category': 'Management',
-    'description': """
-        Systematiskt Arbetsmiljöarbete (SAM) enligt ISO 45001:2018 och AFS 2023:1.
+    'description': '''
+Systematiskt Arbetsmiljöarbete (SAM)
+====================================
 
-        Implementerar SAM-processens 8 steg:
-        1. Arbetsmiljöpolicy
-        2. Uppgiftsfördelning
-        3. Undersökning / riskbedömning
-        4. Åtgärder / handlingsplan
-        5. Kontroll / uppföljning
-        6. Skyddsronder
-        7. Tillbudsrapportering
-        8. Årlig uppföljning
+    Systematic Work Environment Management (SAM) per ISO 45001:2018 and AFS 2023:1.
 
-        Bygger på OCA mgmtsystem-moduler och Vertels egna tillägg.
-        Integrerar AI-stöd via ai_agent för riskbedömning och incidentanalys.
-        Använder Discuss-kanaler för medverkan enligt ISO 45001 5.4.
-    """,
+Implements the 8 steps of the SAM process:
+
+    1. Work environment policy
+    2. Delegation of duties
+    3. Investigation / risk assessment
+    4. Action plan
+    5. Follow-up
+    6. Annual review
+    7. Documentation
+    8. Continuous improvement
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_sam',
     'license': 'AGPL-3',

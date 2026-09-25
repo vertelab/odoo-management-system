@@ -22,12 +22,20 @@
 #
 {
     'name': 'Management System: Project AI Canvas HR',
-    'version': '1.0',
-    'summary': """Project AI Canvas HR""",
+    'version': '18.0.1.0.0',
+    'summary': """Project AI Canvas HR.""",
     'category': 'Management',
-    'description': """
-        Project/Task AI Canvas HR
-    """,
+    'description': '''
+Project AI Canvas HR
+====================
+
+    Project AI Canvas HR.
+
+    Features:
+
+        - UI Integration: Extends 6 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on ai.agent, ai.coworker, hr.department, project.task.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/project_task_aicanvas_hr',
     'images': ['static/description/banner.png'],  # 560x280

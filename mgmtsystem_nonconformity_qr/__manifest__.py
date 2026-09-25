@@ -21,12 +21,21 @@
 
 {
     'name': 'Management System: Nonconformity QR',
-    'version': '0.1',
-    'summary': ' Management System Nonconformity QR.',
+    'version': '18.0.1.0.0',
+    'summary': 'Management System Nonconformity QR.',
     'category': 'Management',
-    'description': """
-        Management System Nonconformity QR
-    """,
+    'description': '''
+Nonconformity QR
+================
+
+    Management System Nonconformity QR.
+
+    Features:
+
+        - Web integration: Exposes HTTP endpoints for external systems.
+        - UI Integration: Extends 6 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on mgmtsystem.nonconformity.origin, mgmtsystem.nonconformity.qr.
+    ''',
     # 'sequence': '1',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_nonconformity_qr',

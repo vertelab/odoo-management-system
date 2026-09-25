@@ -6,7 +6,17 @@
     'name': 'Management System: HR Skills Integration',
     'version': '18.0.1.0.0',
     'license': 'AGPL-3',
-    'summary': 'ISO-kompetenser och certifieringar i HR-skills',
+    'summary': 'ISO-kompetenser och certifieringar i HR-skills.',
+    'description': '''
+HR Skills Integration
+=====================
+
+    ISO-kompetenser och certifieringar i HR-skills.
+
+    Features:
+
+        - Extends Odoo: Builds on hr.employee.skill, hr.skill.
+    ''',
     'category': 'Management',
     'depends': ['mgmtsystem', 'hr_skills'],
     'data': [

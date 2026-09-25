@@ -6,24 +6,17 @@
     'version': '18.0.1.0.0',
     'summary': 'ISO 9001:2026 QMS — klausuler, gap-analys, kvalitetspolicy, kvalitetsmål, processer',
     'category': 'Management',
-    'description': """
-        Kvalitetsledningssystem (QMS) enligt ISO 9001:2026.
+    'description': '''
+ISO 9001:2026 — Kvalitetsledning
+================================
 
-        Implementerar:
-        - Samtliga klausuler 4–10 med svenska beskrivningar
-        - Gap-analys med mognadsbedömning (maturity 0–5) per klausul
-        - Kvalitetspolicy med signeringsflöde
-        - Kvalitetsmål med KPI:er och deadlines
-        - Processidentifiering och processkartläggning
-        - Dashboard för QMS-status
+    Quality Management System (QMS) per ISO 9001:2026.
 
-        ISO 9001:2026 (FDIS, Edition 6) inkluderar:
-        - Climate change amendment inbäddad i 4.1/4.2
-        - Quality culture and ethical behaviour (5.1.1, 7.3)
-        - Ny Annex A (informativ vägledning, ej krav)
+Implements:
 
-        Bygger på OCA mgmtsystem-moduler.
-    """,
+    - All clauses 4-10 with descriptions.
+    - Gap analysis with maturity assessment (0-5) per clause.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_9001',
     'license': 'AGPL-3',

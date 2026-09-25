@@ -1,29 +1,34 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'BPM: Law Packages',
-    'version': '1.0',
+    'version': '18.0.1.0.0',
     'summary': 'Pre-configured law packages for different business types.',
     'category': 'Management',
-    'description': """
-Law Packages for Business Types
-===============================
+    'description': '''
+Law Packages
+============
 
-Provides pre-configured packages of relevant Swedish laws (SFS) for
-different business types. Users select their business type(s) in
-Settings and the corresponding laws are loaded into the management
-system's law monitoring module.
+    Provides pre-configured packages of relevant Swedish laws (SFS) for
+    different business types. Users select their business type(s) in
+    Settings and the corresponding laws are loaded into the management
+    system's law monitoring module.
 
-Business types included:
-- Consulting Firm (Konsultbyrå)
-- Manufacturing Company (Tillverkande företag)
-- Restaurant (Restaurang)
+    Business types included:
+    - Consulting Firm (Konsultbyrå)
+    - Manufacturing Company (Tillverkande företag)
+    - Restaurant (Restaurang)
 
-Features:
-- Select one or multiple business type packages in Settings
-- Laws are automatically linked to document.law records
-- Each law includes SFS number, name, category, and relevance note
-- Integration with mgmtsystem_law for management system tracking
-    """,
+    Features:
+    - Select one or multiple business type packages in Settings
+    - Laws are automatically linked to document.law records
+    - Each law includes SFS number, name, category, and relevance note
+    - Integration with mgmtsystem_law for management system tracking
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on bpm.law.import, bpm.law.package, bpm.law.package.line.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/law_packages',
     'license': 'AGPL-3',

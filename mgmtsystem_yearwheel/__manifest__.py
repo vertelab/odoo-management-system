@@ -22,12 +22,22 @@
 #
 {
     'name': 'Management System: YearWheel',
-    'version': '1.0',
-    'summary': """Management System YearWheel""",
+    'version': '18.0.1.0.0',
+    'summary': """Management System YearWheel.""",
     'category': 'management',
-    'description': """
-        Management System YearWheel
-    """,
+    'description': '''
+YearWheel
+=========
+
+    Management System YearWheel.
+
+    Features:
+
+        - Automation: Scheduled jobs: Year Wheel: Activity Manager, Year Wheel: Activity Manager.
+        - Guided Wizards: Step-by-step dialogs for data entry.
+        - UI Integration: Extends 6 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on mail.activity, mail.thread, summary, year.wheel.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_yearwheel',
     'images': ['static/description/banner.png'],  # 560x280

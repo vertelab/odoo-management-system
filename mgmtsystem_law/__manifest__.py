@@ -23,12 +23,20 @@
 #
 {
     'name': 'Management System: Managment System Law',
-    'version': '1.0',
+    'version': '18.0.1.0.0',
     'summary': "This module adds access to the Knowledge module Document Law in the management system interface.",
     'category': 'Management',
-    'description': """
+    'description': '''
+Managment System Law
+====================
+
     This module's function is to add access to the Knowledge module Document Law in the management system interface, as well as to add some connections to other models in Odoo.
-    """,
+
+    Features:
+
+        - UI Integration: Extends 7 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on document.law, document.law.mgmtsystem.claim, document.page, document.page.law.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law',
     'images': ['static/description/banner.png'], 

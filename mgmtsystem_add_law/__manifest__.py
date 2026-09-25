@@ -23,15 +23,20 @@
 #
 {
     'name': 'Management System: Add Laws',
-    'version': '1.0',
-    'summary': """
-        Makes it possible to add laws from the website lagen.nu to the Management System Law module.
-42
-    """,
+    'version': '18.0.1.0.0',
+    'summary': """Makes it possible to add laws from the website lagen.nu to the Management System Law module. 42.""",
     'category': 'Management',
-    'description': """
-        Makes it possible to add laws from the website lagen.nu to the Management System Law module.
-    """,
+    'description': '''
+Add Laws
+========
+
+    Makes it possible to add laws from the website lagen.nu to the Management System Law module.
+
+    Features:
+
+        - Guided Wizards: Step-by-step dialogs for data entry.
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_add_law',
     'images': ['static/description/banner.png'],

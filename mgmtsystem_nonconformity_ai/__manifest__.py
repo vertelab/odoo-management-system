@@ -14,7 +14,17 @@
 {
     'name': 'Management Nonconformity: Chat with Nonconformity',
     'version': '18.0.1.0.0',
-    'summary': 'AI-coworker per nonconformity (chat via discuss.channel)',
+    'summary': 'AI-coworker per nonconformity (chat via discuss.channel).',
+    'description': '''
+Chat with Nonconformity
+=======================
+
+    AI-coworker per nonconformity (chat via discuss.channel).
+
+    Features:
+
+        - Extends Odoo: Builds on mgmtsystem.nonconformity.
+    ''',
     'category': 'helpdesk',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_nonconformity_ai',

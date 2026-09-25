@@ -23,14 +23,20 @@
 #
 {
     'name': 'Management System: Action Ref',
-    'version': '1.0',
-    'summary': """
-        Makes it possible to link action to any odoo model and record.
-    """,
+    'version': '18.0.1.0.0',
+    'summary': """Makes it possible to link action to any odoo model and record.""",
     'category': 'Management',
-    'description': """
-        Makes it possible to link action to any odoo model and record.
-    """,
+    'description': '''
+Action Ref
+==========
+
+    Makes it possible to link action to any odoo model and record.
+
+    Features:
+
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on mgmtsystem.action.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_action_ref',
     'license': 'AGPL-3',
