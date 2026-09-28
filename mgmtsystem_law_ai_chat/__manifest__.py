@@ -23,19 +23,14 @@
 #
 {
     'name': 'Management System: Law AI Chat',
-    'version': '18.0.1.0.0',
-    'summary': "Adds an AI chat for legal documents.",
+    'version': '1.0',
+    'summary': """
+        Short (1 phrase/line) summary of the module's purpose, used as
+        subtitle on modules listing or apps.odoo.com""",
     'category': 'Management',
-    'description': '''
-Law AI Chat
-===========
-
-    Adds an AI chat for legal documents.
-
-    Features:
-
-        - Extends Odoo: Builds on ai.agent, ai.quest, ai.quest.session, document.law.
-    ''',
+    'description': """
+        Long description of module's purpose
+    """,
     #'sequence': 1,
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_chat',

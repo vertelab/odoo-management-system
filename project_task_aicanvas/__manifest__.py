@@ -22,22 +22,14 @@
 #
 {
     'name': 'Project Management: AI Canvas',
-    'version': '18.0.1.0.0',
-    'summary': """Project AI Canvas.""",
+    'version': '1.0',
+    'summary': """Project AI Canvas""",
     'category': 'Management',
-    'description': '''
-AI Canvas
-=========
-
-    Project AI Canvas.
-
-    Features:
-
-        - UI Integration: Extends 6 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on ai.canvas.capability, project.project, project.task.
-    ''',
+    'description': """
+        Project/Task AI Canvas
+    """,
     'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system/project_task_aicanvas',
+    'website': 'https://vertel.se/apps/odoo-management-system/project_task_aicanvas_hr/',
     'images': ['static/description/banner.png'],  # 560x280
     'license': 'AGPL-3',
     'depends':
