@@ -8,11 +8,11 @@
             <form string="Information Security Policy">
                 <header>
                     <button name="action_approve" string="Approve"
-                            states="draft" type="object" class="btn-primary"/>
+                            invisible="state not in ['draft']" type="object" class="btn-primary"/>
                     <button name="action_archive" string="Archive"
-                            states="active" type="object"/>
+                            invisible="state not in ['active']" type="object"/>
                     <button name="action_draft" string="Reset to Draft"
-                            states="active,archived" type="object"/>
+                            invisible="state not in ['active', 'archived']" type="object"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,active,archived"/>
                 </header>
                 <sheet>
@@ -22,7 +22,7 @@
                     <group>
                         <group>
                             <field name="approved_by"/>
-                            <field name="date_approved" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                            <field name="date_approved" invisible="state != 'active'"/>
                             <field name="date_review"/>
                             <field name="company_id" groups="base.group_multi_company"/>
                         </group>

@@ -8,11 +8,11 @@
             <form string="Statement of Applicability">
                 <header>
                     <button name="action_approve" string="Approve"
-                            states="draft" type="object" class="btn-primary"/>
+                            invisible="state not in ['draft']" type="object" class="btn-primary"/>
                     <button name="action_archive" string="Archive"
-                            states="approved" type="object"/>
+                            invisible="state not in ['approved']" type="object"/>
                     <button name="action_draft" string="Reset to Draft"
-                            states="approved,archived" type="object"/>
+                            invisible="state not in ['approved', 'archived']" type="object"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,approved,archived"/>
                 </header>
                 <sheet>
@@ -23,7 +23,7 @@
                         <group>
                             <field name="date"/>
                             <field name="approved_by"/>
-                            <field name="date_approved" attrs="{'invisible': [('state', '!=', 'approved')]}"/>
+                            <field name="date_approved" invisible="state != 'approved'"/>
                             <field name="company_id" groups="base.group_multi_company"/>
                         </group>
                     </group>
@@ -35,7 +35,7 @@
                                            context="{'default_system_id': system_id}"/>
                                     <field name="applicable" widget="boolean_toggle"/>
                                     <field name="implemented" widget="boolean_toggle"
-                                           attrs="{'invisible': [('applicable', '=', False)]}"/>
+                                           invisible="applicable == False"/>
                                     <field name="justification"/>
                                     <field name="implementation_status"/>
                                     <field name="linked_event_ids" widget="many2many_tags"/>

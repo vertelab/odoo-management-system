@@ -26,7 +26,7 @@
                     <group>
                         <field name="source_type"/>
                         <field name="url" widget="url"/>
-                        <field name="api_key" attrs="{'invisible': [('source_type', '!=', 'nvd_cve')]}"/>
+                        <field name="api_key" invisible="source_type != 'nvd_cve'"/>
                         <field name="fetch_interval"/>
                         <field name="active"/>
                         <field name="last_fetch"/>

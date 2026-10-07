@@ -5,13 +5,13 @@
         <field name="name">sam.policy.tree</field>
         <field name="model">sam.policy</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="date_approved"/>
                 <field name="date_review"/>
                 <field name="state"/>
                 <field name="company_id" groups="base.group_multi_company"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -23,11 +23,11 @@
             <form>
                 <header>
                     <button name="action_approve" string="Godkänn" type="object"
-                            states="draft" class="oe_highlight"/>
+                            invisible="state not in ['draft']" class="oe_highlight"/>
                     <button name="action_archive" string="Arkivera" type="object"
-                            states="active"/>
+                            invisible="state not in ['active']"/>
                     <button name="action_draft" string="Återställ utkast" type="object"
-                            states="archived"/>
+                            invisible="state not in ['archived']"/>
                     <field name="state" widget="statusbar"
                            statusbar_visible="draft,active,archived"/>
                 </header>

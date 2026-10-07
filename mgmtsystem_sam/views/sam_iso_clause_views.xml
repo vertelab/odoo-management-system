@@ -5,11 +5,11 @@
         <field name="name">sam.iso.clause.tree</field>
         <field name="model">sam.iso_clause</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="clause_number"/>
                 <field name="name"/>
                 <field name="parent_id" invisible="1"/>
-            </tree>
+            </list>
         </field>
     </record>
 

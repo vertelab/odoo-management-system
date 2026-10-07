@@ -9,12 +9,12 @@
             <field name="name">bpm.law.package.tree</field>
             <field name="model">bpm.law.package</field>
             <field name="arch" type="xml">
-                <tree string="Law Packages">
+                <list string="Law Packages">
                     <field name="name"/>
                     <field name="business_type" optional="show"/>
                     <field name="size_category" optional="show"/>
                     <field name="law_count"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -42,7 +42,7 @@
                         <notebook>
                             <page string="Laws" name="laws">
                                 <field name="line_ids">
-                                    <tree editable="bottom">
+                                    <list editable="bottom">
                                         <field name="sequence" widget="handle"/>
                                         <field name="category" optional="show"/>
                                         <field name="sfs_number"/>
@@ -50,7 +50,7 @@
                                         <field name="department" optional="hide"/>
                                         <field name="size_category" optional="show"/>
                                         <field name="min_employees" optional="hide"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Active For" name="companies">

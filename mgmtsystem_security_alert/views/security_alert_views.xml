@@ -47,7 +47,7 @@
                             <field name="company_id" groups="base.group_multi_company"/>
                         </group>
                     </group>
-                    <group string="AI Assessment" attrs="{'invisible': [('ai_assessed_date', '=', False)]}">
+                    <group string="AI Assessment" invisible="ai_assessed_date == False">
                         <field name="ai_relevance_score"/>
                         <field name="ai_risk_assessment"/>
                         <field name="ai_mitigation_suggestion"/>

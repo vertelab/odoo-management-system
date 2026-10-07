@@ -5,11 +5,11 @@
         <field name="name">sam.instruction.tree</field>
         <field name="model">sam.instruction</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="department_id"/>
                 <field name="revision_date"/>
-            </tree>
+            </list>
         </field>
     </record>
 

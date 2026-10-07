@@ -5,13 +5,13 @@
         <field name="name">sam.task.delegation.tree</field>
         <field name="model">sam.task_delegation</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="employee_id"/>
                 <field name="department_id"/>
                 <field name="date_assigned"/>
                 <field name="date_review"/>
-            </tree>
+            </list>
         </field>
     </record>
 

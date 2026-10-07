@@ -5,11 +5,11 @@
         <field name="name">sam.consultation.tree</field>
         <field name="model">sam.consultation</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="department_id"/>
                 <field name="date_consultation"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -27,7 +27,7 @@
                         <field name="department_id"/>
                         <field name="date_consultation"/>
                         <field name="discuss_channel_id"
-                               attrs="{'invisible': [('discuss_channel_id', '=', False)]}"/>
+                               invisible="discuss_channel_id == False"/>
                     </group>
                     <group string="ISO 45001">
                         <field name="iso_clause_ids" widget="many2many_tags"/>

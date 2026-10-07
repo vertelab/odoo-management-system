@@ -3,7 +3,7 @@
 
 {
     'name': 'Management System: Systematiskt Arbetsmiljöarbete (SAM)',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.0.1',
     'summary': 'Systematiskt Arbetsmiljöarbete enligt ISO 45001 och AFS 2023:1',
     'category': 'Management',
     'description': '''

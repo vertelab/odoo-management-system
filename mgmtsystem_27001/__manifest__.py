@@ -3,7 +3,7 @@
 
 {
     'name': 'Management System: ISO 27001:2022 — Informationssäkerhet',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.0.1',
     'summary': 'ISO 27001:2022 ISMS — mallar, gap-analys, SoA och Annex A kontroller.',
     'category': 'Management',
     'description': '''

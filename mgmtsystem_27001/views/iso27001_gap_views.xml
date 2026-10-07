@@ -8,9 +8,9 @@
             <form string="Gap Analysis">
                 <header>
                     <button name="action_start" string="Start Analysis"
-                            states="draft" type="object" class="btn-primary"/>
+                            invisible="state not in ['draft']" type="object" class="btn-primary"/>
                     <button name="action_complete" string="Complete"
-                            states="in_progress" type="object" class="btn-primary"/>
+                            invisible="state not in ['in_progress']" type="object" class="btn-primary"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,done"/>
                 </header>
                 <sheet>
