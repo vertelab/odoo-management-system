@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo SA, Open Source Management Solution, third party addon
-#    Copyright (C) 2025- Vertel AB (<https://vertel.se>).
+#    Copyright (C) 2025- Vertel Sverige AB (<https://vertel.se>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -26,7 +26,7 @@ Chat with Nonconformity
         - Extends Odoo: Builds on mgmtsystem.nonconformity.
     ''',
     'category': 'helpdesk',
-    'author': 'Vertel AB',
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_nonconformity_ai',
     'license': 'AGPL-3',
     'depends': [

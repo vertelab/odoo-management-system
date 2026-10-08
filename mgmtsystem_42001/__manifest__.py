@@ -1,4 +1,4 @@
-# Copyright (C) 2025 Vertel AB (<https://vertel.se>).
+# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
@@ -6,18 +6,28 @@
     'version': '18.0.1.0.0',
     'summary': 'ISO 42001:2023 AIMS — klausuler, AI-systemregister, konsekvensbedömning, Annex A kontroller, SoA',
     'category': 'Management',
-    'description': '''
-ISO 42001:2023 — AI-ledningssystem
-==================================
+    'description': """
+        Ledningssystem för artificiell intelligens (AIMS) enligt ISO/IEC 42001:2023.
 
-    Artificial Intelligence Management System (AIMS) per ISO/IEC 42001:2023.
+        Implementerar:
+        - Samtliga klausuler 4–10 med svenska beskrivningar
+        - Annex A referenskontroller (A.2–A.10) med svenska beskrivningar
+        - AI-systemregister — dokumentation av samtliga AI-system
+        - AI-konsekvensbedömning — fairness, transparency, privacy, safety, bias
+        - Statement of Applicability (SoA) med koppling till Annex A
+        - Gap-analys med mognadsbedömning (maturity 0–5)
+        - AI-policy med signeringsflöde
+        - AI-mål (Annex C) — mätbara mål för AI-governance
+        - Dashboard för AIMS-status
 
-Implements:
+        ISO/IEC 42001:2023 är den första internationella standarden för AI-ledningssystem.
+        Alla fyra annex (A, B, C, D) är informativa — Annex A är referenskontroller
+        (ej normativa som i 27001) men granskas ändå vid certifiering.
 
-    - All clauses 4-10 with descriptions.
-    - Annex A reference controls (A.2-A.x).
-    ''',
-    'author': 'Vertel AB',
+        Bygger på OCA mgmtsystem-moduler. Ingen befintlig AI-modul finns i OCA —
+        detta är helt nytt.
+    """,
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_42001',
     'license': 'AGPL-3',
     'depends': [

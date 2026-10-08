@@ -1,25 +1,32 @@
-# Copyright (C) 2025 Vertel AB (<https://vertel.se>).
+# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     'name': 'Management System: Security Alert Monitoring',
-    'version': '18.0.1.0.1',
+    'version': '18.0.1.0.0',
     'summary': 'Automatisk säkerhetsbevakning — CERT-SE, NCSC, CVE/NVD, Ubuntu USN',
     'category': 'Management',
-    'description': '''
-Security Alert Monitoring
-=========================
+    'description': """
+        Automatisk säkerhetsbevakning för ledningssystemet.
 
-    Automatic security monitoring for the management system.
+        Hämtar säkerhetsvarningar från fyra källor:
+        - CERT-SE (Atom RSS)
+        - NCSC Aktuellt (web scraping)
+        - NVD CVE (REST API v2.0)
+        - Ubuntu Security Notices (REST API)
 
-Fetches security advisories from four sources:
+        Funktioner:
+        - Automatisk schemalagd inhämtning (cron)
+        - Programvaruinventering för CVE-filtrering
+        - AI-relevansbedömning av varningar
+        - Koppling till ISO 27001 Annex A-kontroller
+        - Koppling till EBIOS security events
+        - Åtgärdshantering via mgmtsystem.action
+        - Dashboard med pivot/grafer
 
-    - CERT-SE (Atom RSS)
-    - NCSC Aktuellt (web scraping)
-    - NVD CVE (REST API v2.0)
-    - Ubuntu Security Notices
-    ''',
-    'author': 'Vertel AB',
+        Kräver pip-paket: feedparser, beautifulsoup4, requests
+    """,
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_security_alert',
     'license': 'AGPL-3',
     'depends': [

@@ -1,4 +1,4 @@
-# Copyright (C) 2025 Vertel AB (<https://vertel.se>).
+# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
@@ -6,18 +6,25 @@
     'version': '18.0.1.0.0',
     'summary': 'ISO 22000:2018 FSMS — klausuler, gap-analys, policy, PRP, HACCP, CCP, spårbarhet',
     'category': 'Management',
-    'description': '''
-ISO 22000:2018 — Livsmedelssäkerhet
-===================================
+    'description': """
+        Ledningssystem för livsmedelssäkerhet (FSMS) enligt ISO 22000:2018.
 
-    Food Safety Management System (FSMS) per ISO 22000:2018.
+        Implementerar:
+        - Samtliga klausuler 4–10 med svenska beskrivningar
+        - Gap-analys med mognadsbedömning (maturity 0–5) per klausul
+        - Livsmedelssäkerhetspolicy med signeringsflöde
+        - Grundförutsättningar (PRP) — hygien, rengöring, infrastruktur
+        - HACCP-planer med faroanalys
+        - Kritiska styrpunkter (CCP) med övervakning och korrigerande åtgärder
+        - Flödesscheman för produktionskedjan
+        - Spårbarhetstest (framåt/bakåt)
+        - Nödberedskap och recall-planer
+        - Livsmedelssäkerhetsmål med KPI:er
+        - Dashboard för FSMS-status
 
-Implements:
-
-    - All clauses 4-10 with descriptions.
-    - Gap analysis with maturity assessment (0-5) per clause.
-    ''',
-    'author': 'Vertel AB',
+        Bygger på OCA mgmtsystem-moduler.
+    """,
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_22000',
     'license': 'AGPL-3',
     'depends': [

@@ -32,7 +32,7 @@
         Long description of module's purpose
     """,
     #'sequence': 1,
-    'author': 'Vertel AB',
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_law_ai_chat',
     'images': ['static/description/banner.png'], # 560x280
     'license': 'AGPL-3',

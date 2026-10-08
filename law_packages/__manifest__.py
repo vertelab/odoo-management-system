@@ -1,36 +1,31 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'BPM: Law Packages',
-    'version': '18.0.1.0.1',
+    'version': '1.0',
     'summary': 'Pre-configured law packages for different business types.',
     'category': 'Management',
-    'description': '''
-Law Packages
-============
+    'description': """
+Law Packages for Business Types
+===============================
 
-    Provides pre-configured packages of relevant Swedish laws (SFS) for
-    different business types. Users select their business type(s) in
-    Settings and the corresponding laws are loaded into the management
-    system's law monitoring module.
+Provides pre-configured packages of relevant Swedish laws (SFS) for
+different business types. Users select their business type(s) in
+Settings and the corresponding laws are loaded into the management
+system's law monitoring module.
 
-    Business types included:
-    - Consulting Firm (Konsultbyrå)
-    - Manufacturing Company (Tillverkande företag)
-    - Restaurant (Restaurang)
+Business types included:
+- Consulting Firm (Konsultbyrå)
+- Manufacturing Company (Tillverkande företag)
+- Restaurant (Restaurang)
 
-    Features:
-    - Select one or multiple business type packages in Settings
-    - Laws are automatically linked to document.law records
-    - Each law includes SFS number, name, category, and relevance note
-    - Integration with mgmtsystem_law for management system tracking
-
-    Features:
-
-        - UI Integration: Extends 2 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on bpm.law.import, bpm.law.package, bpm.law.package.line.
-    ''',
-    'author': 'Vertel AB',
-    'website': 'https://vertel.se/apps/odoo-management-system/law_packages',
+Features:
+- Select one or multiple business type packages in Settings
+- Laws are automatically linked to document.law records
+- Each law includes SFS number, name, category, and relevance note
+- Integration with mgmtsystem_law for management system tracking
+    """,
+    'author': 'Vertel Sverige AB',
+    'website': 'https://vertel.se',
     'license': 'AGPL-3',
     'depends': [
         'mgmtsystem_law',

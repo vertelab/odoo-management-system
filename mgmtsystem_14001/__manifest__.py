@@ -1,4 +1,4 @@
-# Copyright (C) 2025 Vertel AB (<https://vertel.se>).
+# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
@@ -6,18 +6,28 @@
     'version': '18.0.1.0.0',
     'summary': 'ISO 14001:2026 EMS — klausuler, gap-analys, miljöpolicy, aspekter, lagkrav',
     'category': 'Management',
-    'description': '''
-ISO 14001:2026 — Miljöledning
-=============================
+    'description': """
+        Miljöledningssystem (EMS) enligt ISO 14001:2026 (Edition 4).
 
-    Environmental Management System (EMS) per ISO 14001:2026 (Edition 4).
+        Implementerar:
+        - Samtliga klausuler 4–10 med svenska beskrivningar
+        - Gap-analys med mognadsbedömning (maturity 0–5) per klausul
+        - Miljöpolicy med signeringsflöde
+        - Miljöaspekter och miljöpåverkan med livscykelperspektiv
+        - Lagkravsregister (compliance obligations)
+        - Miljömål och handlingsplaner
+        - Dashboard för EMS-status
 
-Implements:
+        ISO 14001:2026 (Edition 4, publicerad april 2026) inkluderar:
+        - Förtydligade krav kring miljöaspekter och livscykelperspektiv
+        - Förstärkt fokus på klimatförändringar och biologisk mångfald
+        - Uppdaterad Annex SL-struktur
+        - Förbättrad integration med andra ledningssystem
 
-    - All clauses 4-10 with descriptions.
-    - Gap analysis with maturity assessment (0-5) per clause.
-    ''',
-    'author': 'Vertel AB',
+        Bygger på OCA mgmtsystem-moduler (mgmtsystem_environment,
+        document_page_environmental_aspect).
+    """,
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_14001',
     'license': 'AGPL-3',
     'depends': [

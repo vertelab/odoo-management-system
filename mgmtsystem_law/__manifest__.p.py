@@ -29,7 +29,7 @@
     'description': """
     This module's function is to add access to the Knowledge module Document Law in the management system interface, as well as to add some connections to other models in Odoo.
     """,
-    'author': 'Vertel AB',
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmsystem_law',
     'images': ['static/description/banner.png'], 
     'license': 'AGPL-3',
