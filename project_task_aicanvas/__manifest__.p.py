@@ -28,7 +28,7 @@
     'description': """
         Project/Task AI Canvas
     """,
-    'author': 'Vertel AB',
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/project_task_aicanvas_hr/',
     'images': ['static/description/banner.png'],  # 560x280
     'license': 'AGPL-3',
