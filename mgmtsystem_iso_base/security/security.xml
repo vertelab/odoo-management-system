@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- ISO Common Core Group Category -->
+    <record id="module_category_iso_base" model="ir.module.category">
+        <field name="name">ISO Ledningssystem</field>
+        <field name="description">Gemensam ISO-kärna — standarder, klausuler och gap-analys</field>
+        <field name="sequence">89</field>
+    </record>
+
+    <!-- ISO Common Core Groups -->
+    <record id="group_iso_base_user" model="res.groups">
+        <field name="name">ISO User</field>
+        <field name="category_id" ref="module_category_iso_base"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Kan läsa standarder, klausuler och gap-analyser.</field>
+    </record>
+
+    <record id="group_iso_base_manager" model="res.groups">
+        <field name="name">ISO Manager</field>
+        <field name="category_id" ref="module_category_iso_base"/>
+        <field name="implied_ids" eval="[(4, ref('group_iso_base_user'))]"/>
+        <field name="comment">Kan skapa och redigera standarder, klausuler och gap-analyser.</field>
+    </record>
+
+    <!-- Record Rules: Company Isolation -->
+    <record id="rule_iso_standard_company" model="ir.rule">
+        <field name="name">ISO Standard: Company Isolation</field>
+        <field name="model_id" ref="model_mgmtsystem_iso_standard"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso_clause_company" model="ir.rule">
+        <field name="name">ISO Clause: Company Isolation</field>
+        <field name="model_id" ref="model_mgmtsystem_iso_clause"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso_gap_company" model="ir.rule">
+        <field name="name">ISO Gap: Company Isolation</field>
+        <field name="model_id" ref="model_mgmtsystem_iso_gap"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+
+    <record id="rule_iso_gap_line_company" model="ir.rule">
+        <field name="name">ISO Gap Line: Company Isolation</field>
+        <field name="model_id" ref="model_mgmtsystem_iso_gap_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

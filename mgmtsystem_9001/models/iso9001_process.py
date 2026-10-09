@@ -34,9 +34,9 @@ class Iso9001Process(models.Model):
         string="Process Owner",
     )
     iso9001_clause_ids = fields.Many2many(
-        "iso9001.clause",
-        string="ISO 9001 Clauses",
-        help="Linked to ISO 9001:2026 clauses, typically 4.4, 8.1",
+        "mgmtsystem.iso.clause",
+        string="ISO 9001 Klausuler",
+        help="Kopplade till ISO 9001-klausuler, typiskt 4.4 och 8.1",
     )
     company_id = fields.Many2one(
         "res.company",

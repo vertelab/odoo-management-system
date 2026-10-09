@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <!-- Standardregistret: de standarder organisationen kan arbeta mot.
+         Standarder är poster, inte modeller — klausuler och gap-analyser
+         pekar på dem via standard_id. -->
+
+    <record id="iso_standard_9001" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 9001</field>
+        <field name="name">Kvalitetsledning</field>
+        <field name="version">2026</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="iso_standard_14001" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 14001</field>
+        <field name="name">Miljöledning</field>
+        <field name="version">2026</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="iso_standard_22000" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 22000</field>
+        <field name="name">Livsmedelssäkerhet</field>
+        <field name="version">2018</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="iso_standard_27001" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 27001</field>
+        <field name="name">Informationssäkerhet</field>
+        <field name="version">2022</field>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="iso_standard_42001" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 42001</field>
+        <field name="name">AI-ledningssystem</field>
+        <field name="version">2023</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="iso_standard_45001" model="mgmtsystem.iso.standard">
+        <field name="code">ISO 45001</field>
+        <field name="name">Arbetsmiljöledning</field>
+        <field name="version">2018</field>
+        <field name="sequence">60</field>
+    </record>
+</odoo>

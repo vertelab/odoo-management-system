@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- ISO Standard List View -->
+    <record id="view_mgmtsystem_iso_standard_list" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.standard.list</field>
+        <field name="model">mgmtsystem.iso.standard</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="version"/>
+                <field name="clause_count"/>
+                <field name="active" invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ISO Standard Form View -->
+    <record id="view_mgmtsystem_iso_standard_form" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.standard.form</field>
+        <field name="model">mgmtsystem.iso.standard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Arkiverad"
+                            bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <label for="code" string="Beteckning"/>
+                        <h1>
+                            <field name="code" class="oe_inline" placeholder="ISO 9001"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Kvalitetsledning"/>
+                            <field name="version"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="active"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Beskrivning">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ISO Standard Search View -->
+    <record id="view_mgmtsystem_iso_standard_search" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.standard.search</field>
+        <field name="model">mgmtsystem.iso.standard</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="version"/>
+                <filter name="filter_inactive" string="Arkiverade"
+                        domain="[('active', '=', False)]"/>
+                <group expand="0" string="Gruppera efter">
+                    <filter name="group_company" string="Företag"
+                            context="{'group_by': 'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_mgmtsystem_iso_standard" model="ir.actions.act_window">
+        <field name="name">Standarder</field>
+        <field name="res_model">mgmtsystem.iso.standard</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_filter_inactive': 0}</field>
+    </record>
+</odoo>

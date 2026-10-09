@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mgmtsystem_iso_standard_user,ISO Standard - User,model_mgmtsystem_iso_standard,group_iso_base_user,1,0,0,0
+access_mgmtsystem_iso_standard_manager,ISO Standard - Manager,model_mgmtsystem_iso_standard,group_iso_base_manager,1,1,1,1
+access_mgmtsystem_iso_clause_user,ISO Clause - User,model_mgmtsystem_iso_clause,group_iso_base_user,1,0,0,0
+access_mgmtsystem_iso_clause_manager,ISO Clause - Manager,model_mgmtsystem_iso_clause,group_iso_base_manager,1,1,1,1
+access_mgmtsystem_iso_gap_user,ISO Gap - User,model_mgmtsystem_iso_gap,group_iso_base_user,1,0,0,0
+access_mgmtsystem_iso_gap_manager,ISO Gap - Manager,model_mgmtsystem_iso_gap,group_iso_base_manager,1,1,1,1
+access_mgmtsystem_iso_gap_line_user,ISO Gap Line - User,model_mgmtsystem_iso_gap_line,group_iso_base_user,1,0,0,0
+access_mgmtsystem_iso_gap_line_manager,ISO Gap Line - Manager,model_mgmtsystem_iso_gap_line,group_iso_base_manager,1,1,1,1

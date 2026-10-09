@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Root menu: the shared ISO core. Shell modules add their own
+         sub-menus beneath their own root; this one holds the shared
+         registers that any standard uses. -->
+    <menuitem id="menu_iso_base_root"
+              name="ISO Ledningssystem"
+              sequence="85"
+              groups="group_iso_base_user"/>
+
+    <menuitem id="menu_iso_base_clauses"
+              name="Klausuler"
+              parent="menu_iso_base_root"
+              action="action_mgmtsystem_iso_clause"
+              sequence="10"/>
+
+    <menuitem id="menu_iso_base_gap"
+              name="Gap-analyser"
+              parent="menu_iso_base_root"
+              action="action_mgmtsystem_iso_gap"
+              sequence="20"/>
+
+    <menuitem id="menu_iso_base_config"
+              name="Konfiguration"
+              parent="menu_iso_base_root"
+              groups="group_iso_base_manager"
+              sequence="100"/>
+
+    <menuitem id="menu_iso_base_standards"
+              name="Standarder"
+              parent="menu_iso_base_config"
+              action="action_mgmtsystem_iso_standard"
+              sequence="10"/>
+</odoo>

@@ -3,43 +3,38 @@
 
 {
     'name': 'Management System: ISO 9001:2026 — Kvalitetsledning',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.1.0',
     'summary': 'ISO 9001:2026 QMS — klausuler, gap-analys, kvalitetspolicy, kvalitetsmål, processer',
     'category': 'Management',
     'description': """
         Kvalitetsledningssystem (QMS) enligt ISO 9001:2026.
 
-        Implementerar:
-        - Samtliga klausuler 4–10 med svenska beskrivningar
-        - Gap-analys med mognadsbedömning (maturity 0–5) per klausul
-        - Kvalitetspolicy med signeringsflöde
-        - Kvalitetsmål med KPI:er och deadlines
-        - Processidentifiering och processkartläggning
-        - Dashboard för QMS-status
+        Tunt skal ovanpå mgmtsystem_iso_base (den gemensamma ISO-kärnan):
+        - Klausulerna 4–10 ligger i kärnans klausulmodell, kopplade till
+          ISO 9001 i standardregistret
+        - Gap-analys med mognadsbedömning (0–5) använder kärnans gap-modell
+        - Processidentifiering och processkartläggning (unikt för 9001)
+
+        Policy hanteras av mgmtsystem_manual / document_page och mål med
+        KPI:er av mgmtsystem_objective — inga egna kopior.
 
         ISO 9001:2026 (FDIS, Edition 6) inkluderar:
         - Climate change amendment inbäddad i 4.1/4.2
         - Quality culture and ethical behaviour (5.1.1, 7.3)
         - Ny Annex A (informativ vägledning, ej krav)
-
-        Bygger på OCA mgmtsystem-moduler.
     """,
     'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-management-system/mgmtsystem_9001',
     'license': 'AGPL-3',
     'depends': [
-        'base',
-        'mail',
+        'mgmtsystem_iso_base',
+        'mgmtsystem_manual',
+        'mgmtsystem_objective',
     ],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
         'data/iso9001_clause_data.xml',
-        'data/iso9001_template_data.xml',
-        'views/iso9001_clause_views.xml',
-        'views/iso9001_policy_views.xml',
-        'views/iso9001_gap_views.xml',
-        'views/iso9001_objective_views.xml',
         'views/iso9001_process_views.xml',
         'views/iso9001_dashboard_views.xml',
         'views/iso9001_menu.xml',

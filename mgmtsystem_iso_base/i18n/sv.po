@@ -1,0 +1,632 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgmtsystem_iso_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-09 09:00+0000\n"
+"PO-Revision-Date: 2026-10-09 09:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__clause_count
+msgid "# Klausuler"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__0
+msgid "0 – Saknas"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__1
+msgid "1 – Initial"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__2
+msgid "2 – Upprepbar"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__3
+msgid "3 – Definierad"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__4
+msgid "4 – Styrd"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__maturity_level__5
+msgid "5 – Optimerad"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_42001
+msgid "AI-ledningssystem"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__active
+msgid "Active"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__notes
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Anteckningar"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_45001
+msgid "Arbetsmiljöledning"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_form
+msgid "Arkiverad"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_search
+msgid "Arkiverade"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__assessed_by
+msgid "Bedömd av"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_form
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_form
+msgid "Beskrivning"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_form
+msgid "Beteckning"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__clause_number
+msgid "Clause Number"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__code
+msgid "Code"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__company_id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__company_id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__company_id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__company_id
+msgid "Company"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__create_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__create_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__create_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__create_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__create_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__create_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__date
+msgid "Date"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__description
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__description
+msgid "Description"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__display_name
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__display_name
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__display_name
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__finding
+msgid "Fynd"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_search
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_search
+msgid "Företag"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__parent_id
+msgid "Förälderklausul"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__gap_id
+msgid "Gap"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Gap-analys"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.actions.act_window,name:mgmtsystem_iso_base.action_mgmtsystem_iso_gap
+#: model:ir.ui.menu,name:mgmtsystem_iso_base.menu_iso_base_gap
+msgid "Gap-analyser"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__line_ids
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Gap-rader"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.module.category,description:mgmtsystem_iso_base.module_category_iso_base
+msgid "Gemensam ISO-kärna — standarder, klausuler och gap-analys"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_search
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_search
+msgid "Gruppera efter"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__id
+msgid "ID"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_form
+msgid "ISO 9001"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model,name:mgmtsystem_iso_base.model_mgmtsystem_iso_clause
+msgid "ISO Clause"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model,name:mgmtsystem_iso_base.model_mgmtsystem_iso_gap
+msgid "ISO Gap Analysis"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model,name:mgmtsystem_iso_base.model_mgmtsystem_iso_gap_line
+msgid "ISO Gap Analysis Line"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.module.category,name:mgmtsystem_iso_base.module_category_iso_base
+#: model:ir.ui.menu,name:mgmtsystem_iso_base.menu_iso_base_root
+msgid "ISO Ledningssystem"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:res.groups,name:mgmtsystem_iso_base.group_iso_base_manager
+msgid "ISO Manager"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model,name:mgmtsystem_iso_base.model_mgmtsystem_iso_standard
+msgid "ISO Standard"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:res.groups,name:mgmtsystem_iso_base.group_iso_base_user
+msgid "ISO User"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__clause_id
+msgid "ISO-klausul"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__clause_number
+msgid "ISO-klausulnummer, t.ex. '5.2'"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_error
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_27001
+msgid "Informationssäkerhet"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:res.groups,comment:mgmtsystem_iso_base.group_iso_base_user
+msgid "Kan läsa standarder, klausuler och gap-analyser."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:res.groups,comment:mgmtsystem_iso_base.group_iso_base_manager
+msgid "Kan skapa och redigera standarder, klausuler och gap-analyser."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap__state__done
+msgid "Klar"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+msgid "Klara"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_form
+msgid "Klausul"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.actions.act_window,name:mgmtsystem_iso_base.action_mgmtsystem_iso_clause
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__clause_ids
+#: model:ir.ui.menu,name:mgmtsystem_iso_base.menu_iso_base_clauses
+msgid "Klausuler"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__company_id
+msgid "Klausuler är företagsspecifika men delas typiskt mellan bolag"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.constraint,message:mgmtsystem_iso_base.constraint_mgmtsystem_iso_clause_clause_number_standard_uniq
+msgid "Klausulnumret måste vara unikt inom standarden!"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.ui.menu,name:mgmtsystem_iso_base.menu_iso_base_config
+msgid "Konfiguration"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_9001
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_standard_form
+msgid "Kvalitetsledning"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__write_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__write_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__write_uid
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__write_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__write_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__write_date
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_22000
+msgid "Livsmedelssäkerhet"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:mgmtsystem.iso.standard,name:mgmtsystem_iso_base.iso_standard_14001
+msgid "Miljöledning"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__maturity_level
+msgid "Mognadsnivå"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__name
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__name
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__name
+msgid "Name"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Påbörja"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap__state__in_progress
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__status__in_progress
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+msgid "Pågår"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__recommendation
+msgid "Rekommendation"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__sequence
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Slutför"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__standard_id
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__standard_id
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_search
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+msgid "Standard"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__company_id
+msgid "Standarden är företagsspecifik men delas typiskt mellan bolag"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.constraint,message:mgmtsystem_iso_base.constraint_mgmtsystem_iso_standard_code_uniq
+msgid "Standardens beteckning måste vara unik!"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__code
+msgid "Standardens beteckning, t.ex. 'ISO 9001'"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__name
+msgid "Standardens namn, t.ex. 'Kvalitetsledning'"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__version
+msgid "Standardens utgåva, t.ex. '2015' eller '2026'"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.actions.act_window,name:mgmtsystem_iso_base.action_mgmtsystem_iso_standard
+#: model:ir.ui.menu,name:mgmtsystem_iso_base.menu_iso_base_standards
+msgid "Standarder"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__state
+msgid "State"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap_line__status
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+msgid "Status"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_clause__child_ids
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_clause_form
+msgid "Underklausuler"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap__state__draft
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_search
+msgid "Utkast"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_standard__version
+msgid "Version"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,field_description:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields,help:mgmtsystem_iso_base.field_mgmtsystem_iso_gap__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model_terms:ir.ui.view,arch_db:mgmtsystem_iso_base.view_mgmtsystem_iso_gap_form
+msgid "Återställ"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__status__resolved
+msgid "Åtgärdad"
+msgstr ""
+
+#. module: mgmtsystem_iso_base
+#: model:ir.model.fields.selection,name:mgmtsystem_iso_base.selection__mgmtsystem_iso_gap_line__status__open
+msgid "Öppen"
+msgstr ""

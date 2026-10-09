@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- ISO Gap List View -->
+    <record id="view_mgmtsystem_iso_gap_list" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.gap.list</field>
+        <field name="model">mgmtsystem.iso.gap</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="standard_id"/>
+                <field name="date"/>
+                <field name="assessed_by"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-info="state == 'in_progress'"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ISO Gap Form View -->
+    <record id="view_mgmtsystem_iso_gap_form" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.gap.form</field>
+        <field name="model">mgmtsystem.iso.gap</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" string="Påbörja" type="object"
+                            invisible="state != 'draft'" class="btn-primary"/>
+                    <button name="action_done" string="Slutför" type="object"
+                            invisible="state != 'in_progress'" class="btn-primary"/>
+                    <button name="action_draft" string="Återställ" type="object"
+                            invisible="state not in ('done', 'in_progress')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Gap-analys"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="standard_id"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="assessed_by"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Gap-rader" name="lines">
+                            <field name="line_ids" nolabel="1">
+                                <list editable="bottom">
+                                    <field name="clause_id"
+                                           domain="[('standard_id', '=', parent.standard_id)]"/>
+                                    <field name="maturity_level"/>
+                                    <field name="status"/>
+                                    <field name="finding"/>
+                                    <field name="recommendation"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Anteckningar" name="notes">
+                            <field name="notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ISO Gap Search View -->
+    <record id="view_mgmtsystem_iso_gap_search" model="ir.ui.view">
+        <field name="name">mgmtsystem.iso.gap.search</field>
+        <field name="model">mgmtsystem.iso.gap</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="standard_id"/>
+                <field name="assessed_by"/>
+                <filter name="filter_draft" string="Utkast"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_in_progress" string="Pågår"
+                        domain="[('state', '=', 'in_progress')]"/>
+                <filter name="filter_done" string="Klara"
+                        domain="[('state', '=', 'done')]"/>
+                <group expand="0" string="Gruppera efter">
+                    <filter name="group_standard" string="Standard"
+                            context="{'group_by': 'standard_id'}"/>
+                    <filter name="group_state" string="Status"
+                            context="{'group_by': 'state'}"/>
+                    <filter name="group_company" string="Företag"
+                            context="{'group_by': 'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_mgmtsystem_iso_gap" model="ir.actions.act_window">
+        <field name="name">Gap-analyser</field>
+        <field name="res_model">mgmtsystem.iso.gap</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

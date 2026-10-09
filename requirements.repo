@@ -1,1 +1,2 @@
 git@github.com:vertelab/odoo-knowledge.git /usr/share/odoo-knowledge
+git@github.com:OCA/management-system.git /usr/share/odooext-OCA-management-system

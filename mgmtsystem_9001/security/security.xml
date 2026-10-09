@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
     <!-- ISO 9001 Group Category -->
     <record id="module_category_iso9001" model="ir.module.category">
         <field name="name">ISO 9001 (QMS)</field>
-        <field name="description">Kvalitetsledningssystem — moduler för ISO 9001:2026</field>
+        <field name="description">Kvalitetsledningssystem — skal ovanpå den gemensamma ISO-kärnan</field>
         <field name="sequence">90</field>
     </record>
 
@@ -12,59 +14,26 @@
         <field name="name">ISO 9001 User</field>
         <field name="category_id" ref="module_category_iso9001"/>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-        <field name="comment">Kan läsa QMS-dokument, gap-analyser, mål och processer.</field>
+        <field name="comment">Kan läsa QMS-dokument och processer.</field>
     </record>
 
     <record id="group_iso9001_manager" model="res.groups">
         <field name="name">ISO 9001 Manager</field>
         <field name="category_id" ref="module_category_iso9001"/>
         <field name="implied_ids" eval="[(4, ref('group_iso9001_user'))]"/>
-        <field name="comment">Kan skapa och redigera gap-analyser, policy, mål och processer.</field>
+        <field name="comment">Kan skapa och redigera processer.</field>
     </record>
 
     <record id="group_iso9001_officer" model="res.groups">
         <field name="name">ISO 9001 Officer</field>
         <field name="category_id" ref="module_category_iso9001"/>
         <field name="implied_ids" eval="[(4, ref('group_iso9001_manager'))]"/>
-        <field name="comment">Fullständig administration av QMS-systemet.</field>
+        <field name="comment">Fullständig administration av QMS-skalet.</field>
     </record>
 
-    <!-- Record Rules: Company Isolation -->
-    <record id="rule_iso9001_clause_company" model="ir.rule">
-        <field name="name">ISO 9001 Clause: Company Isolation</field>
-        <field name="model_id" ref="model_iso9001_clause"/>
-        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-        <field name="global" eval="True"/>
-    </record>
-
-    <record id="rule_iso9001_policy_company" model="ir.rule">
-        <field name="name">ISO 9001 Policy: Company Isolation</field>
-        <field name="model_id" ref="model_iso9001_policy"/>
-        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-        <field name="global" eval="True"/>
-    </record>
-
-    <record id="rule_iso9001_gap_company" model="ir.rule">
-        <field name="name">ISO 9001 Gap: Company Isolation</field>
-        <field name="model_id" ref="model_iso9001_gap"/>
-        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-        <field name="global" eval="True"/>
-    </record>
-
-    <record id="rule_iso9001_gap_line_company" model="ir.rule">
-        <field name="name">ISO 9001 Gap Line: Company Isolation</field>
-        <field name="model_id" ref="model_iso9001_gap_line"/>
-        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-        <field name="global" eval="True"/>
-    </record>
-
-    <record id="rule_iso9001_objective_company" model="ir.rule">
-        <field name="name">ISO 9001 Objective: Company Isolation</field>
-        <field name="model_id" ref="model_iso9001_objective"/>
-        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-        <field name="global" eval="True"/>
-    </record>
-
+    <!-- Record Rules: Company Isolation.
+         Clause, gap and gap-line now live in mgmtsystem_iso_base and are
+         isolated there; only the process model is owned by this shell. -->
     <record id="rule_iso9001_process_company" model="ir.rule">
         <field name="name">ISO 9001 Process: Company Isolation</field>
         <field name="model_id" ref="model_iso9001_process"/>
