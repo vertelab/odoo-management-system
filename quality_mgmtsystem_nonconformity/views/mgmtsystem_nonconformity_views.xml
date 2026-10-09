@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Nonconformityns form: visa och öppna ursprungskontrollen/alerten.
+         Bakåtlänken ligger generiskt i res_model/res_id (OCA) och görs
+         användbar här via två computed fält — OCA-modellens form ändras
+         inte i onödan. -->
+    <record id="mgmtsystem_nonconformity_view_form_quality" model="ir.ui.view">
+        <field name="name">mgmtsystem.nonconformity.view.form.quality</field>
+        <field name="model">mgmtsystem.nonconformity</field>
+        <field name="inherit_id" ref="mgmtsystem_nonconformity.view_mgmtsystem_nonconformity_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="Ursprung i kvalitetsarbetet"
+                       invisible="not quality_check_id and not quality_alert_id">
+                    <field name="quality_check_id" readonly="1"/>
+                    <field name="quality_alert_id" readonly="1"/>
+                    <button name="action_open_quality_origin"
+                            type="object"
+                            string="Öppna ursprunget"
+                            class="btn-link"
+                            invisible="not quality_check_id and not quality_alert_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

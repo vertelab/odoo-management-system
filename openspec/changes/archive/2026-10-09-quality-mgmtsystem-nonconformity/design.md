@@ -35,6 +35,8 @@ Se `proposal.md` — Why, för motivering. Det som styr designen:
 - Underkänd kontroll → nonconformity med ett klick, utan dubbelregistrering.
 - Spårbarhet bakåt: kontrollpunkt → klausul, nonconformity → kontroll.
 - Idempotens: högst en nonconformity per kontroll.
+- Alla obligatoriska fält på nonconformity härleds, så att åtgärden aldrig
+  blockeras av saknad data (se Beslut 6).
 
 **Non-Goals:**
 
@@ -116,8 +118,46 @@ har ofta ingen extern partner. Att blockera åtgärden då vore fel — avvikels
 Förkastat — att ändra en OCA-modells krav för vår skull är en större
 inkräktan än att härleda ett värde.
 
-### Beslut 6: Klausulkopplingen läggs på kontrollpunkten, inte på kontrollen
+### Beslut 6: Alla obligatoriska fält på nonconformity härleds
 
+`mgmtsystem.nonconformity` har **fem** fält med `required=True`, varav fyra
+saknar default. Verifierat live: `create({"name": ..., "description": ...})`
+faller på `NotNullViolation` för `partner_id`, och därefter på
+`responsible_user_id`, `manager_user_id` och `origin_ids`. Bryggan måste sätta
+alla fem:
+
+| Fält | Krav | Härleds ur |
+|---|---|---|
+| `partner_id` | required, ingen default | Beslut 5 |
+| `responsible_user_id` | required, ingen default | kontrollens `user_id` → alertens `user_id` → `env.user` |
+| `manager_user_id` | required, ingen default | utförarens `hr.employee` → `parent_id` (chef) → chefens `user_id`; faller tillbaka på `responsible_user_id` |
+| `origin_ids` | required, ingen default | Beslut 3 (fast origin) |
+| `user_id` | required, **har default** (`env.user`) | lämnas orörd |
+| `description` | required | sammanställs ur kontrollen |
+
+**Varför härleda i stället för att kräva:** samma skäl som Beslut 5 — en
+avvikelse på golvet är verklig även när ansvarig eller chef inte är satt på
+kontrollen. Att blockera registreringen vore fel; den som skapar avvikelsen
+blir ansvarig i sista hand.
+
+**`manager_user_id` via `hr.employee`:** kedjan är
+`res.users` → `hr.employee.user_id` → `hr.employee.parent_id` (fältet heter
+"Manager") → `parent_id.user_id`.
+
+⚠ **Rättelse:** designen påstod först att `hr` redan är installerad som en
+följd av `mgmtsystem_nonconformity`. Det är **fel** — beroendekedjan är
+`mgmtsystem_nonconformity` → `mgmtsystem_action` → `mgmtsystem` + `mail`, och
+inget i den drar in `hr`. Verifierat i testdatabas: `hr` var `uninstalled`.
+Bryggan lägger därför till `hr` som **eget beroende** (det är en Odoo-kärnmodul,
+låg kostnad) och gör dessutom uppslaget defensivt, så att modulen inte kraschar
+om `hr` senare tas bort: saknas modellen faller chefsfältet tillbaka på
+`responsible_user_id`.
+
+**Alternativ:** en wizard som tvingar användaren att fylla i ansvarig och chef.
+Förkastat — det gör den manuella åtgärden tyngre än den behöver vara, och
+Beslut 4 säger att åtgärden ska vara ett klick.
+
+### Beslut 7: Klausulkopplingen läggs på kontrollpunkten, inte på kontrollen
 `quality.point` får M2M till `mgmtsystem.iso.clause`. Kontroller som skapas ur
 punkten ärver kopplingen via sin `point_id`.
 
@@ -140,6 +180,10 @@ spårbarheten är rätt från början.
   operation) → att lägga ett M2O-fält på den är billigt, men vyer måste vara
   försiktiga så att kontrollistan inte blir tung. Mitigering: fältet visas bara
   i kontrollens form, inte i listan.
+- **`manager_user_id` kan bli tom** om utföraren saknar `hr.employee`-post,
+  chefen saknar `user_id`, eller `hr` inte är installerad → Mitigering:
+  uppslaget är defensivt och faller tillbaka på `responsible_user_id`, som i
+  sin tur faller tillbaka på `env.user`. Åtgärden blockeras aldrig.
 - **Översättning** → nya fältetiketter och åtgärdsnamn måste in i `sv.po`,
   genererat via `checkmodule -e` (handskrivna utan `#: model:`-referenser
   appliceras aldrig).

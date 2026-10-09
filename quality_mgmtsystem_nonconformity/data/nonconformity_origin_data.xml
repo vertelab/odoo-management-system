@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <!-- En återanvändbar avvikelseorsak: avvikelsen uppstod i en
+         kvalitetskontroll på golvet. Sätts på varje nonconformity som
+         skapas ur en quality.check eller quality.alert, så att dessa
+         avvikelser kan filtreras och rapporteras som grupp.
+
+         ref_code är den stabila nyckeln koden letar upp posten med —
+         namnet är översättningsbart och får ändras. -->
+    <record id="nc_origin_quality_check" model="mgmtsystem.nonconformity.origin">
+        <field name="name">Kvalitetskontroll</field>
+        <field name="ref_code">quality_check</field>
+        <field name="description">Avvikelse som uppstod i en kvalitetskontroll på golvet.</field>
+        <field name="sequence">50</field>
+    </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Alertens form: knapp för att skapa/öppna avvikelse + bakåtlänk.
+         En alert är alltid en avvikelse på golvet, så knappen erbjuds
+         oavsett stage — men bara en gång per alert. -->
+    <record id="quality_alert_view_form_nc" model="ir.ui.view">
+        <field name="name">quality.alert.view.form.nc</field>
+        <field name="model">quality.alert</field>
+        <field name="inherit_id" ref="quality_control_ce.quality_alert_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_create_nonconformity"
+                        type="object"
+                        string="Skapa avvikelse"
+                        class="btn-primary"
+                        invisible="nonconformity_id"/>
+                <button name="action_view_nonconformity"
+                        type="object"
+                        string="Visa avvikelse"
+                        invisible="not nonconformity_id"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_nonconformity"
+                        icon="fa-exclamation-triangle"
+                        type="object"
+                        class="oe_stat_button"
+                        invisible="not nonconformity_id">
+                    <field name="nonconformity_count" string="Avvikelser" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='company_id'][@invisible='1']" position="after">
+                <field name="nonconformity_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

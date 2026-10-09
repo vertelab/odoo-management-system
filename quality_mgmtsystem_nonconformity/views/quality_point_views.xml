@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Kontrollpunktens form: koppling till de ISO-klausuler som kräver
+         kontrollen. Fältet visas i en egen flik så att det inte tynger
+         grundformuläret. -->
+    <record id="quality_point_view_form_iso" model="ir.ui.view">
+        <field name="name">quality.point.view.form.iso</field>
+        <field name="model">quality.point</field>
+        <field name="inherit_id" ref="quality_ce.quality_point_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="ISO-klausuler" name="iso_clauses">
+                    <field name="iso_clause_ids"
+                           domain="[('standard_id', '!=', False)]"
+                           options="{'no_create': True}"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

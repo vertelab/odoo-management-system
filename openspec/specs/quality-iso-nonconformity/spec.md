@@ -1,3 +1,5 @@
+# quality-iso-nonconformity Specification
+
 ## Purpose
 
 Bryggan mellan kvalitetskontroller och ledningssystemets avvikelsehantering:
@@ -6,7 +8,7 @@ kontroll kan bli en nonconformity med rotorsaksanalys och korrigerande åtgärd
 — med bakåtlänk åt båda hållen, så att golvets kvalitetsarbete och
 ledningssystemets avvikelsehantering beskriver samma händelse.
 
-## ADDED Requirements
+## Requirements
 
 ### Requirement: Kontrollpunkt kopplas till ISO-klausul
 
@@ -75,8 +77,10 @@ ledningssystemet.
 ### Requirement: Nonconformityns uppgifter härleds ur kontrollen
 
 Den skapade nonconformityn SHALL ärva de uppgifter som finns på kontrollen:
-namn, beskrivning, allvarlighetsgrad, ansvarig, företag och, när det finns,
-produkt, parti och partner.
+namn, beskrivning, allvarlighetsgrad, ansvarig, chef, företag och, när det
+finns, produkt, parti och partner. De fält som ledningssystemet kräver för att
+en avvikelse ska kunna registreras SHALL alltid sättas, så att åtgärden inte
+blockeras av att kontrollen saknar uppgiften.
 
 #### Scenario: Namn och beskrivning sammanställs
 
@@ -104,6 +108,20 @@ produkt, parti och partner.
 - **THEN** skapas nonconformityn ändå
 - **AND** en partner härleds ur kontrollens sammanhang eller lämnas enligt
   ledningssystemets krav
+
+#### Scenario: Chef härleds ur den anställdes organisationstillhörighet
+
+- **GIVEN** en kontroll vars utförare är kopplad till en anställd med en chef
+- **WHEN** nonconformityn skapas
+- **THEN** sätts avvikelsens chef till chefens användare
+- **AND** chefens användare härleds ur den anställdes chefspost
+
+#### Scenario: Chef saknas för utföraren
+
+- **GIVEN** en kontroll vars utförare saknar anställd eller chef
+- **WHEN** nonconformityn skapas
+- **THEN** skapas nonconformityn ändå
+- **AND** avvikelsens chef faller tillbaka på avvikelsens ansvariga
 
 ### Requirement: Bakåtlänk mellan nonconformity och kontroll
 
