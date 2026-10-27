@@ -191,5 +191,17 @@
             <field name="min_employees">1</field>
         </record>
 
+        <record id="law_firm_arl" model="bpm.law.package.line">
+            <field name="package_id" ref="law_package_law_firm"/>
+            <field name="name">Årsredovisningslag (1995:1554)</field>
+            <field name="sfs_number">1995:1554</field>
+            <field name="department">Justitiedepartementet</field>
+            <field name="category">accounting</field>
+            <field name="description">Krav på årsredovisning, förvaltningsberättelse och revisionsberättelse. 6:10 hållbarhetsrapport vid minst två av: >250 anställda, >175 Mkr balans, >350 Mkr omsättning. 9:1 revisionsplikt vid minst två av: >3 anställda, >1,5 Mkr balans, >3 Mkr omsättning.</field>
+            <field name="sequence">30</field>
+            <field name="min_employees">1</field>
+            <field name="size_threshold">250_employees</field>
+        </record>
+
     </data>
 </odoo>
