@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso45001_ohs_process_form_afs" model="ir.ui.view">
+        <field name="name">iso45001.ohs.process.form.afs</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="inherit_id" ref="mgmtsystem_45001.view_iso45001_ohs_process_form"/>
+        <field name="arch" type="xml">
+            <page name="laws" position="inside">
+                <separator string="AFS 2023:13"/>
+                <group>
+                    <group>
+                        <field name="afs_2023_13_applies"/>
+                        <field name="afs_2023_13_chapters"
+                               placeholder="t.ex. 8 kap. 18 § hissvakt"/>
+                    </group>
+                    <group>
+                        <field name="hissvakt_required"/>
+                        <field name="hissvakt_gap" widget="boolean_toggle"
+                               decoration-danger="hissvakt_gap"/>
+                    </group>
+                </group>
+                <group invisible="not hissvakt_required">
+                    <field name="hissvakt_assigned"/>
+                    <field name="hissvakt_employee_ids" widget="many2many_tags"
+                           invisible="not hissvakt_assigned"/>
+                </group>
+                <p class="text-muted" invisible="not hissvakt_required">
+                    8 kap. 18 §: hissvakt krävs för varje hiss eller grupp av hissar
+                    som manövreras från samma manöverplats, och på varje däck som
+                    betjänas. Allmänna rådet tillåter att trafikvakten tar uppgiften.
+                </p>
+            </page>
+        </field>
+    </record>
+
+    <record id="view_iso45001_ohs_process_search_afs" model="ir.ui.view">
+        <field name="name">iso45001.ohs.process.search.afs</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="inherit_id" ref="mgmtsystem_45001.view_iso45001_ohs_process_search"/>
+        <field name="arch" type="xml">
+            <filter name="filter_high_risk" position="after">
+                <filter name="filter_hissvakt_gap" string="Hissvakt saknas"
+                        domain="[('hissvakt_gap', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- AFS 2023:13 kapitel → ISO 45001-klausuler.
+             Varje kapitel ger innehåll åt en eller flera klausuler.
+             Mappningen gör att en gap-analys kan peka på föreskriften,
+             inte bara på standarden. -->
+
+        <!-- 5 kap. Byggnads- och anläggningsarbete -->
+        <record id="afs_5_build" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">AFS 2023:13 5 kap. — Byggnads- och anläggningsarbete</field>
+            <field name="clause_number">AFS-5</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1_3"/>
+            <field name="description">Fallskydd, ställningar, schakt och rasrisk vid installation och modernisering av hissar. Svarar mot ISO 45001 6.1.3 (lagkrav) och 8.1.2 (eliminering av faror).</field>
+            <field name="sequence">131</field>
+        </record>
+
+        <!-- 8 kap. 18 § Hissvakt -->
+        <record id="afs_8_18_hissvakt" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">AFS 2023:13 8 kap. 18 § — Hissvakt</field>
+            <field name="clause_number">AFS-8.18</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1_3"/>
+            <field name="description">Arbetsgivaren ska se till att det finns en hissvakt för varje hiss eller grupp av hissar som manövreras från samma manöverplats och på varje däck som betjänas av hissen, om inte motsvarande säkerhet kan uppnås ändå. Hissvakten kan i vissa fall ersättas, till exempel genom att trafikvakten avdelas för hissvaktens uppgift. Ersätter AFS 2006:6.</field>
+            <field name="sequence">132</field>
+        </record>
+
+        <!-- 9 kap. Arbete på höjd -->
+        <record id="afs_9_height" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">AFS 2023:13 9 kap. — Arbete på höjd</field>
+            <field name="clause_number">AFS-9</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1_3"/>
+            <field name="description">Arbete i schakt och på tak vid hissservice. Kräver fallskydd och kompetens. Svarar mot ISO 45001 6.1.2 (identifiering av faror) och 7.2 (kompetens).</field>
+            <field name="sequence">133</field>
+        </record>
+
+    </data>
+</odoo>
