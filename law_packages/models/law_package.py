@@ -45,6 +45,7 @@ BUSINESS_TYPES = [
     ("restaurant", "Restaurant"),
     ("retail", "Retail Store / Butik"),
     ("webshop", "Web Shop / E-handel"),
+    ("elevator", "Elevator / Hissföretag"),
 ]
 
 # Size categories according to Swedish law thresholds

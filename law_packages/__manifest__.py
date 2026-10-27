@@ -39,6 +39,7 @@ Features:
         'data/law_package_law_firm.xml',
         'data/law_package_retail.xml',
         'data/law_package_webshop.xml',
+        'data/law_package_elevator.xml',
         'views/law_package_views.xml',
         'views/res_config_settings_views.xml',
     ],
