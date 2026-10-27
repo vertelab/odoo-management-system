@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_law_fetcher_form" model="ir.ui.view">
+        <field name="name">law.fetcher.form</field>
+        <field name="model">law.fetcher</field>
+        <field name="arch" type="xml">
+            <form string="Hämta föreskrift">
+                <group>
+                    <group>
+                        <field name="source"/>
+                        <field name="designation"/>
+                    </group>
+                    <group>
+                        <field name="available" widget="boolean_toggle" readonly="1"/>
+                        <field name="http_status" readonly="1" invisible="not checked"/>
+                    </group>
+                </group>
+                <field name="url" readonly="1" widget="url" invisible="not url"/>
+                <p class="text-muted">
+                    Boverket och Elsäkerhetsverket publicerar föreskrifter som
+                    statiska PDF:er men saknar RSS. Ange beteckningen som
+                    år:nummer — URL:en byggs automatiskt.
+                </p>
+                <p class="text-muted">
+                    Arbetsmiljöverket har ingen förutsägbar sökväg. AFS läggs in
+                    manuellt via document.law.
+                </p>
+                <footer>
+                    <button name="action_check" string="Kontrollera" type="object"
+                            class="btn-primary"/>
+                    <button string="Stäng" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_law_fetcher" model="ir.actions.act_window">
+        <field name="name">Hämta föreskrift</field>
+        <field name="res_model">law.fetcher</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_law_fetcher"
+              name="Hämta föreskrift"
+              parent="menu_law_packages"
+              action="action_law_fetcher"
+              sequence="20"
+              groups="mgmtsystem.group_mgmtsystem_viewer"/>
+</odoo>
