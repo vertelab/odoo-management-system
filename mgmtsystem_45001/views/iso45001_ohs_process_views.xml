@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_iso45001_ohs_process_list" model="ir.ui.view">
+        <field name="name">iso45001.ohs.process.list</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="arch" type="xml">
+            <list string="Arbetsmiljöprocesser">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="process_type"/>
+                <field name="owner_id"/>
+                <field name="hazard_count"/>
+                <field name="risk_level" widget="badge"
+                       decoration-success="risk_level == 'low'"
+                       decoration-warning="risk_level == 'medium'"
+                       decoration-danger="risk_level in ('high', 'critical')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_iso45001_ohs_process_form" model="ir.ui.view">
+        <field name="name">iso45001.ohs.process.form</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="arch" type="xml">
+            <form string="Arbetsmiljöprocess">
+                <header>
+                    <field name="risk_level" widget="statusbar"
+                           statusbar_visible="low,medium,high,critical"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" placeholder="Processnamn"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="process_type"/>
+                            <field name="owner_id"/>
+                        </group>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="hazard_count"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Beskrivning" name="description">
+                            <field name="description" placeholder="Beskriv processen, dess avgränsning och ansvar..."/>
+                        </page>
+                        <page string="Arbetsmiljöfaror" name="hazards">
+                            <field name="hazard_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="type_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="ISO-klausuler" name="clauses">
+                            <field name="clause_ids">
+                                <list>
+                                    <field name="clause_number"/>
+                                    <field name="name"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_iso45001_ohs_process_search" model="ir.ui.view">
+        <field name="name">iso45001.ohs.process.search</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="arch" type="xml">
+            <search string="Sök arbetsmiljöprocess">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="owner_id"/>
+                <filter name="filter_core" string="Kärnprocesser"
+                        domain="[('process_type', '=', 'core')]"/>
+                <filter name="filter_high_risk" string="Hög risk"
+                        domain="[('risk_level', 'in', ('high', 'critical'))]"/>
+                <separator/>
+                <filter name="filter_inactive" string="Inaktiva"
+                        domain="[('active', '=', False)]"/>
+                <group expand="0" string="Gruppera efter">
+                    <filter name="group_type" string="Processtyp"
+                            context="{'group_by': 'process_type'}"/>
+                    <filter name="group_risk" string="Risknivå"
+                            context="{'group_by': 'risk_level'}"/>
+                    <filter name="group_owner" string="Processägare"
+                            context="{'group_by': 'owner_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_iso45001_ohs_process" model="ir.actions.act_window">
+        <field name="name">Arbetsmiljöprocesser</field>
+        <field name="res_model">iso45001.ohs.process</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Identifiera organisationens arbetsmiljöprocesser
+            </p>
+            <p>
+                Klausul 4.4 kräver att arbetsmiljöledningssystemets processer
+                identifieras. En process är det arbete som pågår hela tiden —
+                inte ett ärende.
+            </p>
+        </field>
+    </record>
+</odoo>

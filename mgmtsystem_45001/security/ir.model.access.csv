@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iso45001_ohs_process_user,iso45001.ohs.process user,model_iso45001_ohs_process,group_iso45001_user,1,1,1,0
+access_iso45001_ohs_process_manager,iso45001.ohs.process manager,model_iso45001_ohs_process,group_iso45001_manager,1,1,1,1

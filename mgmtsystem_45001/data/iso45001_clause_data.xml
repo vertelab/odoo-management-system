@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ISO 45001:2018 Klausuler — svenska -->
+        <!-- Klausul 4: Verksamhetens förutsättningar -->
+        <record id="iso45001_clause_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Verksamhetens förutsättningar</field>
+            <field name="clause_number">4</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="iso45001_clause_4_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Förstå verksamheten och dess förutsättningar</field>
+            <field name="clause_number">4.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_4"/>
+            <field name="description">Organisationen ska fastställa externa och interna förhållanden som är relevanta för dess syfte och som påverkar förmågan att uppnå avsedda resultat i arbetsmiljöledningssystemet. Arbetsmiljöns påverkan på arbetstagare och verksamheten ska beaktas.</field>
+            <field name="sequence">11</field>
+        </record>
+        <record id="iso45001_clause_4_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Förstå arbetstagares och andra intressenters behov och förväntningar</field>
+            <field name="clause_number">4.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_4"/>
+            <field name="description">Organisationen ska fastställa arbetstagare och andra relevanta intressenter, deras behov och förväntningar som blir bindande krav. Arbetstagardeltagande är centralt.</field>
+            <field name="sequence">12</field>
+        </record>
+        <record id="iso45001_clause_4_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Fastställa omfattningen av arbetsmiljöledningssystemet</field>
+            <field name="clause_number">4.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_4"/>
+            <field name="description">Organisationen ska fastställa gränser och tillämplighet för att bestämma omfattningen. Alla aktiviteter, produkter och tjänster inom organisationens kontroll ska ingå.</field>
+            <field name="sequence">13</field>
+        </record>
+        <record id="iso45001_clause_4_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Arbetsmiljöledningssystemet</field>
+            <field name="clause_number">4.4</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_4"/>
+            <field name="description">Organisationen ska upprätta, införa, underhålla och ständigt förbättra ett arbetsmiljöledningssystem, inklusive de processer som behövs och deras samverkan.</field>
+            <field name="sequence">14</field>
+        </record>
+
+        <!-- Klausul 5: Ledarskap och arbetstagardeltagande -->
+        <record id="iso45001_clause_5" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Ledarskap och arbetstagardeltagande</field>
+            <field name="clause_number">5</field>
+            <field name="sequence">20</field>
+        </record>
+        <record id="iso45001_clause_5_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Ledarskap och åtagande</field>
+            <field name="clause_number">5.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_5"/>
+            <field name="description">Högsta ledningen ska visa ledarskap och åtagande genom att ta ansvar för effektiviteten i arbetsmiljöledningssystemet, säkerställa att arbetsmiljöpolicy och mål fastställs, integrera arbetsmiljökrav i verksamhetsprocesser samt säkerställa resurser och kommunikation.</field>
+            <field name="sequence">21</field>
+        </record>
+        <record id="iso45001_clause_5_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Arbetsmiljöpolicy</field>
+            <field name="clause_number">5.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_5"/>
+            <field name="description">Högsta ledningen ska fastställa, införa och underhålla en arbetsmiljöpolicy som ger ramverk för mål, inkluderar åtagande att förebygga arbetsskador och ohälsa samt att fullgöra bindande krav. Policyn ska vara tillgänglig som dokumenterad information.</field>
+            <field name="sequence">22</field>
+        </record>
+        <record id="iso45001_clause_5_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Organisationens roller, ansvar och befogenheter</field>
+            <field name="clause_number">5.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_5"/>
+            <field name="description">Högsta ledningen ska säkerställa att ansvar och befogenheter för relevanta roller tilldelas och kommuniceras inom organisationen.</field>
+            <field name="sequence">23</field>
+        </record>
+        <record id="iso45001_clause_5_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Samråd och deltagande av arbetstagare</field>
+            <field name="clause_number">5.4</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_5"/>
+            <field name="description">Organisationen ska upprätta processer för samråd och deltagande av arbetstagare på alla nivåer. Arbetstagare ska ges möjlighet att delta i riskbedömning, utredning av incidenter och utveckling av arbetsmiljöarbetet. Hinder för deltagande ska undanröjas.</field>
+            <field name="sequence">24</field>
+        </record>
+
+        <!-- Klausul 6: Planering -->
+        <record id="iso45001_clause_6" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Planering</field>
+            <field name="clause_number">6</field>
+            <field name="sequence">30</field>
+        </record>
+        <record id="iso45001_clause_6_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Åtgärder för att hantera risker och möjligheter</field>
+            <field name="clause_number">6.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6"/>
+            <field name="description">Organisationen ska planera åtgärder för att hantera risker och möjligheter, inklusive bedömning av arbetsmiljöfaror och risker samt fastställande av lagkrav och andra bindande krav.</field>
+            <field name="sequence">31</field>
+        </record>
+        <record id="iso45001_clause_6_1_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Allmänt — risker och möjligheter</field>
+            <field name="clause_number">6.1.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1"/>
+            <field name="description">Vid planering ska organisationen beakta förhållanden enligt 4.1, krav enligt 4.2 och omfattningen enligt 4.3, samt fastställa risker och möjligheter som behöver hanteras för att försäkra att arbetsmiljöledningssystemet uppnår avsedda resultat.</field>
+            <field name="sequence">32</field>
+        </record>
+        <record id="iso45001_clause_6_1_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Identifiering av arbetsmiljöfaror och bedömning av risker</field>
+            <field name="clause_number">6.1.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1"/>
+            <field name="description">Organisationen ska upprätta processer för identifiering av arbetsmiljöfaror som kan orsaka arbetsskada eller ohälsa, med beaktande av rutinmässiga och icke-rutinmässiga aktiviteter, nödsituationer, mänskligt beteende, infrastruktur och tidigare incidenter. Risker ska bedömas med lämplig metodik och dokumenteras.</field>
+            <field name="sequence">33</field>
+        </record>
+        <record id="iso45001_clause_6_1_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Fastställande av lagkrav och andra bindande krav</field>
+            <field name="clause_number">6.1.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1"/>
+            <field name="description">Organisationen ska fastställa och ha tillgång till uppdaterade lagkrav och andra bindande krav som är tillämpliga på arbetsmiljöfaror, och fastställa hur dessa tillämpas. AFS-föreskrifter läses in som lagposter via document.law.</field>
+            <field name="sequence">34</field>
+        </record>
+        <record id="iso45001_clause_6_1_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Planering av åtgärder</field>
+            <field name="clause_number">6.1.4</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6_1"/>
+            <field name="description">Organisationen ska planera åtgärder för att hantera risker och möjligheter samt lagkrav, integrera dessa i arbetsmiljöledningssystemets processer och utvärdera effektiviteten. Åtgärder ska prioriteras enligt hierarkin för riskbegränsning: eliminera, ersätta, tekniska åtgärder, organisatoriska åtgärder, skyddsutrustning.</field>
+            <field name="sequence">35</field>
+        </record>
+        <record id="iso45001_clause_6_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Arbetsmiljömål och planering för att uppnå dem</field>
+            <field name="clause_number">6.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_6"/>
+            <field name="description">Organisationen ska fastställa arbetsmiljömål på relevanta funktioner och nivåer, med beaktande av väsentliga aspekter och bindande krav. Målen ska vara mätbara, övervakas och uppdateras. Planering ska ange vad som ska göras, resurser, ansvarig, tidsram och utvärderingsmetod.</field>
+            <field name="sequence">36</field>
+        </record>
+
+        <!-- Klausul 7: Stöd -->
+        <record id="iso45001_clause_7" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Stöd</field>
+            <field name="clause_number">7</field>
+            <field name="sequence">40</field>
+        </record>
+        <record id="iso45001_clause_7_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Resurser</field>
+            <field name="clause_number">7.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_7"/>
+            <field name="description">Organisationen ska fastställa och tillhandahålla de resurser som behövs för att upprätta, införa, underhålla och ständigt förbättra arbetsmiljöledningssystemet.</field>
+            <field name="sequence">41</field>
+        </record>
+        <record id="iso45001_clause_7_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Kompetens</field>
+            <field name="clause_number">7.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_7"/>
+            <field name="description">Organisationen ska fastställa nödvändig kompetens för arbetstagare som påverkar eller kan påverka arbetsmiljöprestanda, säkerställa att de är kompetenta, och vid behov vidta åtgärder för att förvärva kompetens. Dokumenterad information ska behållas som bevis. Certifieringar hanteras via hr_skills_certificate.</field>
+            <field name="sequence">42</field>
+        </record>
+        <record id="iso45001_clause_7_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Medvetenhet</field>
+            <field name="clause_number">7.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_7"/>
+            <field name="description">Arbetstagare ska vara medvetna om arbetsmiljöpolicyn, sina bidrag till systemets effektivitet, konsekvenser av bristande efterlevnad samt faror, risker och åtgärder som berör dem.</field>
+            <field name="sequence">43</field>
+        </record>
+        <record id="iso45001_clause_7_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Kommunikation</field>
+            <field name="clause_number">7.4</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_7"/>
+            <field name="description">Organisationen ska upprätta processer för intern och extern kommunikation relevant för arbetsmiljöledningssystemet, inklusive vad, när, med vem och hur. Arbetstagare ska ges möjlighet att framföra synpunkter.</field>
+            <field name="sequence">44</field>
+        </record>
+        <record id="iso45001_clause_7_5" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Dokumenterad information</field>
+            <field name="clause_number">7.5</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_7"/>
+            <field name="description">Organisationen ska omfatta den dokumenterade information som krävs av standarden och som organisationen bedömer nödvändig. Dokumenterad information ska vara lämpligt identifierad, granskad och skyddad. Hanteras via document_page och mgmtsystem_manual.</field>
+            <field name="sequence">45</field>
+        </record>
+
+        <!-- Klausul 8: Verksamhet -->
+        <record id="iso45001_clause_8" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Verksamhet</field>
+            <field name="clause_number">8</field>
+            <field name="sequence">50</field>
+        </record>
+        <record id="iso45001_clause_8_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Planering och styrning av verksamheten</field>
+            <field name="clause_number">8.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8"/>
+            <field name="description">Organisationen ska planera, införa, styra och underhålla de processer som behövs för att uppfylla kraven i arbetsmiljöledningssystemet, inklusive fastställda kriterier och styrning av processer enligt hierarkin för riskbegränsning.</field>
+            <field name="sequence">51</field>
+        </record>
+        <record id="iso45001_clause_8_1_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Allmänt — verksamhetsstyrning</field>
+            <field name="clause_number">8.1.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8_1"/>
+            <field name="sequence">52</field>
+        </record>
+        <record id="iso45001_clause_8_1_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Eliminering av faror och minskning av risker</field>
+            <field name="clause_number">8.1.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8_1"/>
+            <field name="description">Organisationen ska upprätta processer för eliminering av faror och minskning av risker enligt hierarkin: eliminera faran, ersätta med mindre farligt, använda tekniska skyddsåtgärder, använda organisatoriska åtgärder, använda personlig skyddsutrustning.</field>
+            <field name="sequence">53</field>
+        </record>
+        <record id="iso45001_clause_8_1_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Hantering av förändringar</field>
+            <field name="clause_number">8.1.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8_1"/>
+            <field name="description">Organisationen ska upprätta processer för hantering av planerade förändringar som kan påverka arbetsmiljöprestanda, inklusive nya produkter, processer, utrustning och organisatoriska förändringar. Oavsiktliga konsekvenser av förändringar ska granskas.</field>
+            <field name="sequence">54</field>
+        </record>
+        <record id="iso45001_clause_8_1_4" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Upphandling</field>
+            <field name="clause_number">8.1.4</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8_1"/>
+            <field name="description">Organisationen ska upprätta processer för styrning av upphandling av produkter och tjänster, inklusive entreprenörer, för att säkerställa att de uppfyller kraven i arbetsmiljöledningssystemet.</field>
+            <field name="sequence">55</field>
+        </record>
+        <record id="iso45001_clause_8_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Beredskap och agerande vid nödsituationer</field>
+            <field name="clause_number">8.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_8"/>
+            <field name="description">Organisationen ska upprätta processer för beredskap och agerande vid potentiella nödsituationer, inklusive första hjälpen, utrymning och återställning. Övningar ska genomföras och utvärderas regelbundet.</field>
+            <field name="sequence">56</field>
+        </record>
+
+        <!-- Klausul 9: Prestationsutvärdering -->
+        <record id="iso45001_clause_9" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Prestationsutvärdering</field>
+            <field name="clause_number">9</field>
+            <field name="sequence">60</field>
+        </record>
+        <record id="iso45001_clause_9_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Uppföljning, mätning, analys och utvärdering</field>
+            <field name="clause_number">9.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_9"/>
+            <field name="description">Organisationen ska fastställa vad som ska följas upp och mätas, metod, när och när resultat ska analyseras. Uppföljning ska omfatta omfattning av efterlevnad av lagkrav och andra bindande krav, samt proaktiv och reaktiv uppföljning av arbetsmiljöprestanda.</field>
+            <field name="sequence">61</field>
+        </record>
+        <record id="iso45001_clause_9_1_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Allmänt — uppföljning och mätning</field>
+            <field name="clause_number">9.1.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_9_1"/>
+            <field name="sequence">62</field>
+        </record>
+        <record id="iso45001_clause_9_1_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Utvärdering av efterlevnad</field>
+            <field name="clause_number">9.1.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_9_1"/>
+            <field name="description">Organisationen ska utvärdera efterlevnad av lagkrav och andra bindande krav, och behålla dokumenterad information som bevis på resultatet. Utvärderingen ska göras med planerade intervall.</field>
+            <field name="sequence">63</field>
+        </record>
+        <record id="iso45001_clause_9_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Internrevision</field>
+            <field name="clause_number">9.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_9"/>
+            <field name="description">Organisationen ska genomföra interna revisioner med planerade intervall för att bedöma om arbetsmiljöledningssystemet överensstämmer med organisationens egna krav och standardens krav, samt om det är ändamålsenligt infört och underhållet. Hanteras via mgmtsystem_audit.</field>
+            <field name="sequence">64</field>
+        </record>
+        <record id="iso45001_clause_9_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Ledningens genomgång</field>
+            <field name="clause_number">9.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_9"/>
+            <field name="description">Högsta ledningen ska med planerade intervall genomgå arbetsmiljöledningssystemet för att säkerställa att det fortsatt är lämpligt, tillräckligt och verkningsfullt. Genomgången ska omfatta status på åtgärder, förändringar i förutsättningar, arbetstagardeltagande och incidenter. Hanteras via mgmtsystem_review.</field>
+            <field name="sequence">65</field>
+        </record>
+
+        <!-- Klausul 10: Förbättring -->
+        <record id="iso45001_clause_10" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Förbättring</field>
+            <field name="clause_number">10</field>
+            <field name="sequence">70</field>
+        </record>
+        <record id="iso45001_clause_10_1" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Allmänt — förbättring</field>
+            <field name="clause_number">10.1</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_10"/>
+            <field name="description">Organisationen ska fastställa möjligheter till förbättring och vidta nödvändiga åtgärder för att uppnå avsedda resultat i arbetsmiljöledningssystemet.</field>
+            <field name="sequence">71</field>
+        </record>
+        <record id="iso45001_clause_10_2" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Incident, avvikelse och korrigerande åtgärd</field>
+            <field name="clause_number">10.2</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_10"/>
+            <field name="description">Organisationen ska upprätta processer för att hantera incidenter och avvikelser, inklusive att reagera i tid, utvärdera behov av korrigerande åtgärder, utreda orsaker, vidta åtgärder och granska effektivitet. Incidenter omfattar arbetsskador, ohälsa, tillbud och nödsituationer. Hanteras via mgmtsystem_nonconformity.</field>
+            <field name="sequence">72</field>
+        </record>
+        <record id="iso45001_clause_10_3" model="mgmtsystem.iso.clause">
+            <field name="standard_id" ref="mgmtsystem_iso_base.iso_standard_45001"/>
+            <field name="name">Ständig förbättring</field>
+            <field name="clause_number">10.3</field>
+            <field name="parent_id" ref="mgmtsystem_45001.iso45001_clause_10"/>
+            <field name="description">Organisationen ska ständigt förbättra arbetsmiljöledningssystemets lämplighet, tillräcklighet och verkningsfullhet för att förbättra arbetsmiljöprestanda.</field>
+            <field name="sequence">73</field>
+        </record>
+    </data>
+</odoo>

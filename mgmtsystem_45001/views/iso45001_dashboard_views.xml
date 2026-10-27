@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard: samma mönster som mgmtsystem_9001 -->
+    <record id="view_iso45001_dashboard_kanban" model="ir.ui.view">
+        <field name="name">iso45001.dashboard.kanban</field>
+        <field name="model">iso45001.ohs.process</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="process_type" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="risk_level"/>
+                <field name="hazard_count"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="d-flex justify-content-between">
+                            <strong><t t-esc="record.name.value"/></strong>
+                            <span class="badge" t-att-class="{
+                                'text-bg-success': record.risk_level.raw_value === 'low',
+                                'text-bg-warning': record.risk_level.raw_value === 'medium',
+                                'text-bg-danger': ['high','critical'].includes(record.risk_level.raw_value),
+                            }">
+                                <t t-esc="record.risk_level.value"/>
+                            </span>
+                        </div>
+                        <div class="text-muted">
+                            <t t-esc="record.code.value"/>
+                            — <t t-esc="record.hazard_count.value"/> faror
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_iso45001_dashboard" model="ir.actions.act_window">
+        <field name="name">Arbetsmiljööversikt</field>
+        <field name="res_model">iso45001.ohs.process</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+</odoo>

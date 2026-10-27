@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- ISO 45001 shell menu: only what is unique to the 45001 shell.
+         Clauses and gap analyses live in the shared core menu
+         (ISO Ledningssystem); policy in the manual module, objectives
+         in the objective module and hazards in mgmtsystem_hazard. -->
+    <menuitem id="menu_iso45001_root"
+              name="Arbetsmiljö (ISO 45001)"
+              sequence="60"
+              groups="group_iso45001_user"/>
+
+    <menuitem id="menu_iso45001_processes"
+              name="Arbetsmiljöprocesser"
+              parent="menu_iso45001_root"
+              action="action_iso45001_ohs_process"
+              sequence="10"/>
+
+    <menuitem id="menu_iso45001_dashboard"
+              name="Översikt"
+              parent="menu_iso45001_root"
+              action="action_iso45001_dashboard"
+              sequence="50"/>
+</odoo>
