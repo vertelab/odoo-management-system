@@ -3,7 +3,7 @@
 
 {
     'name': 'Management System: ISO 45001:2018 — Arbetsmiljöledning',
-    'version': '18.0.1.0.2',
+    'version': '18.0.1.0.3',
     'summary': 'ISO 45001 OHSMS — klausuler, gap-analys, arbetsmiljöpolicy, risker och möjligheter',
     'category': 'Management',
     'description': """
@@ -39,6 +39,7 @@
         'mgmtsystem_hazard',
         'mgmtsystem_hazard_risk',
         'mgmtsystem_law',
+        'law_packages',
     ],
     'data': [
         'security/security.xml',

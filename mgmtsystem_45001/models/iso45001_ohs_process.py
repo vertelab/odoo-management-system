@@ -51,6 +51,16 @@ class Iso45001OhsProcess(models.Model):
         help='Kopplade till ISO 45001-klausuler, typiskt 4.4 och 6.1.2',
     )
 
+    law_package_ids = fields.Many2many(
+        'bpm.law.package',
+        'iso45001_ohs_process_law_package_rel',
+        'process_id', 'package_id',
+        string='Lagpaket',
+        help='Lagpaket som styr den här processen. Ett hissföretag har '
+             'både tillverkande och service — välj alla som gäller.',
+    )
+    law_count = fields.Integer(compute='_compute_law_count')
+
     risk_level = fields.Selection([
         ('low', 'Låg'),
         ('medium', 'Medel'),
@@ -62,6 +72,18 @@ class Iso45001OhsProcess(models.Model):
     def _compute_hazard_count(self):
         for process in self:
             process.hazard_count = len(process.hazard_ids)
+
+    @api.depends('law_package_ids', 'law_package_ids.line_ids')
+    def _compute_law_count(self):
+        """Antal lagar i processens paket, utan dubbletter.
+
+        Två paket kan innehålla samma lag — AML finns i både
+        manufacturing och retail. Räknar vi rader får vi dubbletter;
+        vi räknar unika lagar.
+        """
+        for process in self:
+            lines = process.law_package_ids.mapped('line_ids')
+            process.law_count = len(set(lines.mapped('name')))
 
     @api.depends('hazard_ids')
     def _compute_risk_level(self):

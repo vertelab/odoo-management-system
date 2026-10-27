@@ -11,6 +11,7 @@
                 <field name="process_type"/>
                 <field name="owner_id"/>
                 <field name="hazard_count"/>
+                <field name="law_count"/>
                 <field name="risk_level" widget="badge"
                        decoration-success="risk_level == 'low'"
                        decoration-warning="risk_level == 'medium'"
@@ -55,6 +56,17 @@
                                     <field name="type_id"/>
                                 </list>
                             </field>
+                        </page>
+                        <page string="Lagpaket" name="laws">
+                            <group>
+                                <field name="law_count"/>
+                            </group>
+                            <field name="law_package_ids" widget="many2many_tags"/>
+                            <p class="text-muted mt-2">
+                                Lagpaketen kommer från <code>law_packages</code> och innehåller
+                                lagar och föreskrifter per bransch. AFS läses in som lagposter
+                                via <code>document.law</code> — inte hårdkodade i modulen.
+                            </p>
                         </page>
                         <page string="ISO-klausuler" name="clauses">
                             <field name="clause_ids">
