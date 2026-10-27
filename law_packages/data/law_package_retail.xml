@@ -96,6 +96,7 @@
             <field name="sfs_number">2010:900</field>
             <field name="category">premises</field>
             <field name="sequence">60</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="retail_lso" model="bpm.law.package.line">
@@ -106,6 +107,7 @@
             <field name="description">Brandskydd, utrymningsvägar, brandlarm. Skriftlig brandskyddsredogörelse.</field>
             <field name="sequence">65</field>
             <field name="size_threshold">50_employees</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Opening hours -->
@@ -137,6 +139,7 @@
             <field name="category">employment</field>
             <field name="sequence">90</field>
             <field name="size_threshold">5_employees</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="retail_las" model="bpm.law.package.line">
@@ -145,6 +148,7 @@
             <field name="sfs_number">1982:80</field>
             <field name="category">employment</field>
             <field name="sequence">95</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="retail_arbetstid" model="bpm.law.package.line">
@@ -154,6 +158,7 @@
             <field name="category">employment</field>
             <field name="description">Regler för öppettider, kvälls-/helgarbete.</field>
             <field name="sequence">97</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Core -->
@@ -163,6 +168,7 @@
             <field name="sfs_number">2005:551</field>
             <field name="category">corporate</field>
             <field name="sequence">100</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="retail_bfl" model="bpm.law.package.line">
@@ -188,6 +194,7 @@
             <field name="category">data</field>
             <field name="description">Kundregister, kundklubbar, butikskameror = personuppgiftsbehandling.</field>
             <field name="sequence">130</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="retail_kamerab" model="bpm.law.package.line">

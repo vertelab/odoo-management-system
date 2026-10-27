@@ -20,6 +20,7 @@
             <field name="category">corporate</field>
             <field name="description">Grundläggande för bolagsstyrning, styrelsearbete och aktieägarfrågor.</field>
             <field name="sequence">10</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Accounting -->
@@ -83,6 +84,7 @@
             <field name="category">employment</field>
             <field name="description">Grundläggande krav på arbetsmiljö, systematiskt arbetsmiljöarbete (SAM).</field>
             <field name="sequence">60</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="consulting_las" model="bpm.law.package.line">
@@ -93,6 +95,7 @@
             <field name="category">employment</field>
             <field name="description">Regler för anställning, uppsägning och avsked.</field>
             <field name="sequence">70</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="consulting_disk" model="bpm.law.package.line">
@@ -114,6 +117,7 @@
             <field name="category">data</field>
             <field name="description">Behandling av personuppgifter, kunddata, samtycke, personuppgiftsbiträdesavtal.</field>
             <field name="sequence">90</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="consulting_lekk" model="bpm.law.package.line">

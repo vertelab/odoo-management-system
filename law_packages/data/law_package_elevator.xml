@@ -21,6 +21,7 @@
             <field name="category">safety</field>
             <field name="description">Användning, kontroll, drift, tillsyn, skötsel och underhåll av hissar, portar, rulltrappor och skidliftar. Ersätter BFS 2011:12 från 1 december 2025. Kräver hissjournal (27 §) med datum, omfattning och utförare för varje åtgärd.</field>
             <field name="sequence">10</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_bfs_2025_13" model="bpm.law.package.line">
@@ -31,6 +32,7 @@
             <field name="category">safety</field>
             <field name="description">Utsläppande på marknaden, projektering, installation och kontroll av hissar och säkerhetskomponenter. Genomför EU:s hissdirektiv 2014/33/EU.</field>
             <field name="sequence">15</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- ── Arbetsmiljöverket: hissarbete ─────────────────── -->
@@ -43,6 +45,7 @@
             <field name="category">employment</field>
             <field name="description">8 kap. 18 §: hissvakt krävs för varje hiss eller grupp av hissar som manövreras från samma manöverplats, och på varje däck som betjänas. Ersätter AFS 2006:6. Även byggnads- och anläggningsarbete (5 kap.) och arbete på höjd.</field>
             <field name="sequence">20</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_afs_2023_11" model="bpm.law.package.line">
@@ -53,6 +56,7 @@
             <field name="category">employment</field>
             <field name="description">Krav på arbetsutrustning, lyftredskap och personlig skyddsutrustning. Tillämplig vid service och reparation i maskinrum och schakt.</field>
             <field name="sequence">25</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_afs_2023_10" model="bpm.law.package.line">
@@ -63,6 +67,7 @@
             <field name="category">employment</field>
             <field name="description">Systematiskt arbetsmiljöarbete (SAM) och riskbedömning. Grunden för ISO 45001-arbetet — klausul 6.1.2 vilar på denna.</field>
             <field name="sequence">30</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_afs_2020_5" model="bpm.law.package.line">
@@ -73,6 +78,7 @@
             <field name="category">employment</field>
             <field name="description">Krav från 10 anställda: rutiner för arbetsanpassning och rehabilitering. Gäller hissföretag med tekniker i fält.</field>
             <field name="sequence">35</field>
+            <field name="min_employees">10</field>
         </record>
 
         <!-- ── Elsäkerhet ───────────────────────────────────── -->
@@ -85,6 +91,7 @@
             <field name="category">safety</field>
             <field name="description">Kontroll av elanläggningar och elektriska utrustningar. Grunden för ESA-planen — arbete utan, med eller nära spänning i hisschakt.</field>
             <field name="sequence">40</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_elsak_2022_5" model="bpm.law.package.line">
@@ -95,6 +102,7 @@
             <field name="category">safety</field>
             <field name="description">Utförande och ändring av starkströmsanläggningar. Tillämplig vid installation och modernisering av hissar.</field>
             <field name="sequence">45</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- ── Övrigt som styr hissverksamhet ───────────────── -->
@@ -107,6 +115,7 @@
             <field name="category">premises</field>
             <field name="description">Hissar är byggnadsverk. Krav på bygglov, kontroll och tillsyn. Boverkets föreskrifter meddelas med stöd av PBL.</field>
             <field name="sequence">50</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_pbf" model="bpm.law.package.line">
@@ -117,6 +126,7 @@
             <field name="category">premises</field>
             <field name="description">Bemyndiganden för Boverkets föreskrifter om motordrivna anordningar. Definierar vem som ansvarar för en hiss.</field>
             <field name="sequence">55</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_aml" model="bpm.law.package.line">
@@ -127,6 +137,7 @@
             <field name="category">employment</field>
             <field name="description">Grunden för arbetsmiljöarbetet. Krav på systematiskt arbetsmiljöarbete (SAM), skyddsombud, skyddskommitté. AFS-föreskrifterna meddelas med stöd av AML.</field>
             <field name="sequence">60</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="elev_elsak_lag" model="bpm.law.package.line">
@@ -137,6 +148,7 @@
             <field name="category">safety</field>
             <field name="description">Krav på elsäkerhet i starkströmsanläggningar. Hissar är elektriska anläggningar.</field>
             <field name="sequence">65</field>
+            <field name="min_employees">1</field>
         </record>
 
     </data>

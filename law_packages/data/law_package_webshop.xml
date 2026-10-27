@@ -71,6 +71,7 @@
             <field name="description">Cookie-samtycke, nyhetsbrev, kundregister, personuppgiftsbiträdesavtal med betalleverantörer.</field>
             <field name="sequence">30</field>
             <field name="size_threshold">250_emp_40m</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="web_lekk" model="bpm.law.package.line">
@@ -177,6 +178,7 @@
             <field name="category">marketing</field>
             <field name="description">Webbtillgänglighet (WCAG). Gäller från juni 2025 för e-handel.</field>
             <field name="sequence">90</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Core -->
@@ -186,6 +188,7 @@
             <field name="sfs_number">2005:551</field>
             <field name="category">corporate</field>
             <field name="sequence">100</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="web_bfl" model="bpm.law.package.line">

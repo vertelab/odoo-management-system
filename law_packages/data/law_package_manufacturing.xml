@@ -20,6 +20,7 @@
             <field name="category">employment</field>
             <field name="description">Central för all tillverkning. Krav på systematiskt arbetsmiljöarbete (SAM), skyddsombud, skyddskommitté.</field>
             <field name="sequence">10</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_amf" model="bpm.law.package.line">
@@ -30,6 +31,7 @@
             <field name="category">employment</field>
             <field name="description">Kompletterande bestämmelser till AML, bemyndiganden för Arbetsmiljöverket.</field>
             <field name="sequence">15</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_arbetstid" model="bpm.law.package.line">
@@ -40,6 +42,7 @@
             <field name="category">employment</field>
             <field name="description">Regler för arbetstid, nattarbete, jourtid, övertid — särskilt viktigt vid skiftarbete.</field>
             <field name="sequence">20</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_las" model="bpm.law.package.line">
@@ -50,6 +53,7 @@
             <field name="category">employment</field>
             <field name="description">Anställningsskydd, turordningsregler vid uppsägning.</field>
             <field name="sequence">25</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Product Safety -->
@@ -92,6 +96,7 @@
             <field name="category">environmental</field>
             <field name="description">Tillståndsplikt för miljöfarlig verksamhet, avfallshantering, kemikaliehantering.</field>
             <field name="sequence">50</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_mfb" model="bpm.law.package.line">
@@ -144,6 +149,7 @@
             <field name="category">safety</field>
             <field name="description">Hantering av brandfarliga varor, tillstånd, föreståndare.</field>
             <field name="sequence">80</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_el" model="bpm.law.package.line">
@@ -154,6 +160,7 @@
             <field name="category">safety</field>
             <field name="description">Krav på elektrisk utrustning, elinstallationsarbete.</field>
             <field name="sequence">85</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Premises -->
@@ -165,6 +172,7 @@
             <field name="category">premises</field>
             <field name="description">Bygglov, byggregler, ändrad användning av lokaler.</field>
             <field name="sequence">90</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Transport -->
@@ -185,6 +193,7 @@
             <field name="sfs_number">2005:551</field>
             <field name="category">corporate</field>
             <field name="sequence">110</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="mfg_bfl" model="bpm.law.package.line">
@@ -209,6 +218,7 @@
             <field name="sfs_number">2018:218</field>
             <field name="category">data</field>
             <field name="sequence">140</field>
+            <field name="min_employees">1</field>
         </record>
 
     </data>

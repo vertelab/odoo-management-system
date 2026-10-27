@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_law_package_wizard_form" model="ir.ui.view">
+        <field name="name">law.package.wizard.form</field>
+        <field name="model">law.package.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Välj lagar för din verksamhet">
+                <group>
+                    <group>
+                        <field name="business_type"/>
+                        <field name="employee_count"/>
+                        <field name="size_category"/>
+                    </group>
+                    <group>
+                        <field name="line_count"/>
+                        <field name="excluded_count"/>
+                    </group>
+                </group>
+
+                <separator string="Tillämpliga lagar och föreskrifter"/>
+                <field name="line_ids" nolabel="1">
+                    <list>
+                        <field name="sfs_number" string="Beteckning"/>
+                        <field name="name"/>
+                        <field name="department"/>
+                        <field name="category"/>
+                        <field name="min_employees" string="Från (anst.)"/>
+                        <field name="document_law_id" string="Lagpost"/>
+                    </list>
+                </field>
+
+                <p class="text-muted" invisible="not excluded_count">
+                    <field name="excluded_count"/> lagar är bortvalda för att de
+                    kräver fler anställda än <field name="employee_count"/>.
+                </p>
+
+                <footer>
+                    <button name="action_create_laws" string="Skapa lagposter"
+                            type="object" class="btn-primary"/>
+                    <button string="Avbryt" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_law_package_wizard" model="ir.actions.act_window">
+        <field name="name">Välj lagar</field>
+        <field name="res_model">law.package.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_law_package_wizard"
+              name="Välj lagar för min verksamhet"
+              parent="menu_law_packages"
+              action="action_law_package_wizard"
+              sequence="5"
+              groups="mgmtsystem.group_mgmtsystem_viewer"/>
+</odoo>

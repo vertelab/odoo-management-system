@@ -111,6 +111,7 @@
             <field name="sfs_number">1977:1160</field>
             <field name="category">employment</field>
             <field name="sequence">60</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_las" model="bpm.law.package.line">
@@ -119,6 +120,7 @@
             <field name="sfs_number">1982:80</field>
             <field name="category">employment</field>
             <field name="sequence">65</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_disk" model="bpm.law.package.line">
@@ -137,6 +139,7 @@
             <field name="category">environmental</field>
             <field name="description">Buller, avfall, fettavskiljare, ventilation — relevant för restaurangverksamhet.</field>
             <field name="sequence">80</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_ordning" model="bpm.law.package.line">
@@ -156,6 +159,7 @@
             <field name="category">premises</field>
             <field name="description">Bygglov för ombyggnad, ändrad användning av lokal till restaurang.</field>
             <field name="sequence">90</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Consumer -->
@@ -188,6 +192,7 @@
             <field name="category">safety</field>
             <field name="description">Brandskydd, brandfarlig vara, sotning — särskilt viktigt i restaurangkök.</field>
             <field name="sequence">110</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_smittskydd" model="bpm.law.package.line">
@@ -207,6 +212,7 @@
             <field name="sfs_number">2005:551</field>
             <field name="category">corporate</field>
             <field name="sequence">120</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_bfl" model="bpm.law.package.line">
@@ -232,6 +238,7 @@
             <field name="sfs_number">2018:218</field>
             <field name="category">data</field>
             <field name="sequence">140</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="rest_kassareg" model="bpm.law.package.line">

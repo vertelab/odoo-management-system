@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'BPM: Law Packages',
-    'version': '1.1',
+    'version': '18.0.1.3.0',
     'summary': 'Pre-configured law packages for different business types.',
     'category': 'Management',
     'description': """
@@ -42,6 +42,7 @@ Features:
         'data/law_package_elevator.xml',
         'views/law_package_views.xml',
         'views/law_fetcher_views.xml',
+        'views/law_package_wizard_views.xml',
         'views/res_config_settings_views.xml',
     ],
     'application': False,

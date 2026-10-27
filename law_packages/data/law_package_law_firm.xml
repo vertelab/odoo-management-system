@@ -62,6 +62,7 @@
             <field name="description">Särskilt viktigt: klientsekretess + GDPR. Personuppgiftsbiträdesavtal med klienter.</field>
             <field name="sequence">30</field>
             <field name="size_threshold">250_emp_40m</field>
+            <field name="min_employees">1</field>
         </record>
 
         <!-- Client money -->
@@ -122,6 +123,7 @@
             <field name="sfs_number">2005:551</field>
             <field name="category">corporate</field>
             <field name="sequence">60</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="law_bfl_adv" model="bpm.law.package.line">
@@ -156,6 +158,7 @@
             <field name="sfs_number">1982:80</field>
             <field name="category">employment</field>
             <field name="sequence">80</field>
+            <field name="min_employees">1</field>
         </record>
 
         <record id="law_disk_adv" model="bpm.law.package.line">
