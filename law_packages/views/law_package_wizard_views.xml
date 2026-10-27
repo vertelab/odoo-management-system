@@ -9,11 +9,14 @@
                     <group>
                         <field name="business_type"/>
                         <field name="employee_count"/>
+                        <field name="balance_total"/>
+                        <field name="revenue"/>
                         <field name="size_category"/>
                     </group>
                     <group>
                         <field name="line_count"/>
                         <field name="excluded_count"/>
+                        <field name="two_of_three"/>
                     </group>
                 </group>
 

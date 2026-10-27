@@ -28,6 +28,22 @@ class LawPackageWizard(models.TransientModel):
         help='Storleken avgör vilka lagar som gäller. Skyddsombud från 5, '
              'arbetsanpassning från 10, skyddskommitté från 50.',
     )
+    balance_total = fields.Float(
+        string='Balansomslutning (Mkr)', default=0.0, digits=(12, 1),
+        help='Senaste räkenskapsårets balansomslutning i miljoner kronor. '
+             'Behövs för hållbarhetsrapport (ÅRL 6:10) och revisionsplikt '
+             '(ÅRL 9:1) — båda kräver minst två av tre villkor.',
+    )
+    revenue = fields.Float(
+        string='Nettoomsättning (Mkr)', default=0.0, digits=(12, 1),
+        help='Senaste räkenskapsårets nettoomsättning i miljoner kronor.',
+    )
+    two_of_three = fields.Char(
+        string='Tröskeluppfyllnad', compute='_compute_two_of_three',
+        help='Hållbarhetsrapport och revisionsplikt kräver minst två av tre '
+             'villkor uppfyllda.',
+    )
+
     size_category = fields.Selection(
         selection=[
             ('micro', 'Micro (0-4)'),
@@ -68,6 +84,28 @@ class LawPackageWizard(models.TransientModel):
             else:
                 rec.size_category = 'large'
 
+    @api.depends('employee_count', 'balance_total', 'revenue')
+    def _compute_two_of_three(self):
+        """Vilka av två-av-tre-trösklarna som är uppfyllda.
+
+        Hållbarhetsrapport (ÅRL 6:10): >250 anställda, >175 Mkr balans,
+        >350 Mkr omsättning — minst två av tre.
+
+        Revisionsplikt (ÅRL 9:1): >3 anställda, >1,5 Mkr balans,
+        >3 Mkr omsättning — minst två av tre.
+
+        Vi visar räkningen i stället för att filtrera: den som har 5
+        anställda men 200 Mkr i omsättning omfattas av revisionsplikten,
+        och det syns bara om villkoren redovisas.
+        """
+        for rec in self:
+            n = rec.employee_count or 0
+            bal = rec.balance_total or 0.0
+            rev = rec.revenue or 0.0
+            hb = sum([n > 250, bal > 175, rev > 350])
+            rv = sum([n > 3, bal > 1.5, rev > 3])
+            rec.two_of_three = 'Hållbarhetsrapport %s/3 · Revisionsplikt %s/3' % (hb, rv)
+
     @api.depends('business_type')
     def _compute_packages(self):
         Package = self.env['bpm.law.package']
@@ -77,7 +115,8 @@ class LawPackageWizard(models.TransientModel):
                 ('active', '=', True),
             ])
 
-    @api.depends('package_ids', 'employee_count', 'size_category')
+    @api.depends('package_ids', 'employee_count', 'size_category',
+                 'balance_total', 'revenue')
     def _compute_lines(self):
         for rec in self:
             lines = rec.package_ids.mapped('line_ids')
