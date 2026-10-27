@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'BPM: Law Packages',
-    'version': '18.0.1.4.1',
+    'version': '18.0.1.5.1',
     'summary': 'Pre-configured law packages for different business types.',
     'category': 'Management',
     'description': """
