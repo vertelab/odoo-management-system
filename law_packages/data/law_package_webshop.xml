@@ -208,5 +208,27 @@
             <field name="sequence">120</field>
         </record>
 
+        <record id="webshop_afs_2023_12" model="bpm.law.package.line">
+            <field name="package_id" ref="law_package_webshop"/>
+            <field name="name">AFS 2023:12 — Utformning av arbetsplatser</field>
+            <field name="sfs_number">AFS 2023:12</field>
+            <field name="department">Arbetsmiljöverket</field>
+            <field name="category">employment</field>
+            <field name="description">4 kap. 3 §: arbetsgivaren ska se till att det finns rutiner för att alla arbetstagare kan utrymma arbetsplatsen, och att utrymningsövningar genomförs så att kunskapen är aktuell. 4 kap. om utrymning, larm och brandskydd.</field>
+            <field name="sequence">90</field>
+            <field name="min_employees">1</field>
+        </record>
+
+        <record id="webshop_lso" model="bpm.law.package.line">
+            <field name="package_id" ref="law_package_webshop"/>
+            <field name="name">Lag om skydd mot olyckor (2003:778)</field>
+            <field name="sfs_number">2003:778</field>
+            <field name="department">Justitiedepartementet</field>
+            <field name="category">safety</field>
+            <field name="description">2 kap. 2 §: fastighetsägare och verksamhetsutövare ska bedriva systematiskt brandskyddsarbete (SBA) och dokumentera det. Krav på utrymningsorganisation och brandskyddsorganisation.</field>
+            <field name="sequence">95</field>
+            <field name="min_employees">1</field>
+        </record>
+
     </data>
 </odoo>

@@ -207,5 +207,16 @@
             <field name="sequence">135</field>
         </record>
 
+        <record id="retail_afs_2023_12" model="bpm.law.package.line">
+            <field name="package_id" ref="law_package_retail"/>
+            <field name="name">AFS 2023:12 — Utformning av arbetsplatser</field>
+            <field name="sfs_number">AFS 2023:12</field>
+            <field name="department">Arbetsmiljöverket</field>
+            <field name="category">employment</field>
+            <field name="description">4 kap. 3 §: arbetsgivaren ska se till att det finns rutiner för att alla arbetstagare kan utrymma arbetsplatsen, och att utrymningsövningar genomförs så att kunskapen är aktuell. 4 kap. om utrymning, larm och brandskydd.</field>
+            <field name="sequence">90</field>
+            <field name="min_employees">1</field>
+        </record>
+
     </data>
 </odoo>
