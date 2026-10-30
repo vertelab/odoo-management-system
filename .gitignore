@@ -163,3 +163,4 @@ cython_debug/
 
 # Backup files
 *.bak
+graphify-out/
