@@ -1,3 +1,4 @@
+#. module: mgmtsystem_22000
 # Translation of mgmtsystem_22000 — ISO 22000:2018 Livsmedelssäkerhet
 # Copyright (C) 2025 Vertel Sverige AB
 msgid ""
@@ -8,74 +9,92 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_clause
 msgid "ISO 22000:2018 Clause"
 msgstr "ISO 22000:2018 Klausul"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_policy
 msgid "Food Safety Policy"
 msgstr "Livsmedelssäkerhetspolicy"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_gap
 msgid "ISO 22000 Gap Analysis"
 msgstr "ISO 22000 Gap-analys"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_gap_line
 msgid "ISO 22000 Gap Analysis Line"
 msgstr "ISO 22000 Gap-analysrad"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_objective
 msgid "Food Safety Objective"
 msgstr "Livsmedelssäkerhetsmål"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_prp
 msgid "Prerequisite Programme (PRP)"
 msgstr "Grundförutsättning (PRP)"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_haccp
 msgid "HACCP Plan"
 msgstr "HACCP-plan"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_ccp
 msgid "Critical Control Point (CCP)"
 msgstr "Kritisk styrpunkt (CCP)"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_hazard
 msgid "Food Safety Hazard Analysis"
 msgstr "Faroanalys livsmedelssäkerhet"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_flow
 msgid "Process Flow Diagram"
 msgstr "Flödesschema"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_traceability
 msgid "Traceability Test"
 msgstr "Spårbarhetstest"
 
+#. module: mgmtsystem_22000
 #. model:ir.model,name:mgmtsystem_22000.model_iso22000_emergency
 msgid "Emergency Preparedness / Recall Plan"
 msgstr "Nödberedskap / recall-plan"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:0
 msgid "0 - Non-existent"
 msgstr "0 - Obefintlig"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:1
 msgid "1 - Initial"
 msgstr "1 - Inledande"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:2
 msgid "2 - Repeatable"
 msgstr "2 - Upprepbar"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:3
 msgid "3 - Defined"
 msgstr "3 - Definierad"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:4
 msgid "4 - Managed"
 msgstr "4 - Styrd"
 
+#. module: mgmtsystem_22000
 #. field:iso22000.gap.line,maturity_level:5
 msgid "5 - Optimized"
 msgstr "5 - Optimerad"

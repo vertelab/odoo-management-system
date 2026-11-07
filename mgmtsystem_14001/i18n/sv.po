@@ -1,81 +1,105 @@
+#. module: mgmtsystem_14001
 # Translation of ISO 14001:2026 EMS — Swedish
 msgid ""
 msgstr ""
 "Project-Id-Version: mgmtsystem_14001 18.0.1.0.0\n"
 "Language: sv\n"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.clause
 msgid "iso14001.clause"
 msgstr "ISO 14001:2026 Claus"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.policy
 msgid "iso14001.policy"
 msgstr "Miljöpolicy"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.gap
 msgid "iso14001.gap"
 msgstr "ISO 14001 Gap-analys"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.aspect
 msgid "iso14001.aspect"
 msgstr "Miljöaspekt"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.impact
 msgid "iso14001.impact"
 msgstr "Miljöpåverkan"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.compliance
 msgid "iso14001.compliance"
 msgstr "Lagkrav / Efterlevnad"
 
+#. module: mgmtsystem_14001
 #. model:ir.model,name:iso14001.objective
 msgid "iso14001.objective"
 msgstr "Miljömål"
 
+#. module: mgmtsystem_14001
 msgid "Name"
 msgstr "Namn"
 
+#. module: mgmtsystem_14001
 msgid "Clause Number"
 msgstr "Klausulnummer"
 
+#. module: mgmtsystem_14001
 msgid "Approved Date"
 msgstr "Godkänd datum"
 
+#. module: mgmtsystem_14001
 msgid "Next Review"
 msgstr "Nästa översyn"
 
+#. module: mgmtsystem_14001
 msgid "Approved By"
 msgstr "Godkänd av"
 
+#. module: mgmtsystem_14001
 msgid "State"
 msgstr "Status"
 
+#. module: mgmtsystem_14001
 msgid "Environmental Aspect"
 msgstr "Miljöaspekt"
 
+#. module: mgmtsystem_14001
 msgid "Significance"
 msgstr "Betydande"
 
+#. module: mgmtsystem_14001
 msgid "Life Cycle Stage"
 msgstr "Livscykelsteg"
 
+#. module: mgmtsystem_14001
 msgid "Compliance Obligation"
 msgstr "Lagkrav"
 
+#. module: mgmtsystem_14001
 msgid "Source"
 msgstr "Källa"
 
+#. module: mgmtsystem_14001
 msgid "Deadline"
 msgstr "Deadline"
 
+#. module: mgmtsystem_14001
 msgid "Responsible"
 msgstr "Ansvarig"
 
+#. module: mgmtsystem_14001
 msgid "Maturity Level"
 msgstr "Mognadsnivå"
 
+#. module: mgmtsystem_14001
 msgid "Finding"
 msgstr "Iakttagelse"
 
+#. module: mgmtsystem_14001
 msgid "Recommendation"
 msgstr "Rekommendation"

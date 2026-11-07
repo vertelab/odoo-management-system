@@ -1,86 +1,114 @@
+#. module: mgmtsystem_42001
 # Translation of ISO 42001:2023 AIMS — Swedish
 msgid ""
 msgstr ""
 "Project-Id-Version: mgmtsystem_42001 18.0.1.0.0\n"
 "Language: sv\n"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.clause"
 msgstr "ISO 42001:2023 Claus"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.policy"
 msgstr "AI-policy"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.gap"
 msgstr "ISO 42001 Gap-analys"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.control"
 msgstr "Annex A Kontroll"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.aisystem"
 msgstr "AI-system"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.impact.assessment"
 msgstr "AI-Konsekvensbedömning"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.objective"
 msgstr "AI-mål"
 
+#. module: mgmtsystem_42001
 msgid "iso42001.soa"
 msgstr "Statement of Applicability"
 
+#. module: mgmtsystem_42001
 msgid "Name"
 msgstr "Namn"
 
+#. module: mgmtsystem_42001
 msgid "Clause Number"
 msgstr "Klausulnummer"
 
+#. module: mgmtsystem_42001
 msgid "Approved Date"
 msgstr "Godkänd datum"
 
+#. module: mgmtsystem_42001
 msgid "AI Policy"
 msgstr "AI-policy"
 
+#. module: mgmtsystem_42001
 msgid "AI System"
 msgstr "AI-system"
 
+#. module: mgmtsystem_42001
 msgid "System Type"
 msgstr "Systemtyp"
 
+#. module: mgmtsystem_42001
 msgid "Risk Level"
 msgstr "Risknivå"
 
+#. module: mgmtsystem_42001
 msgid "AI Impact Assessment"
 msgstr "AI-Konsekvensbedömning"
 
+#. module: mgmtsystem_42001
 msgid "Fairness"
 msgstr "Rättvisa"
 
+#. module: mgmtsystem_42001
 msgid "Transparency"
 msgstr "Transparens"
 
+#. module: mgmtsystem_42001
 msgid "Privacy"
 msgstr "Integritet"
 
+#. module: mgmtsystem_42001
 msgid "Safety"
 msgstr "Säkerhet"
 
+#. module: mgmtsystem_42001
 msgid "Human Oversight"
 msgstr "Mänsklig översyn"
 
+#. module: mgmtsystem_42001
 msgid "Statement of Applicability"
 msgstr "Statement of Applicability (SoA)"
 
+#. module: mgmtsystem_42001
 msgid "Applicable"
 msgstr "Tillämplig"
 
+#. module: mgmtsystem_42001
 msgid "Implemented"
 msgstr "Implementerad"
 
+#. module: mgmtsystem_42001
 msgid "Justification"
 msgstr "Motivering"
 
+#. module: mgmtsystem_42001
 msgid "Maturity Level"
 msgstr "Mognadsnivå"
 
+#. module: mgmtsystem_42001
 msgid "Finding"
 msgstr "Iakttagelse"
