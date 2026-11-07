@@ -43,6 +43,11 @@
         </record>
 
         <record id="template_impact_1" model="iso42001.impact.assessment">
+            <!-- aisystem_id is required=True on the model; the seed data
+                 omitted it, so the whole module failed to install with
+                 "required field" on this record. -->
+            <field name="aisystem_id" ref="template_aisystem_1"/>
+            <field name="date_assessed">2026-01-01</field>
             <field name="name">Konsekvensbedömning - Kreditbedömningsmodell</field>
             <field name="state">draft</field>
             <field name="fairness">3</field>
