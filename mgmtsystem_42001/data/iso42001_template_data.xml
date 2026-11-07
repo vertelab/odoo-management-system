@@ -48,7 +48,8 @@
                  "required field" on this record. -->
             <field name="aisystem_id" ref="template_aisystem_1"/>
             <field name="date_assessed">2026-01-01</field>
-            <field name="name">Konsekvensbedömning - Kreditbedömningsmodell</field>
+            <!-- iso42001.impact.assessment has no `name` field; the
+                 assessment is identified by its AI system. -->
             <field name="state">draft</field>
             <field name="fairness">3</field>
             <field name="transparency">2</field>
