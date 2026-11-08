@@ -34,7 +34,6 @@ HITL-policy: förslag till korrigerande åtgärder levereras för granskning —
                 ref('mgmtsystem_nonconformity.model_mgmtsystem_nonconformity'),
             ])]"/>
             <field name="filter_domain">[]</field>
-            <field name="injection_level">summary_and_key</field>
             <field name="hitl_threshold">always</field>
             <field name="orchestration_mode">single</field>
             <field name="example_prompts">

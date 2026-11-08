@@ -88,7 +88,6 @@ Arbetsregler:
             ref('ai_agent_zabbix.model_ai_zabbix_config'),
         ])]"/>
         <field name="filter_domain">[]</field>
-        <field name="injection_level">summary_and_key</field>
         <field name="hitl_threshold">never</field>
         <field name="orchestration_mode">single</field>
         <field name="tool_ids" eval="[(6, 0, [

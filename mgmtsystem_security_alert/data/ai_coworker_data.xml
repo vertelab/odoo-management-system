@@ -18,7 +18,6 @@ Svara i JSON-format:
             ref('mgmtsystem_security_alert.model_security_alert'),
         ])]"/>
         <field name="filter_domain">[]</field>
-        <field name="injection_level">summary_and_key</field>
         <field name="hitl_threshold">never</field>
         <field name="orchestration_mode">single</field>
         <field name="example_prompts">
