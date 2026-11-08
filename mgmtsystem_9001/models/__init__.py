@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 # Copyright (C) 2026 Vertel Sverige AB (<https://vertel.se>).
-=======
-# Copyright (C) 2025 Vertel Sverige AB (<https://vertel.se>).
->>>>>>> Stashed changes
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 # ISO 9001 is a shell on top of mgmtsystem_iso_base:
