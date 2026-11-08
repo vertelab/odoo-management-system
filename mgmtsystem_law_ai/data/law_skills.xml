@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         Skills — hur arbetet görs.
+
+         Reglerna bor här och inte i agentens backstory: en skill kan
+         uppdateras utan att röra agentposten, och samma skill kan delas av
+         flera agenter.
+         ════════════════════════════════════════════════════════════════ -->
+
+    <record id="skill_law_relevance" model="ai.skill">
+        <field name="name">Lagrelevans — bedöm om lagen gäller oss</field>
+        <field name="description">Avgör om en lag är relevant för företaget och motivera varför — med ett JSON-svar som kan läsas maskinellt.</field>
+        <field name="category">general</field>
+        <field name="source_type">odoo</field>
+        <field name="compatibility">any</field>
+        <field name="trigger_keywords">relevant, lag, regelverk, gäller oss, tillämpas</field>
+        <field name="recipe_text">
+Uppgiften är att avgöra om en lag är relevant för företaget.
+
+Läs lagtexten. Bedöm om den reglerar verksamhet som företaget faktiskt
+bedriver. Utgå från det du vet om företaget i kontexten; vet du inget,
+bedöm mot lagens eget tillämpningsområde.
+
+Svara ENDAST med JSON, ingen inledning och ingen förklaring utanför objektet:
+
+    {"relevant": true, "reason": "…"}
+
+eller
+
+    {"relevant": false, "reason": "…"}
+
+Regler:
+- `reason` ska vara en eller två meningar på svenska och peka på vad i
+  lagen som avgör saken — inte en allmän beskrivning av lagen.
+- Är lagen relevant: nämn vilken skyldighet den inför.
+- Är lagen irrelevant: nämn varför den inte träffar verksamheten.
+- Gissa inte. Står det inte i texten, säg det i `reason`.
+- Skriv inget utanför JSON-objektet. Ett svar med prosa runt objektet
+  går att läsa men kostar ett extra parsningssteg.
+        </field>
+    </record>
+
+    <record id="skill_law_summary" model="ai.skill">
+        <field name="name">Lagsammanfattning — skriv för läsaren</field>
+        <field name="description">Sammanfatta en lagtext i markdown så att en läsare som inte är jurist förstår vad den innebär i praktiken.</field>
+        <field name="category">general</field>
+        <field name="source_type">odoo</field>
+        <field name="compatibility">any</field>
+        <field name="trigger_keywords">sammanfatta, lag, sammanfattning, vad innebär, kortversion</field>
+        <field name="recipe_text">
+Uppgiften är att sammanfatta en lagtext för en läsare som behöver veta vad
+den innebär i praktiken — inte att återge den.
+
+Struktur (markdown):
+
+1. En ingress på två till tre meningar: vad lagen reglerar och vem den
+   träffar.
+2. En punktlista över de viktigaste kraven, en rad per krav.
+3. Vid behov en kort rad om vad som händer vid överträdelse.
+
+Regler:
+- Skriv på svenska, klarspråk, ingen juridiskt formell ton.
+- Hitta inte på. Står ett krav inte i texten ska det inte stå i
+  sammanfattningen.
+- Är texten för kort för en punktlista: skriv bara ingressen.
+- citera inte paragrafnummer om de inte står i texten.
+- Längd: en halv sida är nästan alltid nog. En hel sida är för långt.
+        </field>
+    </record>
+
+</odoo>

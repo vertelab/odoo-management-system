@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================================================================
+         AI on the law form.
+
+         The two buttons run the coworker on this law. The result lands in
+         the AI tab below, not in a popup — a summary is something you read
+         next to the text it summarises, not something you dismiss.
+
+         The buttons sit in the header, left of the stage bar, so they read
+         as actions on the record rather than as navigation.
+         ================================================================ -->
+
+    <record id="view_law_form_ai" model="ir.ui.view">
+        <field name="name">document.law.form.ai</field>
+        <field name="model">document.law</field>
+        <field name="inherit_id" ref="document_law.view_law_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='stage']" position="before">
+                <button name="action_ai_assess_relevance" type="object"
+                        string="Bedöm relevans" icon="fa-balance-scale"
+                        groups="mgmtsystem.group_mgmtsystem_manager"/>
+                <button name="action_ai_summarise" type="object"
+                        string="Sammanfatta" icon="fa-file-text-o"
+                        groups="mgmtsystem.group_mgmtsystem_manager"/>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="AI" name="ai">
+                    <group>
+                        <group string="Relevans">
+                            <field name="law_relevant" widget="badge"
+                                   decoration-success="law_relevant == 'yes'"
+                                   decoration-muted="law_relevant == 'no'"/>
+                            <field name="law_ai_checked_on"/>
+                        </group>
+                    </group>
+                    <group string="Motivering">
+                        <field name="law_relevance_reason" nolabel="1"
+                               placeholder="Kör Bedöm relevans för att fylla i…"/>
+                    </group>
+                    <group string="Sammanfattning">
+                        <field name="law_summary" nolabel="1"
+                               placeholder="Kör Sammanfatta för att fylla i…"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Filter so the register can be worked through: what is left, and
+         what the coworker judged irrelevant. -->
+    <record id="view_law_search_ai" model="ir.ui.view">
+        <field name="name">document.law.search.ai</field>
+        <field name="model">document.law</field>
+        <field name="inherit_id" ref="document_law.view_law_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter name="ai_unchecked" string="Ej AI-granskade"
+                        domain="[('law_ai_checked_on', '=', False)]"/>
+                <filter name="ai_relevant" string="Relevanta"
+                        domain="[('law_relevant', '=', 'yes')]"/>
+                <filter name="ai_irrelevant" string="Irrelevanta"
+                        domain="[('law_relevant', '=', 'no')]"/>
+                <separator/>
+                <filter name="ai_summarised" string="Har sammanfattning"
+                        domain="[('law_summary', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
