@@ -20,7 +20,7 @@
         8. Årlig uppföljning
 
         Bygger på OCA mgmtsystem-moduler och Vertels egna tillägg.
-        Integrerar AI-stöd via ai_agent för riskbedömning och incidentanalys.
+        AI-stöd (riskbedömning, incidentanalys) ligger i mgmtsystem_sam_ai.
         Använder Discuss-kanaler för medverkan enligt ISO 45001 5.4.
     """,
     'author': 'Vertel Sverige AB',
@@ -37,7 +37,6 @@
         'mgmtsystem_yearwheel',
         'hr',
         'mail',
-        'ai_agent_hr',
         'base',
     ],
     'data': [
@@ -46,7 +45,6 @@
         'data/sam_iso_clause_data.xml',
         'data/sam_hazard_type_data.xml',
         'data/sam_template_data.xml',
-        'data/ai_agent_data.xml',
         'views/sam_iso_clause_views.xml',
         'views/sam_policy_views.xml',
         'views/sam_task_delegation_views.xml',
