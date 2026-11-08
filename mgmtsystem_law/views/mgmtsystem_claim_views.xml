@@ -23,7 +23,7 @@
             <field name="name">mgmtsystem_claims_tree_view</field>
             <field name="model">mgmtsystem.claim</field>
             <field name="inherit_id" ref="mgmtsystem_claim.mgmtsystem_claims_tree_view"/>
-            <field name="type">tree</field>
+            <field name="type">list</field>
             <field name="arch" type="xml">
                 <field name="stage_id" position="after">
                     <field name="document_law_ids" widget="many2many_tags" optional="hide"/>
