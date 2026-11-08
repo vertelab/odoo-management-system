@@ -60,8 +60,9 @@ Management System: Law AI
     'data': [
         'security/ir.model.access.csv',
         'data/law_skills.xml',
-        'data/law_agents.xml',
+        # Coworkern måste finnas innan agenterna länkas till den.
         'data/law_coworker.xml',
+        'data/law_agents.xml',
         'views/document_law_views.xml',
     ],
     'application': False,
