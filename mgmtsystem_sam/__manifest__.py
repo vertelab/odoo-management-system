@@ -55,8 +55,10 @@
         'views/mgmtsystem_action_views.xml',
         'views/mgmtsystem_audit_views.xml',
         'views/mgmtsystem_review_views.xml',
-        'views/sam_menu.xml',
+        # sam_dashboard_views.xml defines action_sam_dashboard, which
+        # sam_menu.xml references — the action must load first.
         'views/sam_dashboard_views.xml',
+        'views/sam_menu.xml',
         'views/res_config_views.xml',
     ],
     'demo': [],
