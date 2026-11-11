@@ -14,8 +14,17 @@ class SamTaskDelegation(models.Model):
     employee_id = fields.Many2one(
         "hr.employee",
         string="Mottagare",
-        required=True,
+        # Inte required: mallrader (is_template=True) skapas utan
+        # mottagare och föll annars på NOT NULL:
+        #   null value in column employee_id violates not-null constraint
+        # Fixat 2026-11-10 (lantteknik).
         help="Den anställde som tilldelas arbetsmiljöuppgiften",
+    )
+    is_template = fields.Boolean(
+        string="Mall",
+        default=False,
+        help="En mallrad tilldelas ingen anstalld; den kopieras till "
+             "en riktig uppgift nar den anvands.",
     )
     department_id = fields.Many2one(
         "hr.department",
