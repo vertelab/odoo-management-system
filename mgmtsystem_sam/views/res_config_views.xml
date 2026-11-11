@@ -5,7 +5,10 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='employees']" position="after">
+            <!-- Odoo 18's base_setup form has no div#employees; the settings
+                 blocks live inside the General Settings app. Anchor on the
+                 app and append a block of our own. -->
+            <xpath expr="//app[@name='general_settings']" position="inside">
                 <div id="sam_settings" string="Arbetsmiljö (SAM)" groups="group_sam_manager">
                     <h2>Systematiskt Arbetsmiljöarbete</h2>
                     <div class="row mt16 o_settings_container">
