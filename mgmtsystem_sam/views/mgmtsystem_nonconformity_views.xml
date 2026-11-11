@@ -22,7 +22,7 @@
         <field name="model">mgmtsystem.nonconformity</field>
         <field name="inherit_id" ref="mgmtsystem_nonconformity.view_mgmtsystem_nonconformity_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree" position="inside">
+            <xpath expr="//list" position="inside">
                 <field name="incident_type"/>
             </xpath>
         </field>
