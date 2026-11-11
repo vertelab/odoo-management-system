@@ -24,28 +24,5 @@
             </field>
         </record>
 
-        <!-- SAM Template: Exempel på Uppgiftsfördelning -->
-        <record id="template_task_delegation" model="sam.task_delegation">
-            <field name="name">Arbetsmiljöuppgifter - Chef (exempelmall)</field>
-            <field name="task_description">
-                <![CDATA[
-                Som chef har du ansvar för det dagliga arbetsmiljöarbetet inom din enhet.
-
-                Dina arbetsmiljöuppgifter:
-                1. Genomföra skyddsronder två gånger per år
-                2. Genomföra riskbedömningar vid förändringar
-                3. Utreda tillbud och olyckor
-                4. Introducera nya medarbetare i arbetsmiljöfrågor
-                5. Hålla regelbundna arbetsmiljömöten
-                ]]>
-            </field>
-            <field name="responsibility">
-                Ansvarar för att arbetsmiljöarbetet bedrivs enligt policy och rutiner.
-            </field>
-            <field name="resources_required">
-                Tid: ca 10% av arbetstid. Utbildning: SAM-utbildning 2 dagar.
-                Befogenheter: Besluta om åtgärder upp till 50 000 kr.
-            </field>
-        </record>
     </data>
 </odoo>
