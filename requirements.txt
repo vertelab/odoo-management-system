@@ -2,3 +2,12 @@ beautifulsoup4
 langchain
 langchain-openai
 langchain_mistralai
+
+# ── Saknade beroenden — inventering 2026-11-13 ──────────────────────────────
+# mgmtsystem_law_ai_relevancy / mgmtsystem_law_ai_summary — langchain_core
+# importeras på modulnivå (langchain-paketet ovan räcker inte: det är
+# langchain-core som äger Runnable/prompt-klasserna i LangChain 1.x).
+langchain-core
+
+# mgmtsystem_law_ai_chat — markdown renderar lagtext-svar
+markdown
